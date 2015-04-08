@@ -1,0 +1,95 @@
+/**
+ * Variables
+ * ----------------------------------------------------------------
+ */
+
+/**
+ * Main
+ */
+$primary:                                    #219dc8;
+
+$logo:                                       "theme/stad-logo.svg";
+
+$brand:                 					           #cf0039;
+$brand-light:           					           #f28b00;
+
+
+/**
+ * Navigation
+ */
+$nav-top-bg-color:      					           #333;
+$nav-aside-link-hover-color:                 $primary;
+
+$back-to-top-bgcolor:                        rgba($primary, .4);
+$back-to-top-hover-bgcolor:                  rgba($primary, .8);
+
+
+
+/**
+ * Colors
+ */
+$brand-success:                              #0b0;
+
+$link-color:                                 $primary;
+$link-hover-color:                           lighten($link-color, 8%);
+
+
+/**
+ * Code
+ */
+$code-color:                                 $primary;
+$code-bg:                                    lighten($primary, 51%);
+
+
+/**
+ * Focus
+ */
+$input-base-color:                           $primary;
+$input-border-focus:                         $primary;
+
+
+/**
+ * Buttons
+ */
+$btn-primary-bg:                             $primary;
+
+
+/**
+ * Datepicker
+ */
+$datepicker-btn-hover-color:                 $primary;
+$datepicker-btn-selected-bg-color:           $primary;
+$datepicker-btn-today-color:                 $primary;
+
+
+/**
+ * Callouts
+ */
+$callout-color:                              $primary;
+
+
+/**
+ * Hit-area-box
+ */
+$hit-area-checked-bgcolor:                   $primary;
+
+
+/**
+ * Interactive table
+ */
+$table-interactive-options-selected-bgcolor: lighten($primary, 45%);
+$table-interactive-options-dropzone-border:  $primary;
+
+
+/**
+ * Pagination
+ */
+$pagination-link-active-bg:                  $primary;
+
+
+/**
+ * Upload
+ */
+$upload-hover-background-color:              lighten($primary, 50%);
+$upload-border-color:                        $primary;
+$upload-bg-color-success:                    lighten($brand-success, 54%);

@@ -1,0 +1,107 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+//== Tooltips
+//
+//##
+
+
+// Base class
+.tooltip {
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  display: block;
+  // Reset font and text propertes given new insertion method
+  font-family: $font-family-base;
+  font-weight: normal;
+  position: absolute;
+  visibility: visible;
+  z-index: $zindex-tooltip;
+
+
+  &.in     { }
+  &.top    { margin-top:  rem(-3); padding: rem($tooltip-arrow-width) 0; }
+  &.right  { margin-left:  rem(3); padding: 0 rem($tooltip-arrow-width); }
+  &.bottom { margin-top:   rem(3); padding: rem($tooltip-arrow-width) 0; }
+  &.left   { margin-left: rem(-3); padding: 0 rem($tooltip-arrow-width); }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  background-color: $tooltip-bg;
+  border-radius: $border-radius-base;
+  color: $tooltip-color;
+  font-size: $font-size-base;
+  max-width: rem($tooltip-max-width);
+  padding: rem(3 8);
+  text-align: center;
+  text-decoration: none;
+}
+
+// Arrows
+.tooltip-arrow {
+  border-color: transparent;
+  border-style: solid;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+// Note: Deprecated .top-left, .top-right, .bottom-left, and .bottom-right as of v3.3.1
+.tooltip {
+  &.top .tooltip-arrow {
+    border-width: rem($tooltip-arrow-width) rem($tooltip-arrow-width) 0;
+    border-top-color: $tooltip-arrow-color;
+    bottom: 0;
+    left: 50%;
+    margin-left: rem(-$tooltip-arrow-width);
+  }
+  &.top-left .tooltip-arrow {
+    border-width: rem($tooltip-arrow-width) rem($tooltip-arrow-width) 0;
+    border-top-color: $tooltip-arrow-color;
+    bottom: 0;
+    margin-bottom: rem(-$tooltip-arrow-width);
+    right: rem($tooltip-arrow-width);
+  }
+  &.top-right .tooltip-arrow {
+    border-width: rem($tooltip-arrow-width) rem($tooltip-arrow-width) 0;
+    border-top-color: $tooltip-arrow-color;
+    bottom: 0;
+    left: rem($tooltip-arrow-width);
+    margin-bottom: rem(-$tooltip-arrow-width);
+  }
+  &.right .tooltip-arrow {
+    border-width: rem($tooltip-arrow-width) rem($tooltip-arrow-width) rem($tooltip-arrow-width) 0;
+    border-right-color: $tooltip-arrow-color;
+    left: 0;
+    margin-top: rem(-$tooltip-arrow-width);
+    top: 50%;
+  }
+  &.left .tooltip-arrow {
+    border-width: rem($tooltip-arrow-width) 0 rem($tooltip-arrow-width) rem($tooltip-arrow-width);
+    border-left-color: $tooltip-arrow-color;
+    right: 0;
+    margin-top: rem(-$tooltip-arrow-width);
+    top: 50%;
+  }
+  &.bottom .tooltip-arrow {
+    border-width: 0 rem($tooltip-arrow-width) rem($tooltip-arrow-width);
+    border-bottom-color: $tooltip-arrow-color;
+    left: 50%;
+    margin-left: rem(-$tooltip-arrow-width);
+    top: 0;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-width: 0 rem($tooltip-arrow-width) rem($tooltip-arrow-width);
+    border-bottom-color: $tooltip-arrow-color;
+    right: rem($tooltip-arrow-width);
+    margin-top: rem(-$tooltip-arrow-width);
+    top: 0;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-width: 0 rem($tooltip-arrow-width) rem($tooltip-arrow-width);
+    border-bottom-color: $tooltip-arrow-color;
+    left: rem($tooltip-arrow-width);
+    margin-top: rem(-$tooltip-arrow-width);
+    top: 0;
+  }
+}

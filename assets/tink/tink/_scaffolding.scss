@@ -1,0 +1,129 @@
+/**
+ * Scaffolding
+ * --------------------------------------------------
+ */
+
+
+// Reset the box-sizing
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+// Body reset
+html {
+  font-size: em($font-size-base); // font-size: .875em;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  // edit font-size with media-queries
+  @include mq($screen-sm) {
+    font-size: em($font-size-base * $font-size-factor-sm);
+  }
+  @include mq($screen-md) {
+    font-size: em($font-size-base * $font-size-factor-md);
+  }
+  @include mq($screen-lg) {
+    font-size: em($font-size-base * $font-size-factor-lg);
+  }
+}
+
+body {
+  background-color: $body-bg;
+  color: $text-color;
+  font-family: $font-family-base;
+  font-size: rem($font-size-base);
+  line-height: $line-height-base;
+  height: 100vh; // Fix for iOS bug where navigation would be chopped off when there isn't enough body content
+}
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all $animation-speed linear;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    @include tab-focus();
+  }
+
+  &[rel="external"] {
+    &:after {
+      content: ' \f08e';
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: rem($font-size-base - 2);
+      font-size: rem($font-size-base * .75);
+      font-style: normal;
+      font-weight: 400;
+      opacity: .5;
+      padding: rem(0 2 0 4);
+      text-decoration: none;
+      transition: color $animation-speed linear;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &.has-no-external-icon:after {
+    content: none;
+  }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: $gray;
+  font-style: italic;
+}
+
+
+// Images
+
+// Images are by default responsive (they don't scale beyond their parents)
+img:not(.media-object):not(.non-responsive) {
+  @include img-responsive();
+  vertical-align: middle;
+}
+
+// Horizontal rules
+
+hr {
+  margin-top:    rem($line-height-computed);
+  margin-bottom: rem($line-height-computed);
+  border: 0;
+  border-top: 1px solid $hr-border;
+}

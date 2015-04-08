@@ -1,0 +1,96 @@
+/**
+ * Accordions
+ * --------------------------------------------------
+ */
+
+.accordion-panel {
+  @extend .panel;
+  margin-bottom: 0;
+
+  > a {
+    text-decoration: none;
+
+    &:hover {
+      .accordion-toggle {
+        background-color: darken($panel-default-heading-bg, 5);
+        transition: background $animation-speed linear;
+      }
+    }
+  }
+
+  &.group-open {
+    .accordion-toggle {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.group-loading {
+    .accordion-toggle {
+      &:before {
+        opacity: 0;
+      }
+    }
+    .accordion-toggle {
+      &:after {
+        content: "\f021";
+        animation: spin 1s linear infinite;
+      }
+    }
+  }
+}
+.accordion-panel-heading {
+  @extend .panel-heading;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &:before,
+  &:after {
+    color: $white;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &:before {
+    content: "\f0d7";
+    right: rem(14);
+    text-align: center;
+    text-decoration: inherit;
+    top: rem(12);
+    transition: color $animation-speed linear, transform $animation-speed linear;
+    z-index: layer('pseudo');
+  }
+
+  &:after {
+    // box-sizing: content-box;
+    content: '';
+    font-size: 14px;
+    right: rem(13);
+    top: rem(13);
+    z-index: layer('base');
+  }
+}
+
+.accordion-panel-body {
+  @extend .panel-body;
+  position: relative;
+}
+
+.accordion-content {
+  overflow: hidden;
+  position: relative;
+}
+
+.accordion-loaded-content {
+  // min-height: 25px;
+  transition: opacity .4s linear;
+}
