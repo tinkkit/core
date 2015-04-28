@@ -1,5 +1,5 @@
 {
-    "name": "bootstrap-sass",
-    "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications",
-    "tags": ["bootstrap", "grid", "typography", "buttons", "ui", "responsive-web-design"]
+    "name": "tink-core",
+    "description": "Tink is an in-house developed easy-to-use front end framework for quick prototyping and simple deployment of all kinds of websites and apps, keeping a uniform and consistent look and feel.",
+    "tags": ["tink", "core", "grid", "typography", "buttons", "ui", "responsive-web-design", "atomic-design", "components"]
 }

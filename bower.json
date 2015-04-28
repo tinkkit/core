@@ -1,28 +1,40 @@
 {
-  "name": "core",
+  "name": "tink-core",
   "version": "1.0.0",
-  "homepage": "http://tink.digipolis.be",
-  "authors": [
-    "Japser"
-  ],
-  "description": "Fork of bootstrap sass",
   "main": [
-    "assets/tink/tink.css"
+    "dist/tink.css"
   ],
+  "ignore": [
+    ".*",
+    "**/.*",
+    "assets",
+    "Gruntfile.js",
+    "package.json",
+    "src",
+    "test",
+    "*.sublime-project"
+  ],
+  "devDependencies": {
+    "angular": "~1.3.12",
+    "angular-resource": "~1.3.12",
+    "angular-cookies": "~1.3.12",
+    "angular-sanitize": "~1.3.12",
+    "angular-animate": "~1.3.12",
+    "angular-touch": "~1.3.12",
+    "angular-route": "~1.3.12"
+  },
+  "authors": [
+    "Jasper Van Proeyen",
+    "Vincent Bouillart",
+    "Lieven Van Gestel",
+    "Tom Hermans"
+  ],
+  "description": "Tink is an in-house developed easy-to-use front end framework for quick prototyping and simple deployment of all kinds of websites and apps, keeping a uniform and consistent look and feel.",
+  "homepage": "http://tink.digipolis.be",
   "keywords": [
-    "twbs",
-    "bootstrap",
+    "tink",
+    "core",
     "sass"
   ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "lib",
-    "tasks",
-    "templates",
-    "test",
-    "*.gemspec",
-    "Rakefile",
-    "Gemfile"
-  ]
+  "license": "MIT"
 }

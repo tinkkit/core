@@ -1,0 +1,105 @@
+/**
+ * Panels
+ * --------------------------------------------------
+ */
+
+// Base class
+.panel {
+  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+
+  background-color: $panel-bg;
+  border: 1px solid transparent;
+  border-radius: $panel-border-radius;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  margin-bottom: rem($line-height-computed);
+
+  &.colored {
+    background: lighten($brand, 50);
+    border: none;
+  }
+}
+
+// Panel contents
+.panel-body {
+  @include clearfix();
+  padding: rem($panel-body-padding ($panel-body-padding * 2));
+  &:not(:last-child) { border-bottom: 1px solid $panel-default-border; }
+
+  .panel-body-title {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    span { font-size: 70%; color: $gray; }
+  }
+
+  .panel-body-section-title {
+    border-bottom: 1px solid $gray-lighter;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    span { font-size: 70%; }
+  }
+
+  .panel-body { // panel inside another oanel
+    padding: rem($panel-body-padding);
+  }
+
+}
+
+// Optional heading
+.panel-heading {
+  background-color: #f6f6f6;
+  font-size: rem(16);
+  font-weight: 700;
+  padding: rem($panel-heading-padding ($panel-heading-padding * 1.5));
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+  .fa {
+    color: $panel-default-icon-color;
+  }
+  .panel-title {
+    background: none;
+    color: $panel-default-text;
+    display: inline-block;
+    font-size: rem(14);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  .fa + .panel-title {
+    margin-left: rem(9);
+  }
+}
+
+
+// Optional Footer
+.panel-footer {
+  border-top: 1px solid $gray-lighter;
+  font-size: rem(12);
+  padding: rem($panel-heading-padding ($panel-heading-padding * 1.5));
+}
+
+
+
+
+// Panel variations
+
+// .panel-primary {
+//   @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+// }
+// .panel-success {
+//   @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+// }
+// .panel-info {
+//   @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+// }
+// .panel-warning {
+//   @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+// }
+// .panel-danger {
+//   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+// }
