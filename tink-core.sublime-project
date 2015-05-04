@@ -16,6 +16,7 @@
 			],
 			"folder_exclude_patterns":
 			[
+				"assets",
 				"bower_components",
 				"dist",
 				"node_modules"

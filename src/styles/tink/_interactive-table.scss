@@ -28,12 +28,12 @@
     user-select: none;
 
     // setting width on first tablehead cell to fit the checkbox
-    &:first-child {
+    &.has-checkbox {
       width: rem(35);
     }
 
     &:hover {
-      &:not(:first-child) {
+      &:not(.has-checkbox) {
         background-color: $table-interactive-heading-hover-bg;
         color: $table-interactive-heading-hover-color;
       }

@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.0.1] - 2015-05-04
+
+### Changed
+- Changed behaviour of the interactive table, since it conflicted with the sort table
+
+
+
 ## [1.0.0] - 2015-02-12
 
 Initial release

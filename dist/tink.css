@@ -3086,9 +3086,9 @@ html.has-open-modal {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .table-interactive > thead > tr > th:first-child {
+  .table-interactive > thead > tr > th.has-checkbox {
     width: 2.5rem ; }
-  .table-interactive > thead > tr > th:hover:not(:first-child) {
+  .table-interactive > thead > tr > th:hover:not(.has-checkbox) {
     background-color: #dddddd;
     color: #141414; }
   .table-interactive > thead > tr > th.sort-asc:after {
