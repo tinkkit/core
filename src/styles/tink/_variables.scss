@@ -395,7 +395,7 @@ $bar-padding:                           $padding-base-horizontal !default;
 /**
  * Logo
  */
-$logo: "digipolis-logo.svg" !default;
+$logo: "theme/digipolis-logo.svg" !default;
 $logo-bg-color: transparent !default;
 $logo-width: $bar-height !default;
 $logo-height: $bar-height !default;
@@ -758,8 +758,8 @@ $upload-delete-icon-bg-hover-color:   rgba($black, .05) !default;
  */
 $modal-inner-padding:         25px !default;
 $modal-border-radius:         $border-radius-base !default;
-$modal-backdropcolor: 		  rgba(0, 0, 0, .7) !default;
-$modal-bgcolor:				  $gray-lighter !default;
+$modal-backdropcolor:       rgba(0, 0, 0, .7) !default;
+$modal-bgcolor:         $gray-lighter !default;
 
 
 //== Modals
@@ -999,21 +999,27 @@ $badge-border-radius:         3px !default;
 // Alternate badge colors
 $badge-default-color:              $badge-color !default;
 $badge-default-bg:                 $badge-bg !default;
+$badge-default-invert-bg:          $white !default;
 
 $badge-danger-color:               $white !default;
 $badge-danger-bg:                  $state-danger-text !default;
+$badge-danger-invert-bg:           $white !default;
 
 $badge-info-color:                 $white !default;
 $badge-info-bg:                    $state-info-text !default;
+$badge-info-invert-bg:             $white !default;
 
 $badge-primary-color:              $white !default;
 $badge-primary-bg:                 $brand !default;
+$badge-primary-invert-bg:          $white !default;
 
 $badge-success-color:              $white !default;
 $badge-success-bg:                 $state-success-text !default;
+$badge-success-invert-bg:          $white !default;
 
 $badge-warning-color:              $white !default;
 $badge-warning-bg:                 $state-warning-text !default;
+$badge-warning-invert-bg:          $white !default;
 
 
 //== Breadcrumbs
