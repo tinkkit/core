@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-ng-app="tinkApp">
 <head>
   <meta charset="utf-8">
   <title>Tink core</title>
@@ -12,10 +12,41 @@
 </head>
 <body>
 
-<h1>Hello Tink!</h1>
+<nav data-tink-top-nav class="nav-top">
+  <ul class="nav-top-branding">
+    <li class="logo">
+      <a href="#/" title="Tink"><span>Tink</span></a>
+    </li>
+    <!-- <li class="toggle" data-tink-sidenav-collapse="asideNavLeft">
+      <a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open menu</span></i></a>
+    </li> -->
+    <li class="app">
+      <h1><a href="#/">Tink</a></h1>
+    </li>
+  </ul>
+</nav>
+
+<div>
+  <div class="main" role="main" data-ng-view="" data-autoscroll="true"></div>
+</div>
 
 <!-- bower:js -->
 <!-- endbower -->
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/tink-api-javascript/dist/tink-api-javascript.js"></script>
+<script src="bower_components/tink-api-angular/dist/tink-api-angular.js"></script>
+<script src="bower_components/tink-navigation-angular/dist/tink-navigation-angular.js"></script>
+
+<script src="scripts/app.js"></script>
 
 </body>
 </html>
