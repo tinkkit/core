@@ -395,10 +395,10 @@ $bar-padding:                           $padding-base-horizontal !default;
 /**
  * Logo
  */
-$logo: "digipolis-logo.svg" !default;
+$logo:          "digipolis-logo.svg" !default;
 $logo-bg-color: transparent !default;
-$logo-width: $bar-height !default;
-$logo-height: $bar-height !default;
+$logo-width:    $bar-height !default;
+$logo-height:   $bar-height !default;
 
 
 
@@ -758,8 +758,8 @@ $upload-delete-icon-bg-hover-color:   rgba($black, .05) !default;
  */
 $modal-inner-padding:         25px !default;
 $modal-border-radius:         $border-radius-base !default;
-$modal-backdropcolor: 		  rgba(0, 0, 0, .7) !default;
-$modal-bgcolor:				  $gray-lighter !default;
+$modal-backdropcolor:       rgba(0, 0, 0, .7) !default;
+$modal-bgcolor:         $gray-lighter !default;
 
 
 //== Modals
@@ -980,6 +980,11 @@ $badge-bg:                    $gray-lighter !default;
 
 $badge-padding-vertical:      0 !default;
 $badge-padding-horizontal:    5px !default;
+$badge-margin-base-left:      $padding-base-horizontal !default;
+
+$badge-margin-lg-left:        $padding-large-horizontal!default;
+$badge-margin-sm-left:        $padding-small-horizontal !default;
+$badge-margin-xs-left:        $padding-xs-horizontal !default;
 
 // ** Badge text color in active nav link
 $badge-active-color:          $link-color !default;
@@ -987,9 +992,34 @@ $badge-active-color:          $link-color !default;
 $badge-active-bg:             $white !default;
 $badge-font-size:             11px !default;
 $badge-font-weight:           600 !default;
-$badge-line-height:           .9 !default;
+$badge-line-height:           1.4 !default;
+$badge-sm-line-height:        1.2 !default;
 $badge-border-radius:         3px !default;
 
+// Alternate badge colors
+$badge-default-color:              $badge-color !default;
+$badge-default-bg:                 $badge-bg !default;
+$badge-default-invert-bg:          $white !default;
+
+$badge-danger-color:               $white !default;
+$badge-danger-bg:                  $state-danger-text !default;
+$badge-danger-invert-bg:           $white !default;
+
+$badge-info-color:                 $white !default;
+$badge-info-bg:                    $state-info-text !default;
+$badge-info-invert-bg:             $white !default;
+
+$badge-primary-color:              $white !default;
+$badge-primary-bg:                 $brand !default;
+$badge-primary-invert-bg:          $white !default;
+
+$badge-success-color:              $white !default;
+$badge-success-bg:                 $state-success-text !default;
+$badge-success-invert-bg:          $white !default;
+
+$badge-warning-color:              $white !default;
+$badge-warning-bg:                 $state-warning-text !default;
+$badge-warning-invert-bg:          $white !default;
 
 
 //== Breadcrumbs

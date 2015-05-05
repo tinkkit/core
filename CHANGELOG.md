@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.0.2] - 2015-05-05
+
+### Fixed
+- Added forgotten badges styling from older Tink repository
+
+
+
 ## [1.0.1] - 2015-05-04
 
 ### Changed
