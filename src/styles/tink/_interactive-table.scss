@@ -7,19 +7,74 @@
 
 
 .table-interactive {
-  &:focus {
-    outline: none;
-  }
 
-  table {
-    input[type="checkbox"] + label {
-      padding: 0; // remove padding so the tablecell width can be adjusted
+  &.is-loading {
+    cursor: not-allowed;
+    position: relative;
+    user-select: none;
 
-      @include mq($screen-sm, "max") {
-        padding-right: rem(24);
-      }
+    &:before, &:after {
+      cursor: not-allowed;
+      position: absolute;
+      top: 0;
+      z-index: layer('pseudo');
+    }
+
+    &:before {
+      background: rgba($white, .8);
+      bottom: 0;
+      content: '';
+      left: 0;
+      right: 0;
+    }
+
+    &:after {
+      animation: spin 1s linear infinite;
+      color: $gray;
+      content: "\f021";
+      font-family: FontAwesome;
+      font-size: 2em;
+      font-style: normal;
+      font-weight: normal;
+      left: 50%;
+      margin-left: -.5em;
+      // pointer-events: none;
+      top: rem(50);
     }
   }
+  // }
+
+  // &.is-loading {
+    // tbody > tr {
+    //   position: relative;
+
+    //   &:before {
+    //     background: rgba($white, .2);
+    //     bottom: 0;
+    //     content: '';
+    //     left: 0;
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     z-index: layer('pseudo');
+    //   }
+    // }
+  // }
+
+
+  // &:focus {
+  //   outline: none;
+  // }
+
+  // table {
+  //   input[type="checkbox"] + label {
+  //     padding: 0; // remove padding so the tablecell width can be adjusted
+
+  //     @include mq($screen-sm, "max") {
+  //       padding-right: rem(24);
+  //     }
+  //   }
+  // }
 
   > thead > tr > th {
     cursor: pointer;
@@ -27,7 +82,7 @@
     transition: background-color $animation-speed linear;
     user-select: none;
 
-    // setting width on first tablehead cell to fit the checkbox
+    // Fixed width for column with only checkboxes
     &.has-checkbox {
       width: rem(35);
     }

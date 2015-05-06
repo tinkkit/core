@@ -18,8 +18,8 @@
    'ngSanitize',
    'ngTouch',
    'tink.tinkApi',
-   'tink.navigation'
-
+   'tink.navigation',
+   'tink.interactivetable'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider

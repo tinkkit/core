@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.0.3] - 2015-05-05
+
+### Added
+- Added loading state for interactive table
+
+
+
 ## [1.0.2] - 2015-05-05
 
 ### Fixed
