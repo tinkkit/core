@@ -2029,7 +2029,6 @@ select {
   -moz-appearance: none;
   background: #fff url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjQkJCQkJCIiBwb2ludHM9IjQuMiwyOS4yIDguMywyMiAwLDIyIDQuMiwyOS4yIDguMywyMiAwLDIyICIvPgo8cG9seWdvbiBmaWxsPSIjQkJCQkJCIiBwb2ludHM9IjQuMiwxMS44IDAsMTkgOC4zLDE5IDQuMiwxMS44IDAsMTkgOC4zLDE5ICIvPgo8L3N2Zz4K") no-repeat right center;
   background-size: contain;
-  background: none \9;
   padding: 0.42857rem 0.57143rem 0.42857rem 0.85714rem  \9;
   text-indent: 0.01px;
   text-overflow: ''; }
@@ -2719,9 +2718,9 @@ html.has-open-modal {
   .accordion-panel.group-loading .accordion-toggle:before {
     opacity: 0; }
   .accordion-panel.group-loading .accordion-toggle:after {
-    content: "\f021";
     -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite; }
+    animation: spin 1s linear infinite;
+    content: "\f021"; }
 
 .accordion-toggle {
   cursor: pointer;
@@ -3120,15 +3119,37 @@ html.has-open-modal {
  * Basic styling is already done on the table element by the _table.scss
  * .table-interactive adds interactive styling elements
  */
-.table-interactive:focus {
-  outline: none; }
-.table-interactive table input[type="checkbox"] + label {
-  padding: 0; }
-  @media (max-width: 768px) {
-    .table-interactive table input[type="checkbox"] + label {
-      padding-right: 1.71429rem ; } }
+.table-interactive.is-loading {
+  cursor: not-allowed;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .table-interactive.is-loading:before, .table-interactive.is-loading:after {
+    cursor: not-allowed;
+    position: absolute;
+    top: 0;
+    z-index: 2; }
+  .table-interactive.is-loading:before {
+    background: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    content: '';
+    left: 0;
+    right: 0; }
+  .table-interactive.is-loading:after {
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    color: #888;
+    content: "\f021";
+    font-family: FontAwesome;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: normal;
+    left: 50%;
+    margin-left: -0.5em;
+    top: 3.57143rem ; }
 .table-interactive > thead > tr > th {
-  cursor: pointer;
   position: relative;
   transition: background-color 0.1s linear;
   -webkit-user-select: none;
@@ -3137,9 +3158,10 @@ html.has-open-modal {
   user-select: none; }
   .table-interactive > thead > tr > th.has-checkbox {
     width: 2.5rem ; }
-  .table-interactive > thead > tr > th:hover:not(.has-checkbox) {
+  .table-interactive > thead > tr > th.is-sortable:hover {
     background-color: #dddddd;
-    color: #141414; }
+    color: #141414;
+    cursor: pointer; }
   .table-interactive > thead > tr > th.sort-asc:after {
     content: '\f106';
     font-family: 'FontAwesome';

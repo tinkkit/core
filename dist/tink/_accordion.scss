@@ -33,8 +33,8 @@
     }
     .accordion-toggle {
       &:after {
-        content: "\f021";
         animation: spin 1s linear infinite;
+        content: "\f021";
       }
     }
   }

@@ -77,7 +77,6 @@
   // }
 
   > thead > tr > th {
-    cursor: pointer;
     position: relative;
     transition: background-color $animation-speed linear;
     user-select: none;
@@ -87,10 +86,12 @@
       width: rem(35);
     }
 
-    &:hover {
-      &:not(.has-checkbox) {
+    // Only sortable columns should have an hover effect
+    &.is-sortable {
+      &:hover {
         background-color: $table-interactive-heading-hover-bg;
         color: $table-interactive-heading-hover-color;
+        cursor: pointer;
       }
     }
 
