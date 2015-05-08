@@ -21,6 +21,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Added loading state for interactive table
 
+### Fixed
+- Fixed an issue where the minified code of <select> was broken
+
 
 
 ## [1.0.2] - 2015-05-05
