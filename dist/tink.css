@@ -2511,6 +2511,10 @@ button[type="submit"], input[type="submit"], .btn-primary {
       font-size: 70%; }
   .panel-body .panel-body, .accordion-panel-body .panel-body, .panel-body .accordion-panel-body, .accordion-panel-body .accordion-panel-body {
     padding: 1.14286rem ; }
+    .panel-body .panel-body.has-no-padding, .accordion-panel-body .panel-body.has-no-padding, .panel-body .has-no-padding.accordion-panel-body, .accordion-panel-body .has-no-padding.accordion-panel-body {
+      padding: 0; }
+  .panel-body.has-no-padding, .has-no-padding.accordion-panel-body {
+    padding: 0; }
 
 .panel-heading, .accordion-panel-heading {
   background-color: #f6f6f6;

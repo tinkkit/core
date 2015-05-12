@@ -1,7 +1,7 @@
 {
   "name": "tink-core",
   "description": "Tink is an in-house developed easy-to-use front end framework for quick prototyping and simple deployment of all kinds of websites and apps, keeping a uniform and consistent look and feel.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "git://github.com/twbs/bootstrap-sass"

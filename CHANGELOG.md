@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.0.4] - 2015-05-12
+
+### Added
+- Added utility class for panel
+
+
+
 ## [1.0.3] - 2015-05-05
 
 ### Added

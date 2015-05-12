@@ -44,8 +44,15 @@
 
   .panel-body { // panel inside another oanel
     padding: rem($panel-body-padding);
+
+    &.has-no-padding {
+      padding: 0;
+    }
   }
 
+  &.has-no-padding {
+    padding: 0;
+  }
 }
 
 // Optional heading
