@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.0.5] - 2015-05-20
+
+### Added
+- Added styling for stick to top directive
+
+
+
 ## [1.0.4] - 2015-05-12
 
 ### Added
