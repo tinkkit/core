@@ -1,0 +1,12 @@
+/**
+ * Stick to top
+ * --------------------------------------------------
+ * Make some elements stick to the top of the viewport
+ */
+
+
+.is-sticky {
+  position: fixed;
+  transform: translate(0, 0);
+  width: 100%;
+}
