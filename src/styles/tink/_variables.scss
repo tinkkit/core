@@ -590,31 +590,38 @@ $hit-area-checked-bgcolor       : $brand !default;
 /**
  * Navs
  */
-$nav-bgcolor:                               $body-bg !default;
+$nav-bgcolor:                               transparent !default;
+
 $nav-link-padding:                          $padding-base-vertical $padding-base-horizontal !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
-$nav-active-link-hover-color:               $white !default;
+$nav-link-color:                            $link-color !default;
+$nav-link-bgcolor:                          transparent !default;
+$nav-link-hover-color:                      $link-hover-color !default;
+$nav-link-hover-bgcolor:                    rgba(0, 0, 0, .05) !default;
+$nav-link-active-color:                     $gray-dark !default;
+$nav-link-active-bgcolor:                   transparent !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
 
+$nav-lg-bgcolor:                            rgba(0, 0, 0, .05) !default;
 
-// //== Tabs
+$nav-lg-link-padding:                       ($padding-base-vertical * 2) ($padding-base-horizontal * 1.25) !default;
+
+
+// Tabs
 $nav-tabs-border-color:                     $gray-light !default;
-
 // $nav-tabs-link-hover-border-color:          $gray-lighter !default;
+// $nav-tabs-active-link-hover-bg:             $body-bg !default;
+// $nav-tabs-active-link-hover-color:          $gray !default;
+// $nav-tabs-active-link-hover-border-color:   $gray-lighter !default;
+// $nav-tabs-justified-link-border-color:            $gray-lighter !default;
+// $nav-tabs-justified-active-link-border-color:     $body-bg !default;
 
-$nav-tabs-active-link-hover-bg:             $body-bg !default;
-$nav-tabs-active-link-hover-color:          $gray !default;
-$nav-tabs-active-link-hover-border-color:   $gray-lighter !default;
-
-$nav-tabs-justified-link-border-color:            $gray-lighter !default;
-$nav-tabs-justified-active-link-border-color:     $body-bg !default;
-
-//== Pills
-$nav-pills-border-radius:                   $border-radius-base !default;
-$nav-pills-active-link-hover-bg:            $component-active-bg !default;
-$nav-pills-active-link-hover-color:         $component-active-color !default;
+// //== Pills
+// $nav-pills-border-radius:                   $border-radius-base !default;
+// $nav-pills-active-link-hover-bg:            $component-active-bg !default;
+// $nav-pills-active-link-hover-color:         $component-active-color !default;
 
 
 
