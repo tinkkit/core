@@ -1,0 +1,6 @@
+// Labels
+
+@mixin label-variant($color) {
+  border-color: $color;
+  color: $color;
+}

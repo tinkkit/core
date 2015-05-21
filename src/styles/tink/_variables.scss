@@ -556,27 +556,22 @@ $upload-delete-icon-bg-hover-color:   rgba($black, .05) !default;
 
 
 
-//== Labels
-//
-//##
-
-//** Default label background color
-    // $label-default-bg:            $gray-light !default;
-//** Primary label background color
-    // $label-primary-bg:            $brand-primary !default;
-//** Success label background color
-    // $label-success-bg:            $brand-success !default;
-//** Info label background color
-    // $label-info-bg:               $brand-info !default;
-//** Warning label background color
-    // $label-warning-bg:            $brand-warning !default;
-//** Danger label background color
-    // $label-danger-bg:             $brand-danger !default;
+/**
+ * Labels
+ */
 
 //** Default label text color
-    // $label-color:                 $white !default;
-//** Default text color of a linked label
-    // $label-link-hover-color:      $white !default;
+$label-default:            $gray-light !default;
+//** Primary label background color
+$label-primary:            $brand !default;
+//** Success label background color
+$label-success:            $brand-success !default;
+//** Info label background color
+$label-info:               $brand-info !default;
+//** Warning label background color
+$label-warning:            $brand-warning !default;
+//** Danger label background color
+$label-danger:             $brand-danger !default;
 
 
 
