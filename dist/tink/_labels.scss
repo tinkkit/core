@@ -1,0 +1,55 @@
+/**
+ * Label
+ * ----------------------------------------------------------------
+ */
+.label {
+  border: 1px solid $label-default;
+  border-radius: .25em;
+  color: $label-default;
+  display: inline;
+  font-size: 75%;
+  font-weight: 400;
+  line-height: 1;
+  padding: .2em .3em .2em;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: nowrap;
+  // @include label-variant($label-default-bg);
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.label-primary {
+  @extend .label;
+  @include label-variant($label-primary);
+}
+
+.label-success {
+  @extend .label;
+  @include label-variant($label-success);
+}
+
+.label-info {
+  @extend .label;
+  @include label-variant($label-info);
+}
+
+.label-warning {
+  @extend .label;
+  @include label-variant($label-warning);
+}
+
+.label-danger {
+  @extend .label;
+  @include label-variant($label-danger);
+}
