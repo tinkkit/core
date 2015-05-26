@@ -16,6 +16,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.1.1] - 2015-05-26
+
+### Changed
+- Created a responsive table mixin in favour of duplicate code
+- Added standard margin to nav elements
+
+
+
 ## [1.1.0] - 2015-05-20
 
 ### Added
