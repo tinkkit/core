@@ -1,0 +1,60 @@
+// Duplicate table code
+
+@mixin responsive-table() {
+  background-color: $table-bg;
+  border: 1px solid $table-border-color;
+  margin-bottom: rem(($line-height-computed * 0.75));
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+
+  > table {
+    margin-bottom: 0; // Tighten up spacing
+
+    // Ensure the content doesn't wrap
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > td,
+        > th {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  // Special overrides for the bordered tables
+  > .table-bordered {
+    border: 0;
+
+    // Nuke the appropriate borders so that the parent can handle them
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > td:first-child,
+        > th:first-child {
+          border-left: 0;
+        }
+        > td:last-child,
+        > th:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    // Only nuke the last row's bottom-border in `tbody` and `tfoot` since chances are there will be only one `tr` in a `thead` and that would remove the border altogether.
+    > tbody,
+    > tfoot {
+      > tr:last-child {
+        > td,
+        > th {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
