@@ -71,14 +71,16 @@ $brand-warning:         #ff8d00 !default; // orange
 $brand-danger:          #e60038 !default; // red
 
 // Settings for some of the most global styles.
-$body-bg:               #f7f7f7 !default;
+$body-bg:               $white !default;
+$body-bg-alt:           #f7f7f7 !default;
 $text-color:            $gray-dark !default;
 $link-color:            $brand-light !default;
 $link-hover-color:      darken($link-color, 10%) !default;
 
 
 // Typography
-$font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default; // Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`
 
@@ -371,7 +373,7 @@ $nav-aside-link-color:                          lighten($gray-dark, 12%) !defaul
 $nav-aside-link-hover-color:                    $brand !default;
 $nav-aside-link-hover-background-color:         rgba($black, .05) !default;
 $nav-aside-link-active-color:                   $nav-aside-link-hover-color !default;
-$nav-aside-item-open-color:                     $body-bg !default;
+$nav-aside-item-open-color:                     $body-bg-alt !default;
 $nav-aside-badge-color:                         $gray-dark !default;
 $nav-aside-badge-background-color:              $gray-lighter !default;
 $nav-aside-badge-hover-color:                   $nav-aside-link-hover-color !default;

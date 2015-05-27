@@ -8,7 +8,7 @@
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
 
   background-color: $panel-bg;
-  border: 1px solid transparent;
+  border: 1px solid $gray-lighter;
   border-radius: $panel-border-radius;
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   margin-bottom: rem($line-height-computed);
@@ -89,7 +89,6 @@
   font-size: rem(12);
   padding: rem($panel-heading-padding ($panel-heading-padding * 1.5));
 }
-
 
 
 
