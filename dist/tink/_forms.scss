@@ -67,7 +67,7 @@ textarea {
   color: $input-color;
   display: block;
   font-size: rem($font-size-base);
-  height: rem($input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  // height: rem($input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   line-height: $line-height-base;
   padding: rem($padding-base-vertical $padding-base-horizontal);
   transition: border-color linear $animation-speed, box-shadow linear $animation-speed;
@@ -571,6 +571,11 @@ output {
  * Inspired by lack of control now and the way so many others do it, esp. looking at Semantic UI atm.
  * TH
 */
+
+.input-inline {
+  float: left;
+  width: auto;
+}
 
 .select-box-inline {
   display: inline-block;

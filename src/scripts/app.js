@@ -19,7 +19,8 @@
    'ngTouch',
    'tink.tinkApi',
    'tink.navigation',
-   'tink.interactivetable'
+   'tink.interactivetable',
+   'tink.sorttable'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider

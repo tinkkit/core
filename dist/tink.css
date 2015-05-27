@@ -1859,7 +1859,6 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   color: #5c5c5c;
   display: block;
   font-size: 1rem ;
-  height: 2.42857rem ;
   line-height: 1.428571429;
   padding: 0.42857rem 0.85714rem ;
   transition: border-color linear 0.1s, box-shadow linear 0.1s;
@@ -2178,6 +2177,10 @@ output {
  * Inspired by lack of control now and the way so many others do it, esp. looking at Semantic UI atm.
  * TH
 */
+.input-inline {
+  float: left;
+  width: auto; }
+
 .select-box-inline {
   display: inline-block;
   margin-left: 0.57143rem ; }

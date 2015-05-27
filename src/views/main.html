@@ -1,4 +1,37 @@
 <div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <div class="row margin-bottom">
+        <div class="form-group">
+          <div class="col-xs-8">
+            <input type="text" />
+          </div>
+          <div class="col-xs-4">
+            <button>Verzenden</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input type="text" style="width: 200px;float:left;margin-right:5px" /> <button class="btn-primary">Verzenden</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="hidden-xs col-sm-2">
+      <p><strong>Liquor ipsum dolor</strong> sit amet arran man</p>
+    </div>
+    <div class="col-xs-6 col-sm-8">
+      <p><strong>Liquor ipsum dolor</strong> sit amet arran man o'war salty dog? Long island iced tea sangría pall mall wolfram choking hazard choking hazard sundowner bloody mary or bloodball. Whiskey sour champagne cocktail glen ord benrinnes, angel's tit longmorn. Benedictine glendronach dalwhinnie vodka mcgovern clynelish mortlach macuá glen grant stolichnaya cointreau the macallan; gin and tonic; salmiakki koskenkorva, cafe zürich! Ectoplasm, tequila sunrise absolut, glen spey bloody aztec flaming dr pepper kir royale negroni rabo-de-galo.</p>
+    </div>
+    <div class="col-xs-6 col-sm-2">
+      <p><strong>Liquor ipsum dolor</strong> sit amet arran man</p>
+    </div>
+  </div>
+  <hr> -->
 	<div class="row margin-top">
 		<div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
       <h1>Tink! <span class="badge-primary">1.0.2</span></h1>
@@ -127,7 +160,7 @@
   <div class="row" data-ng-controller="interactiveTableController">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
       <div>
-      <tink-interactive-table ng-model="data" data-allow-column-reorder="true" headers="headers" actions="actions" items-per-page="pages" data-force-responsive="true"></tink-interactive-table>
+      <tink-interactive-table ng-model="data" data-tink-allow-column-reorder="true" data-tink-headers="headers" data-tink-actions="actions" data-tink-items-per-page="pages" data-tink-force-responsive="true"></tink-interactive-table>
       </div>
     </div>
   </div>

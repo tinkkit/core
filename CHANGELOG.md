@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added option for alternative background-color
+- Added inline option for input elements
 
 ### Changed
 - Tink now uses Open Sans as default font instead of Lato.
@@ -30,6 +31,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fixed a panel heading rendering bug
+- Fixed a form input field rendering bug
 
 
 
