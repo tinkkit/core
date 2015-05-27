@@ -19,7 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.2.0] - 2015-05-26
 
 ### Added
-- Added option for alternative background-color
+- Added option for alternate background-color
 - Added inline option for input elements
 
 ### Changed
