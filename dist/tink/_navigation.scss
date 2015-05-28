@@ -61,7 +61,7 @@ html {
   &.has-nav-left {
     .main {
       @include mq($screen-sm) {
-        padding-left: rem($nav-aside-width);
+        padding-left: rem($nav-aside-width + $nav-aside-extra-body-padding);
       }
     }
   }
@@ -69,7 +69,7 @@ html {
   &.has-nav-right {
     .main {
       @include mq($screen-sm) {
-        padding-right: rem($nav-aside-width);
+        padding-right: rem($nav-aside-width + $nav-aside-extra-body-padding);
       }
     }
   }

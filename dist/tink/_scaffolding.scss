@@ -21,12 +21,6 @@ html {
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-  &.has-alternative-background {
-    body {
-      background-color: $body-bg-alt;
-    }
-  }
-
   // edit font-size with media-queries
   @include mq($screen-sm) {
     font-size: em($font-size-base * $font-size-factor-sm);
@@ -46,6 +40,15 @@ body {
   font-size: rem($font-size-base);
   line-height: $line-height-base;
   height: 100vh; // Fix for iOS bug where navigation would be chopped off when there isn't enough body content
+}
+
+// Alternate background
+html {
+  &.has-alternate-background {
+    body {
+      background-color: $body-bg-alt;
+    }
+  }
 }
 
 
