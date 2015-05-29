@@ -6,6 +6,7 @@
 
 
 .is-sticky {
+  overflow: auto;
   position: fixed;
   transform: translate(0, 0);
   width: 100%;
