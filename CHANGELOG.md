@@ -16,11 +16,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.2.0] - 2015-05-26
+## [1.2.0] - 2015-05-29
 
 ### Added
 - Added option for alternate background-color
 - Added inline option for input elements
+- Changed the way fonts are loaded; custom themes can now load their own fonts without having to override ours
 
 ### Changed
 - Tink now uses Open Sans as default font instead of Lato.
