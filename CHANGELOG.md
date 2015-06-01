@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.2.2] - 2015-06-01
+
+### Fixed
+- Fixed erroneous behaviour of floating elements in sticky divs
+
+
+
 ## [1.2.1] - 2015-05-29
 
 ### Fixed
