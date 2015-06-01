@@ -318,7 +318,7 @@ $input-group-addon-border-color: $input-border !default; // Border color for tex
  * Complete layer list (for reference, add these to $layers only if needed)
  * $layers: base, navbar, dropdown, tooltip, navbar-sticky, navbar-fixed, modal-background, modal, popover;
  */
-$layers: base, pseudo, above-pseudo, nav-aside, popover, nav-top, modal !default;
+$layers: base, pseudo, above-pseudo, nav-aside, popover, sticky, nav-top, modal !default;
 
 
 

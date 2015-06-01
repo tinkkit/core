@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.2.3] - 2015-06-01
+
+### Fixed
+- Added new sticky z-index layer
+
+
+
 ## [1.2.2] - 2015-06-01
 
 ### Fixed
