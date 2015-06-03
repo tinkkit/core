@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.2.4] - 2015-06-03
+
+### Fixed
+- Fixed an accordion toggle color issue
+
+
+
 ## [1.2.3] - 2015-06-01
 
 ### Fixed
