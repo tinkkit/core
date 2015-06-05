@@ -2206,7 +2206,8 @@ output {
     color: #333; }
 
 .faux-input .placeholder {
-  color: #bbb; }
+  color: #bbb;
+  height: 2.42857rem ; }
 
 /**
  * Buttons
