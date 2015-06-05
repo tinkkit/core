@@ -86,7 +86,10 @@ html {
 
 
 .main {
+  // Properties that will make page transition animations really smooth
+  position: absolute;
   transition: opacity ($animation-speed * 2) linear, padding $animation-speed linear, transform $animation-speed linear;
+  width: 100%;
 
   /**
    * ng-animate classes

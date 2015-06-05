@@ -1202,8 +1202,9 @@ body {
   color: #333;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem ;
+  height: 100vh;
   line-height: 1.428571429;
-  height: 100vh; }
+  position: relative; }
 
 html.has-alternate-background body {
   background-color: #f7f7f7; }
@@ -3751,8 +3752,10 @@ html {
     position: relative; }
 
 .main {
+  position: absolute;
   transition: opacity 0.2s linear, padding 0.1s linear, -webkit-transform 0.1s linear;
   transition: opacity 0.2s linear, padding 0.1s linear, transform 0.1s linear;
+  width: 100%;
   /**
    * ng-animate classes
    */ }

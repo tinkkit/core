@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.2.5] - 2015-06-05
+
+### Added
+- Added smoother page transition animations
+
+
+
 ## [1.2.4] - 2015-06-03
 
 ### Fixed
