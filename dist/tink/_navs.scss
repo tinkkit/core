@@ -1,0 +1,109 @@
+/**
+ * Navs
+ * --------------------------------------------------
+ * - Base class
+ * - Tabs
+ */
+
+
+/**
+ * Base class
+ */
+%nav {
+  @include clearfix();
+  background-color: $nav-bgcolor;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+
+  > li {
+    display: block;
+    position: relative;
+
+    > a {
+      background: $nav-link-bgcolor;
+      color: $nav-link-color;
+      display: block;
+      padding: rem($nav-link-padding);
+      position: relative;
+
+      &:hover,
+      &:focus {
+        background: $nav-link-hover-bgcolor;
+        color: $nav-link-hover-color;
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      > a {
+        background: $nav-link-active-bgcolor;
+        color: $nav-link-active-color;
+        cursor: default;
+        font-weight: 600;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: $nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: $nav-disabled-link-hover-color;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/**
+ * Overrides
+ */
+.nav-lg {
+  background-color: $nav-lg-bgcolor;
+
+  >li {
+    >a {
+      padding: rem($nav-lg-link-padding);
+    }
+  }
+}
+
+
+
+/**
+ * Tabs
+ */
+
+.nav-tabs {
+  @extend %nav;
+  border-bottom: 1px solid $nav-tabs-border-color;
+  border-top: 1px solid $nav-tabs-border-color;
+  margin: rem(20 0);
+
+  > li {
+    float: left;
+
+    > a {
+      line-height: $line-height-base;
+    }
+  }
+}
+
+/**
+ * Tabbable tabs
+ */
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}

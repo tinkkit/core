@@ -1,0 +1,57 @@
+/**
+ * Stick to top
+ * --------------------------------------------------
+ * Make some elements stick to the top of the viewport
+ */
+
+
+.is-sticky {
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  transform: translate(0, 0);
+  z-index: layer('sticky');
+}
+
+
+
+/**
+ * Fixes when a navigation menu is present
+ */
+
+.has-nav-left {
+  .is-sticky {
+    @include mq($screen-sm) {
+      left: rem($nav-aside-width + $nav-aside-extra-body-padding);
+    }
+  }
+
+  &.nav-left-can-always-close {
+    &:not(.nav-left-open) {
+      .is-sticky {
+        @include mq($screen-sm) {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.has-nav-right {
+  .is-sticky {
+    @include mq($screen-sm) {
+      right: rem($nav-aside-width + $nav-aside-extra-body-padding);
+    }
+  }
+
+  &.nav-right-can-always-close {
+    &:not(.nav-right-open) {
+      .is-sticky {
+        @include mq($screen-sm) {
+          right: 0;
+        }
+      }
+    }
+  }
+}
