@@ -26,12 +26,32 @@
       left: rem($nav-aside-width + $nav-aside-extra-body-padding);
     }
   }
+
+  &.nav-left-can-always-close {
+    &:not(.nav-left-open) {
+      .is-sticky {
+        @include mq($screen-sm) {
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
 .has-nav-right {
   .is-sticky {
     @include mq($screen-sm) {
       right: rem($nav-aside-width + $nav-aside-extra-body-padding);
+    }
+  }
+
+  &.nav-right-can-always-close {
+    &:not(.nav-right-open) {
+      .is-sticky {
+        @include mq($screen-sm) {
+          right: 0;
+        }
+      }
     }
   }
 }

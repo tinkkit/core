@@ -64,12 +64,94 @@ html {
         padding-left: rem($nav-aside-width + $nav-aside-extra-body-padding);
       }
     }
+
+    /**
+     * If the left nav can always be closed we need some more styling
+     */
+    &.nav-left-can-always-close {
+
+      // Nav left is NOT open
+      @include mq($screen-sm) {
+        .main {
+          padding-left: 0;
+        }
+        .nav-left {
+          transform: translate(rem(-$nav-aside-width), 0);
+        }
+      }
+
+      // Nav left is open
+      &.nav-left-open {
+        @include mq($screen-sm) {
+          .main {
+            padding-left: rem($nav-aside-width + $nav-aside-extra-body-padding);
+          }
+          .nav-left {
+            transform: translate(0, 0);
+          }
+        }
+      }
+
+      // Make sure the toggle is always visible
+      .nav-top {
+        &-branding {
+          > li {
+            &.toggle {
+              @include mq($screen-sm) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &.has-nav-right {
     .main {
       @include mq($screen-sm) {
         padding-right: rem($nav-aside-width + $nav-aside-extra-body-padding);
+      }
+    }
+
+    /**
+     * If the right nav can always be closed we need some more styling
+     */
+    &.nav-right-can-always-close {
+
+      // Nav right is NOT open
+      @include mq($screen-sm) {
+        .main {
+          padding-right: 0;
+        }
+        .nav-right {
+          transform: translate(rem($nav-aside-width), 0);
+        }
+      }
+
+      // Nav right is open
+      &.nav-right-open {
+        @include mq($screen-sm) {
+          .main {
+            padding-right: rem($nav-aside-width + $nav-aside-extra-body-padding);
+          }
+          .nav-right {
+            transform: translate(0, 0);
+          }
+        }
+      }
+
+      // Make sure the toggle is always visible
+      .nav-top {
+        &-branding {
+          > li {
+            &.toggle {
+              @include mq($screen-sm) {
+                display: block;
+              }
+            }
+          }
+        }
       }
     }
   }

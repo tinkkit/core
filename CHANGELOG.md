@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.3.0] - 2015-06-10
+
+### Added
+- Added the possibility of closing the sidenavs on all media
+
+### Changed
+- Changed the behaviour of how stick-to-top elements work
+
+
+
 ## [1.2.6] - 2015-06-05
 
 ### Fixed
