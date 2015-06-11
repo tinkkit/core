@@ -4,39 +4,20 @@
  */
 
 // Define the text and/or background-color of your element
-.tink-yellow {
-  color: $tink-yellow;
-  &-bg { background-color: $tink-yellow; }
-}
-
-.tink-orange {
-  color: $tink-orange;
-  &-bg { background-color: $tink-orange; }
-}
-
-.tink-red {
-  color: $tink-red;
-  &-bg { background-color: $tink-red; }
-}
 
 .tink-blue {
   color: $tink-blue;
   &-bg { background-color: $tink-blue; }
 }
 
+.tink-brown {
+  color: $tink-brown;
+  &-bg { background-color: $tink-brown; }
+}
+
 .tink-cyan {
   color: $tink-cyan;
   &-bg { background-color: $tink-cyan; }
-}
-
-.tink-teal {
-  color: $tink-teal;
-  &-bg { background-color: $tink-teal; }
-}
-
-.tink-lime {
-  color: $tink-lime;
-  &-bg { background-color: $tink-lime; }
 }
 
 .tink-grass {
@@ -49,9 +30,14 @@
   &-bg { background-color: $tink-green; }
 }
 
-.tink-purple {
-  color: $tink-purple;
-  &-bg { background-color: $tink-purple; }
+.tink-lime {
+  color: $tink-lime;
+  &-bg { background-color: $tink-lime; }
+}
+
+.tink-orange {
+  color: $tink-orange;
+  &-bg { background-color: $tink-orange; }
 }
 
 .tink-pink {
@@ -59,8 +45,23 @@
   &-bg { background-color: $tink-pink; }
 }
 
-.tink-brown {
-  color: $tink-brown;
-  &-bg { background-color: $tink-brown; }
+.tink-purple {
+  color: $tink-purple;
+  &-bg { background-color: $tink-purple; }
+}
+
+.tink-red {
+  color: $tink-red;
+  &-bg { background-color: $tink-red; }
+}
+
+.tink-teal {
+  color: $tink-teal;
+  &-bg { background-color: $tink-teal; }
+}
+
+.tink-yellow {
+  color: $tink-yellow;
+  &-bg { background-color: $tink-yellow; }
 }
 
