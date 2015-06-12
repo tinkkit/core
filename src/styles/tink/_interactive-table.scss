@@ -70,7 +70,7 @@
   //   input[type="checkbox"] + label {
   //     padding: 0; // remove padding so the tablecell width can be adjusted
 
-  //     @include mq($screen-sm, "max") {
+  //     @include mq($screen-xs-max, "max") {
   //       padding-right: rem(24);
   //     }
   //   }

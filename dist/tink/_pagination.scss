@@ -106,7 +106,7 @@
         border-color: $input-border-focus;
       }
 
-      @include mq($screen-md, "max") {
+      @include mq($screen-sm-max, "max") {
         > span {
           display: none;
         }

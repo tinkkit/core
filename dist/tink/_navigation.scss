@@ -27,7 +27,7 @@ html.nav-right-open {
 
 html.nav-left-open {
 
-  @include mq($screen-sm, "max") {
+  @include mq($screen-xs-max, "max") {
     .main {
       transform: translate(rem($nav-aside-width), 0);
     }
@@ -39,7 +39,7 @@ html.nav-left-open {
 
 html.nav-right-open {
 
-  @include mq($screen-sm, "max") {
+  @include mq($screen-xs-max, "max") {
     .main {
       transform: translate(rem(-$nav-aside-width), 0);
     }
@@ -266,7 +266,7 @@ html {
 
       &.app {
         padding: rem(0 $nav-top-padding);
-        @include mq($screen-sm, "max") {
+        @include mq($screen-xs-max, "max") {
           display: none;
         }
       }
