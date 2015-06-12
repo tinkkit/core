@@ -4,7 +4,7 @@
  */
 
 // Sass map of colour classes mapped to their color variables
- $color-list: (
+$color-list: (
   blue:     $tink-blue,
   brown:    $tink-brown,
   cyan:     $tink-cyan,
@@ -19,75 +19,12 @@
   yellow:   $tink-yellow
 );
 
-// For each key in the map, an own class is created
-@each $class-name, $variablename in $color-list {
-  .tink-txt-#{$class-name} {
-    color: $variablename;
+// For each key in the map, a class is created
+@each $class-name, $variable-name in $color-list {
+  .tink-text-#{$class-name} {
+    color: $variable-name;
   }
   .tink-bg-#{$class-name} {
-   background-color: $variablename;
+   background-color: $variable-name;
   }
 }
-
-// Previous styling
-
-// .tink-blue {
-//   color: $tink-blue;
-//   &-bg { background-color: $tink-blue; }
-// }
-
-// .tink-brown {
-//   color: $tink-brown;
-//   &-bg { background-color: $tink-brown; }
-// }
-
-// .tink-cyan {
-//   color: $tink-cyan;
-//   &-bg { background-color: $tink-cyan; }
-// }
-
-// .tink-grass {
-//   color: $tink-grass;
-//   &-bg { background-color: $tink-grass; }
-// }
-
-// .tink-green {
-//   color: $tink-green;
-//   &-bg { background-color: $tink-green; }
-// }
-
-// .tink-lime {
-//   color: $tink-lime;
-//   &-bg { background-color: $tink-lime; }
-// }
-
-// .tink-orange {
-//   color: $tink-orange;
-//   &-bg { background-color: $tink-orange; }
-// }
-
-// .tink-pink {
-//   color: $tink-pink;
-//   &-bg { background-color: $tink-pink; }
-// }
-
-// .tink-purple {
-//   color: $tink-purple;
-//   &-bg { background-color: $tink-purple; }
-// }
-
-// .tink-red {
-//   color: $tink-red;
-//   &-bg { background-color: $tink-red; }
-// }
-
-// .tink-teal {
-//   color: $tink-teal;
-//   &-bg { background-color: $tink-teal; }
-// }
-
-// .tink-yellow {
-//   color: $tink-yellow;
-//   &-bg { background-color: $tink-yellow; }
-// }
-
