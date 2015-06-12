@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.3.1] - 2015-06-11
+
+### Fixed
+- Fixed an issue when using "max-width" in media queries
+
+
+
 ## [1.3.0] - 2015-06-10
 
 ### Added

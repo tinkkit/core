@@ -3237,7 +3237,7 @@ html.has-open-modal {
         border-color: #bbb; }
       .pagination li a:focus {
         border-color: #5fb1d6; }
-      @media (max-width: 992px) {
+      @media (max-width: 991px) {
         .pagination li a > span {
           display: none; }
  }
@@ -3717,7 +3717,7 @@ button i {
 html.nav-left-open body, html.nav-right-open body {
   overflow-x: hidden; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   html.nav-left-open .main {
     -webkit-transform: translate(15.71429rem , 0);
     -ms-transform: translate(15.71429rem , 0);
@@ -3729,7 +3729,7 @@ html.nav-left-open body, html.nav-right-open body {
     transform: translate(0, 0); }
  }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   html.nav-right-open .main {
     -webkit-transform: translate(-15.71429rem , 0);
     -ms-transform: translate(-15.71429rem , 0);
@@ -3930,7 +3930,7 @@ html {
             display: none; } }
       .nav-top-branding > li.app {
         padding: 0rem 0.85714rem ; }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .nav-top-branding > li.app {
             display: none; } }
     .nav-top-branding img {
