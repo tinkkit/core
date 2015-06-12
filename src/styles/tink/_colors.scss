@@ -3,65 +3,91 @@
  * --------------------------------------------------
  */
 
-// Define the text and/or background-color of your element
+// Sass map of colour classes mapped to their color variables
+ $color-list: (
+  blue:     $tink-blue,
+  brown:    $tink-brown,
+  cyan:     $tink-cyan,
+  grass:    $tink-grass,
+  green:    $tink-green,
+  lime:     $tink-lime,
+  orange:   $tink-orange,
+  pink:     $tink-pink,
+  purple:   $tink-purple,
+  red:      $tink-red,
+  teal:     $tink-teal,
+  yellow:   $tink-yellow
+);
 
-.tink-blue {
-  color: $tink-blue;
-  &-bg { background-color: $tink-blue; }
+// For each key in the map, an own class is created
+@each $class-name, $variablename in $color-list {
+  .tink-txt-#{$class-name} {
+    color: $variablename;
+  }
+  .tink-bg-#{$class-name} {
+   background-color: $variablename;
+  }
 }
 
-.tink-brown {
-  color: $tink-brown;
-  &-bg { background-color: $tink-brown; }
-}
+// Previous styling
 
-.tink-cyan {
-  color: $tink-cyan;
-  &-bg { background-color: $tink-cyan; }
-}
+// .tink-blue {
+//   color: $tink-blue;
+//   &-bg { background-color: $tink-blue; }
+// }
 
-.tink-grass {
-  color: $tink-grass;
-  &-bg { background-color: $tink-grass; }
-}
+// .tink-brown {
+//   color: $tink-brown;
+//   &-bg { background-color: $tink-brown; }
+// }
 
-.tink-green {
-  color: $tink-green;
-  &-bg { background-color: $tink-green; }
-}
+// .tink-cyan {
+//   color: $tink-cyan;
+//   &-bg { background-color: $tink-cyan; }
+// }
 
-.tink-lime {
-  color: $tink-lime;
-  &-bg { background-color: $tink-lime; }
-}
+// .tink-grass {
+//   color: $tink-grass;
+//   &-bg { background-color: $tink-grass; }
+// }
 
-.tink-orange {
-  color: $tink-orange;
-  &-bg { background-color: $tink-orange; }
-}
+// .tink-green {
+//   color: $tink-green;
+//   &-bg { background-color: $tink-green; }
+// }
 
-.tink-pink {
-  color: $tink-pink;
-  &-bg { background-color: $tink-pink; }
-}
+// .tink-lime {
+//   color: $tink-lime;
+//   &-bg { background-color: $tink-lime; }
+// }
 
-.tink-purple {
-  color: $tink-purple;
-  &-bg { background-color: $tink-purple; }
-}
+// .tink-orange {
+//   color: $tink-orange;
+//   &-bg { background-color: $tink-orange; }
+// }
 
-.tink-red {
-  color: $tink-red;
-  &-bg { background-color: $tink-red; }
-}
+// .tink-pink {
+//   color: $tink-pink;
+//   &-bg { background-color: $tink-pink; }
+// }
 
-.tink-teal {
-  color: $tink-teal;
-  &-bg { background-color: $tink-teal; }
-}
+// .tink-purple {
+//   color: $tink-purple;
+//   &-bg { background-color: $tink-purple; }
+// }
 
-.tink-yellow {
-  color: $tink-yellow;
-  &-bg { background-color: $tink-yellow; }
-}
+// .tink-red {
+//   color: $tink-red;
+//   &-bg { background-color: $tink-red; }
+// }
+
+// .tink-teal {
+//   color: $tink-teal;
+//   &-bg { background-color: $tink-teal; }
+// }
+
+// .tink-yellow {
+//   color: $tink-yellow;
+//   &-bg { background-color: $tink-yellow; }
+// }
 
