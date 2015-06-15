@@ -5,6 +5,7 @@
 
 // Sass map of colour classes mapped to their color variables
 $color-list: (
+  black:          $black,
   blue:           $tink-blue,
   brand:          $brand,
   brand-light:    $brand-light,
@@ -12,6 +13,12 @@ $color-list: (
   cyan:           $tink-cyan,
   danger:         $brand-danger,
   grass:          $tink-grass,
+  gray:           $gray,
+  gray-darker:    $gray-darker,
+  gray-dark:      $gray-dark,
+  gray-light:     $gray-light,
+  gray-lighter:   $gray-lighter,
+  gray-lightest:  $body-bg-alt,
   green:          $tink-green,
   info:           $brand-info,
   lime:           $tink-lime,
@@ -22,6 +29,7 @@ $color-list: (
   success:        $brand-success,
   teal:           $tink-teal,
   warning:        $brand-warning,
+  white:          $white,
   yellow:         $tink-yellow
 );
 
