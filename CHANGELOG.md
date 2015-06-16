@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.4.1] - 2015-06-16
+
+### Added
+- Added color classes
+
+
+
 ## [1.3.1] - 2015-06-11
 
 ### Fixed
