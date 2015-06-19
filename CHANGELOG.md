@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.4.1] - 2015-06-19
+
+### Fixed
+- Fixed missing _colors.scss file
+
+
+
 ## [1.4.0] - 2015-06-16
 
 ### Added
