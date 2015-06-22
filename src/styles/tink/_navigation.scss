@@ -20,8 +20,10 @@
 html.nav-left-open,
 html.nav-right-open {
 
-  body {
-    overflow-x: hidden;
+  @include mq($screen-xs-max, "max") {
+    body {
+      overflow-x: hidden;
+    }
   }
 }
 

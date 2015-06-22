@@ -3874,8 +3874,10 @@ button i {
 /**
  * HTML behaviour when side navigation is open
  */
-html.nav-left-open body, html.nav-right-open body {
-  overflow-x: hidden; }
+@media (max-width: 767px) {
+  html.nav-left-open body, html.nav-right-open body {
+    overflow-x: hidden; }
+ }
 
 @media (max-width: 767px) {
   html.nav-left-open .main {

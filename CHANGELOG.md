@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.4.2] - 2015-06-22
+
+### Fixed
+- Fixed an overflow issue on the body on certain viewports
+
+
+
 ## [1.4.1] - 2015-06-19
 
 ### Fixed
