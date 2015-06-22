@@ -13,10 +13,11 @@
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   margin-bottom: rem($line-height-computed);
 
-  &.colored {
-    background: lighten($brand, 50);
-    border: none;
-  }
+  // TO BE CLEANED UP - seems not to be used??
+  // &.colored {
+  //   background: lighten($brand, 50);
+  //   border: none;
+  // }
 }
 
 // Panel contents
@@ -25,29 +26,32 @@
   padding: rem($panel-body-padding ($panel-body-padding * 2));
   &:not(:last-child) { border-bottom: 1px solid $panel-default-border; }
 
-  .panel-body-title {
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    span { font-size: 70%; color: $gray; }
-  }
+// TO BE CLEANED UP - seems not to be used??
+// Panel body title
+  // .panel-body-title {
+  //   font-weight: 600;
+  //   margin-top: 0;
+  //   margin-bottom: 1rem;
+  //   span { font-size: 70%; color: $gray; }
+  // }
 
-  .panel-body-section-title {
-    border-bottom: 1px solid $gray-lighter;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+// TO BE CLEANED UP - seems not to be used??
+// Panel body section title
+  // .panel-body-section-title {
+  //   border-bottom: 1px solid $gray-lighter;
+  //   font-weight: 300;
+  //   margin-top: 0;
+  //   margin-bottom: 1rem;
+  //   padding-bottom: 1rem;
+  //   span { font-size: 70%; }
+  // }
 
-    span { font-size: 70%; }
-  }
-
-  .panel-body { // panel inside another oanel
+  .panel-body { // panel inside another panel
     padding: rem($panel-body-padding);
-
-    &.has-no-padding {
-      padding: 0;
-    }
+// @JAZZ // TO BE CLEANED UP - seems to be unnecessary?
+    // &.has-no-padding {
+    //   padding: 0;
+    // }
   }
 
   &.has-no-padding {
@@ -57,7 +61,10 @@
 
 // Optional heading
 .panel-heading {
-  background-color: #f6f6f6;
+// TO BE CLEANED UP - seems to be unnecessary?
+//  background-color: #f6f6f6;
+  border-top-left-radius: $panel-border-radius;
+  border-top-right-radius: $panel-border-radius;
   font-size: rem(16);
   font-weight: 700;
   padding: rem($panel-heading-padding ($panel-heading-padding * 1.5));
@@ -80,10 +87,18 @@
   .fa + .panel-title {
     margin-left: rem(9);
   }
+//BADGE NEEDS TO BE MORE GENERIC
+  .badge + .panel-title {
+    margin-left: rem(9);
+  }
+// FURTHER TESTING NEEDED
+  // .panel-title + .badge {
+  //   margin-right: rem(9);
+  // }
 }
 
 
-// Optional Footer
+// Optional footer
 .panel-footer {
   border-top: 1px solid $gray-lighter;
   font-size: rem(12);
