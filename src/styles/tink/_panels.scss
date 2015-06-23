@@ -5,7 +5,7 @@
 
 // temporary variables
 $panel-heading-padding: 8px;
-$panel-body-padding: 8px;
+$panel-body-padding: 16px;
 
 
 // Base class
@@ -23,7 +23,7 @@ $panel-body-padding: 8px;
 .panel-body {
   @include clearfix();
 
-  padding: rem($panel-body-padding ($panel-body-padding * 2));
+  padding: rem($panel-body-padding);
   &:not(:last-child) { border-bottom: 1px solid $panel-default-border; }
 
   &.has-no-padding {
