@@ -39,5 +39,8 @@
     "core",
     "sass"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "tink-accordion-angular": "~1.2.0"
+  }
 }

@@ -619,7 +619,7 @@ $panel-border-radius:         $border-radius-base !default;
 
 $panel-default-text:          $gray-dark !default; // TO BE CLEANED UP  $white !default;
 $panel-default-border:        $gray-lighter !default;
-$panel-default-heading-bg:    $gray-lighter !default; // TO BE CLEANED UP lighten($gray-dark, 12) !default;
+$panel-default-heading-bg:    $body-bg-alt; //$gray-lighter !default; // TO BE CLEANED UP lighten($gray-dark, 12) !default;
 $panel-default-icon-color:    $gray !default;
 
 $panel-primary-text:          $white !default;

@@ -17,6 +17,7 @@
    'ngMessages',
    'ngSanitize',
    'ngTouch',
+   'tink.accordion',
    'tink.tinkApi',
    'tink.navigation',
    'tink.interactivetable',
