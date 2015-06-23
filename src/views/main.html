@@ -8,55 +8,43 @@
 
 <!-- ACCORDION EXAMPLE -->
 
-  <div class="panel">
-    <header class="panel-heading">
-      <h1 class="panel-title">Multiple accordion panels</h1>
-    </header>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-md-6">
-          <p>Place multiple instances of the <code>&lt;tink-accordion-panel&gt;</code> inside a <code>&lt;tink-accordion-&gt;</code> wrapper.</p>
-          <div class="margin-bottom">
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+
+      <tink-accordion data-start-open="false" data-one-at-a-time="true">
+      <tink-accordion-panel data-is-collapsed="true" >
+      <data-header>
+        First accordion panel
+      </data-header>
+      <data-content>
+        <p>This praragraph creates more vertical padding.</p>
+        This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+      </data-content>
+      </tink-accordion-panel>
+      <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
+        <data-header>
+        Second accordion panel
+      </data-header>
+      <data-content>
+        <p>This is a paragraph, hence the more spacing.</p>
+      </data-content>
+      </tink-accordion-panel>
+      <tink-accordion-panel data-is-collapsed="true">
+        <data-header>
+        Third accordion panel
+      </data-header>
+      <data-content>
+        <p>Only the third panel should be open.</p>
+      </data-content>
+      </tink-accordion-panel>
+      </tink-accordion>
 
 
-  <tink-accordion data-start-open="false" data-one-at-a-time="true">
-  <tink-accordion-panel data-is-collapsed="true" >
-  <data-header>
-    First accordion panel
-  </data-header>
-  <data-content>
-    <p>This praragraph creates more vertical padding.</p>
-    This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
-  </data-content>
-  </tink-accordion-panel>
-  <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
-    <data-header>
-    Second accordion panel
-  </data-header>
-  <data-content>
-    <p>This is a paragraph, hence the more spacing.</p>
-  </data-content>
-  </tink-accordion-panel>
-  <tink-accordion-panel data-is-collapsed="true">
-    <data-header>
-    Third accordion panel
-  </data-header>
-  <data-content>
-    <p>Only the third panel should be open.</p>
-  </data-content>
-  </tink-accordion-panel>
-</tink-accordion>
-
-
-          </div>
-          <p>None of the above three panels can be open simultaneously.</p>
-        </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
     </div>
-  </div>
+    </div>
+    <div>
+
 
 
 
