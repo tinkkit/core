@@ -87,16 +87,15 @@
   .fa + .panel-title {
     margin-left: rem(9);
   }
-//BADGE NEEDS TO BE MORE GENERIC
-  .badge + .panel-title {
+
+  [class^="badge"] + .panel-title {
     margin-left: rem(9);
   }
-// FURTHER TESTING NEEDED
-  // .panel-title + .badge {
-  //   margin-right: rem(9);
-  // }
-}
 
+   .panel-title + [class^="badge"] {
+    margin-left: rem(9);
+  }
+}
 
 // Optional footer
 .panel-footer {
