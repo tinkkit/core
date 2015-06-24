@@ -3,11 +3,6 @@
  * --------------------------------------------------
  */
 
-// temporary variables
-$panel-heading-padding: 8px;
-$panel-body-padding: 16px;
-
-
 // Base class
 .panel {
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);

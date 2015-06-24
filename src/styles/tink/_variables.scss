@@ -609,7 +609,7 @@ $modal-bgcolor:         $gray-lighter !default;
 
 $panel-bg:                    $white !default;
 $panel-body-padding:          $padding-large-horizontal !default;
-$panel-heading-padding:       $padding-base-horizontal !default;
+$panel-heading-padding:       ($padding-base-horizontal * 2/3) !default;
 $panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
 

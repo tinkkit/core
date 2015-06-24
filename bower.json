@@ -1,6 +1,6 @@
 {
   "name": "tink-core",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "main": [
     "dist/tink.css"
   ],
@@ -24,7 +24,8 @@
     "angular-route": "~1.3.12",
     "angular-messages": "~1.3.12",
     "tink-navigation-angular": "latest",
-    "tink-interactive-table-angular": "latest"
+    "tink-interactive-table-angular": "latest",
+    "tink-accordion-angular": "latest"
   },
   "authors": [
     "Jasper Van Proeyen",
@@ -38,9 +39,5 @@
     "tink",
     "core",
     "sass"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "tink-accordion-angular": "~1.2.0"
-  }
+  ]
 }
