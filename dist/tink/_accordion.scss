@@ -19,19 +19,18 @@
   }
 
   &.group-open {
-    .accordion-toggle {
+    > .accordion-toggle {
       &:before {
         transform: rotate(180deg);
       }
     }
   }
   &.group-loading {
-    .accordion-toggle {
+    > .accordion-toggle {
       &:before {
         opacity: 0;
       }
-    }
-    .accordion-toggle {
+
       &:after {
         animation: spin 1s linear infinite;
         content: "\f021";
@@ -41,6 +40,10 @@
 }
 .accordion-panel-heading {
   @extend .panel-heading;
+  &:hover, :focus, :active {
+    background-color: darken($panel-default-heading-bg, 5);
+    transition: background $animation-speed linear;
+  }
 }
 
 .accordion-toggle {

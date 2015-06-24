@@ -3,6 +3,11 @@
  * --------------------------------------------------
  */
 
+// temporary variables
+$panel-heading-padding: 8px;
+$panel-body-padding: 16px;
+
+
 // Base class
 .panel {
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
@@ -12,43 +17,14 @@
   border-radius: $panel-border-radius;
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   margin-bottom: rem($line-height-computed);
-
-  &.colored {
-    background: lighten($brand, 50);
-    border: none;
-  }
 }
 
 // Panel contents
 .panel-body {
   @include clearfix();
-  padding: rem($panel-body-padding ($panel-body-padding * 2));
+
+  padding: rem($panel-body-padding);
   &:not(:last-child) { border-bottom: 1px solid $panel-default-border; }
-
-  .panel-body-title {
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    span { font-size: 70%; color: $gray; }
-  }
-
-  .panel-body-section-title {
-    border-bottom: 1px solid $gray-lighter;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-
-    span { font-size: 70%; }
-  }
-
-  .panel-body { // panel inside another oanel
-    padding: rem($panel-body-padding);
-
-    &.has-no-padding {
-      padding: 0;
-    }
-  }
 
   &.has-no-padding {
     padding: 0;
@@ -57,10 +33,11 @@
 
 // Optional heading
 .panel-heading {
-  background-color: #f6f6f6;
+  border-top-left-radius: $panel-border-radius;
+  border-top-right-radius: $panel-border-radius;
   font-size: rem(16);
   font-weight: 700;
-  padding: rem($panel-heading-padding ($panel-heading-padding * 1.5));
+  padding: rem($panel-heading-padding ($panel-heading-padding * 2));
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -77,13 +54,23 @@
     margin: 0;
     padding: 0;
   }
+
+// Optional icon margin
   .fa + .panel-title {
+    margin-left: rem(9);
+  }
+
+// Optional badge margin
+  [class^="badge"] + .panel-title {
+    margin-left: rem(9);
+  }
+
+   .panel-title + [class^="badge"] {
     margin-left: rem(9);
   }
 }
 
-
-// Optional Footer
+// Optional footer
 .panel-footer {
   border-top: 1px solid $gray-lighter;
   font-size: rem(12);
