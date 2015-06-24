@@ -19,19 +19,18 @@
   }
 
   &.group-open {
-    .accordion-toggle {
+    > .accordion-toggle {
       &:before {
         transform: rotate(180deg);
       }
     }
   }
   &.group-loading {
-    .accordion-toggle {
+    > .accordion-toggle {
       &:before {
         opacity: 0;
       }
-    }
-    .accordion-toggle {
+
       &:after {
         animation: spin 1s linear infinite;
         content: "\f021";

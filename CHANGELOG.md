@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.4.3] - 2015-06-24
+
+### Fixed
+- Fixed an issue with nested panels where all descendant toggles would get the wrong styling
+
+
+
 ## [1.4.2] - 2015-06-22
 
 ### Fixed
