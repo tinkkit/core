@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.1] - 2015-06-24
+
+### Fixed
+- Fixed the accordion toggle's position
+
+
+
 ## [1.5.0] - 2015-06-24
 
 ### Changed

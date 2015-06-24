@@ -3007,7 +3007,7 @@ html.has-open-modal {
     right: 1rem ;
     text-align: center;
     text-decoration: inherit;
-    top: 0.85714rem ;
+    top: 0.67857rem ;
     transition: color 0.1s linear, -webkit-transform 0.1s linear;
     transition: color 0.1s linear, transform 0.1s linear;
     z-index: 2; }
@@ -3015,7 +3015,7 @@ html.has-open-modal {
     content: '';
     font-size: 14px;
     right: 0.92857rem ;
-    top: 0.92857rem ;
+    top: 0.78571rem ;
     z-index: 1; }
 
 .accordion-panel-body {

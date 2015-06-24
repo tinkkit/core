@@ -68,7 +68,7 @@
     right: rem(14);
     text-align: center;
     text-decoration: inherit;
-    top: rem(12);
+    top: rem($panel-heading-padding + 1.5px);
     transition: color $animation-speed linear, transform $animation-speed linear;
     z-index: layer('pseudo');
   }
@@ -78,7 +78,7 @@
     content: '';
     font-size: 14px;
     right: rem(13);
-    top: rem(13);
+    top: rem($panel-heading-padding + 3px);
     z-index: layer('base');
   }
 }

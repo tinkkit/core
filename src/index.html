@@ -57,5 +57,22 @@
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/interactive-table.js"></script>
 
+<script>
+  var myApp = angular.module('tinkApp');
+
+  myApp.controller('ctrl', ['$scope', function($scope) {
+    $scope.accordion = {collapsed:false};
+    $scope.openAccordion = function(status,go){
+      console.log('triggerd',status);
+      if(status === 'loading'){
+        setTimeout(function(){
+          go();
+        },3000);
+
+      }
+    }
+  }]);
+</script>
+
 </body>
 </html>
