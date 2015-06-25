@@ -7,15 +7,28 @@
   @extend .panel;
   margin-bottom: 0;
 
+  &:first-child {
+    border-top-right-radius: $panel-border-radius;
+    border-top-left-radius: $panel-border-radius;
+
+    .panel-heading {
+      border-top-right-radius: $panel-border-radius;
+      border-top-left-radius: $panel-border-radius;
+    }
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $panel-border-radius;
+    border-bottom-left-radius: $panel-border-radius;
+
+    .panel-heading {
+      border-bottom-right-radius: $panel-border-radius;
+      border-bottom-left-radius: $panel-border-radius;
+    }
+  }
+
   > a {
     text-decoration: none;
-
-    &:hover {
-      .accordion-toggle {
-        background-color: darken($panel-default-heading-bg, 5);
-        transition: background $animation-speed linear;
-      }
-    }
   }
 
   &.group-open {
@@ -38,10 +51,12 @@
     }
   }
 }
+
 .accordion-panel-heading {
   @extend .panel-heading;
+
   &:hover, :focus, :active {
-    background-color: darken($panel-default-heading-bg, 5);
+    background-color: darken($panel-default-heading-bg, 4);
     transition: background $animation-speed linear;
   }
 }
