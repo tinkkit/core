@@ -16,6 +16,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.2] - 2015-06-26
+
+### Changed
+- Made subtle design changes to panel and accordion
+- Optimized the panel title so that basic HTML can be added
+
+
+
 ## [1.5.1] - 2015-06-24
 
 ### Fixed

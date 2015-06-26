@@ -59,6 +59,11 @@
     background-color: darken($panel-default-heading-bg, 4);
     transition: background $animation-speed linear;
   }
+
+  .panel-title {
+    padding-right: rem(20);
+    width: 100%;
+  }
 }
 
 .accordion-toggle {
