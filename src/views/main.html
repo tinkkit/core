@@ -1,9 +1,3 @@
-<div class="container margin-top">
-  <div class="row margin-top">
-    </div>
-  </div>
-</div>
-
 <!-- ACCORDION EXAMPLE -->
 
 <div class="container margin-top" data-ng-controller="ctrl">
@@ -11,69 +5,83 @@
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
 
       <tink-accordion data-start-open="false" data-one-at-a-time="true">
-      <tink-accordion-panel data-is-collapsed="true" data-onclick="openAccordion">
-      <data-header>
-        First accordion panel
-      </data-header>
-      <data-content>
-        <p>This praragraph creates more vertical padding.</p>
-        This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
-      </data-content>
-      </tink-accordion-panel>
-      <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
-        <data-header>
-        Second accordion panel
-      </data-header>
-      <data-content>
-        <p>This is a paragraph, hence the more spacing.</p>
-      </data-content>
-      </tink-accordion-panel>
-      <tink-accordion-panel data-is-collapsed="true">
-        <data-header>
-        Third accordion panel
-      </data-header>
-      <data-content>
-        <button>text</button>
-      </data-content>
-      </tink-accordion-panel>
+        <tink-accordion-panel data-is-collapsed="true" data-onclick="openAccordion">
+          <data-header>
+            First accordion panel
+          </data-header>
+          <data-content>
+            <p>This paragraph creates more vertical padding.</p>
+            This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+          </data-content>
+        </tink-accordion-panel>
+        <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
+          <data-header>
+            Second accordion panel
+          </data-header>
+          <data-content>
+            <p>This is a paragraph, hence the more spacing.</p>
+          </data-content>
+        </tink-accordion-panel>
+        <tink-accordion-panel data-is-collapsed="true">
+          <data-header>
+            Third accordion panel
+          </data-header>
+          <data-content>
+            <button>text</button>
+          </data-content>
+        </tink-accordion-panel>
       </tink-accordion>
 
-  <ul class="list-unstyled">
-            <tink-accordion data-start-open="false" data-one-at-a-time="true">
-      <li class="margin-top"><tink-accordion-panel data-is-collapsed="true" >
-      <data-header>
-        First accordion panel
-      </data-header>
-      <data-content>
-        <p>This praragraph creates more vertical padding.</p>
-        This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
-      </data-content>
-      </tink-accordion-panel></li>
-      <li class="margin-top"><tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
-        <data-header>
-        Second accordion panel
-      </data-header>
-      <data-content>
-        <p>This is a paragraph, hence the more spacing.</p>
-      </data-content>
-      </tink-accordion-panel></li>
-      <li class="margin-top"><tink-accordion-panel data-is-collapsed="true">
-        <data-header>
-        Third accordion panel
-      </data-header>
-      <data-content>
-        <button>text</button>
-      </data-content>
-      </tink-accordion-panel></li>
-      </tink-accordion>
-</ul>
+    </div>
+  </div>
+<div>
+
+<!-- ACCORDION IN LIST EXAMPLE -->
+
+<div class="container margin-top" data-ng-controller="ctrl">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+
+      <ul class="list-unstyled">
+        <tink-accordion data-start-open="false" data-one-at-a-time="true">
+          <li class="margin-top">
+            <tink-accordion-panel data-is-collapsed="true" >
+              <data-header>
+                First accordion panel
+              </data-header>
+              <data-content>
+                <p>This praragraph creates more vertical padding.</p>
+                This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+              </data-content>
+            </tink-accordion-panel></li>
+          <li class="margin-top">
+            <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
+              <data-header>
+                Second accordion panel
+              </data-header>
+              <data-content>
+                <p>This is a paragraph, hence the more spacing.</p>
+              </data-content>
+            </tink-accordion-panel>
+          </li>
+          <li class="margin-top">
+            <tink-accordion-panel data-is-collapsed="true">
+              <data-header>
+                Third accordion panel
+              </data-header>
+              <data-content>
+                <button>text</button>
+              </data-content>
+            </tink-accordion-panel>
+          </li>
+        </tink-accordion>
+      </ul>
 
     </div>
-    </div>
-    <div>
+  </div>
+<div>
 
-
-
+<!-- FORM EXAMPLE -->
 
 <div class="container margin-top">
   <div class="row margin-top">
@@ -98,11 +106,13 @@
     </div>
   </div>
 
+<!-- BASIC PANEL EXAMPLE -->
+
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
       <section class="panel">
         <header class="panel-heading">
-          <h3 class="panel-title">Basic panel</h3>
+          <span class="panel-title h3">Basic panel</span>
         </header>
         <div class="panel-body">
           1st panel body content that consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
@@ -116,6 +126,8 @@
       </section>
     </div>
   </div>
+
+<!-- PANEL WITH BADGE AND FORM EXAMPLE -->
 
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
@@ -144,6 +156,8 @@
     </div>
   </div>
 
+<!-- PANEL WITHOUT HEADING EXAMPLE -->
+
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
       <section class="panel">
@@ -153,6 +167,8 @@
       </section>
     </div>
   </div>
+
+<!-- PANEL WITH FOOTER EXAMPLE -->
 
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
@@ -167,6 +183,7 @@
     </div>
   </div>
 
+<!-- PANEL WITH ICON EXAMPLE -->
 
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
@@ -180,6 +197,9 @@
       </section>
     </div>
   </div>
+
+
+<!-- RESPONSIVE TABLE EXAMPLE -->
 
   <div class="row margin-bottom margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
