@@ -2670,7 +2670,6 @@ button[type="submit"], input[type="submit"], .btn-primary {
   border-color: #eaeaea;
   background-color: #fff;
   border: 1px solid #eaeaea;
-  border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.42857rem ; }
   .panel .panel-heading, .accordion-panel .panel-heading, .panel .accordion-panel-heading, .accordion-panel .accordion-panel-heading {
@@ -2684,6 +2683,11 @@ button[type="submit"], input[type="submit"], .btn-primary {
       background-color: #333; }
   .panel .panel-footer + .panel-collapse > .panel-body, .accordion-panel .panel-footer + .panel-collapse > .panel-body, .panel .panel-footer + .panel-collapse > .accordion-panel-body, .accordion-panel .panel-footer + .panel-collapse > .accordion-panel-body {
     border-bottom-color: #eaeaea; }
+  .panel:not(.accordion-panel), .accordion-panel:not(.accordion-panel) {
+    border-radius: 3px; }
+  .panel > .panel-heading, .accordion-panel > .panel-heading, .panel > .accordion-panel-heading, .accordion-panel > .accordion-panel-heading {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
 
 .panel-body, .accordion-panel-body {
   padding: 1.14286rem ; }
@@ -2698,8 +2702,6 @@ button[type="submit"], input[type="submit"], .btn-primary {
     padding: 0; }
 
 .panel-heading, .accordion-panel-heading {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
   font-size: 1.14286rem ;
   font-weight: 700;
   padding: 0.57143rem 1.14286rem ; }
@@ -2969,11 +2971,20 @@ html.has-open-modal {
  */
 .accordion-panel {
   margin-bottom: 0; }
+  .accordion-panel:first-child {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px; }
+    .accordion-panel:first-child .panel-heading, .accordion-panel:first-child .accordion-panel-heading {
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px; }
+  .accordion-panel:last-child {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; }
+    .accordion-panel:last-child .panel-heading, .accordion-panel:last-child .accordion-panel-heading {
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px; }
   .accordion-panel > a {
     text-decoration: none; }
-    .accordion-panel > a:hover .accordion-toggle {
-      background-color: #eaeaea;
-      transition: background 0.1s linear; }
   .accordion-panel.group-open > .accordion-toggle:before {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -2986,8 +2997,11 @@ html.has-open-modal {
     content: "\f021"; }
 
 .accordion-panel-heading:hover, .accordion-panel-heading :focus, .accordion-panel-heading :active {
-  background-color: #eaeaea;
+  background-color: #ededed;
   transition: background 0.1s linear; }
+.accordion-panel-heading .panel-title {
+  padding-right: 1.42857rem ;
+  width: 100%; }
 
 .accordion-toggle {
   cursor: pointer;
