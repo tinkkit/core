@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.3] - 2015-06-30
+
+### Added
+- Added tooltip styling
+
+
+
 ## [1.5.2] - 2015-06-26
 
 ### Changed
