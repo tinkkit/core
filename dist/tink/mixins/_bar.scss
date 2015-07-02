@@ -46,12 +46,13 @@
       line-height: rem($height);
       margin: 0;
       padding: rem(0 ($padding / 2));
+      user-select: none;
 
-      &:first-child {
+      &:first-child:not(.bar-item-sm) {
         padding-left: 0;
       }
 
-      &:last-child {
+      &:last-child:not(.bar-item-sm) {
         padding-right: 0;
       }
 
@@ -93,6 +94,66 @@
       height: 100%;
       float: right;
       text-align: left;
+    }
+  }
+
+  .popover {
+    ul {
+      @extend .list-unstyled;
+      > hr {
+        border-top-color: $hr-border;
+        margin: rem($line-height-computed / 4) 0;
+      }
+
+      li {
+        padding: rem(5);
+      }
+
+      li:hover:not(.disabled) {
+        background-color: $gray-lighter;
+        cursor: pointer;
+        transition: background-color linear $animation-speed;
+      }
+    }
+  }
+
+  /**
+  * Bar menu items styled on breakpoints
+  */
+  .bar-item-md {
+    &:hover:not(.disabled) {
+      text-decoration: underline;
+      cursor: pointer;
+      transition: text-decoration linear $animation-speed;
+    }
+
+    &.disabled {
+      color: $gray-light;
+      cursor: default;
+    }
+
+    &:last-child {
+      margin-left: rem(20);
+    }
+  }
+
+  .bar-item-sm {
+    @extend .btn;
+    width: rem(45);
+
+    &.disabled {
+      background-color: $gray-lighter;
+    }
+
+    &:last-child {
+      margin-left: rem(10);
+    }
+  }
+
+  .bar-item-xs {
+    &.disabled {
+      color: $gray-light;
+      cursor: default;
     }
   }
 }
