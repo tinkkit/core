@@ -39,5 +39,8 @@
     "tink",
     "core",
     "sass"
-  ]
+  ],
+  "resolutions": {
+    "tink-core": "1.5.4"
+  }
 }
