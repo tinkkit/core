@@ -20,8 +20,6 @@
    'tink.accordion',
    'tink.tinkApi',
    'tink.navigation',
-   'tink.interactivetable',
-   'tink.sorttable'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider
