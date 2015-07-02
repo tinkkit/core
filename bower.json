@@ -1,6 +1,6 @@
 {
   "name": "tink-core",
-  "version": "1.5.4",
+  "version": "1.5.7",
   "main": [
     "dist/tink.css"
   ],
@@ -30,8 +30,7 @@
   "authors": [
     "Jasper Van Proeyen",
     "Vincent Bouillart",
-    "Lieven Van Gestel",
-    "Tom Hermans"
+    "Lieven Van Gestel"
   ],
   "description": "Tink is an in-house developed easy-to-use front end framework for quick prototyping and simple deployment of all kinds of websites and apps, keeping a uniform and consistent look and feel.",
   "homepage": "http://tink.digipolis.be",

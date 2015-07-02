@@ -16,6 +16,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.7] - 2015-07-02
+
+### Fixed
+- Reverted to 1.5.4, but kept borked builds
+
+
+
+## [1.5.6] - 2015-07-02
+
+### Fixed
+- Fixed faulty build
+
+
+
+## [1.5.5] - 2015-07-02
+
+### Fixed
+- Fixed mixup in bower file
+
+### Added
+- Added extra stylings to bar list items
+- Added extra breakpoint for JavaScript
+
+
+
 ## [1.5.4] - 2015-07-02
 
 ### Added
