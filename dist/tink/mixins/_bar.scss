@@ -48,11 +48,11 @@
       padding: rem(0 ($padding / 2));
       user-select: none;
 
-      &:first-child:not(.bar-item-sm) {
+      &:first-child:not([class*="bar-item"]) {
         padding-left: 0;
       }
 
-      &:last-child:not(.bar-item-sm) {
+      &:last-child:not([class*="bar-item"]) {
         padding-right: 0;
       }
 
@@ -97,6 +97,12 @@
     }
   }
 
+  .main-actions {
+  }
+
+  .sub-actions {
+  }
+
   .popover {
     ul {
       @extend .list-unstyled;
@@ -121,32 +127,21 @@
   * Bar menu items styled on breakpoints
   */
   .bar-item-md {
-    &:hover:not(.disabled) {
-      text-decoration: underline;
-      cursor: pointer;
-      transition: text-decoration linear $animation-speed;
-    }
+    @extend .btn;
+    margin-right: rem(3);
 
     &.disabled {
-      color: $gray-light;
-      cursor: default;
-    }
-
-    &:last-child {
-      margin-left: rem(20);
+      background-color: $gray-lighter;
     }
   }
 
   .bar-item-sm {
     @extend .btn;
+    margin-right: rem(3);
     width: rem(45);
 
     &.disabled {
       background-color: $gray-lighter;
-    }
-
-    &:last-child {
-      margin-left: rem(10);
     }
   }
 

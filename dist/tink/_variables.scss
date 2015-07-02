@@ -21,10 +21,14 @@ $screen-md-min:              $screen-md !default;
 $screen-lg:                  1200px !default; // Large screen / wide desktop
 $screen-lg-min:              $screen-lg !default;
 
+$screen-xl:                  1600px !default; // Extra large screen / wide desktop
+$screen-xl-min:              $screen-xl !default;
+
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-sm - 1) !default;
 $screen-sm-max:              ($screen-md - 1) !default;
 $screen-md-max:              ($screen-lg - 1) !default;
+$screen-lg-max:              ($screen-xl - 1) !default;
 
 
 // Grid system
