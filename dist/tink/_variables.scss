@@ -520,15 +520,18 @@ $zindex-tooltip:              layer("popover") !default;
 //** Tooltip max width
 $tooltip-max-width:           200px !default;
 //** Tooltip text color
-$tooltip-color:               $gray-darker !default;
+$tooltip-color:               $text-color !default;
 //** Tooltip background color
-$tooltip-bg:                  $white !default; //lighten($gray-light, 10) !default;
+$tooltip-bg:                  #fff176 !default; // lighten($gray-light, 10) !default;
 // $tooltip-opacity:             .9 !default;
+$tooltip-border-color:        darken($tooltip-bg, 2) !default;
 
 //** Tooltip arrow width
-$tooltip-arrow-width:         5px !default;
+$tooltip-arrow-width:         6px !default;
 //** Tooltip arrow color
+$tooltip-arrow-border-color:  $tooltip-border-color !default;
 $tooltip-arrow-color:         $tooltip-bg !default;
+$tooltip-arrow-offset:        16px !default;
 
 
 
@@ -546,6 +549,8 @@ $popover-button-background-color:       $nav-aside-item-open-color !default;
 $popover-button-hover-background-color: $nav-aside-link-hover-background-color !default;
 $popover-button-color:                  $nav-aside-link-color !default;
 
+$popover-arrow-color:                   $popover-bg-color;
+$popover-arrow-border-color:            $popover-border-color;
 $popover-arrow-offset:                  16px !default;
 
 
