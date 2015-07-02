@@ -16,6 +16,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.4] - 2015-07-02
+
+### Added
+- Added different stylings to bar list items
+- Added breakpoint content for JavaScript
+
+
+
 ## [1.5.3] - 2015-06-30
 
 ### Added
