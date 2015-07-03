@@ -4113,15 +4113,16 @@ html {
       float: right;
       text-align: left; }
   .nav-top .sub-actions {
+    margin-left: 0.21429rem ;
     padding-left: 0.21429rem ;
     position: relative; }
-    .nav-top .sub-actions .vertical-rule {
-      background-color: #bbb;
-      content: '';
+    .nav-top .sub-actions hr {
+      border-left: 1px solid #eaeaea;
+      border-top: 0;
       display: inline-block;
       height: 60%;
-      left: 0;
-      margin: 0 0.21429rem ;
+      left: -2px;
+      margin: 0;
       position: absolute;
       top: 20%;
       width: 1px; }
@@ -4452,15 +4453,16 @@ html {
       float: right;
       text-align: left; }
   .bar .sub-actions {
+    margin-left: 0.21429rem ;
     padding-left: 0.21429rem ;
     position: relative; }
-    .bar .sub-actions .vertical-rule {
-      background-color: #bbb;
-      content: '';
+    .bar .sub-actions hr {
+      border-left: 1px solid #eaeaea;
+      border-top: 0;
       display: inline-block;
       height: 60%;
-      left: 0;
-      margin: 0 0.21429rem ;
+      left: -2px;
+      margin: 0;
       position: absolute;
       top: 20%;
       width: 1px; }
