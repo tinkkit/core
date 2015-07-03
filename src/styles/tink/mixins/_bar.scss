@@ -102,8 +102,8 @@
   }
 
   .sub-actions {
-    margin-left: rem(3);
-    padding-left: rem(3);
+    margin-left: rem(4);
+    padding-left: rem(4);
     //position: relative; (messes up the popovers)
 
     // Create a vertical rule between the sub- and the main-actions.
@@ -114,11 +114,11 @@
         border-left: 1px solid #eaeaea;
         border-top: 0;
         display: inline-block;
-        height: rem(6);
+        height: rem(30);
         left: -7px;
         margin: 0;
         position: absolute;
-        top: rem(3);
+        top: rem(10);
         width: 1px;
       }
     }
