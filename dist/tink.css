@@ -3792,7 +3792,6 @@ button i {
   padding: 6px 12px;
   position: relative;
   text-decoration: none;
-  transition: bottom 0.1s linear, left 0.1s linear, right 0.1s linear, top 0.1s linear;
   white-space: normal;
   z-index: 5; }
   .tooltip:before, .tooltip:after {
@@ -4117,12 +4116,15 @@ html {
     padding-left: 0.21429rem ;
     position: relative; }
     .nav-top .sub-actions .vertical-rule {
-      height: 60%;
-      width: 1px;
       background-color: #bbb;
-      position: absolute;
+      content: '';
+      display: inline-block;
+      height: 60%;
       left: 0;
-      top: 20%; }
+      margin: 0 0.21429rem ;
+      position: absolute;
+      top: 20%;
+      width: 1px; }
     .nav-top .sub-actions li:last-of-type {
       margin-left: 1.42857rem ;
       margin-right: 0; }
@@ -4131,17 +4133,17 @@ html {
     margin: 0.35714rem  0; }
   .nav-top .popover ul li {
     padding: 0.35714rem ; }
-  .nav-top .popover ul li:hover:not(.disabled) {
+  .nav-top .popover ul li:hover:not([disabled]) {
     background-color: #eaeaea;
     cursor: pointer;
     transition: background-color linear 0.1s; }
   .nav-top .bar-item-md, .nav-top .bar-item-sm {
     margin-right: 0.21429rem ; }
-    .nav-top .bar-item-md.disabled, .nav-top .bar-item-sm.disabled {
+    .nav-top .bar-item-md.disabled, .nav-top .bar-item-md[disabled], .nav-top .bar-item-sm.disabled, .nav-top .bar-item-sm[disabled] {
       background-color: #eaeaea; }
   .nav-top .bar-item-sm {
     width: 3.21429rem ; }
-  .nav-top .bar-item-xs.disabled {
+  .nav-top .bar-item-xs.disabled, .nav-top .bar-item-xs[disabled] {
     color: #bbb;
     cursor: default; }
   .nav-top a.btn, .nav-top a.bar-item-md, .nav-top a.bar-item-sm, .nav-top a.btn-primary, .nav-top button, .nav-top input {
@@ -4453,12 +4455,15 @@ html {
     padding-left: 0.21429rem ;
     position: relative; }
     .bar .sub-actions .vertical-rule {
-      height: 60%;
-      width: 1px;
       background-color: #bbb;
-      position: absolute;
+      content: '';
+      display: inline-block;
+      height: 60%;
       left: 0;
-      top: 20%; }
+      margin: 0 0.21429rem ;
+      position: absolute;
+      top: 20%;
+      width: 1px; }
     .bar .sub-actions li:last-of-type {
       margin-left: 1.42857rem ;
       margin-right: 0; }
@@ -4467,17 +4472,17 @@ html {
     margin: 0.35714rem  0; }
   .bar .popover ul li {
     padding: 0.35714rem ; }
-  .bar .popover ul li:hover:not(.disabled) {
+  .bar .popover ul li:hover:not([disabled]) {
     background-color: #eaeaea;
     cursor: pointer;
     transition: background-color linear 0.1s; }
   .bar .bar-item-md, .bar .bar-item-sm {
     margin-right: 0.21429rem ; }
-    .bar .bar-item-md.disabled, .bar .bar-item-sm.disabled {
+    .bar .bar-item-md.disabled, .bar .bar-item-md[disabled], .bar .bar-item-sm.disabled, .bar .bar-item-sm[disabled] {
       background-color: #eaeaea; }
   .bar .bar-item-sm {
     width: 3.21429rem ; }
-  .bar .bar-item-xs.disabled {
+  .bar .bar-item-xs.disabled, .bar .bar-item-xs[disabled] {
     color: #bbb;
     cursor: default; }
 

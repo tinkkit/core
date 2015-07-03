@@ -108,12 +108,15 @@
     // Create a vertical rule between the sub- and the main-actions.
     // A vertical border is too high so the choice was made for a separate rule.
     .vertical-rule {
-      height: 60%;//rem(30);
-      width: 1px;
       background-color: $btn-default-border;
-      position: absolute;
+      content: '';
+      display: inline-block;
+      height: 60%;//rem(30);
       left:0;
+      margin: 0 rem(3);
+      position: absolute;
       top: 20%;//rem(10);
+      width: 1px;
     }
     // Separate last list item
     li:last-of-type  {
@@ -135,7 +138,7 @@
         padding: rem(5);
       }
 
-      li:hover:not(.disabled) {
+      li:hover:not([disabled]) {
         background-color: $gray-lighter;
         cursor: pointer;
         transition: background-color linear $animation-speed;
@@ -153,7 +156,8 @@
     @extend .btn;
     margin-right: rem(3);
 
-    &.disabled {
+    &.disabled,
+    &[disabled] {
       background-color: $gray-lighter;
     }
 
@@ -167,7 +171,8 @@
   }
 
   .bar-item-xs {
-    &.disabled {
+    &.disabled,
+    &[disabled] {
       color: $gray-light;
       cursor: default;
     }
