@@ -18,18 +18,18 @@
  */
 
 body:before {
-  content: "smartphone";
+  content: "smartphone-view";
   display: none; /* Prevent from displaying. */
 }
 
 @include mq($screen-sm-min) {
   body:before {
-    content: "tablet";
+    content: "tablet-view";
   }
 }
-@include mq($screen-md-min) {
+@include mq(1600px) {
   body:before {
-    content: "desktop";
+    content: "wide-xl-view";
   }
 }
 

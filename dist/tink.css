@@ -3906,18 +3906,18 @@ button i {
  * Breakpoints to import into JavaScript
  */
 body:before {
-  content: "smartphone";
+  content: "smartphone-view";
   display: none;
   /* Prevent from displaying. */ }
 
 @media (min-width: 768px) {
   body:before {
-    content: "tablet"; }
+    content: "tablet-view"; }
  }
 
-@media (min-width: 992px) {
+@media (min-width: 1600px) {
   body:before {
-    content: "desktop"; }
+    content: "wide-xl-view"; }
  }
 
 /**
