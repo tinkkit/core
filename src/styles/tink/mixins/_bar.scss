@@ -124,7 +124,7 @@
     }
 
     // Separate last list item
-    li:last-of-type  {
+    > li:last-of-type  {
       margin-left: rem(20);
       margin-right: 0;
     }

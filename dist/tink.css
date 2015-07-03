@@ -4127,7 +4127,7 @@ html {
         position: absolute;
         top: 0.71429rem ;
         width: 1px; }
-    .nav-top .sub-actions li:last-of-type {
+    .nav-top .sub-actions > li:last-of-type {
       margin-left: 1.42857rem ;
       margin-right: 0; }
   .nav-top .popover ul > hr {
@@ -4468,7 +4468,7 @@ html {
         position: absolute;
         top: 0.71429rem ;
         width: 1px; }
-    .bar .sub-actions li:last-of-type {
+    .bar .sub-actions > li:last-of-type {
       margin-left: 1.42857rem ;
       margin-right: 0; }
   .bar .popover ul > hr {
