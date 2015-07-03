@@ -104,21 +104,25 @@
   .sub-actions {
     margin-left: rem(3);
     padding-left: rem(3);
-    position: relative;
+    //position: relative; (messes up the popovers)
 
     // Create a vertical rule between the sub- and the main-actions.
     // The horizontal rule is restyled to be vertical.
-    hr {
-      border-left: 1px solid #eaeaea;
-      border-top: 0;
-      display: inline-block;
-      height: 60%;
-      left: -2px;
-      margin: 0;
-      position: absolute;
-      top: 20%;
-      width: 1px;
+    .hr-container{
+      position: relative;
+      hr {
+        border-left: 1px solid #eaeaea;
+        border-top: 0;
+        display: inline-block;
+        height: rem(6);
+        left: -7px;
+        margin: 0;
+        position: absolute;
+        top: rem(3);
+        width: 1px;
+      }
     }
+
     // Separate last list item
     li:last-of-type  {
       margin-left: rem(20);
