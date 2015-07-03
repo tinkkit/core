@@ -48,11 +48,11 @@
       padding: rem(0 ($padding / 2));
       user-select: none;
 
-      &:first-child:not(.bar-item-sm) {
+      &:first-child:not([class*="bar-item"]) {
         padding-left: 0;
       }
 
-      &:last-child:not(.bar-item-sm) {
+      &:last-child:not([class*="bar-item"]) {
         padding-right: 0;
       }
 
@@ -97,6 +97,32 @@
     }
   }
 
+  .main-actions {
+
+  }
+
+  .sub-actions {
+    padding-left: rem(3);
+    position: relative;
+
+    // Create a vertical rule between the sub- and the main-actions.
+    // A vertical border is too high so the choice was made for a separate rule.
+    .vertical-rule {
+      height: 60%;//rem(30);
+      width: 1px;
+      background-color: $btn-default-border;
+      position: absolute;
+      left:0;
+      top: 20%;//rem(10);
+    }
+    // Separate last list item
+    li:last-of-type  {
+      margin-left: rem(20);
+      margin-right: 0;
+    }
+
+  }
+
   .popover {
     ul {
       @extend .list-unstyled;
@@ -120,34 +146,24 @@
   /**
   * Bar menu items styled on breakpoints
   */
-  .bar-item-md {
-    &:hover:not(.disabled) {
-      text-decoration: underline;
-      cursor: pointer;
-      transition: text-decoration linear $animation-speed;
-    }
-
-    &.disabled {
-      color: $gray-light;
-      cursor: default;
-    }
-
-    &:last-child {
-      margin-left: rem(20);
-    }
-  }
-
+  // just adding this extra class to the following @extend rules enlarges the Tink-Core from 264KB to 428KB
+  // needs to be checked why this happens and how to refactor
+  .bar-item-md,
   .bar-item-sm {
     @extend .btn;
-    width: rem(45);
+    margin-right: rem(3);
 
     &.disabled {
       background-color: $gray-lighter;
     }
 
-    &:last-child {
-      margin-left: rem(10);
-    }
+  }
+
+  .bar-item-md {
+  }
+
+  .bar-item-sm {
+    width: rem(45);
   }
 
   .bar-item-xs {
