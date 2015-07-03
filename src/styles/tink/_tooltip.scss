@@ -16,11 +16,9 @@
   font-weight: normal;
   line-height: $line-height-base;
   max-width: rem($tooltip-max-width);
-  //min-width: rem($tooltip-max-width);
   padding: ($padding-base-vertical $padding-base-horizontal);
   position: relative;
   text-decoration: none;
-  //transition: bottom $animation-speed linear, left $animation-speed linear, right $animation-speed linear, top $animation-speed linear;
   white-space: normal;
   z-index: layer("popover");
 

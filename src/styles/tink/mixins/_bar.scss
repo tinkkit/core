@@ -108,10 +108,10 @@
 
     // Create a vertical rule between the sub- and the main-actions.
     // The horizontal rule is restyled to be vertical.
-    .hr-container{
+    .set-hr-vertical {
       position: relative;
       hr {
-        border-left: 1px solid #eaeaea;
+        border-left: 1px solid $hr-border;
         border-top: 0;
         display: inline-block;
         height: rem(30);
