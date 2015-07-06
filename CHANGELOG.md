@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.8] - 2015-07-06
+
+### Fixed
+- Fixed transition for tooltip
+
+### Added
+- Added new stylings to bar list items
+
+
+
 ## [1.5.7] - 2015-07-02
 
 ### Fixed
