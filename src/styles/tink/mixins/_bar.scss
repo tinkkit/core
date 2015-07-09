@@ -123,27 +123,6 @@
     > li:last-of-type  {
       margin-left: rem(20);
     }
-
-  }
-
-  .popover {
-    ul {
-      @extend .list-unstyled;
-      > hr {
-        border-top-color: $hr-border;
-        margin: rem($line-height-computed / 4) 0;
-      }
-
-      li {
-        padding: rem(5);
-      }
-
-      li:hover:not([disabled]) {
-        background-color: $gray-lighter;
-        cursor: pointer;
-        transition: background-color linear $animation-speed;
-      }
-    }
   }
 
   /**
