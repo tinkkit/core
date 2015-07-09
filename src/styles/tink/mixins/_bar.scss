@@ -149,11 +149,10 @@
   /**
   * Bar menu items styled on breakpoints
   */
-  // just by adding an extra class to the @extend enlarges the Tink-Core from 264KB to 428KB
-  // needs to be checked why this happens and how to refactor
   .bar-item-md,
   .bar-item-sm {
-    @extend .btn;
+    @extend %btn;
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
     &:not(:last-child) { //gives a problem when tooltip appears on bar menu item - to check in script
       margin-right: rem(3);
     }
