@@ -540,6 +540,7 @@ $tooltip-arrow-offset:        16px !default;
  */
 $popover-bg-color:                      lighten($nav-aside-item-open-color, 2) !default;
 $popover-border-color:                  $btn-default-border !default;// rgba(0,0,0,.2)
+$popover-disabled-color:                $gray-light !default;
 $popover-padding:                       6px !default;
 $popover-header-bg:                     $white !default;
 

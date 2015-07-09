@@ -16,6 +16,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.5.9] - 2015-07-09
+
+### Fixed
+- Fixed wrong use of buttons in navigation bar
+- Fixed popover menu for interactive table
+
+
+
 ## [1.5.8] - 2015-07-06
 
 ### Fixed
