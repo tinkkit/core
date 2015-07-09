@@ -97,10 +97,6 @@
     }
   }
 
-  .main-actions {
-
-  }
-
   .sub-actions {
     margin-left: rem(4);
     padding-left: rem(4);
@@ -143,18 +139,16 @@
 
   }
 
-  .bar-item-md {
-  }
-
   .bar-item-sm {
     width: rem(45);
   }
 
-  .bar-item-xs {
-    &.disabled,
-    &[disabled] {
-      color: $gray-light;
-      cursor: default;
-    }
-  }
+  // Not used at this moment
+  // .bar-item-xs {
+  //   &.disabled,
+  //   &[disabled] {
+  //     color: $gray-light;
+  //     cursor: not-allowed;
+  //   }
+  // }
 }
