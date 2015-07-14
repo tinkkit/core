@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.6.0] - 2015-07-14
+
+### Changed
+- Separated overflow styling from modal-dialog
+
+
+
 ## [1.5.9] - 2015-07-09
 
 ### Fixed

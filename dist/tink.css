@@ -2948,7 +2948,6 @@ html.has-open-modal {
   display: inline-block;
   margin: 2.28571rem 0rem ;
   max-width: 95%;
-  overflow: auto;
   padding: 1.78571rem ;
   -webkit-user-select: all;
   -moz-user-select: all;
@@ -2964,6 +2963,8 @@ html.has-open-modal {
   @media (min-width: 1200px) {
     .modal-dialog {
       max-width: 42.85714rem ; } }
+  .modal-dialog.set-overflow {
+    overflow: auto; }
 
 /**
  * Accordions
