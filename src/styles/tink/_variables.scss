@@ -75,6 +75,7 @@ $gray-dark:             #333 !default;
 $gray:                  #888 !default;
 $gray-light:            #bbb !default;
 $gray-lighter:          #eaeaea !default;
+$gray-lightest:         #f7f7f7 !default;
 
 $brand:                 #347ea6 !default; // Digipolis dark blue - was #698ab2
 $brand-light:           #5fb1d6 !default; // Digipolis light blue - was #264a7a
@@ -86,7 +87,7 @@ $brand-danger:          #e60038 !default; // red
 
 // Settings for some of the most global styles.
 $body-bg:               $white !default;
-$body-bg-alt:           #f7f7f7 !default;
+$body-bg-alt:           $gray-lightest !default;
 $text-color:            $gray-dark !default;
 $link-color:            $brand-light !default;
 $link-hover-color:      darken($link-color, 10%) !default;
@@ -623,9 +624,9 @@ $panel-border-radius:         $border-radius-base !default;
     // $panel-inner-border:          $gray-lighter !default;
     // $panel-footer-bg:             lighten($gray-lighter, 6%) !default;
 
-$panel-default-text:          $gray-dark !default; // TO BE CLEANED UP  $white !default;
+$panel-default-text:          $gray-dark !default;
 $panel-default-border:        $gray-lighter !default;
-$panel-default-heading-bg:    $body-bg-alt; //$gray-lighter !default; // TO BE CLEANED UP lighten($gray-dark, 12) !default;
+$panel-default-heading-bg:    $body-bg-alt !default;
 $panel-default-icon-color:    $gray !default;
 
 $panel-primary-text:          $white !default;

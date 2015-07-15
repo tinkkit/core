@@ -2,77 +2,28 @@
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1">
 
-      <h4 class="text-center tink-bg-gray-lightest">INTERACTIVE BAR EXAMPLE MD</h4>
+     <!-- LIST FILTER BLOCK EXAMPLE -->
 
-      <div class="bar">
-        <div class="bar-section">
-          <ul class="bar-section-left main-actions">
-            <li class="bar-item-md"><i class="fa fa-minus-square-o fa-fw"></i> Inactief maken</li>
-            <li class="bar-item-md"><i class="fa fa-envelope-o fa-fw"></i> Mail sturen</li>
-            <li class="bar-item-md"><i class="fa fa-line-chart fa-fw"></i> Traject tonen</li>
-          </ul>
-          <ul class="bar-section-left sub-actions">
-            <hr>
-            <li class="bar-item-md disabled"><i class="fa fa-file-o fa-fw"></i> Verslagen tonen</li>
-            <li class="bar-item-md disabled"><i class="fa fa-folder-open-o fa-fw"></i> Personen in begeleiding</li>
-            <li class="bar-item-md"><i class="fa fa-ellipsis-h fa-fw"></i> Meer acties</li>
-          </ul>
-          <ul class="bar-section-right">
-            <li></li>
-            <li><button>Kolommen <i class="fa fa-caret-down"></i></button></li>
-          </ul>
-        </div>
-      </div>
+      <h4 class="text-center tink-bg-gray-lightest">LIST FILTER BLOCK EXAMPLE</h4>
 
-
-      <h4 class="text-center tink-bg-gray-lightest">INTERACTIVE BAR EXAMPLE SM</h4>
-
-
-      <div class="bar">
-        <div class="bar-section">
-          <ul class="bar-section-left main-actions">
-            <li class="bar-item-sm"><i class="fa fa-minus-square-o fa-fw"></i></li>
-            <li class="bar-item-sm"><i class="fa fa-envelope-o fa-fw"></i></li>
-            <li class="bar-item-sm"><i class="fa fa-line-chart fa-fw"></i></li>
-          </ul>
-          <ul class="bar-section-left sub-actions">
-            <hr>
-            <li class="bar-item-sm disabled"><i class="fa fa-file-o fa-fw"></i></li>
-            <li class="bar-item-sm disabled"><i class="fa fa-folder-open-o fa-fw"></i></li>
-            <li class="bar-item-sm"><i class="fa fa-ellipsis-h fa-fw"></i></li>
-          </ul>
-          <ul class="bar-section-right">
-            <li></li>
-            <li><button>Kolommen <i class="fa fa-caret-down"></i></button></li>
-          </ul>
-        </div>
-      </div>
-
-
-      <h4 class="text-center tink-bg-gray-lightest">INTERACTIVE BAR EXAMPLE XS</h4>
-
-
-      <div class="bar">
+      <div class="bar list-filter-bar">
         <div class="bar-section">
           <ul class="bar-section-left">
-            <li><button>Acties <i class="fa fa-caret-down"></i></button>
-              <div class="popover arrow-top-left">
-                <ul>
-                  <li class="bar-item-xs"><i class="fa fa-minus-square-o fa-fw"></i> Inactief maken</li>
-                  <li class="bar-item-xs"><i class="fa fa-envelope-o fa-fw"></i> Mail sturen</li>
-                  <hr>
-                  <li class="bar-item-xs"><i class="fa fa-line-chart fa-fw"></i> Traject tonen</li>
-                  <li class="bar-item-xs disabled"><i class="fa fa-file-o fa-fw"></i> Verslagen tonen</li>
-                  <li class="bar-item-xs disabled"><i class="fa fa-folder-open-o fa-fw"></i> Personen in begeleiding</li>
-                  <hr>
-                  <li class="bar-item-xs"><i class="fa fa-ellipsis-h fa-fw"></i> Meer acties</li>
-                </ul>
-              </div>
-            </li>
+            <li>Referentienummer: <span>alle</span><i class="fa fa-caret-down"></i></li>
+            <li>Type: <span>alle</span><i class="fa fa-caret-down"></i></li>
+            <li>Kazerne: <span>alle</span><i class="fa fa-caret-down"></i></li>
+            <li disabled="disabled">Ploeg: <span>alle</span><i class="fa fa-caret-down"></i></li>
+            <li>Datum: <span>alle</span><i class="fa fa-caret-down"></i></li>
+            <li>Status: <span>alle</span><i class="fa fa-caret-down"></i></li>
+            <li>Locatie: <span>alle</span><i class="fa fa-caret-down"></i></li>
           </ul>
           <ul class="bar-section-right">
-            <li></li>
-            <li><button>Kolommen <i class="fa fa-caret-down"></i></button></li>
+            <li>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox1" name="checkbox1" value="" checked="">
+                <label for="checkbox1">Enkel dossiers met knipperlicht</label>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

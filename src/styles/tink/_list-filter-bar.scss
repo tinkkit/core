@@ -1,0 +1,21 @@
+/**
+ * List filter bar component
+ * --------------------------------------------------
+ */
+
+
+// variables
+
+$list-filter-bar-border:  $panel-default-border;
+$list-filter-bar-bg:      $gray-lightest;
+$list-filter-bar-radius:  $border-radius-base;
+
+
+
+.bar {
+  &.list-filter-bar {
+    background-color: $list-filter-bar-bg;
+    border: 1px solid $list-filter-bar-border;
+    border-radius: $list-filter-bar-radius;
+  }
+}
