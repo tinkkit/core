@@ -248,10 +248,10 @@ html {
 
 html {
   .fa-ellipsis-h {
-    display: block;
+    display: block; // LVG borks interactive table example, needs to be looked at
   }
   .fa-close {
-    display: none;
+    display: none; // LVG borks interactive table example, needs to be looked at
   }
   &.nav-right-open {
     .fa-ellipsis-h {
