@@ -6,16 +6,109 @@
 
 // variables
 
-$list-filter-bar-border:  $panel-default-border;
-$list-filter-bar-bg:      $gray-lightest;
-$list-filter-bar-radius:  $border-radius-base;
+$list-filter-bar-bg:                    $gray-lightest;
+$list-filter-bar-border-color:          $gray-light;
+$list-filter-bar-color:                 $text-color;
+$list-filter-bar-hover-bg:              $gray-lighter;
+$list-filter-bar-hover-color:           $list-filter-bar-color;
+$list-filter-bar-link-color:            $list-filter-bar-color;
+$list-filter-bar-radius:                $border-radius-base;
+$list-filter-bar-horizontal-padding:    10px;
+$list-filter-bar-vertical-padding:      10px;
+$list-filter-bar-padding:               10px;
+$list-filter-bar-top-height:            50px;
 
 
+// list-filter-bar styling which is based on the bar mixin.
 
-.bar {
-  &.list-filter-bar {
-    background-color: $list-filter-bar-bg;
-    border: 1px solid $list-filter-bar-border;
+.list-filter-bar {
+  @include bar($list-filter-bar-top-height, $list-filter-bar-bg, $list-filter-bar-color, $list-filter-bar-link-color, $list-filter-bar-hover-color, $list-filter-bar-hover-bg, $list-filter-bar-padding);
+  border: 1px solid $list-filter-bar-border-color;
+  border-radius: $list-filter-bar-radius;
+  padding: rem(0 $list-filter-bar-padding); // countering the first- and last-child padding rule of li in sections
+
+// filter-toggle styling
+
+  .filter-toggle {
+    color: $list-filter-bar-color;
     border-radius: $list-filter-bar-radius;
+    height: 100%;
+    line-height: rem($list-filter-bar-top-height); // is the same as line-height of the bar
+    //margin: rem(($list-filter-bar-padding / 2) 0);
+    //padding: rem($padding-xs-vertical * 3 $padding-xs-horizontal);
+    padding: rem($padding-small-vertical $padding-small-horizontal);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $list-filter-bar-hover-color;
+      background-color: $list-filter-bar-hover-bg;
+      text-decoration: none;
+    }
   }
+
+
 }
+
+
+
+// OLD CODE
+
+// .bar {
+//   &.list-filter-bar {
+//     background-color: $list-filter-bar-bg;
+//     border: 1px solid $list-filter-bar-border;
+//     border-radius: $list-filter-bar-radius;
+
+//     ul {
+//       > li {
+//         border: 1px solid transparent;
+//         color: $list-filter-bar-color;
+//         padding: 0 1.5rem;
+//         position: relative;
+//         // transition: color $animation-speed linear; // doesn't work yet
+
+//         &.can-open {
+//           &:before {
+//             content: "\f0d7";
+//             font-family: FontAwesome;
+//             font-style: normal;
+//             font-weight: normal;
+//             pointer-events: none;
+//             position: absolute;
+//             right: 0;
+//             text-decoration: inherit;
+//             z-index: layer('pseudo');
+//           }
+
+//           .popover {
+//             ul {
+//               @extend .list-unstyled;
+
+//               li {
+
+//               }
+//             }
+//           }
+//         }
+
+//         &:hover {
+//           background-color: $list-filter-bar-hover-bg;
+//           border: 1px solid $list-filter-bar-color;
+//           border-radius: $list-filter-bar-radius;
+//         }
+
+//         a {
+//           color: $list-filter-bar-link-color;
+//           text-decoration: none;
+
+//           &:hover,
+//           &:active,
+//           &:focus {
+//             color: $list-filter-bar-hover-color;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

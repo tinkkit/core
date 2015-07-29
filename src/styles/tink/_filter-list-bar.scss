@@ -1,0 +1,88 @@
+/**
+ * Filter list bar component
+ * --------------------------------------------------
+ */
+
+
+// variables
+
+$filter-list-bar-border:                $panel-default-border;
+$filter-list-bar-bg:                    $gray-lightest;
+$filter-list-bar-color:                 $text-color;
+$filter-list-bar-hover-bg:              $gray-lighter;
+$filter-list-bar-hover-color:           $filter-list-bar-color;
+$filter-list-bar-link-color:            $filter-list-bar-color;
+$filter-list-bar-radius:                $border-radius-base;
+$filter-list-bar-horizontal-padding:    10px;
+$filter-list-bar-vertical-padding:      10px;
+$filter-list-bar-padding:               10px;
+
+.filter-list-bar {
+  @include bar($nav-top-height, $filter-list-bar-bg, $filter-list-bar-color, $filter-list-bar-link-color, $filter-list-bar-hover-color, $filter-list-bar-hover-bg, $filter-list-bar-padding);
+  border-radius: $filter-list-bar-radius;
+  .filter-list {
+  }
+}
+
+
+
+// OLD CODE
+
+// .bar {
+//   &.list-filter-bar {
+//     background-color: $list-filter-bar-bg;
+//     border: 1px solid $list-filter-bar-border;
+//     border-radius: $list-filter-bar-radius;
+
+//     ul {
+//       > li {
+//         border: 1px solid transparent;
+//         color: $list-filter-bar-color;
+//         padding: 0 1.5rem;
+//         position: relative;
+//         // transition: color $animation-speed linear; // doesn't work yet
+
+//         &.can-open {
+//           &:before {
+//             content: "\f0d7";
+//             font-family: FontAwesome;
+//             font-style: normal;
+//             font-weight: normal;
+//             pointer-events: none;
+//             position: absolute;
+//             right: 0;
+//             text-decoration: inherit;
+//             z-index: layer('pseudo');
+//           }
+
+//           .popover {
+//             ul {
+//               @extend .list-unstyled;
+
+//               li {
+
+//               }
+//             }
+//           }
+//         }
+
+//         &:hover {
+//           background-color: $list-filter-bar-hover-bg;
+//           border: 1px solid $list-filter-bar-color;
+//           border-radius: $list-filter-bar-radius;
+//         }
+
+//         a {
+//           color: $list-filter-bar-link-color;
+//           text-decoration: none;
+
+//           &:hover,
+//           &:active,
+//           &:focus {
+//             color: $list-filter-bar-hover-color;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
