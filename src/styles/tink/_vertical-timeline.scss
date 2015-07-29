@@ -1,0 +1,175 @@
+
+/* The timeline container */
+
+.vertical-timeline {
+  margin: 30px 0 0 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* The line */
+.vertical-timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: $brand;
+  left: 20%;
+  margin-left: -10px;
+}
+
+.vertical-timeline > li {
+  position: relative;
+}
+
+/* The date/time */
+.vertical-timeline > li .timeline-date {
+  background-color: #a5d6a7;
+  color: white;
+  display: block;
+  width: 25%;
+  padding-right: 100px;
+  position: absolute;
+}
+
+// .vertical-timeline > li .timeline-date span {
+//   display: block;
+//   text-align: right;
+// }
+
+// .vertical-timeline > li .timeline-date span:first-child {
+//   font-size: 0.9em;
+//   color: #bdd0db;
+// }
+
+// .vertical-timeline > li .timeline-date span:last-child {
+//   font-size: 2.9em;
+//   color: #3594cb;
+// }
+
+// .vertical-timeline > li:nth-child(odd) .timeline-date span:last-child {
+//   color: #6cbfee;
+// }
+
+/* Right content */
+.vertical-timeline > li .timeline-card {
+  margin: 0 0 15px 25%;
+  background: #3594cb;
+  color: #fff;
+  padding: 2em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  border-radius: 5px;
+}
+
+.vertical-timeline > li:nth-child(odd) .timeline-card {
+  background: #6cbfee;
+}
+
+.vertical-timeline > li .timeline-card h2 {
+  margin-top: 0px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* The triangle */
+.vertical-timeline > li .timeline-card:after {
+  right: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #3594cb;
+  border-width: 10px;
+  top: 10px;
+}
+
+.vertical-timeline > li:nth-child(odd) .timeline-card:after {
+  border-right-color: #6cbfee;
+}
+
+/* The point in date */
+.vertical-timeline > li .point-in-date {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  background: $brand;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $brand-light;
+  left: 20%;
+  top: 0;
+  margin: 0 0 0 -25px;
+}
+
+// .point-in-date-phone:before {
+//   content: "\e000";
+// }
+
+// .point-in-date-screen:before {
+//   content: "\e001";
+// }
+
+// .point-in-date-mail:before {
+//   content: "\e002";
+// }
+
+// .point-in-date-earth:before {
+//   content: "\e003";
+// }
+
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+
+  .vertical-timeline > li .timeline-date span:last-child {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 47.2em) {
+  .vertical-timeline:before {
+    display: none;
+  }
+
+  .vertical-timeline > li .timeline-date {
+    width: 100%;
+    position: relative;
+    padding: 0 0 20px 0;
+  }
+
+  .vertical-timeline > li .timeline-date span {
+    text-align: left;
+  }
+
+  .vertical-timeline > li .timeline-card {
+    margin: 0 0 30px 0;
+    padding: 1em;
+    font-weight: 400;
+    font-size: 95%;
+  }
+
+  .vertical-timeline > li .timeline-card:after {
+    right: auto;
+    left: 20px;
+    border-right-color: transparent;
+    border-bottom-color: #3594cb;
+    top: -20px;
+  }
+
+  .vertical-timeline > li:nth-child(odd) .timeline-card:after {
+    border-right-color: transparent;
+    border-bottom-color: #6cbfee;
+  }
+
+  .vertical-timeline > li .point-in-date {
+    position: relative;
+    float: right;
+    left: auto;
+    margin: -55px 5px 0 0px;
+  }
+}
