@@ -391,7 +391,10 @@ select {
   background: $white image-url("select-arrow.svg") no-repeat right center;
   background-size: contain;
   // background: none \9;
-  padding: rem($padding-base-vertical 8px $padding-base-vertical $padding-base-horizontal) \9;
+// following line is not valid due to \9 for IE9 support at the end. (LVG)
+  // padding: rem($padding-base-vertical 8px $padding-base-vertical $padding-base-horizontal) \9;
+// bugfix so the select field won't collapse when it's used in a absolute container. (LVG)
+  padding-right: rem($padding-base-vertical * 4);
   text-indent: 0.01px;
   text-overflow: '';
 
