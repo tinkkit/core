@@ -1,5 +1,5 @@
 <!-- EDITABLE FIELDSET EXAMPLE -->
-
+<h1 class="h2 text-center">Editable fieldset</h1>
 
 <div class="container margin-top">
   <div class="row margin-top">
@@ -8,17 +8,82 @@
       <form>
         <fieldset>
           <legend>Contactgegevens</legend>
+
           <div class="form-group">
-            <label for="input-tel">Telefoon</label>
-            <input type="tel" id="input-tel" value="0484/17.17.71">
+            <label class="set-inline" for="input-tel">Telefoon</label>
+            <input class="transparent-border set-inline editable" type="tel" id="input-tel" value="0484/17.17.71">
           </div>
           <div class="form-group">
-            <label for="input-tel">Fax</label>
-            <input type="tel" id="input-fax" value=" - ">
+            <label class="set-inline" for="input-tel">Fax</label>
+            <input class="transparent-border non-editable set-inline"  disabled="" type="tel" id="input-fax" value=" - ">
           </div>
           <div class="form-group">
-            <label for="input-email">E-mailadres</label>
-            <input type="email" id="input-email" value="rzera@gmail.com">
+            <label class="set-inline" for="input-email">E-mailadres</label>
+            <input class="transparent-border set-inline editable" type="email" id="input-email" value="rzera@gmail.com">
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-default" disabled="">Wijzigingen opslaan</button>
+        <button type="submit" class="btn btn-default" disabled="">Annuleren</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- EDITABLE FIELDSET ON HOVER EXAMPLE -->
+<hr>
+<h1 class="h2 text-center">Editable fieldset on hover</h1>
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <h2>Rizvanovic Zera</h2>
+      <form>
+        <fieldset class="">
+          <legend>Contactgegevens</legend>
+          <div class="form-group">
+            <label class="set-inline" for="input-tel">Telefoon</label>
+            <input class="transparent-border on-hover set-inline editable" type="tel" id="elm" value="0484/17.17.71">
+          </div>
+          <div class="form-group">
+            <label class="set-inline" for="input-tel">Fax</label>
+            <input class="transparent-border non-editable on-hover set-inline" disabled="" type="tel" id="input-fax" value=" - ">
+          </div>
+          <div class="form-group">
+            <label class="set-inline" for="input-email">E-mailadres</label>
+            <input class="transparent-border on-hover set-inline editable" type="email" id="input-email" value="rzera@gmail.com">
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-default" disabled="">Wijzigingen opslaan</button>
+        <button type="submit" class="btn btn-default" disabled="">Annuleren</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- EDITABLE FIELDSET WHEN ACTIVE EXAMPLE -->
+<hr>
+<h1 class="h2 text-center">Editable fieldset when active</h1>
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <h2>Rizvanovic Zera</h2>
+      <form>
+        <fieldset class="activated">
+          <legend>Contactgegevens</legend>
+          <div class="form-group">
+            <label class="set-inline" for="input-tel">Telefoon</label>
+            <input class="transparent-border on-hover set-inline editable" type="tel" id="elm" value="0484/17.17.71">
+          </div>
+          <div class="form-group">
+            <label class="set-inline" for="input-tel">Fax</label>
+            <input class="transparent-border non-editable on-hover set-inline" disabled="" type="tel" id="input-fax" value=" - ">
+          </div>
+          <div class="form-group">
+            <label class="set-inline" for="input-email">E-mailadres</label>
+            <input class="transparent-border on-hover set-inline editable" type="email" id="input-email" value="rzera@gmail.com">
           </div>
         </fieldset>
         <button type="submit" class="btn btn-default">Wijzigingen opslaan</button>
@@ -27,3 +92,34 @@
     </div>
   </div>
 </div>
+
+
+<!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script> -->
+<script>
+// script to change all input fields on hover of one field
+    var elms = document.getElementsByClassName("editable");
+    var n = elms.length;
+    function changeColor(color) {
+        for(var i = 0; i < n; i ++) {
+            elms[i].style.backgroundColor = color;
+        }
+    }
+    for(var i = 0; i < n; i ++) {
+        elms[i].onmouseover = function() {
+            changeColor("#f7f7f7");
+        };
+        elms[i].onmouseout = function() {
+            changeColor("white");
+        };
+    }
+
+
+
+// jQuery(document).ready(function($){
+//     $('.transparent-border').hover(
+//          function(){ $(this).addClass('test') },
+//          function(){ $(this).removeClass('test') }
+//     )
+// });
+
+</script>
