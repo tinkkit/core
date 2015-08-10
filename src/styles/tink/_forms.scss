@@ -90,10 +90,10 @@ textarea {
 
 /* START For POC */
   // set the form elements inline
-  &.set-inline {
-    display: inline-block;
-    width: 30%
-  }
+  // &.set-inline {
+  //   display: inline-block;
+  //   width: 30%
+  // }
 
   &.transparent-border {
     border: 1px solid transparent;
@@ -116,14 +116,21 @@ textarea {
   border-radius: $border-radius-base;
   padding: rem(15);
   position: relative;
+
   label {
-    font-weight: normal;
+    font-weight: normal; // set as in A-welzijn wireframes
+    line-height: $line-height-base; // same as input styling
+    margin-bottom: 0; // reset of original label styling
+    padding: rem($padding-base-vertical $padding-base-horizontal); // same as input styling
+    position: relative;
   }
   .edit-icon {
     color: $gray-light;
-    position: relative;
-    left: rem(-25);
+    position: absolute;
+    right: rem(25);
+    top: rem(5);
   }
+
   &.editable {
   }
   // while editing content
@@ -131,7 +138,10 @@ textarea {
     background-color: $gray-lighter;
   }
   .cancel {
-    padding-left: rem(20);
+    padding: 0;
+    position: relative;
+    top: rem(5);
+
   }
 }
 
