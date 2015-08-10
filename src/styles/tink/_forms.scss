@@ -9,11 +9,6 @@ fieldset {
   margin: 0;
   min-width: 0; // reset min-width: min-content; in Chrome and Firefox
   padding: 0;
-  // for POC
-  &.activated {
-    background-color: $gray-lighter;
-  }
-
 }
 
 // ---- Start Firefox fieldset bug hack. See https://bugzilla.mozilla.org/show_bug.cgi?id=261037 (or http://stackoverflow.com/questions/1673346/fieldset-firefox-overflow-css-fix)
@@ -42,12 +37,7 @@ label {
   // margin-top: rem(8); // TH Added top-margin to give nicer look and spacing
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   font-weight: bold;
-
-  // editable class for POC
-  &.set-inline {
-    padding: rem(15);
-    width: 30%
-  }}
+}
 
 /* Check appendix A */
 // input:not([type="file"]):not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="image"]),
@@ -96,14 +86,10 @@ textarea {
     background-color: $input-bg-disabled;
     cursor: not-allowed;
     opacity: 1; // iOS fix for unreadable disabled content
-    // editable class for POC
-    &.non-editable {
-      background-color: $white;
-      cursor: default;
-    }
   }
 
-  // editable class for POC
+/* START For POC */
+  // set the form elements inline
   &.set-inline {
     display: inline-block;
     width: 30%
@@ -112,21 +98,44 @@ textarea {
   &.transparent-border {
     border: 1px solid transparent;
 
-    &.on-hover:not(.non-editable) {
-      border: 1px solid $input-border;
-      position: relative;
+    &[disabled] {
+      background-color: transparent;
+      cursor: default;
+    }
 
-      &:before {
-        color: $gray;
-        content: '\f077';
-        display: inline-block;
-        font-family: 'FontAwesome';
-        font-weight: normal;
-        position: absolute;
-      }
+    &.on-hover {
+      border: 1px solid $input-border;
+      &-secondary {
+      border: 1px solid rgba($input-border, 0.5);
+    }
     }
   }
 }
+
+.formfield {
+  border-radius: $border-radius-base;
+  padding: rem(15);
+  position: relative;
+  label {
+    font-weight: normal;
+  }
+  .edit-icon {
+    color: $gray-light;
+    position: relative;
+    left: rem(-25);
+  }
+  &.editable {
+  }
+  // while editing content
+  &.editing {
+    background-color: $gray-lighter;
+  }
+  .cancel {
+    padding-left: rem(20);
+  }
+}
+
+/* END For POC */
 
 input[type="search"] {
   -webkit-appearance: none;
