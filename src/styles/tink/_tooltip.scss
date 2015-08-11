@@ -16,7 +16,7 @@
   font-weight: normal;
   line-height: $line-height-base;
   max-width: rem($tooltip-max-width);
-  padding: ($padding-base-vertical*2/3 $padding-base-horizontal*2/3);
+  padding: ($padding-base-vertical*1/2 $padding-base-horizontal*2/3);
   position: relative;
   text-decoration: none;
   white-space: normal;
