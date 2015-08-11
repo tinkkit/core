@@ -70,6 +70,12 @@
         @include tab-focus();
       }
     }
+
+    // bottom-margin correction for labels used in bar
+    label {
+      // seems to be overruled - to check
+      margin: 0;
+    }
   }
 
   &-section {

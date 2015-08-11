@@ -9,163 +9,35 @@
       <div class="margin-top">
         <div class="list-filter-bar">
           <ul class="bar-section-left">
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="referentieNr = !referentieNr" id="" accesskey="" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+            <li>
+              <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
             </li>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="referentieNr" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-                <div class="form-group">
-                  <input type="text" id="input-text" placeholder="Geef referentienummer in...">
-                  <a href=""><span>Een reeks ingeven</span></a>
-                </div>
-              </div>
-             <!-- END POPOVER MENU -->
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="type = !type" id="" accesskey="" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="type" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-              <div class="form-group">
-                <div class="radio">
-                  <input type="radio" id="radio1" name="radio1" value="" checked="">
-                  <label for="radio1">Aangegeven</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" id="radio2" name="radio1" value="">
-                  <label for="radio2">Vastgesteld</label>
-                </div>
-              </div>
-              </div>
-             <!-- END POPOVER MENU -->
+            <li>
+              <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="kazerne = !kazerne" id="" accesskey="" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="kazerne" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-                <div>
-                  <ul class="popover-list-buttons">
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Voornaam" name="Voornaam" value="Voornaam" checked=""> <label for="Voornaam"><span class="">Voornaam</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Achternaam" name="Achternaam" value="Achternaam" checked=""> <label for="Achternaam"><span class="">Achternaam</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Gebruikersnaam" name="Gebruikersnaam" value="Gebruikersnaam" checked=""> <label for="Gebruikersnaam"><span class="">Gebruikersnaam</span></label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-             <!-- END POPOVER MENU -->
+            <li>
+              <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="ploeg = !ploeg" id="" accesskey="" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="ploeg" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-                <div>
-                  <ul class="popover-list-buttons">
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Voornaam" name="Voornaam" value="Voornaam" checked=""> <label for="Voornaam"><span class="">Voornaam</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Achternaam" name="Achternaam" value="Achternaam" checked=""> <label for="Achternaam"><span class="">Achternaam</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Gebruikersnaam" name="Gebruikersnaam" value="Gebruikersnaam" checked=""> <label for="Gebruikersnaam"><span class="">Gebruikersnaam</span></label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-             <!-- END POPOVER MENU -->
+            <li>
+              <a class="filter-toggle"  data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html"  title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="datum = !datum" id="" accesskey="" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="datum" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-                <div>
-                  <ul class="popover-list-buttons">
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Voornaam" name="Voornaam" value="Voornaam" checked=""> <label for="Voornaam"><span class="">Voornaam</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Achternaam" name="Achternaam" value="Achternaam" checked=""> <label for="Achternaam"><span class="">Achternaam</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Gebruikersnaam" name="Gebruikersnaam" value="Gebruikersnaam" checked=""> <label for="Gebruikersnaam"><span class="">Gebruikersnaam</span></label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-             <!-- END POPOVER MENU -->
+            <li>
+              <a class="filter-toggle"  data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html"  title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="status = !status" id="" accesskey="" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="status" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-                <div>
-                  <ul class="popover-list-buttons">
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Nieuw" name="Nieuw" value="Nieuw" checked=""> <label for="Nieuw"><span class="">Nieuw</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Aan-te-vullen" name="Aan-te-vullen" value="Aan-te-vullen" checked=""> <label for="Aan-te-vullen"><span class="">Aan te vullen</span></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox">
-                        <input type="checkbox" id="Goed-te-keuren" name="Goed-te-keuren" value="Goed-te-keuren" checked=""> <label for="Goed-te-keuren"><span class="">Goed te keuren</span></label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-             <!-- END POPOVER MENU -->
+            <li>
+              <a class="filter-toggle"  data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html"  title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
-            <li class="can-open" style="position: relative;">
-              <a class="filter-toggle" href ng-click="locatie = !locatie" id="" accesskey="" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-             <!-- POPOVER MENU -->
-              <div class="popover" ng-show="locatie" style="position: absolute; visibility: visible; top: 70px; left: 0px;">
-                <div>
-                  <ul class="popover-list-buttons">
-                    <li>
-                      <a href=""><span>List Item 1</span></a>
-                    </li>
-                    <li>
-                      <a href=""><span>List Item 2</span></a>
-                    </li>
-                    <li>
-                      <a href=""><span>List Item 3</span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-             <!-- END POPOVER MENU -->
+            <li>
+              <a class="filter-toggle"  data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html"  title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+            </li>
+            <li>
+              <a class="filter-toggle"  data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html"  title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
           </ul>
           <ul class="bar-section-right">
             <li>
-              <div class="form-group">
-                <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+              <div class="checkbox">
+                <input type="checkbox" id="Knipperlicht" name="Knipperlicht" value="Knipperlicht" checked=""> <label for="Knipperlicht"><span class="">Enkel dossiers met knipperlicht</span></label>
               </div>
             </li>
           </ul>
@@ -175,12 +47,6 @@
   </div>
 
   <!-- END LIST FILTER BAR EXAMPLE -->
-
-
-              <div class="checkbox">
-                <input type="checkbox" id="Knipperlicht" name="Knipperlicht" value="Knipperlicht" checked=""> <label for="Knipperlicht"><span class="">Enkel dossiers met knipperlicht</span></label>
-              </div>
-
 
   <!-- TABLE EXAMPLE -->
 
@@ -223,29 +89,6 @@
         </tfoot>
       </table>
 
-    </div>
-  </div>
-</div>
-
-
-<div class="container margin-top">
-  <div class="row margin-top">
-    <div class="col-xs-12">
-
-  <!-- POPOVER EXAMPLE -->
-      <div class="popover" style="visibility: visible; position: absolute; top: 0px; left:350px;">
-      <ul class="popover-list-buttons">
-        <li>
-          <a href=""><span>List Item 1</span></a>
-        </li>
-        <li>
-          <a href=""><span>List Item 2</span></a>
-        </li>
-        <li>
-          <a href=""><span>List Item 3</span></a>
-        </li>
-      </ul>
-      </div>
     </div>
   </div>
 </div>
