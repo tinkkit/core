@@ -616,6 +616,7 @@ output {
  * LVG
 */
 
+ // Container for restyled form elements
 .formfield {
   border-radius: $border-radius-base;
   padding: rem(15);
@@ -625,7 +626,6 @@ output {
   label {
     font-weight: normal; // set as in A-welzijn wireframes
     line-height: $line-height-base; // same as input styling
-    margin-bottom: 0; // reset of original label styling
     padding: rem($padding-base-vertical $padding-base-horizontal); // same as input styling
     position: relative;
   }
@@ -663,8 +663,31 @@ output {
   }
 
   &.formfield-is-hovered {
-    input:not(.non-editable) {
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="text"],
+    .faux-input,
+    input[type="url"],
+    input[type="week"],
+    select,
+    textarea {
+    // make all editable fields visible with a light border color
+      &:not(.non-editable) {
       border: 1px solid rgba($input-border, .40);
+      }
+    // make the hovered editable field visible with a full border color
+      &:hover:not(.non-editable) {
+        border: 1px solid $input-border;
+      }
     }
   }
 
