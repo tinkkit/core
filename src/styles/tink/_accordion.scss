@@ -17,6 +17,10 @@
     }
   }
 
+  &:not(:first-child) {
+    border-top: none;
+  }
+
   &:last-child {
     border-bottom-right-radius: $panel-border-radius;
     border-bottom-left-radius: $panel-border-radius;
