@@ -87,65 +87,7 @@ textarea {
     cursor: not-allowed;
     opacity: 1; // iOS fix for unreadable disabled content
   }
-
-/* START For POC */
-  // set the form elements inline
-  // &.set-inline {
-  //   display: inline-block;
-  //   width: 30%
-  // }
-
-  &.transparent-border {
-    border: 1px solid transparent;
-
-    &[disabled] {
-      background-color: transparent;
-      cursor: default;
-    }
-
-    &.on-hover {
-      border: 1px solid $input-border;
-      &-secondary {
-      border: 1px solid rgba($input-border, 0.5);
-    }
-    }
-  }
 }
-
-.formfield {
-  border-radius: $border-radius-base;
-  padding: rem(15);
-  position: relative;
-
-  label {
-    font-weight: normal; // set as in A-welzijn wireframes
-    line-height: $line-height-base; // same as input styling
-    margin-bottom: 0; // reset of original label styling
-    padding: rem($padding-base-vertical $padding-base-horizontal); // same as input styling
-    position: relative;
-  }
-  .edit-icon {
-    color: $gray-light;
-    position: absolute;
-    right: rem(25);
-    top: rem(5);
-  }
-
-  &.editable {
-  }
-  // while editing content
-  &.editing {
-    background-color: $gray-lighter;
-  }
-  .cancel {
-    padding: 0;
-    position: relative;
-    top: rem(5);
-
-  }
-}
-
-/* END For POC */
 
 input[type="search"] {
   -webkit-appearance: none;
@@ -668,3 +610,83 @@ output {
     height: rem($input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   }
 }
+
+/*
+ * Start of POC styling
+ * LVG
+*/
+
+.formfield {
+  border-radius: $border-radius-base;
+  padding: rem(15);
+  position: relative;
+
+  // Style label to be set inline in a grid column
+  label {
+    font-weight: normal; // set as in A-welzijn wireframes
+    line-height: $line-height-base; // same as input styling
+    margin-bottom: 0; // reset of original label styling
+    padding: rem($padding-base-vertical $padding-base-horizontal); // same as input styling
+    position: relative;
+  }
+
+  // Style input type to have a transparent border
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="text"],
+  .faux-input,
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea {
+    border: 1px solid transparent;
+    &[disabled] {
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+  // Style the edit icon behind an inputfield
+  .edit-icon {
+    color: $gray-light;
+    position: absolute;
+    right: rem(25);
+    top: rem(5);
+  }
+
+  &.formfield-is-hovered {
+    input:not(.non-editable) {
+      border: 1px solid rgba($input-border, .40);
+    }
+  }
+
+  &.formfield-is-active {
+    @extend .formfield-is-hovered;
+    background-color: $gray-lighter;
+  }
+
+  &.formfield-is-edited {
+    @extend .formfield-is-active;
+  }
+
+  // Position the cancel element
+  .cancel {
+    padding: 0;
+    position: relative;
+    top: rem(5);
+  }
+}
+
+/*
+ * End of POC styling
+ * LVG
+*/
+
