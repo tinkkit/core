@@ -1,11 +1,26 @@
-<div class="container margin-top">
+<div class="container margin-top" data-ng-controller="interactiveTableController as ct">
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1">
-      <div class="tooltip arrow-bottom-left margin-top" style="position: absolute; visibility: visible; top: -36px; left: 245.625px;"><span class="arrow"></span><span class="ng-binding ng-scope">open</span></div>
+      <tink-interactive-table class="table-interactive" data-tink-checked="boxChecked($data,$checked)" data-tink-loading="ct.loading" data-tink-headers="headers" data-tink-data="data.content" data-tink-actions="actions" data-tink-empty-message="Geen resultaten">
+        <table>
+          <thead>
+            <tr>
+              <th ng-repeat='view in tinkHeaders'>{{ view.alias }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
+              <td>{{ view.firstname | date:'dd/MM/yyyy' }}</td>
+              <td>{{ view.lastname }}</td>
+              <td>{{ view.username }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <tink-pagination data-tink-current-page="$parent.ct.nums" data-tink-change="$parent.changed(type,value,next)" data-tink-total-items="$parent.ct.totalitems" data-tink-items-per-page="$parent.ct.numpp"></tink-pagination>
+      </tink-interactive-table>
     </div>
   </div>
 </div>
-
 
 
 
@@ -46,11 +61,9 @@
 
     </div>
   </div>
-<div>
 
 <!-- ACCORDION IN LIST EXAMPLE -->
 
-<div class="container margin-top" data-ng-controller="ctrl">
   <div class="row margin-top">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
 
@@ -292,13 +305,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </div>
-  <div class="row" data-ng-controller="interactiveTableController">
-    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-      <div>
-      <tink-interactive-table ng-model="data" data-tink-allow-column-reorder="true" data-tink-headers="headers" data-tink-actions="actions" data-tink-items-per-page="pages" data-tink-force-responsive="true"></tink-interactive-table>
       </div>
     </div>
   </div>
