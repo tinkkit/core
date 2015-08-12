@@ -22,12 +22,12 @@ body:before {
   display: none; /* Prevent from displaying. */
 }
 
-@include mq($screen-sm-min) {
+@include mq($screen-sm) {
   body:before {
     content: "tablet-view";
   }
 }
-@include mq(1600px) {
+@include mq($screen-lg) {
   body:before {
     content: "wide-xl-view";
   }
