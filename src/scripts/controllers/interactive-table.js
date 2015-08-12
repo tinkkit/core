@@ -15,14 +15,16 @@ angular.module('tinkApp')
   scope.data = {};
 
   scope.load=function(){
-    console.log('clicked')
-  }
+    console.log('clicked');
+  };
+
   scope.changed = function(type,value,fn){
     fn();
-  }
+  };
+
   scope.boxChecked = function($data,c){
-    console.log($data,c)
-  }
+    console.log($data,c);
+  };
 
   ctrl.loading = false;
 
@@ -38,19 +40,9 @@ angular.module('tinkApp')
       username: '@pxlpanic'
     }
   ];
+
   scope.actions = [
     {
-      name: 'remove',
-      callback: function(items) {
-        angular.forEach(items, function(val) {
-          scope.data.content.splice(scope.data.content.indexOf(val),1);
-        });
-      },
-      order:1,
-      master:true,
-      icon:'fa-close',
-      single:true
-    },{
       name: 'add',
       callback: function(items) {
         angular.forEach(items, function(val) {
@@ -59,14 +51,39 @@ angular.module('tinkApp')
             firstname: 'New first',
             lastname: 'New last',
             username: '@newuser'
-          })
+          });
           console.log('Added ' + val.firstname);
+        });
+      },
+      order:0,
+      master:true,
+      icon:'fa-plus'
+    },
+    {
+      name: 'edit',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          // scope.data.content.splice(scope.data.content.indexOf(val),1);
+          console.log('Did something with ' + val.firstname);
+        });
+      },
+      order:1,
+      master:true,
+      icon:'fa-edit'
+    },
+    {
+      name: 'remove',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          scope.data.content.splice(scope.data.content.indexOf(val),1);
         });
       },
       order:2,
       master:true,
-      icon:'fa-edit'
-    },{
+      icon:'fa-trash-o',
+      single:true
+    },
+    {
       name: 'search',
       callback: function(items) {
         angular.forEach(items, function(val) {
@@ -74,21 +91,9 @@ angular.module('tinkApp')
           console.log('Searched ' + val.firstname);
         });
       },
-      order:100,
+      order:3,
       master:true,
       icon:'fa-search'
-    },
-    {
-      name: 'do something',
-      callback: function(items) {
-        angular.forEach(items, function(val) {
-          // scope.data.content.splice(scope.data.content.indexOf(val),1);
-          console.log('Did something with ' + val.firstname);
-        });
-      },
-      order:100,
-      master:true,
-      icon:'fa-arrows-h'
     },
     {
       name: 'open',
@@ -98,11 +103,10 @@ angular.module('tinkApp')
           console.log('Opened ' + val.firstname);
         });
       },
-      order:100,
+      order:4,
       master:false,
-      icon:'fa-bell-o'
-    }
-    ,
+      icon:'fa-folder-open'
+    },
     {
       name: 'do something else',
       callback: function(items) {
@@ -111,9 +115,9 @@ angular.module('tinkApp')
           console.log('Did something else with ' + val.firstname);
         });
       },
-      order:100,
+      order:5,
       master:false,
-      icon:'fa-calculator'
+      icon:'fa-magic'
     }
   ];
   scope.headers = [{
