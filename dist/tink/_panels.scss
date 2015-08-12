@@ -27,8 +27,8 @@
 
 .panel-body {
   @include clearfix();
-
   padding: rem($panel-body-padding);
+
   &:not(:last-child) {
     border-bottom: 1px solid $panel-default-border;
   }
@@ -63,19 +63,17 @@
     padding: 0;
   }
 
-// Optional icon margin
-
+  // Optional icon margin
   .fa + .panel-title {
     margin-left: rem(9);
   }
 
-// Optional badge margin
-
+  // Optional badge margin
   [class^="badge"] + .panel-title {
     margin-left: rem(9);
   }
 
-   .panel-title + [class^="badge"] {
+  .panel-title + [class^="badge"] {
     margin-left: rem(9);
   }
 }
@@ -83,9 +81,10 @@
 // Optional footer
 
 .panel-footer {
+  background: $panel-default-footer-bg;
   border-top: 1px solid $panel-default-border;
-  font-size: rem(12);
-  padding: rem($panel-heading-padding ($panel-heading-padding * 1.5));
+  // font-size: rem(12);
+  padding: rem($panel-heading-padding ($panel-heading-padding * 2));
 }
 
 
