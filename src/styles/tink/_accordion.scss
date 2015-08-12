@@ -41,6 +41,13 @@
         transform: rotate(180deg);
       }
     }
+
+    &:last-child {
+      .panel-heading {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
   }
   &.group-loading {
     > .accordion-toggle {

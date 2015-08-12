@@ -627,26 +627,27 @@ $panel-default-text:          $gray-dark !default; // TO BE CLEANED UP  $white !
 $panel-default-border:        $gray-lighter !default;
 $panel-default-heading-bg:    $body-bg-alt; //$gray-lighter !default; // TO BE CLEANED UP lighten($gray-dark, 12) !default;
 $panel-default-icon-color:    $gray !default;
+$panel-default-footer-bg:     $panel-default-heading-bg !default;
 
-$panel-primary-text:          $white !default;
-$panel-primary-border:        $brand !default;
-$panel-primary-heading-bg:    $brand !default;
+// $panel-primary-text:          $white !default;
+// $panel-primary-border:        $brand !default;
+// $panel-primary-heading-bg:    $brand !default;
 
-$panel-success-text:          $state-success-text !default;
-$panel-success-border:        $state-success-border !default;
-$panel-success-heading-bg:    $state-success-bg !default;
+// $panel-success-text:          $state-success-text !default;
+// $panel-success-border:        $state-success-border !default;
+// $panel-success-heading-bg:    $state-success-bg !default;
 
-$panel-info-text:             $state-info-text !default;
-$panel-info-border:           $state-info-border !default;
-$panel-info-heading-bg:       $state-info-bg !default;
+// $panel-info-text:             $state-info-text !default;
+// $panel-info-border:           $state-info-border !default;
+// $panel-info-heading-bg:       $state-info-bg !default;
 
-$panel-warning-text:          $state-warning-text !default;
-$panel-warning-border:        $state-warning-border !default;
-$panel-warning-heading-bg:    $state-warning-bg !default;
+// $panel-warning-text:          $state-warning-text !default;
+// $panel-warning-border:        $state-warning-border !default;
+// $panel-warning-heading-bg:    $state-warning-bg !default;
 
-$panel-danger-text:           $state-danger-text !default;
-$panel-danger-border:         $state-danger-border !default;
-$panel-danger-heading-bg:     $state-danger-bg !default;
+// $panel-danger-text:           $state-danger-text !default;
+// $panel-danger-border:         $state-danger-border !default;
+// $panel-danger-heading-bg:     $state-danger-bg !default;
 
 
 
