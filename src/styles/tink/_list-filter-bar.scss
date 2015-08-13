@@ -27,6 +27,10 @@ $list-filter-bar-top-height:            50px;
   border-radius: $list-filter-bar-radius;
   padding: rem(0 $list-filter-bar-padding); // countering the first- and last-child padding rule of li in sections
 
+  label {
+    line-height: rem(20); // LVG: correction to line-height created by bar-section-*
+  }
+
 // filter-toggle styling
 
   .filter-toggle {
