@@ -1570,7 +1570,7 @@ ul, ol {
   margin-bottom: 0.71429rem ;
   margin-top: 0; }
 
-.list-unstyled, .list-inline, .pagination, .nav-top-branding, .nav-top-section-left, .nav-top-section-center, .nav-top-section-right, .bar-branding, .bar-section-left, .bar-section-center, .bar-section-right, .upload-files, .dragenter, .hit-area-box, .table-interactive-cols, .popover-menu-list ul, .nav-aside ul {
+.list-unstyled, .list-inline, .pagination, .nav-top-branding, .nav-top-section-left, .nav-top-section-center, .nav-top-section-right, .bar-branding, .bar-section-left, .bar-section-center, .bar-section-right, .list-mailbox, .upload-files, .dragenter, .hit-area-box, .table-interactive-cols, .popover-menu-list ul, .nav-aside ul {
   list-style: none;
   margin-bottom: 0;
   padding-left: 0; }
@@ -3104,7 +3104,7 @@ html.has-open-modal {
  * Label
  * ----------------------------------------------------------------
  */
-.label, .label-primary, .label-success, .label-info, .label-warning, .label-danger {
+.label, .label-primary, .label-success, .label-info, .label-warning, .label-danger, .list-mailbox-category {
   border: 1px solid #bbb;
   border-radius: 0.25em;
   color: #bbb;
@@ -3117,9 +3117,9 @@ html.has-open-modal {
   text-transform: uppercase;
   vertical-align: baseline;
   white-space: nowrap; }
-  .label:empty, .label-primary:empty, .label-success:empty, .label-info:empty, .label-warning:empty, .label-danger:empty {
+  .label:empty, .label-primary:empty, .label-success:empty, .label-info:empty, .label-warning:empty, .label-danger:empty, .list-mailbox-category:empty {
     display: none; }
-  .btn .label, .btn .label-primary, .btn .label-success, .btn .label-info, .btn .label-warning, .btn .label-danger {
+  .btn .label, .btn .label-primary, .btn .label-success, .btn .label-info, .btn .label-warning, .btn .label-danger, .btn .list-mailbox-category {
     position: relative;
     top: -1px; }
 
@@ -3142,6 +3142,170 @@ html.has-open-modal {
 .label-danger {
   border-color: #e60038;
   color: #e60038; }
+
+/**
+ * Sidenav
+ */
+html.col-resize {
+  cursor: col-resize; }
+html.row-resize {
+  cursor: row-resize; }
+
+/**
+ * Split view
+ */
+.main {
+  height: 100vh;
+  padding-top: 3.57143rem ;
+  top: 0; }
+
+.split-view-vertical, .split-view-horizontal {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+
+.split-handle {
+  position: absolute; }
+
+.split-pane {
+  display: block;
+  overflow: auto;
+  position: absolute; }
+
+.split-view-vertical > .split-pane {
+  bottom: 0;
+  top: 0;
+  width: 50%; }
+  .split-view-vertical > .split-pane:first-of-type {
+    border-right: 1px solid #bbb;
+    left: 0; }
+  .split-view-vertical > .split-pane:last-of-type {
+    right: 0; }
+.split-view-vertical > .split-handle {
+  bottom: 0;
+  cursor: col-resize;
+  left: calc(50% - 3px);
+  top: 0;
+  width: 5px;
+  z-index: 2; }
+
+.split-view-horizontal > .split-pane {
+  height: 50%;
+  left: 0;
+  right: 0; }
+  .split-view-horizontal > .split-pane:first-child {
+    border-bottom: 1px solid #bbb;
+    top: 0; }
+  .split-view-horizontal > .split-pane:last-child {
+    bottom: 0; }
+.split-view-horizontal > .split-handle {
+  left: 0;
+  cursor: row-resize;
+  height: 5px;
+  right: 0;
+  top: calc(50% - 3px);
+  z-index: 2; }
+
+/**
+ * Mailbox list
+ */
+.list-mailbox > li {
+  border-bottom: 1px solid #eaeaea; }
+  .list-mailbox > li.unread > a {
+    color: #000; }
+    .list-mailbox > li.unread > a .list-mailbox-title {
+      font-weight: 700; }
+    .list-mailbox > li.unread > a:before {
+      background-color: #76b9f4;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 0.57143rem ;
+      left: 0.71429rem ;
+      position: absolute;
+      top: 1.35714rem ;
+      width: 0.57143rem ; }
+  .list-mailbox > li.active > a {
+    background-color: rgba(95, 177, 214, 0.16);
+    color: #347ea6; }
+    .list-mailbox > li.active > a:hover, .list-mailbox > li.active > a:active, .list-mailbox > li.active > a:focus {
+      background-color: rgba(95, 177, 214, 0.16); }
+    .list-mailbox > li.active > a .list-mailbox-description {
+      color: #347ea6; }
+  .list-mailbox > li > a {
+    color: #333;
+    cursor: pointer;
+    display: block;
+    padding: 0.85714rem 0.85714rem 0.85714rem 1.71429rem ;
+    position: relative;
+    text-decoration: none; }
+    .list-mailbox > li > a:hover, .list-mailbox > li > a:active, .list-mailbox > li > a:focus {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: #347ea6; }
+      .list-mailbox > li > a:hover .list-mailbox-description, .list-mailbox > li > a:active .list-mailbox-description, .list-mailbox > li > a:focus .list-mailbox-description {
+        color: #347ea6; }
+    .list-mailbox > li > a > div {
+      clear: both;
+      width: 100%; }
+    .list-mailbox > li > a .list-mailbox-description {
+      color: #888; }
+.list-mailbox-options {
+  background-color: #eaeaea;
+  height: 100%;
+  padding: 10px 0 8px;
+  width: 100%; }
+.list-mailbox-icons {
+  float: left;
+  margin: -0.07143rem 0.28571rem 0rem 0rem ; }
+.list-mailbox-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-weight: 600; }
+.list-mailbox-category {
+  float: right;
+  margin: 0.07143rem 0rem 0rem 0.57143rem ; }
+.list-mailbox-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block; }
+
+/**
+ * Nav right
+ */
+.right-menu-toggle {
+  position: absolute;
+  left: -2.71429rem ;
+  top: 0;
+  z-index: 2; }
+  .right-menu-toggle .btn {
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #333;
+    line-height: 1;
+    font-size: 1.5em;
+    width: 2.85714rem ; }
+    .right-menu-toggle .btn:hover, .right-menu-toggle .btn:active, .right-menu-toggle .btn:focus {
+      background-color: #fff;
+      color: #347ea6; }
+
+html .fa-ellipsis-h {
+  display: block; }
+html .fa-close {
+  display: none; }
+html.nav-right-open .fa-ellipsis-h {
+  display: none; }
+html.nav-right-open .fa-close {
+  display: block; }
+
+.mailbox-loader {
+  font-size: 2em;
+  margin-top: 1.71429rem ; }
 
 /**
  * Upload

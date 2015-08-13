@@ -1,0 +1,285 @@
+/**
+ * Sidenav
+ */
+html {
+  &.col-resize {
+    cursor: col-resize;
+  }
+
+  &.row-resize {
+    cursor: row-resize;
+  }
+}
+
+
+/**
+ * Split view
+ */
+.main {
+  height: 100vh; // TO DO: check if this is ok to do by default // LVG 29/07: seems to be ok
+  padding-top: rem($nav-top-height);
+  top: 0;
+
+}
+
+%split-view {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: layer("base");
+}
+
+.split-handle {
+  // background-color: rgba(255,0,0,.32); // Uncomment for testing its placement
+  position: absolute;
+}
+
+.split-pane {
+  display: block;
+  overflow: auto;
+  position: absolute;
+}
+
+.split-view-vertical {
+  @extend %split-view;
+
+  > .split-pane {
+    bottom: 0;
+    top: 0;
+    width: 50%;
+
+    &:first-of-type {
+      border-right: 1px solid $gray-light;
+      left: 0;
+    }
+
+    &:last-of-type {
+      right: 0;
+    }
+  }
+
+  > .split-handle {
+    bottom: 0;
+    cursor: col-resize;
+    left: calc(50% - 3px);
+    top: 0;
+    width: 5px;
+    z-index: layer("pseudo");
+  }
+}
+
+.split-view-horizontal {
+  @extend %split-view;
+
+  > .split-pane {
+    height: 50%;
+    left: 0;
+    right: 0;
+
+    &:first-child {
+      border-bottom: 1px solid $gray-light;
+      top: 0;
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  > .split-handle {
+    left: 0;
+    cursor: row-resize;
+    height: 5px;
+    right: 0;
+    top: calc(50% - 3px);
+    z-index: layer("pseudo");
+  }
+}
+
+
+
+/**
+ * Mailbox list
+ */
+.list-mailbox {
+  @extend .list-unstyled;
+  // border-top: 1px solid $gray-lighter;
+  // padding-top: rem(56);
+
+  > li {
+    border-bottom: 1px solid $gray-lighter;
+
+    &.unread {
+      > a {
+        color: $black;
+
+        .list-mailbox-title {
+          font-weight: 700;
+        }
+
+        &:before {
+          background-color: $brand-info;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: rem(8);
+          left: rem(10);
+          position: absolute;
+          top: rem(19);
+          width: rem(8);
+        }
+      }
+    }
+
+    &.active {
+      > a {
+        background-color: rgba($brand-light, .16);
+        color: $brand;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: rgba($brand-light, .16);
+        }
+
+        .list-mailbox-description {
+          color: $brand;
+        }
+      }
+    }
+
+    > a {
+      color: $text-color;
+      cursor: pointer;
+      display: block;
+      padding: rem(12 12 12 24);
+      position: relative;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: rgba($black, .05);
+        color: $brand;
+
+        .list-mailbox-description {
+          color: $brand;
+        }
+      }
+
+      > div {
+        clear: both;
+        width: 100%;
+      }
+
+      .list-mailbox-description {
+        color: $gray;
+      }
+    }
+  }
+
+  &-options {
+    background-color: $gray-lighter;
+    height: 100%;
+    padding: 10px 0 8px;
+    width: 100%;
+  }
+
+  &-icons {
+    float: left;
+    margin: rem(-1 4 0 0);
+  }
+
+  &-title {
+    @include text-overflow();
+    display: block;
+    font-weight: 600;
+  }
+
+  &-category {
+    @extend .label;
+    float: right;
+    margin: rem(1 0 0 8);
+  }
+
+  &-description {
+    @include text-overflow();
+    display: block;
+    // display: -webkit-box;
+    // height: auto;
+    // line-height: $line-height-base;
+    // max-height: rem($line-height-computed*2);
+    // -webkit-line-clamp: 2;
+    // -webkit-box-orient: vertical;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+  }
+}
+
+
+/**
+ * Nav right
+ */
+.right-menu-toggle {
+  position: absolute;
+  left: rem(-38);
+  top: 0;
+  z-index: layer('pseudo');
+
+  .btn {
+    // border-color: #e1e1e1;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: $text-color;
+    line-height: 1;
+    font-size: 1.5em;
+    width: rem(40);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $btn-default-bg;
+      color: $brand;
+    }
+  }
+}
+
+html {
+  .fa-ellipsis-h {
+    display: block; // LVG borks interactive table example, needs to be looked at
+  }
+  .fa-close {
+    display: none; // LVG borks interactive table example, needs to be looked at
+  }
+  &.nav-right-open {
+    .fa-ellipsis-h {
+      display: none;
+    }
+    .fa-close {
+      display: block;
+    }
+  }
+}
+
+.mailbox-loader {
+  font-size: 2em;
+  margin-top: rem(24);
+}
+
+.fixed-checkboxes {
+  .split-pane[style] {
+    &:first-child {
+      // height: 50px !important;
+    }
+  }
+}
+// .signature {
+//  background-color: $white;
+//  border-top: 1px solid $gray-light;
+//  bottom: 0;
+//  left: 0;
+//  position: absolute;
+//  right: 0;
+// }
