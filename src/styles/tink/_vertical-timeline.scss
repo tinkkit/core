@@ -26,6 +26,7 @@
   > li {
     left: 22px; // test for width of branch
     margin-top: rem(30); // to create some space for the datefield
+    max-width: calc(100% - 22px);
     position: relative;
 
 /* The horizontal branch */
@@ -82,7 +83,8 @@
         margin: rem(1) 0 0 0;
       }
     }
-    // these are more stylings set on the li
+
+    // this li styling is for bigger screen sizes
     @include mq($screen-sm) {
       left: calc(50% + 22px); // set the timeslot on the right side with 22px for width of the branch
       max-width: calc(50% - 22px); // on bigger screens set the max-width to 50% - width of the branch
