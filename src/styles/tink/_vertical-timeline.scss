@@ -1,31 +1,67 @@
 
+/* Vertical timeline */
+
 /* The timeline container */
+// the container should be a list.
 .vertical-timeline {
-  list-style: none; // possibly extend better
-  margin: 0;
-  padding: rem(20) 0;
+  @extend .list-unstyled;
+  //margin: 0;
+  //padding: rem(20) 0;
   position: relative;
-}
 
 /* The vertical line */
-.vertical-timeline:before {
-  background: $tink-teal;
-  bottom: 0;
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 4px;
+  &:before {
+    background: $tink-teal;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 4px;
 
-  @include mq($screen-sm) {
-    left: 50%;
-    margin-left: -2px;
+    @include mq($screen-sm) {
+      left: 50%;
+      margin-left: -2px; // center the line
+    }
   }
-}
 
 /* The timeslot */
-.vertical-timeline > li {
-  margin-top: rem(30);
-  position: relative;
+  > li {
+    margin-top: rem(30); // to create some space for the datefield
+    position: relative;
+    // on bigger screens set the max-width of the timeslot to 50% and set every 2nd one on the right side
+    @include mq($screen-sm) {
+      max-width: calc(50% - 22px);
+
+      &:nth-child(even) {
+        left: calc(50% + 22px);
+      }
+    }
+
+/* The date/time */
+    .timeline-date {
+      background-color: $tink-green;
+      border-radius: $border-radius-base;
+      color: $white;
+      display: block;
+      left: rem(10);
+      padding: rem(5);
+      position: absolute;
+      top: rem(-20);
+      z-index: layer('pseudo');
+    }
+
+/* The info-card */
+    .card {
+    // set the card next to the vertical line and create little vertical space between the cards
+      margin: rem(1) 0 0 4px;
+
+      @include mq($screen-sm) {
+      // on bigger screens remove the left-margin
+        margin: rem(1) 0 0 0;
+      }
+    }
+  }
+}
 
   /* The point in the timeslot */
   // &:before {
@@ -42,79 +78,25 @@
   //   @include mq($screen-sm) {
   //     left: 50%;
   //   }
-  // }
 
 /* The small horizontal bar */
-  &:after {
-    background: $tink-teal;
-    content: '';
-    height: 4px;
-    position: absolute;
-    top: rem(20);
-    width: rem(15);
-    z-index: layer('pseudo');
+  // &:after {
+  //   background: $tink-teal;
+  //   content: '';
+  //   height: 4px;
+  //   position: absolute;
+  //   top: rem(20);
+  //   width: 20px;
+  //   z-index: layer('pseudo');
 
-    @include mq($screen-sm) {
-      // left: calc(50% - 12px);
-    }
-  }
+  //   @include mq($screen-sm) {
+  //     right: calc(50% - 12px);
+  //   }
+  // }
 
-/* The card containing content */
-  .info-card {
-    background: $body-bg-alt;
-    border: 1px solid #c0c0c0;
-    border-radius: $border-radius-base;
-    color: $text-color;
-    left: rem(15);
-    margin: 0 rem(5) 0 0;
-    padding: rem(10);
-    position: relative;
 
-    @include mq($screen-sm) {
-      // margin-top: rem(1);
-      // max-width: calc(50% - 24px);
-      margin: 0 rem(15) 0 0;
-      max-width: 50%;
-    }
-  }
 
-/* The date/time */
-  .timeline-date {
-    background-color: $tink-green;
-    border-radius: $border-radius-base;
-    color: $white;
-    display: block;
-    left: rem(10);
-    padding: rem(5);
-    position: absolute;
-    top: rem(-20);
-    z-index: layer('pseudo');
 
-    // @include mq($screen-sm) {
-    //   left: calc(50% - 30px);
-    // }
-  }
-}
 
-/* The right content in the timeslot */
-.vertical-timeline > li:nth-child(even) {
 
-  &:after {
-    @include mq($screen-sm) {
-      left: 50%;
-    }
-  }
 
-  .timeline-card {
-    @include mq($screen-sm) {
-      left: 50%;
-      max-width: 50%;
-    }
-  }
-
-  .timeline-date {
-    @include mq($screen-sm) {
-      right: calc(50% - 40px);
-    }
-  }
-}
