@@ -1,12 +1,10 @@
 
 /* Vertical timeline */
 
-/* The timeline container */
-// the container should be a list.
+/* The timeline container */ // the container should be a list.
 .vertical-timeline {
   @extend .list-unstyled;
-  //margin: 0;
-  //padding: rem(20) 0;
+  padding: rem(20) 0;
   position: relative;
 
 /* The vertical line */
@@ -26,19 +24,43 @@
 
 /* The timeslot */
   > li {
+    left: 22px; // test for width of branch
     margin-top: rem(30); // to create some space for the datefield
     position: relative;
-    // on bigger screens set the max-width of the timeslot to 50% and set every 2nd one on the right side
-    @include mq($screen-sm) {
-      max-width: calc(50% - 22px);
 
-      &:nth-child(even) {
-        left: calc(50% + 22px);
+/* The horizontal branch */
+    &:after {
+      background: $tink-teal;
+      content: '';
+      height: 4px;
+      left: -18px;
+      position: absolute;
+      top: rem(20);
+      width: 22px;
+      z-index: layer('pseudo');
+
+      @include mq($screen-sm) {
+        left: -20px;
+        width: 20px;
+
       }
     }
 
-/* The date/time */
-    .timeline-date {
+/* The dot in the timeslot */ // position needs to be checked on all screen sizes
+    &:before {
+      background: $tink-teal;
+      border-radius: 50%;
+      content: '';
+      height: 12px;
+      left: -2px;
+      position: absolute;
+      top: rem(16);
+      width: 12px;
+      z-index: layer('pseudo');
+    }
+
+/* The date-card */
+    .card-date {
       background-color: $tink-green;
       border-radius: $border-radius-base;
       color: $white;
@@ -60,39 +82,37 @@
         margin: rem(1) 0 0 0;
       }
     }
+    // these are more stylings set on the li
+    @include mq($screen-sm) {
+      left: calc(50% + 22px); // set the timeslot on the right side with 22px for width of the branch
+      max-width: calc(50% - 22px); // on bigger screens set the max-width to 50% - width of the branch
+      // LVG this shouldn't be needed / so to be looked at.
+      &:before {
+        left: -6px;
+      }
+
+      &:nth-child(odd) {
+        // reset the odd li's to the left
+        left: initial;
+        // horizontal branch positioning // LVG needs some tweaking
+        &:after {
+          left: initial;
+          right: -21px;
+        }
+        // repositioning the dot on the left side
+        &:before {
+          left: initial;
+          right: -6px;
+        }
+        // repositioning the timeline-date on the right side of the li
+        .card-date {
+          left: initial; // reset the left position
+          right: rem(10);
+        }
+      }
+    }
   }
 }
-
-  /* The point in the timeslot */
-  // &:before {
-  //   background: $tink-teal;
-  //   border-radius: 50%;
-  //   content: '';
-  //   height: 8px;
-  //   margin-left: rem(7.5);
-  //   position: absolute;
-  //   top: rem(18.5);
-  //   width: 8px;
-  //   z-index: layer('pseudo');
-
-  //   @include mq($screen-sm) {
-  //     left: 50%;
-  //   }
-
-/* The small horizontal bar */
-  // &:after {
-  //   background: $tink-teal;
-  //   content: '';
-  //   height: 4px;
-  //   position: absolute;
-  //   top: rem(20);
-  //   width: 20px;
-  //   z-index: layer('pseudo');
-
-  //   @include mq($screen-sm) {
-  //     right: calc(50% - 12px);
-  //   }
-  // }
 
 
 
