@@ -1,15 +1,16 @@
 
 /* Vertical timeline */
 
-/* The timeline container */ // the container should be a list.
-.vertical-timeline {
+/* The timeline container */
+.timeline-vertical,
+.timeline-vertical-set-right {
   @extend .list-unstyled;
-  padding: rem(20) 0;
+  padding: rem(20) 0; // give the top and bottom of the timeline some extra length
   position: relative;
 
 /* The vertical line */
   &:before {
-    background: $tink-teal;
+    background: $brand-light;
     bottom: 0;
     content: '';
     position: absolute;
@@ -17,45 +18,45 @@
     width: 4px;
 
     @include mq($screen-sm) {
-      left: 50%;
-      margin-left: -2px; // center the line
+      left: calc(50% - 2px); // center the line on +768 views
     }
   }
 
 /* The timeslot */
   > li {
-    left: 22px; // test for width of branch
+    left: 22px; // width of branch
     margin-top: rem(30); // to create some space for the datefield
     max-width: calc(100% - 22px);
     position: relative;
 
-/* The horizontal branch */
-    &:after {
-      background: $tink-teal;
-      content: '';
-      height: 4px;
-      left: -18px;
-      position: absolute;
-      top: rem(20);
-      width: 22px;
-      z-index: layer('pseudo');
+// /* The horizontal branch */
+//     &:after {
+//       background: $brand-light;
+//       content: '';
+//       height: 4px;
+//       left: -18px;
+//       position: absolute;
+//       top: calc(50% - 2px);
+//       width: 22px;
+//       z-index: layer('pseudo');
 
-      @include mq($screen-sm) {
-        left: -20px;
-        width: 20px;
+//       @include mq($screen-sm) {
+//         left: -20px;
+//         width: 20px;
 
-      }
-    }
+//       }
+//     }
 
-/* The dot in the timeslot */ // position needs to be checked on all screen sizes
+/* The dot in the timeslot */
     &:before {
-      background: $tink-teal;
+      background: $brand-light;
+      //border: 2px solid $brand-light;
       border-radius: 50%;
       content: '';
       height: 12px;
-      left: -2px;
+      left: -26px; // 4px (width of vertical line) + 22px (width left position of li)
       position: absolute;
-      top: rem(16);
+      top: calc(50% - 6px);
       width: 12px;
       z-index: layer('pseudo');
     }
@@ -84,27 +85,28 @@
       }
     }
 
-    // this li styling is for bigger screen sizes
+    // this li styling is for +768 views
     @include mq($screen-sm) {
-      left: calc(50% + 22px); // set the timeslot on the right side with 22px for width of the branch
-      max-width: calc(50% - 22px); // on bigger screens set the max-width to 50% - width of the branch
-      // LVG this shouldn't be needed / so to be looked at.
-      &:before {
-        left: -6px;
-      }
+      left: calc(50% - 2px + 22px); // set the timeslot on the right side minus 20px for the width of the branch (minus 2px repositioning of the vertical line)
+      max-width: calc(50% - 20px); // on bigger screens set the max-width to 50% minus width of the branch
+    }
+  }
+}
 
+.timeline-vertical {
+  @include mq($screen-sm) {
+    > li {
       &:nth-child(odd) {
         // reset the odd li's to the left
         left: initial;
-        // horizontal branch positioning // LVG needs some tweaking
-        &:after {
-          left: initial;
-          right: -21px;
-        }
-        // repositioning the dot on the left side
+        // // horizontal branch positioning
+        // &:after {
+        //   left: initial;
+        //   right: -20px;
+        // }
+        // repositioning the dot on the right side of the li
         &:before {
-          left: initial;
-          right: -6px;
+          left: calc(100% + 14px);
         }
         // repositioning the timeline-date on the right side of the li
         .card-date {
@@ -115,9 +117,6 @@
     }
   }
 }
-
-
-
 
 
 
