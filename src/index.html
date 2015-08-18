@@ -74,6 +74,26 @@
       }
     }
   }]);
+
+myApp.directive('tinkButton', [function () {
+  return {
+    restrict: 'E',
+    scope: {},
+    transclude: true,
+    template: '<span data-ng-transclude></span>',
+    link: function(scope, element) {
+
+      jQuery(document).ready(function($) {
+        $(element).on('click', function() {
+          $(element).addClass('btn-click').on('animationend webkitAnimationEnd', function(){
+            $(this).removeClass('btn-click');
+          });
+        });
+
+      });
+    }
+  };
+}]);
 </script>
 
 </body>
