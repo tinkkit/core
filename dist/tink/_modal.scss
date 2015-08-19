@@ -38,7 +38,7 @@ html.has-open-modal {
   display: inline-block;
   margin: rem(32 0);
   max-width: 95%;
-  overflow: auto;
+  // overflow: auto; // separated overflow because ux issue in combination with datepicker
   padding: rem($modal-inner-padding);
   user-select: all;
   vertical-align: middle;
@@ -53,5 +53,9 @@ html.has-open-modal {
 
   @include mq($screen-lg) {
     max-width: rem(600);
+  }
+  // when needed overflow can be set to auto by adding the class set-overflow
+  &.set-overflow {
+    overflow: auto;
   }
 }

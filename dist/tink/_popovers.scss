@@ -212,4 +212,29 @@
     }
   }
 
+  &-menu-list {
+    ul {
+      @extend .list-unstyled;
+      > hr {
+        border-top-color: $hr-border;
+        margin: rem($line-height-computed / 4) 0;
+      }
+
+      li {
+        padding: rem(5);
+
+        &:hover:not([disabled]) {
+          background-color: $popover-button-hover-background-color;
+          cursor: pointer;
+          transition: background-color linear $animation-speed;
+        }
+
+        &[disabled] {
+          color: $popover-disabled-color;
+          cursor: not-allowed;
+          user-select: none;
+        }
+      }
+    }
+  }
 }

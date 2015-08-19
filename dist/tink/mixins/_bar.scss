@@ -97,10 +97,6 @@
     }
   }
 
-  .main-actions {
-
-  }
-
   .sub-actions {
     margin-left: rem(4);
     padding-left: rem(4);
@@ -123,37 +119,15 @@
     > li:last-of-type  {
       margin-left: rem(20);
     }
-
-  }
-
-  .popover {
-    ul {
-      @extend .list-unstyled;
-      > hr {
-        border-top-color: $hr-border;
-        margin: rem($line-height-computed / 4) 0;
-      }
-
-      li {
-        padding: rem(5);
-      }
-
-      li:hover:not([disabled]) {
-        background-color: $gray-lighter;
-        cursor: pointer;
-        transition: background-color linear $animation-speed;
-      }
-    }
   }
 
   /**
   * Bar menu items styled on breakpoints
   */
-  // just by adding an extra class to the @extend enlarges the Tink-Core from 264KB to 428KB
-  // needs to be checked why this happens and how to refactor
   .bar-item-md,
   .bar-item-sm {
-    @extend .btn;
+    @extend %btn;
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
     &:not(:last-child) { //gives a problem when tooltip appears on bar menu item - to check in script
       margin-right: rem(3);
     }
@@ -165,18 +139,16 @@
 
   }
 
-  .bar-item-md {
-  }
-
   .bar-item-sm {
     width: rem(45);
   }
 
-  .bar-item-xs {
-    &.disabled,
-    &[disabled] {
-      color: $gray-light;
-      cursor: default;
-    }
-  }
+  // Not used at this moment
+  // .bar-item-xs {
+  //   &.disabled,
+  //   &[disabled] {
+  //     color: $gray-light;
+  //     cursor: not-allowed;
+  //   }
+  // }
 }

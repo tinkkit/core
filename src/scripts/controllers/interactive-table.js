@@ -7,13 +7,28 @@ angular.module('tinkApp')
 
   // --- Define Scope Variables. ---------------------- //
 
-  scope.loading = 0;
+  var ctrl = this;
 
-  // Override default items per page
-  scope.pages = '5, 10, 25';
+  ctrl.nums = 2;
+  ctrl.totalitems = 20;
+  ctrl.numpp = 5;
+  scope.data = {};
 
-  // Data model
-  scope.data = [
+  scope.load=function(){
+    console.log('clicked');
+  };
+
+  scope.changed = function(type,value,fn){
+    fn();
+  };
+
+  scope.boxChecked = function($data,c){
+    console.log($data,c);
+  };
+
+  ctrl.loading = false;
+
+  scope.data.content = [
     {
       firstname: 'Jasper',
       lastname: 'Van Proeyen',
@@ -23,89 +38,102 @@ angular.module('tinkApp')
       firstname: 'Tom',
       lastname: 'Wuyts',
       username: '@pxlpanic'
-    },
-    {
-      firstname: 'Kevin',
-      lastname: 'De Mulder',
-      username: '@clopin'
-    },
-    {
-      firstname: 'Vincent',
-      lastname: 'Bouillart',
-      username: '@BouillartV'
-    },
-    {
-      firstname: 'Tom',
-      lastname: 'Hermans',
-      username: '@tomhermans'
-    },
-    {
-      firstname: 'Lieven',
-      lastname: 'Van Gestel',
-      username: '@lievenvg'
-    },
-    {
-      firstname: 'Jasper',
-      lastname: 'Van Proeyen',
-      username: '@trianglejuice'
-    },
-    {
-      firstname: 'Tom',
-      lastname: 'Wuyts',
-      username: '@pxlpanic'
-    },
-    {
-      firstname: 'Kevin',
-      lastname: 'De Mulder',
-      username: '@clopin'
-    },
-    {
-      firstname: 'Vincent',
-      lastname: 'Bouillart',
-      username: '@BouillartV'
-    },
-    {
-      firstname: 'Tom',
-      lastname: 'Hermans',
-      username: '@tomhermans'
-    },
-    {
-      firstname: 'Lieven',
-      lastname: 'Van Gestel',
-      username: '@lievenvg'
     }
   ];
 
-  // The headers you want to show and whether they are already visible in the table
-  scope.headers = [
-    {
-      field: 'firstname',
-      alias: 'Voornaam',
-      checked: true
-    },
-    {
-      field: 'lastname',
-      alias: 'Achternaam',
-      checked: false
-    },
-    {
-      field: 'username',
-      alias: 'Gebruikersnaam',
-      checked: true
-    }
-  ];
-
-  // Some actions that become available when you check one or multiple rows
   scope.actions = [
+    {
+      name: 'add',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          // scope.data.content.splice(scope.data.content.indexOf(val),1);
+          scope.data.content.push({
+            firstname: 'New first',
+            lastname: 'New last',
+            username: '@newuser'
+          });
+          console.log('Added ' + val.firstname);
+        });
+      },
+      order:0,
+      master:true,
+      icon:'fa-plus'
+    },
+    {
+      name: 'edit',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          // scope.data.content.splice(scope.data.content.indexOf(val),1);
+          console.log('Did something with ' + val.firstname);
+        });
+      },
+      order:1,
+      master:true,
+      icon:'fa-edit'
+    },
     {
       name: 'remove',
       callback: function(items) {
         angular.forEach(items, function(val) {
-          scope.data.splice(scope.data.indexOf(val),1);
+          scope.data.content.splice(scope.data.content.indexOf(val),1);
         });
-      }
+      },
+      order:2,
+      master:true,
+      icon:'fa-trash-o',
+      single:true
+    },
+    {
+      name: 'search',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          // scope.data.content.splice(scope.data.content.indexOf(val),1);
+          console.log('Searched ' + val.firstname);
+        });
+      },
+      order:3,
+      master:true,
+      icon:'fa-search'
+    },
+    {
+      name: 'open',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          // scope.data.content.splice(scope.data.content.indexOf(val),1);
+          console.log('Opened ' + val.firstname);
+        });
+      },
+      order:4,
+      master:false,
+      icon:'fa-folder-open'
+    },
+    {
+      name: 'do something else',
+      callback: function(items) {
+        angular.forEach(items, function(val) {
+          // scope.data.content.splice(scope.data.content.indexOf(val),1);
+          console.log('Did something else with ' + val.firstname);
+        });
+      },
+      order:5,
+      master:false,
+      icon:'fa-magic'
     }
   ];
+  scope.headers = [{
+    name:'firstname',
+    alias:'voornaam',
+    checked:true
+  },{
+    name:'lastname',
+    disabled:true,
+    alias:'lastname',
+    checked:true
+  },{
+    name:'username',
+    alias:'username',
+    checked:true
+  }];
 
   // --- Bind To Scope Events. ------------------------ //
 

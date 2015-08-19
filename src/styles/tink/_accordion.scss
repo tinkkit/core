@@ -17,6 +17,10 @@
     }
   }
 
+  &:not(:first-child) {
+    border-top: none;
+  }
+
   &:last-child {
     border-bottom-right-radius: $panel-border-radius;
     border-bottom-left-radius: $panel-border-radius;
@@ -35,6 +39,13 @@
     > .accordion-toggle {
       &:before {
         transform: rotate(180deg);
+      }
+    }
+
+    &:last-child {
+      .panel-heading {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
   }
