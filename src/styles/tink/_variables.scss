@@ -524,7 +524,8 @@ $tooltip-color:               $text-color !default;
 //** Tooltip background color
 $tooltip-bg:                  #fff176 !default; // lighten($gray-light, 10) !default;
 // $tooltip-opacity:             .9 !default;
-$tooltip-border-color:        darken($tooltip-bg, 2) !default;
+// $tooltip-border-color:        darken($tooltip-bg, 2) !default;
+$tooltip-border-color:        transparent !default;
 
 //** Tooltip arrow width
 $tooltip-arrow-width:         6px !default;

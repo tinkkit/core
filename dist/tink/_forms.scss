@@ -378,7 +378,7 @@ table {
       position: absolute;
       right: 1px;
       top: 1px;
-      width: rem(18);
+      width: rem(20);
       z-index: layer('pseudo');
     }
   }
@@ -391,6 +391,7 @@ select {
   background: $white image-url("select-arrow.svg") no-repeat right center;
   background-size: contain;
   // background: none \9;
+  padding-right: rem(24);
   padding: rem($padding-base-vertical 8px $padding-base-vertical $padding-base-horizontal) \9;
   text-indent: 0.01px;
   text-overflow: '';
