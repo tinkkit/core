@@ -544,14 +544,13 @@ $popover-disabled-color:                $gray-light !default;
 $popover-padding:                       6px !default;
 $popover-header-bg:                     $white !default;
 
-$popover-arrow-width:                   11px !default;
-
 $popover-button-background-color:       $nav-aside-item-open-color !default;
 $popover-button-hover-background-color: $nav-aside-link-hover-background-color !default;
 $popover-button-color:                  $nav-aside-link-color !default;
 
-$popover-arrow-color:                   $popover-bg-color;
-$popover-arrow-border-color:            $popover-border-color;
+$popover-arrow-width:                   11px !default;
+$popover-arrow-color:                   $popover-bg-color !default;
+$popover-arrow-border-color:            $popover-border-color !default;
 $popover-arrow-offset:                  16px !default;
 
 
