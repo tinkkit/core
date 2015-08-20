@@ -3,8 +3,128 @@
  * --------------------------------------------------
  */
 
-.timeline {
+/**
+ * Variables
+ */
+$timeline-line-color: $brand-light;
 
+/**
+ * The timeline
+ */
+
+.timeline {
+  @extend .list-unstyled;
+  padding: rem(20);
+
+  /**
+   * The starting dot
+   */
+  &:before {
+    background: $timeline-line-color;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: rem(6);
+    margin-left: rem(-2);
+    position: absolute;
+    top: rem(-3);
+    width: rem(6);
+
+    @include mq($screen-sm) {
+      left: calc(50% - 1px);
+    }
+  }
+
+  /**
+   * The main branch line
+   */
+  &:after {
+    background: $timeline-line-color;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+
+    @include mq($screen-sm) {
+      left: calc(50% - 1px);
+    }
+  }
+
+  /**
+   * Timeline items are actually cards
+   */
+  > li {
+    @extend .panel;
+    margin-top: rem(30);
+    margin-left: 20px;
+    position: relative;
+
+    /**
+     * Connection line to main branch
+     */
+    &:before {
+      background: linear-gradient(to right, $timeline-line-color, $panel-default-border);
+      content: '';
+      height: 1px;
+      left: -20px;
+      position: absolute;
+      top: 20px;
+      width: 20px;
+    }
+
+    /**
+     * Cards are 50% wide on larger screens
+     */
+    @include mq($screen-sm) {
+      margin-bottom: 0;
+      margin-top: 0;
+      width: calc(50% - 20px);
+
+      /**
+       * Left elements
+       */
+      &:nth-child(odd) {
+        margin: 0 20px 0 0;
+
+        &:before {
+          background: linear-gradient(to right, $panel-default-border, $timeline-line-color);
+          left: auto;
+          right: -21px;
+        }
+      }
+
+      /**
+       * Right elements
+       */
+      &:nth-child(even) {
+        left: 50%;
+
+        &:before {
+        }
+      }
+
+      /**
+       * Date label on larger screens
+       */
+    }
+  }
+
+  /**
+   * Date label on mobile
+   */
+  &-date {
+    background-color: $brand-light;
+    border-radius: $border-radius-base;
+    color: $white;
+    display: block;
+    font-size: rem(12);
+    left: rem(14);
+    padding: rem(2 4);
+    position: absolute;
+    top: rem(-12);
+    z-index: layer('pseudo');
+  }
 }
 
 // /* Vertical timeline */
