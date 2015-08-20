@@ -69,7 +69,8 @@ $timeline-line-color: $brand-light;
       height: 1px;
       left: -20px;
       position: absolute;
-      top: 20px;
+      // top: 20px;
+      top: calc(50%);
       width: 20px;
     }
 
@@ -77,8 +78,8 @@ $timeline-line-color: $brand-light;
      * Cards are 50% wide on larger screens
      */
     @include mq($screen-sm) {
-      margin-bottom: 0;
-      margin-top: 0;
+      margin-bottom: rem(10);
+      margin-top: rem(10);
       width: calc(50% - 20px);
 
       /**
@@ -92,6 +93,14 @@ $timeline-line-color: $brand-light;
           left: auto;
           right: -21px;
         }
+
+        .timeline-date {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+          left: calc(100% + 21px);
+          top: calc(50% - 11px);
+          // top: rem(8);
+        }
       }
 
       /**
@@ -100,7 +109,13 @@ $timeline-line-color: $brand-light;
       &:nth-child(even) {
         left: 50%;
 
-        &:before {
+        .timeline-date {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          left: auto;
+          right: calc(100% + 21px);
+          top: calc(50% - 11px);
+          // top: rem(8);
         }
       }
 
@@ -113,6 +128,7 @@ $timeline-line-color: $brand-light;
   /**
    * Date label on mobile
    */
+
   &-date {
     background-color: $brand-light;
     border-radius: $border-radius-base;
