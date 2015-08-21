@@ -12,8 +12,9 @@ $timeline-line-color: $brand-light;
 $timeline-label-color: $white;
 $timeline-label-bgcolor: $brand-light;
 $timeline-card-offset: 24px;
-$timeline-date-color: $text-color;
-$timeline-date-bgcolor: $gray-lighter;
+$timeline-date-color: $brand-light;
+$timeline-date-bgcolor: $white;
+$timeline-date-border: $brand-light;
 
 /**
  * The timeline
@@ -109,7 +110,6 @@ $timeline-date-bgcolor: $gray-lighter;
          */
         &:nth-child(odd) {
           clear: both;
-          float: left;
           margin: 0 $timeline-card-offset 0 0;
 
           &:before {
@@ -119,12 +119,9 @@ $timeline-date-bgcolor: $gray-lighter;
           }
 
           .timeline-date {
+            right: calc(-100% - 2*#{$timeline-card-offset});
+
             time {
-              float: right;
-              border-top-left-radius: 0;
-              border-bottom-right-radius: 0;
-              border-top-right-radius: ($timeline-border-radius - 1.5px); // Fix faulty behaviour in Webkit
-              border-bottom-left-radius: $timeline-border-radius;
             }
           }
         }
@@ -134,6 +131,20 @@ $timeline-date-bgcolor: $gray-lighter;
          */
         &:nth-child(even) {
           float: right;
+
+          .timeline-date {
+            left: calc(-100% - 2*#{$timeline-card-offset});
+
+            &:before {
+              background: linear-gradient(to right, $timeline-date-border, $timeline-line-color);
+              left: auto;
+              right: -($timeline-card-offset);
+            }
+
+            time {
+              float: right;
+            }
+          }
         }
       }
     }
@@ -169,18 +180,71 @@ $timeline-date-bgcolor: $gray-lighter;
    * Each card can have a date
    */
   &-date {
-    @include clearfix();
-    margin-bottom: rem(-12);
+    display: block;
+    margin: rem(-10 0 -10 10);
+    width: 100%;
+
+    @include mq($screen-sm) {
+      margin: rem(0);
+      position: absolute;
+
+      &:before {
+        background: linear-gradient(to right, $timeline-line-color, $timeline-date-border);
+        content: '';
+        height: 1px;
+        left: -($timeline-card-offset);
+        position: absolute;
+        top: rem(10);
+        width: $timeline-card-offset;
+      }
+    }
 
     time {
       background-color: $timeline-date-bgcolor;
-      border-top-left-radius: ($timeline-border-radius - 1.5px); // Fix faulty behaviour in Webkit
-      border-bottom-right-radius: $timeline-border-radius;
+      border: 1px solid $timeline-date-border;
+      border-radius: $timeline-border-radius;
       color: $timeline-date-color;
-      display: inline-block;
-      float: left;
       font-size: rem(12);
       padding: rem(2 8);
+    }
+  }
+
+  &.save-space {
+    .timeline-list {
+      > li {
+        @include mq($screen-sm) {
+          &:nth-child(odd) {
+            float: left;
+
+            .timeline-date {
+              margin: rem(-10 0 -10 -10);
+
+              time {
+                float: right;
+              }
+            }
+          }
+
+          &:nth-child(even) {
+            .timeline-date {
+              margin: rem(-10 0 -10 10);
+
+              time {
+                float: left;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .timeline-date {
+      @include clearfix();
+      position: static;
+
+      &:before {
+        content: none;
+      }
     }
   }
 }
