@@ -309,6 +309,9 @@ $input-height-large:             (ceil($font-size-large * $line-height-large) + 
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            $gray-lighter !default;
 
+$label-color:                    $gray !default;
+$label-font-weight:              400 !default;
+
 $input-group-addon-bg:           $gray-lighter !default; // Background color for textual input addons
 $input-group-addon-border-color: $input-border !default; // Border color for textual input addons
 
