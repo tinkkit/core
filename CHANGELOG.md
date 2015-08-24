@@ -22,7 +22,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added an arrow component and applied it to the popover and tooltip componen
 
 ### Changed
-- Changed the default styling of the label element
+- Tweaked the default styling of some form elements
+- Labels are not bold by default anymore
 
 <!-- ### Deprecated
 - Deprecated the panel component in favour of the card component -->

@@ -2025,7 +2025,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   background-image: none;
   border: 1px solid #bbb;
   border-radius: 0.21429rem ;
-  color: #5c5c5c;
+  color: #333;
   display: block;
   font-size: 1rem ;
   line-height: 1.428571429;
@@ -2257,7 +2257,7 @@ output {
   padding-top: 0.5rem ;
   font-size: 1rem ;
   line-height: 1.428571429;
-  color: #5c5c5c; }
+  color: #333; }
 
 /**
  * Form variants

@@ -260,7 +260,7 @@ $caret-width-large:         5px !default;
 
 $btn-font-weight:                600 !default;
 
-$btn-default-color:              $gray-dark !default;
+$btn-default-color:              $text-color !default;
 $btn-default-bg:                 $white !default;
 $btn-default-border:             $gray-light !default;
 $btn-default-hover-bg:           lighten($gray-lighter, 6%) !default;
@@ -297,7 +297,7 @@ $btn-icon-margin:                8px !default; // right margin when icon inside 
 $input-bg:                       $white !default; // `<input>` background color
 $input-bg-disabled:              $gray-lighter !default; // `<input disabled>` background color
 $input-base-color:               $brand-light !default; // Color for checkboxes and radio buttons
-$input-color:                    lighten($gray-dark, 16%) !default; // Text color for `<input>`s
+$input-color:                    $text-color !default; // lighten($gray-dark, 16%) !default; // Text color for `<input>`s
 $input-border:                   $gray-light !default; // `<input>` border color
 $input-border-radius:            $border-radius-base !default; // `<input>` border radius
 $input-border-focus:             $brand-light !default; // Border color for inputs on focus
@@ -306,7 +306,7 @@ $input-height-base:              ($line-height-computed + ($padding-base-vertica
 $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default; // Large `.form-control` height
 // $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default; // Small `.form-control` height
 
-$legend-color:                   $gray-dark !default;
+$legend-color:                   $text-color !default;
 $legend-border-color:            $gray-lighter !default;
 
 $label-color:                    $gray !default;
@@ -415,7 +415,7 @@ $back-to-top-hover-bgcolor:                    rgba($brand, .8) !default;
  * Settings for both the single as the range datepicker
  */
 
-$datepicker-color:                                    $gray-dark !default;
+$datepicker-color:                                    $text-color !default;
 $datepicker-bg-color:                                 $white !default;
 $datepicker-icon-color:                               lighten($gray-dark, 16%) !default;
 $datepicker-icon-hover-color:                         $gray-dark !default;
@@ -613,44 +613,41 @@ $modal-bgcolor:         $gray-lighter !default;
 
 
 /**
- * Panels
+ * Cards
  */
 
-$panel-bg:                    $white !default;
-$panel-body-padding:          $padding-large-horizontal !default;
-$panel-heading-padding:       ($padding-base-horizontal * 2/3) !default;
-$panel-footer-padding:        $panel-heading-padding !default;
-$panel-border-radius:         $border-radius-base !default;
+$card-bg:                    $white !default;
+$card-body-padding:          $padding-large-horizontal !default;
+$card-heading-padding:       ($padding-base-horizontal * 2/3) !default;
+$card-footer-padding:        $card-heading-padding !default;
+$card-border-radius:         $border-radius-base !default;
 
-//** Border color for elements within panels
-    // $panel-inner-border:          $gray-lighter !default;
-    // $panel-footer-bg:             lighten($gray-lighter, 6%) !default;
+$card-default-text:          $text-color !default; // TO BE CLEANED UP  $white !default;
+$card-title-font-size:       $font-size-base !default;
+$card-default-border:        $gray-lighter !default;
+$card-default-heading-bg:    $body-bg-alt; //$gray-lighter !default; // TO BE CLEANED UP lighten($gray-dark, 12) !default;
+$card-default-icon-color:    $gray !default;
+$card-default-footer-bg:     $card-default-heading-bg !default;
 
-$panel-default-text:          $gray-dark !default; // TO BE CLEANED UP  $white !default;
-$panel-default-border:        $gray-lighter !default;
-$panel-default-heading-bg:    $body-bg-alt; //$gray-lighter !default; // TO BE CLEANED UP lighten($gray-dark, 12) !default;
-$panel-default-icon-color:    $gray !default;
-$panel-default-footer-bg:     $panel-default-heading-bg !default;
+// $card-primary-text:          $white !default;
+// $card-primary-border:        $brand !default;
+// $card-primary-heading-bg:    $brand !default;
 
-// $panel-primary-text:          $white !default;
-// $panel-primary-border:        $brand !default;
-// $panel-primary-heading-bg:    $brand !default;
+// $card-success-text:          $state-success-text !default;
+// $card-success-border:        $state-success-border !default;
+// $card-success-heading-bg:    $state-success-bg !default;
 
-// $panel-success-text:          $state-success-text !default;
-// $panel-success-border:        $state-success-border !default;
-// $panel-success-heading-bg:    $state-success-bg !default;
+// $card-info-text:             $state-info-text !default;
+// $card-info-border:           $state-info-border !default;
+// $card-info-heading-bg:       $state-info-bg !default;
 
-// $panel-info-text:             $state-info-text !default;
-// $panel-info-border:           $state-info-border !default;
-// $panel-info-heading-bg:       $state-info-bg !default;
+// $card-warning-text:          $state-warning-text !default;
+// $card-warning-border:        $state-warning-border !default;
+// $card-warning-heading-bg:    $state-warning-bg !default;
 
-// $panel-warning-text:          $state-warning-text !default;
-// $panel-warning-border:        $state-warning-border !default;
-// $panel-warning-heading-bg:    $state-warning-bg !default;
-
-// $panel-danger-text:           $state-danger-text !default;
-// $panel-danger-border:         $state-danger-border !default;
-// $panel-danger-heading-bg:     $state-danger-bg !default;
+// $card-danger-text:           $state-danger-text !default;
+// $card-danger-border:         $state-danger-border !default;
+// $card-danger-heading-bg:     $state-danger-bg !default;
 
 
 
@@ -659,8 +656,8 @@ $panel-default-footer-bg:     $panel-default-heading-bg !default;
  */
 
 // heading bg and color are standard the values of tables
-//$table-interactive-heading-bg:          $panel-default-heading-bg !default;
-//$table-interactive-heading-color:       $panel-default-text !default;
+//$table-interactive-heading-bg:          $card-default-heading-bg !default;
+//$table-interactive-heading-color:       $card-default-text !default;
 $table-interactive-heading-line:             lighten($table-heading-color, 48%) !default;
 $table-interactive-heading-hover-bg:         darken($table-heading-bg, 5%) !default;
 $table-interactive-heading-hover-color:      $table-heading-color !default;
@@ -671,9 +668,9 @@ $table-interactive-options-dropzone-border:  $brand !default;
 /**
  * Table alternative heading
  */
-$table-alternative-heading-bg:          $panel-default-heading-bg !default;
-$table-alternative-heading-color:       $panel-default-text !default;
-$table-alternative-heading-line:        darken($panel-default-text, 48%) !default;
+$table-alternative-heading-bg:          $card-default-heading-bg !default;
+$table-alternative-heading-color:       $card-default-text !default;
+$table-alternative-heading-line:        darken($card-default-text, 48%) !default;
 $table-alternative-heading-hover-bg:    darken($table-alternative-heading-bg, 5%) !default;
 $table-alternative-heading-hover-color: $table-alternative-heading-color !default;
 
@@ -722,7 +719,7 @@ $pagination-link-disabled-border: lighten($gray-light, 10%) !default;
  * Badges
  */
 
-$badge-color:                 $gray-dark !default;
+$badge-color:                 $text-color !default;
 // ** Linked badge text color on hover
 $badge-link-hover-color:      $white !default;
 $badge-bg:                    $gray-lighter !default;

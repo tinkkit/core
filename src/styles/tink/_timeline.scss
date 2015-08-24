@@ -83,7 +83,7 @@ $timeline-date-border: $brand-light;
      * Timeline items are actually cards
      */
     > li {
-      @extend .panel;
+      @extend .card;
       margin: rem(20 0 20) $timeline-card-offset;
       position: relative;
 
@@ -91,7 +91,7 @@ $timeline-date-border: $brand-light;
        * Connection line to main branch
        */
       &:before {
-        background: linear-gradient(to right, $timeline-line-color, $panel-default-border);
+        background: linear-gradient(to right, $timeline-line-color, $card-default-border);
         content: '';
         height: 1px;
         left: -($timeline-card-offset + 1px);
@@ -113,7 +113,7 @@ $timeline-date-border: $brand-light;
           margin: 0 $timeline-card-offset 0 0;
 
           &:before {
-            background: linear-gradient(to right, $panel-default-border, $timeline-line-color);
+            background: linear-gradient(to right, $card-default-border, $timeline-line-color);
             left: auto;
             right: -($timeline-card-offset + 1px);
           }
