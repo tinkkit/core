@@ -1577,7 +1577,7 @@ ul, ol {
   margin-bottom: 0.71429rem ;
   margin-top: 0; }
 
-.list-unstyled, .list-inline, .pagination, .nav-top-branding, .nav-top-section-left, .nav-top-section-center, .nav-top-section-right, .bar-branding, .bar-section-left, .bar-section-center, .bar-section-right, .hit-area-box, .timeline-vertical, .timeline-vertical-set-right, .table-interactive-cols, .nav-aside ul, .popover-menu-list ul, .upload-files, .dragenter {
+.list-unstyled, .list-inline, .pagination, .nav-top-branding, .nav-top-section-left, .nav-top-section-center, .nav-top-section-right, .bar-branding, .bar-section-left, .bar-section-center, .bar-section-right, .hit-area-box, .table-interactive-cols, .nav-aside ul, .popover-menu-list ul, .upload-files, .dragenter {
   list-style: none;
   margin-bottom: 0;
   padding-left: 0; }
@@ -2036,7 +2036,6 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     border-color: #5fb1d6;
     box-shadow: 0 0 0 2px rgba(95, 177, 214, 0.25);
     outline: 0;
-    position: relative;
     z-index: 1; }
   input[type="color"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="text"]::-moz-placeholder, .faux-input::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="week"]::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
     color: #bbb;
@@ -2303,7 +2302,6 @@ output {
     border-color: #4a921f;
     box-shadow: 0 0 0 2px rgba(74, 146, 31, 0.25);
     outline: 0;
-    position: relative;
     z-index: 1; }
 .has-success .validation:before {
   color: #4a921f;
@@ -2321,7 +2319,6 @@ output {
     border-color: #e60038;
     box-shadow: 0 0 0 2px rgba(230, 0, 56, 0.25);
     outline: 0;
-    position: relative;
     z-index: 1; }
 .has-error .validation:before {
   color: #e60038;
@@ -3067,75 +3064,6 @@ html.has-open-modal {
       left: 1.07143rem ;
       top: 0.64286rem ;
       width: 1.14286rem ; } }
-
-/**
- * Timeline
- * --------------------------------------------------
- */
-/* Vertical timeline */
-/* The timeline container */
-.timeline-vertical, .timeline-vertical-set-right {
-  padding: 1.42857rem  0;
-  position: relative;
-  /* The vertical line */
-  /* The timeslot */ }
-  .timeline-vertical:before, .timeline-vertical-set-right:before {
-    background: #5fb1d6;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 4px; }
-    @media (min-width: 768px) {
-      .timeline-vertical:before, .timeline-vertical-set-right:before {
-        left: calc(50% - 2px); } }
-  .timeline-vertical > li, .timeline-vertical-set-right > li {
-    left: 22px;
-    margin-top: 2.14286rem ;
-    max-width: calc(100% - 22px);
-    position: relative;
-    /* The dot in the timeslot */
-    /* The date-card */
-    /* The info-card */ }
-    .timeline-vertical > li:before, .timeline-vertical-set-right > li:before {
-      background: #5fb1d6;
-      border-radius: 50%;
-      content: '';
-      height: 12px;
-      left: -26px;
-      position: absolute;
-      top: calc(50% - 6px);
-      width: 12px;
-      z-index: 2; }
-    .timeline-vertical > li .card-date, .timeline-vertical-set-right > li .card-date {
-      background-color: #a5d6a7;
-      border-radius: 3px;
-      color: #fff;
-      display: block;
-      left: -0.35714rem ;
-      padding: 0.35714rem ;
-      position: absolute;
-      top: -1.42857rem ;
-      z-index: 2; }
-    .timeline-vertical > li .card, .timeline-vertical-set-right > li .card {
-      margin: 0.07143rem  0 0 4px; }
-      @media (min-width: 768px) {
-        .timeline-vertical > li .card, .timeline-vertical-set-right > li .card {
-          margin: 0.07143rem  0 0 0; } }
-    @media (min-width: 768px) {
-      .timeline-vertical > li, .timeline-vertical-set-right > li {
-        left: calc(50% - 2px + 22px);
-        max-width: calc(50% - 20px); } }
-
-@media (min-width: 768px) {
-  .timeline-vertical > li:nth-child(odd) {
-    left: initial; }
-    .timeline-vertical > li:nth-child(odd):before {
-      left: calc(100% + 14px); }
-    .timeline-vertical > li:nth-child(odd) .card-date {
-      left: initial;
-      right: -0.35714rem ; }
- }
 
 /**
  * Angular related components

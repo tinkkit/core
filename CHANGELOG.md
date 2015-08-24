@@ -16,6 +16,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.6.0] - 2015-xx-xx
+
+### Added
+- Added an arrow component and applied it to the popover and tooltip componen
+
+### Changed
+- Changed the default styling of the label element
+
+<!-- ### Deprecated
+- Deprecated the panel component in favour of the card component -->
+
+### Fixed
+- Fixed a bug where in Firefox the select element had to be clicked twice before it would open
+
+
+
 ## [1.5.11] - 2015-08-12
 
 ### Changed

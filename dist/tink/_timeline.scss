@@ -3,124 +3,247 @@
  * --------------------------------------------------
  */
 
+/**
+ * Variables
+ */
+$timeline-padding: 20px;
+$timeline-border-radius: $border-radius-base;
+$timeline-line-color: $brand-light;
+$timeline-label-color: $white;
+$timeline-label-bgcolor: $brand-light;
+$timeline-card-offset: 24px;
+$timeline-date-color: $brand-light;
+$timeline-date-bgcolor: $white;
+$timeline-date-border: $brand-light;
+
+/**
+ * The timeline
+ */
+
 .timeline {
-
-}
-
-/* Vertical timeline */
-
-/* The timeline container */
-.timeline-vertical,
-.timeline-vertical-set-right {
-  @extend .list-unstyled;
-  padding: rem(20) 0; // give the top and bottom of the timeline some extra length
+  padding: rem($timeline-padding);
   position: relative;
 
-/* The vertical line */
+  @include mq($screen-sm) {
+    text-align: center;
+  }
+
+  /**
+   * The starting dot
+   */
   &:before {
-    background: $brand-light;
-    bottom: 0;
+    background: $timeline-line-color;
+    border-radius: 50%;
     content: '';
+    display: block;
+    height: rem(6);
+    left: $timeline-padding;
+    margin-left: rem(-2);
     position: absolute;
-    top: 0;
-    width: 4px;
+    top: rem(-3);
+    width: rem(6);
 
     @include mq($screen-sm) {
-      left: calc(50% - 2px); // center the line on +768 views
+      left: calc(50% - 1px);
     }
   }
 
-/* The timeslot */
-  > li {
-    left: 22px; // width of branch
-    margin-top: rem(30); // to create some space for the datefield
-    max-width: calc(100% - 22px);
+  /**
+   * The main branch line
+   */
+  &:after {
+    background: $timeline-line-color;
+    bottom: 0;
+    content: '';
+    left: $timeline-padding;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: layer("cellar");
+
+    @include mq($screen-sm) {
+      left: calc(50% - 1px);
+    }
+  }
+
+  /**
+   * Each timeline can have multiple lists
+   */
+  &-list {
+    @extend .list-unstyled;
+    @include clearfix();
     position: relative;
 
-// /* The horizontal branch */
-//     &:after {
-//       background: $brand-light;
-//       content: '';
-//       height: 4px;
-//       left: -18px;
-//       position: absolute;
-//       top: calc(50% - 2px);
-//       width: 22px;
-//       z-index: layer('pseudo');
-
-//       @include mq($screen-sm) {
-//         left: -20px;
-//         width: 20px;
-
-//       }
-//     }
-
-/* The dot in the timeslot */
-    &:before {
-      background: $brand-light;
-      //border: 2px solid $brand-light;
-      border-radius: 50%;
-      content: '';
-      height: 12px;
-      left: -26px; // 4px (width of vertical line) + 22px (width left position of li)
-      position: absolute;
-      top: calc(50% - 6px);
-      width: 12px;
-      z-index: layer('pseudo');
+    @include mq($screen-sm) {
+      margin: rem(20 auto);
+      text-align: left;
     }
 
-/* The date-card */
-    .card-date {
-      background-color: $tink-green;
-      border-radius: $border-radius-base;
-      color: $white;
-      display: block;
-      left: rem(-5);
-      padding: rem(5);
-      position: absolute;
-      top: rem(-20);
-      z-index: layer('pseudo');
-    }
+    /**
+     * Timeline items are actually cards
+     */
+    > li {
+      @extend .panel;
+      margin: rem(20 0 20) $timeline-card-offset;
+      position: relative;
 
-/* The info-card */
-    .card {
-    // set the card next to the vertical line and create little vertical space between the cards
-      margin: rem(1) 0 0 4px;
+      /**
+       * Connection line to main branch
+       */
+      &:before {
+        background: linear-gradient(to right, $timeline-line-color, $panel-default-border);
+        content: '';
+        height: 1px;
+        left: -($timeline-card-offset + 1px);
+        position: absolute;
+        // top: 20px;
+        top: rem(10);
+        // top: calc(50% - 6px);
+        width: $timeline-card-offset;
+      }
 
       @include mq($screen-sm) {
-      // on bigger screens remove the left-margin
-        margin: rem(1) 0 0 0;
+        width: calc(50% - #{$timeline-card-offset});
+
+        /**
+         * Left elements
+         */
+        &:nth-child(odd) {
+          clear: both;
+          margin: 0 $timeline-card-offset 0 0;
+
+          &:before {
+            background: linear-gradient(to right, $panel-default-border, $timeline-line-color);
+            left: auto;
+            right: -($timeline-card-offset + 1px);
+          }
+
+          .timeline-date {
+            right: calc(-100% - 2*#{$timeline-card-offset});
+
+            time {
+            }
+          }
+        }
+
+        /**
+         * Right elements
+         */
+        &:nth-child(even) {
+          float: right;
+
+          .timeline-date {
+            left: calc(-100% - 2*#{$timeline-card-offset});
+
+            &:before {
+              background: linear-gradient(to right, $timeline-date-border, $timeline-line-color);
+              left: auto;
+              right: -($timeline-card-offset);
+            }
+
+            time {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Each timeline can have multiple labels
+   */
+  &-label {
+    background-color: $timeline-label-bgcolor;
+    border-radius: $timeline-border-radius;
+    color: $timeline-label-color;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: rem(20);
+    padding: rem(3 8);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include mq($screen-sm, "max") {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    @include mq($screen-sm) {
+      margin: rem(20 auto 0);
+    }
+  }
+
+  /**
+   * Each card can have a date
+   */
+  &-date {
+    display: block;
+    margin: rem(-10 0 -10 10);
+    width: 100%;
+
+    @include mq($screen-sm) {
+      margin: rem(0);
+      position: absolute;
+
+      &:before {
+        background: linear-gradient(to right, $timeline-line-color, $timeline-date-border);
+        content: '';
+        height: 1px;
+        left: -($timeline-card-offset);
+        position: absolute;
+        top: rem(10);
+        width: $timeline-card-offset;
       }
     }
 
-    // this li styling is for +768 views
-    @include mq($screen-sm) {
-      left: calc(50% - 2px + 22px); // set the timeslot on the right side minus 20px for the width of the branch (minus 2px repositioning of the vertical line)
-      max-width: calc(50% - 20px); // on bigger screens set the max-width to 50% minus width of the branch
+    time {
+      background-color: $timeline-date-bgcolor;
+      border: 1px solid $timeline-date-border;
+      border-radius: $timeline-border-radius;
+      color: $timeline-date-color;
+      font-size: rem(12);
+      padding: rem(2 8);
     }
   }
-}
 
-.timeline-vertical {
-  @include mq($screen-sm) {
-    > li {
-      &:nth-child(odd) {
-        // reset the odd li's to the left
-        left: initial;
-        // // horizontal branch positioning
-        // &:after {
-        //   left: initial;
-        //   right: -20px;
-        // }
-        // repositioning the dot on the right side of the li
-        &:before {
-          left: calc(100% + 14px);
+  &.save-space {
+    .timeline-list {
+      > li {
+        @include mq($screen-sm) {
+          &:nth-child(odd) {
+            float: left;
+
+            .timeline-date {
+              margin: rem(-10 0 -10 -10);
+
+              time {
+                float: right;
+              }
+            }
+          }
+
+          &:nth-child(even) {
+            .timeline-date {
+              margin: rem(-10 0 -10 10);
+
+              time {
+                float: left;
+              }
+            }
+          }
         }
-        // repositioning the timeline-date on the right side of the li
-        .card-date {
-          left: initial; // reset the left position
-          right: rem(-5);
-        }
+      }
+    }
+
+    .timeline-date {
+      @include clearfix();
+      position: static;
+
+      &:before {
+        content: none;
       }
     }
   }
