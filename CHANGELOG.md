@@ -19,7 +19,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.6.0] - 2015-xx-xx
 
 ### Added
-- Added an arrow component and applied it to the popover and tooltip componen
+- Added an arrow component and applied it to the popover and tooltip component
+- Added possibility to right-align the datepicker
 
 ### Changed
 - Tweaked the default styling of some form elements
