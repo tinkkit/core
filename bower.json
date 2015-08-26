@@ -39,8 +39,5 @@
     "tink",
     "core",
     "sass"
-  ],
-  "dependencies": {
-    "tink-popover-angular": "~1.0.3"
-  }
+  ]
 }
