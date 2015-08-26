@@ -112,7 +112,7 @@
  * Modals
  */
 /**
- * Panels
+ * Cards
  */
 /**
  * Interactive table
@@ -2605,53 +2605,56 @@ button[type="submit"], input[type="submit"], .btn-primary {
   top: auto; }
 
 /**
- * Panels
+ * Cards
  * --------------------------------------------------
  */
-.panel, .accordion-panel {
+.card, .accordion-panel {
   border-color: #eaeaea;
   background-color: #fff;
   border: 1px solid #eaeaea;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.42857rem ; }
-  .panel .panel-heading, .accordion-panel .panel-heading, .panel .accordion-panel-heading, .accordion-panel .accordion-panel-heading {
+  .card .card-heading, .accordion-panel .card-heading, .card .accordion-panel-heading, .accordion-panel .accordion-panel-heading {
     color: #333;
     background-color: #f7f7f7;
     border-color: #eaeaea; }
-    .panel .panel-heading + .panel-collapse > .panel-body, .accordion-panel .panel-heading + .panel-collapse > .panel-body, .panel .accordion-panel-heading + .panel-collapse > .panel-body, .accordion-panel .accordion-panel-heading + .panel-collapse > .panel-body, .panel .panel-heading + .panel-collapse > .accordion-panel-body, .accordion-panel .panel-heading + .panel-collapse > .accordion-panel-body, .panel .accordion-panel-heading + .panel-collapse > .accordion-panel-body, .accordion-panel .accordion-panel-heading + .panel-collapse > .accordion-panel-body {
+    .card .card-heading + .card-collapse > .card-body, .accordion-panel .card-heading + .card-collapse > .card-body, .card .accordion-panel-heading + .card-collapse > .card-body, .accordion-panel .accordion-panel-heading + .card-collapse > .card-body, .card .card-heading + .card-collapse > .accordion-panel-body, .accordion-panel .card-heading + .card-collapse > .accordion-panel-body, .card .accordion-panel-heading + .card-collapse > .accordion-panel-body, .accordion-panel .accordion-panel-heading + .card-collapse > .accordion-panel-body {
       border-top-color: #eaeaea; }
-    .panel .panel-heading .badge, .accordion-panel .panel-heading .badge, .panel .accordion-panel-heading .badge, .accordion-panel .accordion-panel-heading .badge {
+    .card .card-heading .badge, .accordion-panel .card-heading .badge, .card .accordion-panel-heading .badge, .accordion-panel .accordion-panel-heading .badge {
       color: #f7f7f7;
       background-color: #333; }
-  .panel .panel-footer + .panel-collapse > .panel-body, .accordion-panel .panel-footer + .panel-collapse > .panel-body, .panel .panel-footer + .panel-collapse > .accordion-panel-body, .accordion-panel .panel-footer + .panel-collapse > .accordion-panel-body {
+  .card .card-footer + .card-collapse > .card-body, .accordion-panel .card-footer + .card-collapse > .card-body, .card .card-footer + .card-collapse > .accordion-panel-body, .accordion-panel .card-footer + .card-collapse > .accordion-panel-body {
     border-bottom-color: #eaeaea; }
-  .panel:not(.accordion-panel), .accordion-panel:not(.accordion-panel) {
+  .card:not(.accordion-card), .accordion-panel:not(.accordion-card) {
     border-radius: 3px; }
-  .panel > .panel-heading, .accordion-panel > .panel-heading, .panel > .accordion-panel-heading, .accordion-panel > .accordion-panel-heading {
+  .card > .card-heading, .accordion-panel > .card-heading, .card > .accordion-panel-heading, .accordion-panel > .accordion-panel-heading {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
 
-.panel-body, .accordion-panel-body {
+.card-body, .accordion-panel-body {
   padding: 1.14286rem ; }
-  .panel-body:before, .accordion-panel-body:before, .panel-body:after, .accordion-panel-body:after {
+  .card-body:before, .accordion-panel-body:before, .card-body:after, .accordion-panel-body:after {
     content: " ";
     display: table; }
-  .panel-body:after, .accordion-panel-body:after {
+  .card-body:after, .accordion-panel-body:after {
     clear: both; }
-  .panel-body:not(:last-child), .accordion-panel-body:not(:last-child) {
+  .card-body:not(:last-child), .accordion-panel-body:not(:last-child) {
     border-bottom: 1px solid #eaeaea; }
-  .panel-body.has-no-padding, .has-no-padding.accordion-panel-body {
+  .card-body.has-no-padding, .has-no-padding.accordion-panel-body {
     padding: 0; }
 
-.panel-heading, .accordion-panel-heading {
+.card-heading, .accordion-panel-heading {
   font-size: 1.14286rem ;
   font-weight: 700;
-  padding: 0.57143rem 1.14286rem ; }
-  .panel-heading > .dropdown .dropdown-toggle, .accordion-panel-heading > .dropdown .dropdown-toggle {
+  padding: 0.57143rem 1.14286rem ;
+  /**
+   * !!!! Panel title should be removed later…
+   */ }
+  .card-heading > .dropdown .dropdown-toggle, .accordion-panel-heading > .dropdown .dropdown-toggle {
     color: inherit; }
-  .panel-heading .fa, .accordion-panel-heading .fa {
+  .card-heading .fa, .accordion-panel-heading .fa {
     color: #888; }
-  .panel-heading .panel-title, .accordion-panel-heading .panel-title {
+  .card-heading .card-title, .accordion-panel-heading .card-title, .card-heading .panel-title, .accordion-panel-heading .panel-title {
     background: none;
     color: #333;
     display: inline-block;
@@ -2659,14 +2662,14 @@ button[type="submit"], input[type="submit"], .btn-primary {
     font-weight: 700;
     margin: 0;
     padding: 0; }
-  .panel-heading .fa + .panel-title, .accordion-panel-heading .fa + .panel-title {
+  .card-heading .fa + .card-title, .accordion-panel-heading .fa + .card-title, .card-heading .fa + .panel-title, .accordion-panel-heading .fa + .panel-title {
     margin-left: 0.64286rem ; }
-  .panel-heading [class^="badge"] + .panel-title, .accordion-panel-heading [class^="badge"] + .panel-title {
+  .card-heading [class^="badge"] + .card-title, .accordion-panel-heading [class^="badge"] + .card-title, .card-heading [class^="badge"] + .panel-title, .accordion-panel-heading [class^="badge"] + .panel-title {
     margin-left: 0.64286rem ; }
-  .panel-heading .panel-title + [class^="badge"], .accordion-panel-heading .panel-title + [class^="badge"] {
+  .card-heading .card-title + [class^="badge"], .accordion-panel-heading .card-title + [class^="badge"], .card-heading .panel-title + [class^="badge"], .accordion-panel-heading .panel-title + [class^="badge"] {
     margin-left: 0.64286rem ; }
 
-.panel-footer {
+.card-footer {
   background: #f7f7f7;
   border-top: 1px solid #eaeaea;
   padding: 0.57143rem 1.14286rem ; }
@@ -2882,31 +2885,29 @@ html.has-open-modal {
     height: 100%;
     margin-right: -0.125em;
     vertical-align: middle; }
-
-.modal-dialog {
-  background-color: #eaeaea;
-  border-radius: 0.21429rem ;
-  box-shadow: 0rem 0.42857rem 1.71429rem  rgba(0, 0, 0, 0.12);
-  display: inline-block;
-  margin: 2.28571rem 0rem ;
-  max-width: 95%;
-  padding: 1.78571rem ;
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
-  vertical-align: middle; }
-  @media (min-width: 768px) {
-    .modal-dialog {
-      max-width: 75%; } }
-  @media (min-width: 992px) {
-    .modal-dialog {
-      max-width: 60%; } }
-  @media (min-width: 1200px) {
-    .modal-dialog {
-      max-width: 42.85714rem ; } }
-  .modal-dialog.set-overflow {
-    overflow: auto; }
+  .modal-dialog {
+    background-color: #eaeaea;
+    border-radius: 0.21429rem ;
+    box-shadow: 0rem 0.42857rem 1.71429rem  rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    margin: 2.28571rem 0rem ;
+    max-width: 95%;
+    overflow: visible;
+    padding: 1.78571rem ;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    vertical-align: middle; }
+    @media (min-width: 768px) {
+      .modal-dialog {
+        max-width: 75%; } }
+    @media (min-width: 992px) {
+      .modal-dialog {
+        max-width: 60%; } }
+    @media (min-width: 1200px) {
+      .modal-dialog {
+        max-width: 42.85714rem ; } }
 
 /**
  * Callout
@@ -3074,7 +3075,7 @@ html.has-open-modal {
   .accordion-panel:first-child {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px; }
-    .accordion-panel:first-child .panel-heading, .accordion-panel:first-child .accordion-panel-heading {
+    .accordion-panel:first-child .card-heading, .accordion-panel:first-child .accordion-panel-heading {
       border-top-right-radius: 3px;
       border-top-left-radius: 3px; }
   .accordion-panel:not(:first-child) {
@@ -3082,7 +3083,7 @@ html.has-open-modal {
   .accordion-panel:last-child {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px; }
-    .accordion-panel:last-child .panel-heading, .accordion-panel:last-child .accordion-panel-heading {
+    .accordion-panel:last-child .card-heading, .accordion-panel:last-child .accordion-panel-heading {
       border-bottom-right-radius: 3px;
       border-bottom-left-radius: 3px; }
   .accordion-panel > a {
@@ -3091,7 +3092,7 @@ html.has-open-modal {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
-  .accordion-panel.group-open:last-child .panel-heading, .accordion-panel.group-open:last-child .accordion-panel-heading {
+  .accordion-panel.group-open:last-child .card-heading, .accordion-panel.group-open:last-child .accordion-panel-heading {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .accordion-panel.group-loading > .accordion-toggle:before {
@@ -3104,7 +3105,7 @@ html.has-open-modal {
 .accordion-panel-heading:hover, .accordion-panel-heading :focus, .accordion-panel-heading :active {
   background-color: #ededed;
   transition: background 0.1s linear; }
-.accordion-panel-heading .panel-title {
+.accordion-panel-heading .card-title, .accordion-panel-heading .panel-title {
   padding-right: 1.42857rem ;
   width: 100%; }
 
@@ -3160,7 +3161,8 @@ html.has-open-modal {
     z-index: 2; }
   .datepicker-input-fields .faux-input {
     min-width: 8.57143rem ;
-    position: relative; }
+    position: relative;
+    text-align: left; }
     .datepicker-input-fields .faux-input:focus {
       z-index: 1; }
   @media (min-width: 768px) {

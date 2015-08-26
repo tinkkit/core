@@ -1,0 +1,26 @@
+// Cards
+
+@mixin card-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  border-color: $border;
+
+  .card-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    + .card-collapse > .card-body {
+      border-top-color: $border;
+    }
+
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+
+  .card-footer {
+    + .card-collapse > .card-body {
+      border-bottom-color: $border;
+    }
+  }
+}

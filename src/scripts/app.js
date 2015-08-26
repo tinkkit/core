@@ -21,7 +21,9 @@
    'tink.tinkApi',
    'tink.navigation',
    'tink.interactivetable',
-   'tink.sorttable'
+   'tink.sorttable',
+   'tink.modal',
+   'tink.datepicker'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider

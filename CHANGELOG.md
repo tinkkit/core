@@ -25,11 +25,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Tweaked the default styling of some form elements
 - Labels are not bold by default anymore
 
-<!-- ### Deprecated
-- Deprecated the panel component in favour of the card component -->
+### Deprecated
+- Deprecated the panel component in favour of the card component (panel code will be dropped in the next release)
 
 ### Fixed
 - Fixed a bug where in Firefox the select element had to be clicked twice before it would open
+- Fixed an overflow issue in the modal dialog
+- Fixed a datepicker layout issue when used inside a modal dialog
 
 
 
@@ -47,7 +49,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.5.10] - 2015-07-14
 
 ### Changed
-- Separated overflow styling from modal-dialog
+- Separated overflow styling from modal dialog
 
 
 

@@ -25,7 +25,9 @@
     "angular-messages": "~1.4.3",
     "tink-navigation-angular": "latest",
     "tink-interactive-table-angular": "latest",
-    "tink-accordion-angular": "latest"
+    "tink-accordion-angular": "latest",
+    "tink-modal-angular": "latest",
+    "tink-datepicker-angular": "latest"
   },
   "authors": [
     "Jasper Van Proeyen",
