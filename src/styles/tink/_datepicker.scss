@@ -176,6 +176,10 @@
   padding: 1.5%;
   position: absolute;
   width: rem(260); // removed min-width
+
+  &.aligns-right {
+    right: 0;
+  }
 }
 
 .datepickerrange {
