@@ -785,3 +785,13 @@ $breadcrumb-separator:          "\f054" !default;
 $breadcrumb-separator-color:    $gray-light !default;
 $breadcrumb-separator-padding:  8px !default;
 $breadcrumb-separator-size:     $breadcrumb-font-size * .6 !default;
+
+
+
+/**
+ * Loader
+ */
+
+$loader-color: rgba($brand, .8);
+$loader-color-alt: rgba($brand-light, .8);
+$loader-border-width: 2px;

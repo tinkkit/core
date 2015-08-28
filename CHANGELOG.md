@@ -20,11 +20,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added an arrow component and applied it to the popover and tooltip component
-- Added possibility to right-align the datepicker
+- Added a basic loader
 
 ### Changed
-- Tweaked the default styling of some form elements
 - Labels are not bold by default anymore
+- Tweaked the default styling of some form elements
+- Added possibility to right-align the datepicker
 
 ### Deprecated
 - Deprecated the panel component in favour of the card component (panel code will be dropped in the next release)
