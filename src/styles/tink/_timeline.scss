@@ -38,13 +38,18 @@ $timeline-date-border: $brand-light;
     display: block;
     height: rem(6);
     left: $timeline-padding;
-    margin-left: rem(-2);
+    margin-left: rem(-2.5); // On non-retina screens, the dot doesn't have a correct position and needs this hack
     position: absolute;
     top: rem(-3);
     width: rem(6);
 
     @include mq($screen-sm) {
       left: calc(50% - 1px);
+    }
+
+    // On retina screens, the dot has a correct position
+    @include retina {
+      margin-left: rem(-2);
     }
   }
 
