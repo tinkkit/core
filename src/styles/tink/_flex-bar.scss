@@ -3,85 +3,56 @@
  * Flex Bar component
  */
 
- // VARIABLES
-$flex-bar-height:                            50px !default;
-$flex-bar-bg-color:                          transparent !default;
-$flex-bar-border-radius:                     $border-radius-base !default;
-$flex-bar-color:                             #bfd1d9 !default;
-$flex-bar-link-color:                        $link-color !default;
-$flex-bar-link-hover-color:                  $link-hover-color !default;
-$flex-bar-link-bg-hover-color:               $gray-lighter;
-$flex-bar-padding:                           $padding-base-horizontal !default;
+// VARIABLES
 
-/* JUST FOR COMPARISON REASONS TO BE DELETED */
-/*********************************************/
-
-.grid-bar {
-  background-color: $flex-bar-bg-color;
-  border: 1px solid $flex-bar-color;
-  border-radius: $flex-bar-border-radius;
-  padding: $flex-bar-padding;
-
-  ul {
-    @extend .list-unstyled;
-
-    li {
-      display: inline;
-      line-height: rem(35);
-    }
-  }
-}
-
-/*  END  */
-/*********/
+$bor-height:                            50px !default;
+$bor-bg-color:                          $gray-lighter;
+$bor-border-radius:                     $border-radius-base !default;
+$bor-color:                             #bfd1d9 !default;
+$bor-link-color:                        $link-color !default;
+$bor-link-hover-color:                  $link-hover-color !default;
+$bor-link-bg-hover-color:               $gray-lighter;
+$bor-padding:                           $padding-base-horizontal !default;
 
 
 /* 1st level container */
 /***********************/
-.flex-bar {
-    background-color: $flex-bar-bg-color;
-    border: 1px solid $flex-bar-color;
-    //border-radius: $flex-bar-border-radius;
-    //padding: $flex-bar-padding;
+.bor {
+  background-color: $bor-bg-color;
+  border: 1px solid $bor-color;
 
-    // set the 1st level flexbox container
-    display: flex;
-    justify-content: space-between;
+  > * {
+    //background-color: green;
+  }
 
   ul {
     @extend .list-unstyled;
+    @extend .list-inline;
 
-    li {
-      display: inline-block; // is not necessary when flex is set on ul
-      line-height: rem(35);
-    }
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .flex-bar-left {
+  display: flex;
+  justify-content: space-between;
+
+  &-left {
+    //float: left;
 
   }
 
-  .flex-bar-center {
+  &-center {
+    //float: left;
+    justify-content: center;
   }
 
-  .flex-bar-right {
+  &-right {
+    //float: right;
+    justify-content: flex-end;
 
     ul {
-      text-align: right;
-    }
-
-  }
-
-
-  /* Media queries */
-
-  @include mq($screen-xs-max, "max") {
-
-    flex-flow: column nowrap;
-    .flex-bar-right {
-      ul {
-        text-align: left;
-      }
+      //text-align: right;
     }
   }
 }

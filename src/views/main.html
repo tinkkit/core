@@ -1,108 +1,143 @@
+
 <div class="container margin-top">
   <div class="row margin-top">
+    <h3 class="text-center">Flex nav bar links / text fields</h3>
+    <div class="bor">
+      <ul class="bor-left">
+        <li>
+          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+      </ul>
 
-    <h3 class="text-center">Flex nav bar with 3 containers</h3>
-    <div class="flex-bar">
-      <div class="flex-bar-left">
-        <ul>
-          <li>
-            <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="flex-bar-center">
-        <div class="">
+      <ul class="bor-center">
+        <li>
           <input type="text" placeholder="search bar">
-        </div>
-      </div>
-      <div class="flex-bar-right">
-        <ul>
-          <li>
-            <div class="checkbox">
-              <input type="checkbox" id="Knipperlicht" name="Knipperlicht" value="Knipperlicht" checked="">
-              <label for="Knipperlicht"><span class="">Enkel dossiers met knipperlicht</span></label>
-            </div>
-          </li>
-        </ul>
-      </div>
+          </form>
+      </ul>
+      <ul class="bor-right">
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+      </ul>
     </div>
-
   </div>
 </div>
-
-
 <div class="container margin-top">
   <div class="row margin-top">
+    <h3 class="text-center">Flex nav bar links / checkbox</h3>
+    <div class="bor">
+      <ul class="bor-left">
+        <li>
+          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+      </ul>
 
-    <h3 class="text-center">Basic GRIDDDD nav bar with 3 containers</h3>
-    <div class="grid-bar row">
-      <div class="flex-bar-left col-md-4">
-
-        <ul>
-          <li>
-            <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-          <li>
-            <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="flex-bar-center col-md-4">
-        <div class="">
+      <ul class="bor-center">
+        <li>
           <input type="text" placeholder="search bar">
-        </div>
-      </div>
-      <div class="flex-bar-right col-md-4">
-        <ul>
-          <li>
-            <div class="checkbox">
-              <input type="checkbox" id="Knipperlicht" name="Knipperlicht" value="Knipperlicht" checked="">
-              <label for="Knipperlicht"><span class="">Enkel dossiers met knipperlicht</span></label>
-            </div>
-          </li>
-        </ul>
-      </div>
+          </form>
+      </ul>
+      <ul class="bor-right">
+        <li>
+          <div class="checkbox">
+            <input type="checkbox" id="Knipperlicht2" name="Knipperlicht2" value="Knipperlicht2" checked="">
+            <label for="Knipperlicht2"><span class="">Enkel dossiers met knipperlicht</span></label>
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
+</div>
+<div class="container margin-top">
+  <div class="row margin-top">
+    <h3 class="text-center">Flex nav bar links / radiobutton</h3>
+    <div class="bor">
+      <ul class="bor-left">
+        <li>
+          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+      </ul>
 
+      <ul class="bor-center">
+        <li>
+          <input type="text" placeholder="search bar">
+          </form>
+      </ul>
+      <ul class="bor-right">
+        <li>
+          <div class="checkbox">
+            <input type="radio" id="radio2" name="radio2" value="radio2" checked="">
+            <label for="radio2"><span class="">Enkel wat tekst </span></label>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
