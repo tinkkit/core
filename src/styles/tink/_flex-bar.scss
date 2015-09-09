@@ -27,13 +27,30 @@ $bor-padding:                           $padding-base-horizontal !default;
   justify-content: space-between;
 
   > * {
-    //background-color: green; // for testing purposes
+    //background-color: mistyrose; // for testing purposes
   }
 
   label {
     display: inline; // fix for inline-block setting that made the flex baseline align with the lower baseline when wrapping
   }
 
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="text"],
+  .faux-input,
+  input[type="url"],
+  input[type="week"] {
+    display: inline-block; // Firefox fix for block setting that made the flex baseline align with the bottom input field
+  }
 
 /* 2nd level container */
 /***********************/
@@ -64,10 +81,11 @@ $bor-padding:                           $padding-base-horizontal !default;
   }
 }
 
+
 // TO DO
 // text needs some padding when it's the only item type in the bar
 // FIXED: align-items: baseline on ul doesn't work because it only set baseline on 1 ul container, not all three
 // FIXED: checkboxes/radio buttons mess up baseline (because of inline-block of the label)
 // in small screeens (480px?) the spans in the li's get split up (BUT ONLY ON THE RIGHT??) - have to give the li's an unbreakable block
 // when wrapping the second lines don't align the same because 1st ul has a text input and 3rd ul hasn't
-// !!IN FIREFOX baseline is set on the bottom of the text input field
+// FIXED: IN FIREFOX baseline is set on the bottom of the text input field because of input styling
