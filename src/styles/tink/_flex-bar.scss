@@ -86,7 +86,7 @@ $bor-padding:                           $padding-base-horizontal !default;
 /*****************/
 
 .bor {
-  min-height: rem(35); // visual fix so the bor doesn't collapse - not responsive when wrapping though
+  overflow: hidden; // so the bor won't collapse
 
   li {
     line-height: rem(35);
@@ -106,10 +106,11 @@ $bor-padding:                           $padding-base-horizontal !default;
 }
 
 // TO DO
-// Chrome and Firefox don't ignore the IE9 hack so removed it. Havn't found an alternative for clearfix but clearfix ads side padding in the bor
-// DOES? text needs some padding when it's the only item type in the bar
+
 // in small screeens (480px?) the spans in the li's get split up (BUT ONLY ON THE RIGHT??) - have to give the li's an unbreakable block
+// DOES? text needs some padding when it's the only item type in the bar
 // NO PROBLEM? when wrapping the second lines don't align the same because 1st ul has a text input and 3rd ul hasn't
+// FIXED: Chrome and Firefox don't ignore the IE9 hack so removed it. Clearfix ads side padding in the bor
 // FIXED: align-items: baseline on ul doesn't work because it only set baseline on 1 ul container, not all three
 // FIXED: checkboxes/radio buttons mess up baseline (because of inline-block of the label)
 // FIXED: IN FIREFOX baseline is set on the bottom of the text input field because of input styling
