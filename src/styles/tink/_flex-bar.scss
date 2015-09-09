@@ -21,21 +21,31 @@ $bor-padding:                           $padding-base-horizontal !default;
   background-color: $bor-bg-color;
   border: 1px solid $bor-color;
 
+// flex settings
+  align-items: baseline; // aligning underlying flex-items with each other (instead of setting this on 2nd level flexbox)
+  display: flex;
+  justify-content: space-between;
+
   > * {
-    //background-color: green;
+    //background-color: green; // for testing purposes
   }
+
+  label {
+    display: inline; // fix for inline-block setting that made the flex baseline align with the lower baseline when wrapping
+  }
+
+
+/* 2nd level container */
+/***********************/
 
   ul {
     @extend .list-unstyled;
     @extend .list-inline;
 
-    align-items: baseline;
+    align-items: baseline; // aligning the li elements with each other
     display: flex;
     flex-wrap: wrap;
   }
-
-  display: flex;
-  justify-content: space-between;
 
   &-left {
     //float: left;
@@ -50,9 +60,14 @@ $bor-padding:                           $padding-base-horizontal !default;
   &-right {
     //float: right;
     justify-content: flex-end;
-
-    ul {
-      //text-align: right;
-    }
+    text-align: right;
   }
 }
+
+// TO DO
+// text needs some padding when it's the only item type in the bar
+// FIXED: align-items: baseline on ul doesn't work because it only set baseline on 1 ul container, not all three
+// FIXED: checkboxes/radio buttons mess up baseline (because of inline-block of the label)
+// in small screeens (480px?) the spans in the li's get split up (BUT ONLY ON THE RIGHT??) - have to give the li's an unbreakable block
+// when wrapping the second lines don't align the same because 1st ul has a text input and 3rd ul hasn't
+// !!IN FIREFOX baseline is set on the bottom of the text input field
