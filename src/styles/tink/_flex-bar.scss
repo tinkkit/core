@@ -65,27 +65,46 @@ $bor-padding:                           $padding-base-horizontal !default;
   }
 
   &-left {
-    //float: left;
 
   }
 
   &-center {
-    //float: left;
     justify-content: center;
   }
 
   &-right {
-    //float: right;
     justify-content: flex-end;
     text-align: right;
   }
 }
 
+/* IE9 fall back */
+/*****************/
+
+@media screen and (min-width:0) and (min-resolution: .001dpcm) {
+ // IE9 CSS
+    .bor {
+      @include clearfix();
+
+      &-left {
+        float: left;
+      }
+
+      &-center {
+        float: left;
+      }
+
+      &-right {
+        float: right;
+      }
+    }
+}
+
 
 // TO DO
 // text needs some padding when it's the only item type in the bar
-// FIXED: align-items: baseline on ul doesn't work because it only set baseline on 1 ul container, not all three
-// FIXED: checkboxes/radio buttons mess up baseline (because of inline-block of the label)
 // in small screeens (480px?) the spans in the li's get split up (BUT ONLY ON THE RIGHT??) - have to give the li's an unbreakable block
 // when wrapping the second lines don't align the same because 1st ul has a text input and 3rd ul hasn't
+// FIXED: align-items: baseline on ul doesn't work because it only set baseline on 1 ul container, not all three
+// FIXED: checkboxes/radio buttons mess up baseline (because of inline-block of the label)
 // FIXED: IN FIREFOX baseline is set on the bottom of the text input field because of input styling
