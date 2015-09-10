@@ -1,9 +1,13 @@
-
 /**
  * Flex Bar component
+ * --------------------------------------------------
+ * - basic bor
+ * - IE9 overrides (delete this section later)
  */
 
-// VARIABLES
+/**
+ * VARIABLES
+ */
 
 $bor-height:                            50px !default;
 $bor-bg-color:                          $gray-lighter;
@@ -15,61 +19,38 @@ $bor-link-bg-hover-color:               $gray-lighter;
 $bor-padding:                           $padding-base-horizontal !default;
 
 
-/* 1st level container */
-/***********************/
-.bor {
-  background-color: $bor-bg-color;
-  border: 1px solid $bor-color;
+/**
+ * 1st level container
+ */
 
-// flex settings
+.bor {
   align-items: baseline; // aligning underlying flex-items with each other (instead of setting this on 2nd level flexbox)
   display: flex;
   justify-content: space-between;
-
-  > * {
-    //background-color: mistyrose; // for testing purposes
-  }
 
   label {
     display: inline; // fix for inline-block setting that made the flex baseline align with the lower baseline when wrapping
   }
 
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="text"],
-  .faux-input,
-  input[type="url"],
-  input[type="week"] {
+  input,
+  select,
+  .faux-input {
     display: inline-block; // Firefox fix for block setting that made the flex baseline align with the bottom input field
   }
 
-/* 2nd level container */
-/***********************/
+/**
+ * 2nd level container
+ */
 
   ul {
-    @extend .list-unstyled;
     @extend .list-inline;
 
     align-items: baseline; // aligning the li elements with each other
     display: flex;
     flex-wrap: wrap;
-
-    li {
-      //border: solid 1px pink;
-      }
   }
 
   &-left {
-
   }
 
   &-center {
@@ -78,18 +59,22 @@ $bor-padding:                           $padding-base-horizontal !default;
 
   &-right {
     justify-content: flex-end;
+    margin-right: rem(-6);
     text-align: right;
   }
 }
 
-/* IE9 fall back */
-/*****************/
+
+
+/**
+ * IE9 fall back
+ */
 
 .bor {
-  overflow: hidden; // so the bor won't collapse
+  overflow: hidden \9; // so the bor won't collapse
 
   li {
-    line-height: rem(35);
+    line-height: rem(2.5 * $font-size-base) \9;
   }
 
   &-left {
@@ -104,13 +89,3 @@ $bor-padding:                           $padding-base-horizontal !default;
     float: right;
   }
 }
-
-// TO DO
-
-// in small screeens (480px?) the spans in the li's get split up (BUT ONLY ON THE RIGHT??) - have to give the li's an unbreakable block
-// DOES? text needs some padding when it's the only item type in the bar
-// NO PROBLEM? when wrapping the second lines don't align the same because 1st ul has a text input and 3rd ul hasn't
-// FIXED: Chrome and Firefox don't ignore the IE9 hack so removed it. Clearfix ads side padding in the bor
-// FIXED: align-items: baseline on ul doesn't work because it only set baseline on 1 ul container, not all three
-// FIXED: checkboxes/radio buttons mess up baseline (because of inline-block of the label)
-// FIXED: IN FIREFOX baseline is set on the bottom of the text input field because of input styling
