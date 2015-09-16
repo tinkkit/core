@@ -44,10 +44,15 @@ $bor-padding:                           $padding-base-horizontal !default;
 
   ul {
     @extend .list-inline;
-
-    align-items: baseline; // aligning the li elements with each other
+    align-items: center; // aligning the li elements with each other - part 1
     display: flex;
     flex-wrap: wrap;
+
+    li {
+      > * {
+        vertical-align: middle; // aligning the li elements with each other - part 2
+      }
+    }
   }
 
   &-left {
