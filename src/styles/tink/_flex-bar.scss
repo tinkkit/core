@@ -49,9 +49,11 @@ $bor-padding:                           $padding-base-horizontal !default;
     flex-wrap: wrap;
 
     li {
-      > * {
-        vertical-align: middle; // aligning the li elements with each other - part 2
-      }
+      vertical-align: middle; // aligning the li elements with each other - part 2
+    }
+
+    img {
+      @extend img.non-responsive;
     }
   }
 
