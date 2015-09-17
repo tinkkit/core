@@ -326,6 +326,84 @@ html {
 
 
 
+/**
+ * Top navigation in flexbox
+ */
+
+.nov-top {
+  @extend .bor;
+  background-color: $nav-top-bg-color;
+  color: $nav-top-color;
+  // left: 0;
+  // position: fixed;
+  // top: 0;
+  z-index: layer('nav-top');
+
+  a.btn,
+  a.btn-primary,
+  button,
+  input {
+    border: none;
+  }
+
+  > ul {
+    a {
+      color: $nav-top-link-color;
+      text-decoration: none;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $nav-top-link-hover-color;
+      }
+    }
+
+    > .logo {
+      overflow: hidden; // correction for webkit 1px render bug
+
+      a {
+        background: $logo-bg-color image-url($logo) no-repeat center center;
+        background-size: cover;
+        display: inline-block;
+        height: rem($logo-height);
+        margin: rem(0 $nav-top-padding 0 0);
+        padding: 0; // isn't really necessary
+        vertical-align: middle;
+        width: rem($logo-width);
+
+        span {
+          @extend .sr-only;
+        }
+      }
+    }
+  }
+
+  > ul > li {
+    &.toggle {
+      cursor: pointer;
+      @include mq($screen-sm) {
+        display: none;
+      }
+    }
+
+    &.app {
+      @include mq($screen-xs-max, "max") {
+        display: none;
+      }
+
+      h1 {
+        font-size: rem($font-size-base);
+        font-weight: 700;
+        line-height: rem($nav-top-height);
+        margin: 0;
+
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
 
 /**
  * Side navigation
@@ -683,111 +761,5 @@ html {
 
   span {
     @extend .sr-only;
-  }
-}
-
-
-/**
- * FlexTop navigation
- */
-
-.nov-top {
-  @extend .bor;
-  //// temporary styling because bor is not included yet ////
-  background-color: $nav-top-bg-color;
-  color: $nav-top-color;
-  //// end of temporary styling ////
-
-  // DELETE OR DISABLE CURRENT CLUTTER
-  //left: 0;
-  //position: fixed;
-  //top: 0;
-  // transition: height $animation-speed linear;
-  z-index: layer('nav-top');
-
-  a.btn,
-  a.btn-primary,
-  button,
-  input {
-    border: none;
-  }
-
-  &-branding {
-
-    a {
-      color: $nav-top-link-color;
-      text-decoration: none;
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: $nav-top-link-hover-color;
-      }
-    }
-
-    > li {
-
-      &.logo {
-        overflow: hidden;
-
- // &.logo {
- //        padding: 0;
-
- //        a {
- //          background: $logo-bg-color image-url($logo) no-repeat center center;
- //          background-size: cover;
- //          display: block;
- //          height: rem($logo-height);
- //          margin: rem(0 $nav-top-padding 0 0);
- //          padding: 0;
- //          // transition: height $animation-speed linear;
- //          width: rem($logo-width);
-
- //          span {
- //            @extend .sr-only;
- //          }
- //        }
- //      }
-
-        a {
-          background-color: red;
-          display: inline-block;
-          height: rem($logo-height);
-          margin: rem(0 $nav-top-padding 0 0);
-          padding: 0;
-          vertical-align: middle;
-          width: rem($logo-width);
-
-          span {
-            @extend .sr-only;
-          }
-        }
-      }
-
-      &.toggle {
-        cursor: pointer;
-
-        @include mq($screen-sm) {
-          display: none;
-        }
-      }
-
-      &.app {
-        @include mq($screen-xs-max, "max") {
-          display: none;
-        }
-      }
-    }
-
-    h1 {
-      font-size: rem($font-size-base);
-      font-weight: 700;
-      line-height: rem($nav-top-height);
-      margin: 0;
-
-      span {
-        font-weight: 400;
-      }
-    }
   }
 }

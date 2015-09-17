@@ -6,20 +6,6 @@
  */
 
 /**
- * VARIABLES
- */
-
-$bor-height:                            50px !default;
-$bor-bg-color:                          $gray-lighter;
-$bor-border-radius:                     $border-radius-base !default;
-$bor-color:                             #bfd1d9 !default;
-$bor-link-color:                        $link-color !default;
-$bor-link-hover-color:                  $link-hover-color !default;
-$bor-link-bg-hover-color:               $gray-lighter;
-$bor-padding:                           $padding-base-horizontal !default;
-
-
-/**
  * 1st level container
  */
 
@@ -53,7 +39,7 @@ $bor-padding:                           $padding-base-horizontal !default;
     }
 
     img {
-      @extend img.non-responsive;
+      @extend img.non-responsive; // setting the image inline
     }
   }
 
@@ -66,7 +52,7 @@ $bor-padding:                           $padding-base-horizontal !default;
 
   &-right {
     justify-content: flex-end;
-    margin-right: rem(-6);
+    margin-right: rem(-6); // compensation for padding-right of .list-inline
     text-align: right;
   }
 }
@@ -82,7 +68,7 @@ $bor-padding:                           $padding-base-horizontal !default;
 
   > ul {
     > li {
-      line-height: rem(2.5 * $font-size-base) \9;
+      line-height: rem(2.5 * $font-size-base) \9; // not using variable because of depecrating use
     }
   }
 
