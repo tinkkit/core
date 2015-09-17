@@ -692,13 +692,13 @@ html {
  */
 
 .nov-top {
+  @extend .bor;
   //// temporary styling because bor is not included yet ////
-    background-color: $gray-darker;
-    color: #fff;
+    background-color: $nav-top-bg-color;
+    color: $nav-top-color;
   //// end of temporary styling ////
 
   // DELETE OR DISABLE CURRENT CLUTTER
-  //@include bar($nav-top-height, $nav-top-bg-color, $nav-top-color, $nav-top-link-color, $nav-top-link-hover-color, $nav-top-link-bg-hover-color, $nav-top-padding);
   //left: 0;
   //position: fixed;
   //top: 0;
@@ -714,12 +714,6 @@ html {
   }
 
   &-branding {
-    float: left;
-    height: rem($nav-top-height);
-    line-height: rem($nav-top-height);
-    overflow: hidden;
-    position: relative;
-    z-index: layer('base');
 
     a {
       color: $nav-top-link-color;
@@ -733,22 +727,35 @@ html {
     }
 
     > li {
-      float: left;
-      height: rem($nav-top-height);
-      line-height: rem($nav-top-height);
 
       &.logo {
-        // padding: 0; // not necessary because of .list-inline set on the bor
-        align-self: flex-start; // keeps this list-item out of the baseline flex-flow
+
+ // &.logo {
+ //        padding: 0;
+
+ //        a {
+ //          background: $logo-bg-color image-url($logo) no-repeat center center;
+ //          background-size: cover;
+ //          display: block;
+ //          height: rem($logo-height);
+ //          margin: rem(0 $nav-top-padding 0 0);
+ //          padding: 0;
+ //          // transition: height $animation-speed linear;
+ //          width: rem($logo-width);
+
+ //          span {
+ //            @extend .sr-only;
+ //          }
+ //        }
+ //      }
 
         a {
-          background: $logo-bg-color image-url($logo) no-repeat center center;
-          background-size: cover;
-          display: block;
+          background-color: red;
+          display: inline-block;
           height: rem($logo-height);
           margin: rem(0 $nav-top-padding 0 0);
           padding: 0;
-          // transition: height $animation-speed linear;
+          vertical-align: middle;
           width: rem($logo-width);
 
           span {
@@ -766,7 +773,6 @@ html {
       }
 
       &.app {
-        padding: rem(0 $nav-top-padding);
         @include mq($screen-xs-max, "max") {
           display: none;
         }
@@ -774,9 +780,9 @@ html {
     }
 
     img {
-      float: left;
-      height: rem($nav-top-height);
-      width: auto;
+      // float: left;
+      // height: rem($nav-top-height);
+      // width: auto;
     }
 
     h1 {
@@ -790,17 +796,4 @@ html {
       }
     }
   }
-
-  &-section-left {
-    margin-left: rem($bar-padding);
-  }
-
-  &-section-right {
-    margin-right: rem($bar-padding);
-  }
 }
-
-// TO DO
-// On smaller screen sizes the .app has display:none; This borks the baseline again because the rest aligns on the first ul
-// The align-self: flex-start; on .logo doesn't work on FireFox
-// Both problems can be solved by setting the bor align-items: center; instead of baseline. But then the search bar and the logo set in center when wrapping

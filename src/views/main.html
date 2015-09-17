@@ -1,6 +1,6 @@
-<h3 class="text-center">Top nov refactor</h3>
-<nav data-tink-top-nav="" class="bor nov-top">
-  <ul class="nov-top-branding">
+<h3 class="text-center">Top nov refactor with search bar and other stuff</h3>
+<div data-tink-top-nav="" class="nov-top">
+  <ul class="bor-left nov-top-branding">
     <li class="logo">
       <a href="#/" title="Tink"><span>Tink</span></a>
     </li>
@@ -10,41 +10,30 @@
     <li class="app">
       <h1><a href="#/">Tink</a></h1>
     </li>
-  </ul>
-</nav>
-
-<h3 class="text-center">Top nov with search bar and other stuff</h3>
-<div class="bor nov-top">
-  <ul class="nov-top-branding">
-    <li class="logo">
-      <a href="#/" title="Tink"><span>Tink</span></a>
-    </li>
-    <!-- <li class="toggle" data-tink-sidenav-collapse="asideNavLeft">
-      <a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open menu</span></i></a>
-    </li> -->
-    <li class="app">
-      <h1><a href="#/">Tink</a></h1>
-    </li>
+    <li><a href="#">L link 1</a></li>
+    <li><a href="#">L link 2</a></li>
+    <li><a href="#">L link 3</a></li>
+    <li><a href="#">L link 4</a></li>
   </ul>
   <ul class="bor-center">
     <li><input type="search" placeholder="search bar"></li>
   </ul>
   <ul class="bor-right">
-    <li><a href="#">link1</a></li>
-    <li><a href="#">link2</a></li>
-    <li><a href="#">link3</a></li>
-    <li><a href="#">link4</a></li>
-    <li><a href="#">link5</a></li>
-    <li><a href="#">link6</a></li>
-    <li><a href="#">link7</a></li>
+    <li><a href="#">R link 1</a></li>
+    <li><button class="btn-xl">XL Button</button></li>
+
+    <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+    <li><a class="btn-xs btn-primary" href="mailto:tink@digipolis.be" role="button">Geef feedback</a></li>
+    <li><img src="http://placehold.it/40x40" alt="Placeholder"></li>
   </ul>
 </div>
+
 <div class="container margin-top">
   <div class="row margin-top">
     <h3 class="text-center">Jasper's Bar</h3>
     <div class="bor" style="background: rgba(255,0,0,.2)">
       <ul class="bor-left">
-        <li><img src="http://placehold.it/75x75" alt="Placeholder"></li>
+        <li><img src="http://placehold.it/61x61" alt="Placeholder"></li>
         <li><button class="btn-xs">Small Button</button></li>
       </ul>
 
@@ -107,100 +96,6 @@
         </li>
         <li>
           <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="container margin-top">
-  <div class="row margin-top">
-    <h3 class="text-center">Flex nav bar links / checkbox WORKS!</h3>
-    <div class="bor">
-      <ul class="bor-left">
-        <li>
-          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-      </ul>
-
-      <ul class="bor-center">
-        <li>
-          <input type="search" placeholder="search bar">
-        </li>
-      </ul>
-      <ul class="bor-right">
-        <li>
-          <div class="checkbox">
-            <input type="checkbox" id="Knipperlicht2" name="Knipperlicht2" value="Knipperlicht2" checked="">
-            <label for="Knipperlicht2"><span class="">Enkel dossiers met knipperlicht</span></label>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="container margin-top">
-  <div class="row margin-top">
-    <h3 class="text-center">Flex nav bar links / radiobutton WORKS! (with a 1px difference)</h3>
-    <div class="bor">
-      <ul class="bor-left">
-        <li>
-          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-      </ul>
-
-      <ul class="bor-center">
-        <li>
-          <input type="search" placeholder="search bar">
-        </li>
-      </ul>
-      <ul class="bor-right">
-        <li>
-          <div class="checkbox">
-            <input type="radio" id="radio2" name="radio2" value="radio2" checked="">
-            <label for="radio2"><span class="">Enkel wat tekst </span></label>
-          </div>
         </li>
       </ul>
     </div>
