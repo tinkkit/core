@@ -222,107 +222,107 @@ html {
  * Top navigation
  */
 
-.nav-top {
-  @include bar($nav-top-height, $nav-top-bg-color, $nav-top-color, $nav-top-link-color, $nav-top-link-hover-color, $nav-top-link-bg-hover-color, $nav-top-padding);
-  left: 0;
-  position: fixed;
-  top: 0;
-  transition: height $animation-speed linear;
-  width: 100%;
-  z-index: layer('nav-top');
+// .nav-top {
+//   @include bar($nav-top-height, $nav-top-bg-color, $nav-top-color, $nav-top-link-color, $nav-top-link-hover-color, $nav-top-link-bg-hover-color, $nav-top-padding);
+//   left: 0;
+//   position: fixed;
+//   top: 0;
+//   transition: height $animation-speed linear;
+//   width: 100%;
+//   z-index: layer('nav-top');
 
-  a.btn,
-  a.btn-primary,
-  button,
-  input {
-    border: none;
-  }
+//   a.btn,
+//   a.btn-primary,
+//   button,
+//   input {
+//     border: none;
+//   }
 
-  &-branding {
-    float: left;
-    height: rem($nav-top-height);
-    line-height: rem($nav-top-height);
-    overflow: hidden;
-    position: relative;
-    z-index: layer('base');
+//   &-branding {
+//     float: left;
+//     height: rem($nav-top-height);
+//     line-height: rem($nav-top-height);
+//     overflow: hidden;
+//     position: relative;
+//     z-index: layer('base');
 
-    a {
-      color: $nav-top-link-color;
-      text-decoration: none;
+//     a {
+//       color: $nav-top-link-color;
+//       text-decoration: none;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: $nav-top-link-hover-color;
-      }
-    }
+//       &:hover,
+//       &:active,
+//       &:focus {
+//         color: $nav-top-link-hover-color;
+//       }
+//     }
 
-    > li {
-      float: left;
-      height: rem($nav-top-height);
-      line-height: rem($nav-top-height);
+//     > li {
+//       float: left;
+//       height: rem($nav-top-height);
+//       line-height: rem($nav-top-height);
 
-      &.logo {
-        padding: 0;
+//       &.logo {
+//         padding: 0;
 
-        a {
-          background: $logo-bg-color image-url($logo) no-repeat center center;
-          background-size: cover;
-          display: block;
-          height: rem($logo-height);
-          margin: rem(0 $nav-top-padding 0 0);
-          padding: 0;
-          // transition: height $animation-speed linear;
-          width: rem($logo-width);
+//         a {
+//           background: $logo-bg-color image-url($logo) no-repeat center center;
+//           background-size: cover;
+//           display: block;
+//           height: rem($logo-height);
+//           margin: rem(0 $nav-top-padding 0 0);
+//           padding: 0;
+//           // transition: height $animation-speed linear;
+//           width: rem($logo-width);
 
-          span {
-            @extend .sr-only;
-          }
-        }
-      }
+//           span {
+//             @extend .sr-only;
+//           }
+//         }
+//       }
 
-      &.toggle {
-        cursor: pointer;
+//       &.toggle {
+//         cursor: pointer;
 
-        @include mq($screen-sm) {
-          display: none;
-        }
-      }
+//         @include mq($screen-sm) {
+//           display: none;
+//         }
+//       }
 
-      &.app {
-        padding: rem(0 $nav-top-padding);
-        @include mq($screen-xs-max, "max") {
-          display: none;
-        }
-      }
-    }
+//       &.app {
+//         padding: rem(0 $nav-top-padding);
+//         @include mq($screen-xs-max, "max") {
+//           display: none;
+//         }
+//       }
+//     }
 
-    img {
-      float: left;
-      height: rem($nav-top-height);
-      width: auto;
-    }
+//     img {
+//       float: left;
+//       height: rem($nav-top-height);
+//       width: auto;
+//     }
 
-    h1 {
-      font-size: rem($font-size-base);
-      font-weight: 700;
-      line-height: rem($nav-top-height);
-      margin: 0;
+//     h1 {
+//       font-size: rem($font-size-base);
+//       font-weight: 700;
+//       line-height: rem($nav-top-height);
+//       margin: 0;
 
-      span {
-        font-weight: 400;
-      }
-    }
-  }
+//       span {
+//         font-weight: 400;
+//       }
+//     }
+//   }
 
-  &-section-left {
-    margin-left: rem($bar-padding);
-  }
+//   &-section-left {
+//     margin-left: rem($bar-padding);
+//   }
 
-  &-section-right {
-    margin-right: rem($bar-padding);
-  }
-}
+//   &-section-right {
+//     margin-right: rem($bar-padding);
+//   }
+// }
 
 
 
@@ -330,13 +330,13 @@ html {
  * Top navigation in flexbox
  */
 
-.nov-top {
-  @extend .bor;
+.nav-top {
+  @extend .bar;
   background-color: $nav-top-bg-color;
   color: $nav-top-color;
-  // left: 0;
-  // position: fixed;
-  // top: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
   z-index: layer('nav-top');
 
   a.btn,
@@ -711,11 +711,11 @@ html {
 
 
 /**
- * Bar
+ * Bar -- REPLACED BY FLEX-BAR
  */
-.bar {
-  @include bar($nav-top-height, transparent, $bar-color);
-}
+// .bar {
+//   @include bar($nav-top-height, transparent, $bar-color);
+// }
 
 
 

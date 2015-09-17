@@ -9,10 +9,11 @@
  * 1st level container
  */
 
-.bor {
+.bar {
   align-items: baseline; // aligning underlying flex-items with each other (instead of setting this on 2nd level flexbox)
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   label {
     display: inline; // fix for inline-block setting that made the flex baseline align with the lower baseline when wrapping
