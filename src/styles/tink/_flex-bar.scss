@@ -42,13 +42,13 @@ $bor-padding:                           $padding-base-horizontal !default;
  * 2nd level container
  */
 
-  ul {
+  > ul {
     @extend .list-inline;
     align-items: center; // aligning the li elements with each other - part 1
     display: flex;
     flex-wrap: wrap;
 
-    li {
+    > li {
       vertical-align: middle; // aligning the li elements with each other - part 2
     }
 
@@ -80,8 +80,10 @@ $bor-padding:                           $padding-base-horizontal !default;
 .bor {
   overflow: hidden \9; // so the bor won't collapse
 
-  li {
-    line-height: rem(2.5 * $font-size-base) \9;
+  > ul {
+    > li {
+      line-height: rem(2.5 * $font-size-base) \9;
+    }
   }
 
   &-left {
@@ -89,7 +91,7 @@ $bor-padding:                           $padding-base-horizontal !default;
   }
 
   &-center {
-    float: left;
+    float: left; // Can be better, but is not necessary, since it's IE9
   }
 
   &-right {

@@ -694,16 +694,15 @@ html {
 .nov-top {
   @extend .bor;
   //// temporary styling because bor is not included yet ////
-    background-color: $nav-top-bg-color;
-    color: $nav-top-color;
+  background-color: $nav-top-bg-color;
+  color: $nav-top-color;
   //// end of temporary styling ////
 
   // DELETE OR DISABLE CURRENT CLUTTER
   //left: 0;
   //position: fixed;
   //top: 0;
-  transition: height $animation-speed linear;
-  width: 100%;
+  // transition: height $animation-speed linear;
   z-index: layer('nav-top');
 
   a.btn,
@@ -729,6 +728,7 @@ html {
     > li {
 
       &.logo {
+        overflow: hidden;
 
  // &.logo {
  //        padding: 0;
@@ -777,12 +777,6 @@ html {
           display: none;
         }
       }
-    }
-
-    img {
-      // float: left;
-      // height: rem($nav-top-height);
-      // width: auto;
     }
 
     h1 {
