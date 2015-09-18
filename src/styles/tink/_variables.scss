@@ -288,6 +288,17 @@ $btn-danger-border:              darken($btn-danger-bg, 4%) !default;
 $btn-link-disabled-color:        $gray-light !default;
 $btn-icon-margin:                8px !default; // right margin when icon inside button
 
+$btn-transparent-color:                  $white !default;
+$btn-transparent-bg:                     transparent !default;
+$btn-transparent-border:                 transparent !default;
+$btn-transparent-hover-color:            $white !default;
+$btn-transparent-hover-bg:               rgba($white, .10) !default;
+
+$btn-transparent-inverse-color:          $btn-default-color !default;
+$btn-transparent-inverse-bg:             $btn-transparent-bg !default;
+$btn-transparent-inverse-border:         $btn-transparent-border !default;
+$btn-transparent-inverse-hover-color:    $btn-default-color !default;
+$btn-transparent-inverse-hover-bg:       rgba($black, .10) !default;
 
 
 /**
