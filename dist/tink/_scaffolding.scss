@@ -124,9 +124,18 @@ figcaption {
 // Images
 
 // Images are by default responsive (they don't scale beyond their parents)
-img:not(.media-object):not(.non-responsive) {
+img {
   @include img-responsive();
   vertical-align: middle;
+
+  &.non-responsive {
+    display: inline;
+    height: auto;
+    height: auto \9;
+    max-height: none;
+    max-width: none;
+    width: auto;
+  }
 }
 
 // Horizontal rules

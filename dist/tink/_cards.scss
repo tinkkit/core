@@ -13,7 +13,7 @@
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   margin-bottom: rem($line-height-computed);
 
-  &:not(.accordion-card) {
+  &:not(.accordion-panel) {
     border-radius: $card-border-radius;
   }
 
@@ -67,18 +67,12 @@
     padding: 0;
   }
 
-  // Optional icon margin
+  // Icon margin
+  // Badge margin
   .fa + .card-title,
-  .fa + .panel-title {
-    margin-left: rem(9);
-  }
-
-  // Optional badge margin
+  .fa + .panel-title,
   [class^="badge"] + .card-title,
-  [class^="badge"] + .panel-title {
-    margin-left: rem(9);
-  }
-
+  [class^="badge"] + .panel-title,
   .card-title + [class^="badge"],
   .panel-title + [class^="badge"] {
     margin-left: rem(9);

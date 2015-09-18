@@ -9,9 +9,18 @@
  */
 @keyframes spin {
     from {
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-color {
+    0%, 100% {
+        border-color: $loader-color $loader-color $loader-color transparent;
+    }
+    50% {
+        border-color: $loader-color-alt $loader-color-alt $loader-color-alt transparent;
     }
 }
