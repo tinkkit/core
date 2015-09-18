@@ -220,116 +220,8 @@ html {
 
 /**
  * Top navigation
+ * --------------------------------------------------
  */
-
-// .nav-top {
-//   @include bar($nav-top-height, $nav-top-bg-color, $nav-top-color, $nav-top-link-color, $nav-top-link-hover-color, $nav-top-link-bg-hover-color, $nav-top-padding);
-//   left: 0;
-//   position: fixed;
-//   top: 0;
-//   transition: height $animation-speed linear;
-//   width: 100%;
-//   z-index: layer('nav-top');
-
-//   a.btn,
-//   a.btn-primary,
-//   button,
-//   input {
-//     border: none;
-//   }
-
-//   &-branding {
-//     float: left;
-//     height: rem($nav-top-height);
-//     line-height: rem($nav-top-height);
-//     overflow: hidden;
-//     position: relative;
-//     z-index: layer('base');
-
-//     a {
-//       color: $nav-top-link-color;
-//       text-decoration: none;
-
-//       &:hover,
-//       &:active,
-//       &:focus {
-//         color: $nav-top-link-hover-color;
-//       }
-//     }
-
-//     > li {
-//       float: left;
-//       height: rem($nav-top-height);
-//       line-height: rem($nav-top-height);
-
-//       &.logo {
-//         padding: 0;
-
-//         a {
-//           background: $logo-bg-color image-url($logo) no-repeat center center;
-//           background-size: cover;
-//           display: block;
-//           height: rem($logo-height);
-//           margin: rem(0 $nav-top-padding 0 0);
-//           padding: 0;
-//           // transition: height $animation-speed linear;
-//           width: rem($logo-width);
-
-//           span {
-//             @extend .sr-only;
-//           }
-//         }
-//       }
-
-//       &.toggle {
-//         cursor: pointer;
-
-//         @include mq($screen-sm) {
-//           display: none;
-//         }
-//       }
-
-//       &.app {
-//         padding: rem(0 $nav-top-padding);
-//         @include mq($screen-xs-max, "max") {
-//           display: none;
-//         }
-//       }
-//     }
-
-//     img {
-//       float: left;
-//       height: rem($nav-top-height);
-//       width: auto;
-//     }
-
-//     h1 {
-//       font-size: rem($font-size-base);
-//       font-weight: 700;
-//       line-height: rem($nav-top-height);
-//       margin: 0;
-
-//       span {
-//         font-weight: 400;
-//       }
-//     }
-//   }
-
-//   &-section-left {
-//     margin-left: rem($bar-padding);
-//   }
-
-//   &-section-right {
-//     margin-right: rem($bar-padding);
-//   }
-// }
-
-
-
-/**
- * Top navigation in flexbox
- */
-
 .nav-top {
   @extend .bar;
   background-color: $nav-top-bg-color;
@@ -405,8 +297,11 @@ html {
 }
 
 
+
+
 /**
- * Side navigation
+ * Side navigation (styling for both left and right navigation)
+ * --------------------------------------------------
  */
 
 .nav-aside {
@@ -503,23 +398,18 @@ html {
           .badge {
             @include badge-variant($nav-aside-badge-hover-color, $nav-aside-badge-hover-background-color);
           }
-
           // .badge-info {
           //   @include badge-variant($badge-info-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-primary {
           //   @include badge-variant($badge-primary-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-success {
           //   @include badge-variant($badge-success-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-warning {
           //   @include badge-variant($badge-warning-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-danger {
           //   @include badge-variant($badge-danger-bg, $nav-aside-badge-hover-background-color);
           // }
@@ -711,7 +601,7 @@ html {
 
 
 /**
- * Bar -- REPLACED BY FLEX-BAR
+ * Bar -- See separate _bar.scss file
  */
 // .bar {
 //   @include bar($nav-top-height, transparent, $bar-color);

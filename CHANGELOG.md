@@ -23,6 +23,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added a basic loader
 
 ### Changed
+- Refactored the bar component to support flex properties
 - Labels are not bold by default anymore
 - Tweaked the default styling of some form elements
 - Added possibility to right-align the datepicker

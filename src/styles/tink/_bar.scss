@@ -1,7 +1,7 @@
 /**
  * Flex Bar component
  * --------------------------------------------------
- * - basic bor
+ * - basic bar
  * - IE9 overrides (delete this section later)
  */
 
@@ -10,7 +10,7 @@
  */
 
 .bar {
-  align-items: baseline; // aligning underlying flex-items with each other (instead of setting this on 2nd level flexbox)
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -22,7 +22,7 @@
   input,
   select,
   .faux-input {
-    display: inline-block; // Firefox fix for block setting that made the flex baseline align with the bottom input field
+    display: inline-block;
   }
 
 /**
@@ -31,16 +31,16 @@
 
   > ul {
     @extend .list-inline;
-    align-items: center; // aligning the li elements with each other - part 1
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
 
     > li {
-      vertical-align: middle; // aligning the li elements with each other - part 2
+      vertical-align: middle;
     }
 
     img {
-      @extend img.non-responsive; // setting the image inline
+      @extend img.non-responsive;
     }
   }
 
@@ -64,12 +64,12 @@
  * IE9 fall back
  */
 
-.bor {
-  overflow: hidden \9; // so the bor won't collapse
+.bar {
+  overflow: hidden \9; // so the bar won't collapse
 
   > ul {
     > li {
-      line-height: rem(2.5 * $font-size-base) \9; // not using variable because of depecrating use
+      line-height: rem(2.5 * $font-size-base) \9;
     }
   }
 
@@ -78,7 +78,7 @@
   }
 
   &-center {
-    float: left; // Can be better, but is not necessary, since it's IE9
+    float: left;
   }
 
   &-right {
