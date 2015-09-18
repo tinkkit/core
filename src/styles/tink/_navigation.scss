@@ -119,13 +119,9 @@ html {
 
       // Make sure the toggle is always visible
       .nav-top {
-        &-branding {
-          > li {
-            &.toggle {
-              @include mq($screen-sm) {
-                display: block;
-              }
-            }
+        &-toggle {
+          @include mq($screen-sm) {
+            display: block;
           }
         }
       }
@@ -168,13 +164,9 @@ html {
 
       // Make sure the toggle is always visible
       .nav-top {
-        &-branding {
-          > li {
-            &.toggle {
-              @include mq($screen-sm) {
-                display: block;
-              }
-            }
+        &-toggle {
+          @include mq($screen-sm) {
+            display: block;
           }
         }
       }
@@ -238,7 +230,69 @@ html {
     border: none;
   }
 
+  &-left {
+    @extend .bar-left;
+  }
+
+  &-center {
+    @extend .bar-center;
+  }
+
+  &-right {
+    @extend .bar-right;
+    margin-right: 0;
+  }
+
+  // Not so easy to override
   > ul {
+    > li {
+      &.nav-top-toggle{
+        @include mq($screen-sm) {
+          display: none;
+        }
+      }
+      &.nav-top-app {
+        @include mq($screen-xs-max, "max") {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-logo {
+    overflow: hidden; // correction for webkit 1px render bug
+
+    a {
+      background: $logo-bg-color image-url($logo) no-repeat center center;
+      background-size: cover;
+      display: inline-block;
+      height: rem($logo-height);
+      margin: rem(0 $nav-top-padding 0 0);
+      // padding: 0; // isn't really necessary
+      vertical-align: middle;
+      width: rem($logo-width);
+
+      span {
+        @extend .sr-only;
+      }
+    }
+  }
+
+  &-toggle {
+    cursor: pointer;
+
+    a {
+      color: $nav-top-link-color;
+      text-decoration: none;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $nav-top-link-hover-color;
+      }
+    }
+  }
+
+  &-app {
     a {
       color: $nav-top-link-color;
       text-decoration: none;
@@ -249,48 +303,14 @@ html {
       }
     }
 
-    > .logo {
-      overflow: hidden; // correction for webkit 1px render bug
+    h1 {
+      font-size: rem($font-size-base);
+      font-weight: 700;
+      line-height: rem($nav-top-height);
+      margin: 0;
 
-      a {
-        background: $logo-bg-color image-url($logo) no-repeat center center;
-        background-size: cover;
-        display: inline-block;
-        height: rem($logo-height);
-        margin: rem(0 $nav-top-padding 0 0);
-        padding: 0; // isn't really necessary
-        vertical-align: middle;
-        width: rem($logo-width);
-
-        span {
-          @extend .sr-only;
-        }
-      }
-    }
-  }
-
-  > ul > li {
-    &.toggle {
-      cursor: pointer;
-      @include mq($screen-sm) {
-        display: none;
-      }
-    }
-
-    &.app {
-      @include mq($screen-xs-max, "max") {
-        display: none;
-      }
-
-      h1 {
-        font-size: rem($font-size-base);
-        font-weight: 700;
-        line-height: rem($nav-top-height);
-        margin: 0;
-
-        span {
-          font-weight: 400;
-        }
+      span {
+        font-weight: 400;
       }
     }
   }

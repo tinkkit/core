@@ -5,8 +5,10 @@
  * - IE9 overrides (delete this section later)
  */
 
+
 /**
  * 1st level container
+ * --------------------------------
  */
 
 .bar {
@@ -25,9 +27,9 @@
     display: inline-block;
   }
 
-/**
- * 2nd level container
- */
+  /**
+   * 2nd level container
+   */
 
   > ul {
     @extend .list-inline;
@@ -45,15 +47,20 @@
   }
 
   &-left {
+    order: 1;
   }
 
   &-center {
     justify-content: center;
+    order: 2;
+    text-align: center;
   }
 
   &-right {
+    float: right;
     justify-content: flex-end;
     margin-right: rem(-6); // compensation for padding-right of .list-inline
+    order: 3;
     text-align: right;
   }
 }
@@ -62,11 +69,10 @@
 
 /**
  * IE9 fall back
+ * --------------------------------
  */
 
 .bar {
-  overflow: hidden \9; // so the bar won't collapse
-
   > ul {
     > li {
       line-height: rem(2.5 * $font-size-base) \9;
@@ -78,7 +84,6 @@
   }
 
   &-center {
-    float: left;
   }
 
   &-right {

@@ -4,19 +4,18 @@
  */
 
 .loader {
-  animation: spin .7s infinite linear, loader-color 2.8s infinite linear;
+  animation: spin .7s infinite linear, loader-color 2.8s infinite linear; //
+  -webkit-backface-visibility: hidden;
   border: $loader-border-width solid;
   border-color: $loader-color $loader-color $loader-color transparent;
   border-radius: 50%;
   display: inline-block;
   height: rem(28);
-  line-height: 0;
-  overflow: hidden;
+  line-height: 0; //
+  overflow: hidden; //
   position: relative;
-  text-indent: -9999px;
-  // transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  text-indent: -9999px; //
+  transform: translateZ(0) scale(1.0, 1.0);
   width: rem(28);
 
   &-lg {
@@ -29,4 +28,8 @@
 /**
  * Loader in a button
  * -> check _buttons.scss
+ */
+
+/**
+ * To do: give the loader a decent fallback for IE9
  */
