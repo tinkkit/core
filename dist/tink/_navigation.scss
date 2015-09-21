@@ -295,7 +295,9 @@ html {
   &-app {
     a {
       color: $nav-top-link-color;
+      margin: rem(0 $nav-top-padding 0 0);
       text-decoration: none;
+
       &:hover,
       &:active,
       &:focus {

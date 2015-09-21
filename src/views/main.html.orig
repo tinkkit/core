@@ -1,0 +1,597 @@
+<<<<<<< HEAD
+<script type="text/ng-template" id="views/popover-template.html">
+  <h2 class="h4">Bedrijfseenheid aanpassen</h2>
+  <div class="form-group">
+    <label for="input-name">Naam</label>
+    <input type="text" id="input-name" placeholder="Voornaam / Achternaam">
+  </div>
+  <div class="form-group">
+    <label for="input-code">Code</label>
+    <input type="text" id="input-code" placeholder="XXXX">
+  </div>
+</script>
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-6 col-xs-push-3">
+      <div class="select">
+        <select><option selected="selected" disabled="disabled">Selecteer…</option><optgroup label="Groep 1"><option value="1">Optie 1</option><option value="1">Optie 2</option><option value="1">Optie 3</option></optgroup><optgroup label="Groep 2"><option value="1">Optie 1</option><option value="1">Optie 2</option><option value="1">Optie 3</option></optgroup>
+        </select>
+      </div>
+=======
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 text-center">
+      <p class="tink-bg-gray"><a class="btn btn-transparent" href="#/start" role="button">Transparent button</a></p>
+      <p class="tink-bg-gray-lightest"><a class="btn btn-transparent-inverse" href="#/start" role="button">Transparent button inverse</a></p>
+      <p class="tink-bg-brand"><a class="btn btn-transparent" href="#/start" role="button">Transparent button</a></p>
+      <p class="tink-bg-brand-light"><a class="btn btn-transparent-inverse" href="#/start" role="button">Transparent button inverse</a></p>
+>>>>>>> feature/btn-transparent
+    </div>
+  </div>
+</div>
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <h3 class="text-center">Flex nav bar links / text fields WORKS! (except for splitting of spans)</h3>
+    <div class="bar">
+      <ul class="bar-left">
+        <li>
+          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+      </ul>
+
+      <ul class="bar-center">
+        <li>
+          <input type="search" placeholder="search bar">
+        </li>
+      </ul>
+      <ul class="bar-right">
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li>
+          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 text-center">
+      <div class="loader loader-lg">Aan het laden…</div>
+    </div>
+  </div>
+  <div class="row margin-top">
+    <div class="col-xs-12 text-center">
+      <div class="loader">Aan het laden…</div>
+    </div>
+  </div>
+  <div class="row margin-top">
+    <div class="col-xs-12 text-center">
+      <button>Inloggen</button>  <button>Inloggen <div class="loader">Aan het laden…</div></button>
+    </div>
+    <div class="col-xs-12 margin-top text-center">
+      <button class="btn-lg">Inloggen</button>  <button class="btn-lg">Inloggen <div class="loader">Aan het laden…</div></button>
+    </div>
+    <div class="col-xs-12 margin-top text-center">
+      <button class="btn-sm">Inloggen</button>  <button class="btn-sm">Inloggen <div class="loader">Aan het laden…</div></button>
+    </div>
+  </div>
+</div>
+
+<!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
+
+
+
+
+<div class="container margin-top" data-ng-controller="modalController">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-md-4">
+      <button ng-click="openModal()">Open the modal dialog</button>
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <data-tink-datepicker data-ng-model="selectedDate1" data-aligns-right="true"></data-tink-datepicker>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ACCORDION EXAMPLE -->
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-md-4">
+
+      <tink-accordion data-start-open="false" data-one-at-a-time="true">
+        <tink-accordion-panel data-is-collapsed="true" data-onclick="openAccordion">
+          <data-header>
+            First accordion panel
+          </data-header>
+          <data-content>
+            <p>This paragraph creates more vertical padding.</p>
+            This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+          </data-content>
+        </tink-accordion-panel>
+        <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
+          <data-header>
+            Second accordion panel
+          </data-header>
+          <data-content>
+            <p>This is a paragraph, hence the more spacing.</p>
+          </data-content>
+        </tink-accordion-panel>
+        <tink-accordion-panel data-is-collapsed="true">
+          <data-header>
+            Third accordion panel
+          </data-header>
+          <data-content>
+            <button>text</button>
+          </data-content>
+        </tink-accordion-panel>
+      </tink-accordion>
+
+    </div>
+
+
+    <div class="col-xs-12 col-md-4">
+      <section class="panel">
+        <header class="panel-heading">
+          <span class="panel-title h3">Basic panel</span>
+        </header>
+        <div class="panel-body">
+          1st panel body content that consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+        </div>
+        <div class="panel-body">
+          2nd panel body content
+        </div>
+        <div class="panel-body">
+          3rd panel body content
+        </div>
+      </section>
+    </div>
+
+
+    <div class="col-xs-12 col-md-4">
+      <section class="card">
+        <header class="card-heading">
+          <span class="card-title h3">Basic card</span>
+        </header>
+        <div class="card-body">
+          1st card body content that consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+        </div>
+        <div class="card-body">
+          2nd card body content
+        </div>
+        <div class="card-body">
+          3rd card body content
+        </div>
+      </section>
+    </div>
+  </div>
+<div>
+
+<!-- ACCORDION IN LIST EXAMPLE -->
+
+<div class="container margin-top" data-ng-controller="ctrl">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+
+      <ul class="list-unstyled">
+        <tink-accordion data-start-open="false" data-one-at-a-time="true">
+          <li class="margin-top">
+            <tink-accordion-panel data-is-collapsed="true" >
+              <data-header>
+                First accordion panel
+              </data-header>
+              <data-content>
+                <p>This praragraph creates more vertical padding.</p>
+                This accordion panel consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+              </data-content>
+            </tink-accordion-panel></li>
+          <li class="margin-top">
+            <tink-accordion-panel data-is-collapsed="true" data-heading="Second accordion panel">
+              <data-header>
+                Second accordion panel
+              </data-header>
+              <data-content>
+                <p>This is a paragraph, hence the more spacing.</p>
+              </data-content>
+            </tink-accordion-panel>
+          </li>
+          <li class="margin-top">
+            <tink-accordion-panel data-is-collapsed="true">
+              <data-header>
+                Third accordion panel
+              </data-header>
+              <data-content>
+                <button>text</button>
+              </data-content>
+            </tink-accordion-panel>
+          </li>
+        </tink-accordion>
+      </ul>
+
+    </div>
+  </div>
+<div>
+
+<!-- FORM EXAMPLE -->
+
+<div class="container margin-top">
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <div class="row margin-bottom">
+        <div class="form-group">
+          <div class="col-xs-8 margin-top">
+            <input type="text" />
+          </div>
+          <div class="col-xs-4">
+            <button>Verzenden</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input type="text" style="width: 200px;float:left;margin-right:5px" /> <button class="btn-primary">Verzenden</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- BASIC PANEL EXAMPLE -->
+
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <section class="card">
+        <header class="card-heading">
+          <span class="card-title h3">Basic panel</span>
+        </header>
+        <div class="card-body">
+          1st panel body content that consists of some text. This text is purely for your own pleasue and may not be reproduced in any form or matter. So please take notice of this and screw me. If u care to do so, u can always drop me a line, asking me for my permission to redistribute this content.
+        </div>
+        <div class="card-body">
+          2nd panel body content
+        </div>
+        <div class="card-body">
+          3rd panel body content
+        </div>
+      </section>
+    </div>
+  </div>
+
+<!-- PANEL WITH BADGE AND FORM EXAMPLE -->
+
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <section class="card">
+        <header class="card-heading">
+          <span class="badge">13</span></a><span class="card-title h3">Basic panel</span><span class="badge">13</span></a>
+        </header>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Radio buttons</label>
+            <div class="radio">
+              <input type="radio" id="radio1" name="radio1" value="" checked="">
+              <label for="radio1">Option one</label>
+            </div>
+            <div class="radio">
+              <input type="radio" id="radio2" name="radio1" value="">
+              <label for="radio2">Option two is a very long option, so we can see its behaviour when too much text is used for the label.</label>
+            </div>
+            <div class="radio">
+              <input type="radio" id="radio3" name="radio1" value="" disabled="">
+              <label for="radio3">Option three is disabled</label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+<!-- PANEL WITHOUT HEADING EXAMPLE -->
+
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <section class="card">
+        <div class="card-body">
+          Panel body without a heading. The bar is a responsive component that is able to serve a variety of navigation elements, links, buttons, search boxes and whiskey. Ok, maybe not whiskey.
+        </div>
+      </section>
+    </div>
+  </div>
+
+<!-- PANEL WITH FOOTER EXAMPLE -->
+
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <section class="card">
+        <div class="card-body">
+          <p>Some content for the panels</p>
+          Using navs for tab panels requires JavaScript tabs plugin
+          For tabs with tabbable areas, you must use the tabs JavaScript plugin. The markup will also require additional role and ARIA attributes – see the plugin's example markup for further details.
+        </div>
+        <footer class="card-footer">Panel footer content to add to the main panel content</footer>
+      </section>
+    </div>
+  </div>
+
+<!-- PANEL WITH ICON EXAMPLE -->
+
+  <div class="row margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <section class="card">
+        <header class="card-heading">
+          <i class="fa fa-download"></i><span class="card-title h3">Panel title</span>
+        </header>
+        <div class="card-body has-no-padding">
+          <p>Panel body without padding</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+<!-- RESPONSIVE TABLE EXAMPLE -->
+
+  <div class="row margin-bottom margin-top">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <div class="table-force-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Label</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+              <th>Street + Nr</th>
+              <th>Postal Code + City</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><div class="label">label 1</div></td>
+              <td>Jasper</td>
+              <td>Van Proeyen</td>
+              <td>@trianglejuice</td>
+              <td>Kolonel Silvertoplaan 1</td>
+              <td>2018 Antwerpen</td>
+              <td>Belgium</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><div class="label-primary">label 2</div></td>
+              <td>Tom</td>
+              <td>Wuyts</td>
+              <td>@pxlpanic</td>
+              <td>Kolonel Silvertoplaan 1</td>
+              <td>2018 Antwerpen</td>
+              <td>Belgium</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><div class="label-success">label 3</div></td>
+              <td>Kevin</td>
+              <td>De Mulder</td>
+              <td>@clopin</td>
+              <td>Kolonel Silvertoplaan 1</td>
+              <td>2018 Antwerpen</td>
+              <td>Belgium</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><div class="label-info">label 4</div></td>
+              <td>Kevin</td>
+              <td>De Mulder</td>
+              <td>@clopin</td>
+              <td>Kolonel Silvertoplaan 1</td>
+              <td>2018 Antwerpen</td>
+              <td>Belgium</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><div class="label-warning">label 5</div></td>
+              <td>Kevin</td>
+              <td>De Mulder</td>
+              <td>@clopin</td>
+              <td>Kolonel Silvertoplaan 1</td>
+              <td>2018 Antwerpen</td>
+              <td>Belgium</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><div class="label-danger">label 6</div></td>
+              <td>Kevin</td>
+              <td>De Mulder</td>
+              <td>@clopin</td>
+              <td>Kolonel Silvertoplaan 1</td>
+              <td>2018 Antwerpen</td>
+              <td>Belgium</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row" data-ng-controller="interactiveTableController">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <div>
+      <tink-interactive-table ng-model="data" data-tink-allow-column-reorder="true" data-tink-headers="headers" data-tink-actions="actions" data-tink-items-per-page="pages" data-tink-force-responsive="true"></tink-interactive-table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+      <div class="form-group">
+        <div class="select">
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="input-text">Your name</label>
+        <input type="text" id="input-text" placeholder="First and last name">
+        <span class="help-block">You can write your name, right?</span>
+      </div>
+      <ul class="list-inline text-center">
+        <li><p><button class="btn-sm btn-success">Woohoo</button></p></li>
+        <li><p><button class="btn-sm btn-warning">O-ow</button></p></li>
+        <li><p><button class="btn-sm btn-danger">Holy $%!†</button></p></li>
+        <li><p><button class="btn-sm btn-info">Tell me…</button></p></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container margin-top">
+  <div class="row">
+    <div class="col-xs-12 margin-top">
+      <div class="timeline">
+        <div class="timeline-label">2015</div>
+        <ul class="timeline-list">
+          <li>
+            <div class="timeline-date">
+              <time datetime="2015-02-14">14/02/2015</time>
+            </div>
+            <div class="panel-body">
+              <h4>Burgerlijke stand</h4>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Relatie</b></div><div class="col-xs-4 col-md-4">Gescheiden</div>
+                <div class="col-xs-2 col-md-2"><b>Met</b></div><div class="col-xs-4 col-md-4">Ann Vermeulen</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Datum</b></div><div class="col-xs-4 col-md-4">14/02/2015</div>
+                <div class="col-xs-2 col-md-2"><b>Land</b></div><div class="col-xs-4 col-md-4">België</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-date">
+              <time datetime="2015-02-14">14/02/2015</time>
+            </div>
+            <div class="panel-body">
+              <h4>Burgerlijke stand</h4>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Relatie</b></div><div class="col-xs-4 col-md-4">Gescheiden</div>
+                <div class="col-xs-2 col-md-2"><b>Met</b></div><div class="col-xs-4 col-md-4">Ann Vermeulen</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Datum</b></div><div class="col-xs-4 col-md-4">14/02/2015</div>
+                <div class="col-xs-2 col-md-2"><b>Land</b></div><div class="col-xs-4 col-md-4">België</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-date">
+              <time datetime="2015-02-14">14/02/2015</time>
+            </div>
+            <div class="panel-body">
+              <h4>Burgerlijke stand</h4>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Relatie</b></div><div class="col-xs-4 col-md-4">Gescheiden</div>
+                <div class="col-xs-2 col-md-2"><b>Met</b></div><div class="col-xs-4 col-md-4">Ann Vermeulen</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Datum</b></div><div class="col-xs-4 col-md-4">14/02/2015</div>
+                <div class="col-xs-2 col-md-2"><b>Land</b></div><div class="col-xs-4 col-md-4">België</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="timeline-label">2014</div>
+        <ul class="timeline-list">
+          <li>
+            <div class="timeline-date">
+              <time datetime="2014-02-14">14/02/2014</time>
+            </div>
+            <div class="panel-body">
+              <h4>Burgerlijke stand</h4>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Relatie</b></div><div class="col-xs-4 col-md-4">Gescheiden</div>
+                <div class="col-xs-2 col-md-2"><b>Met</b></div><div class="col-xs-4 col-md-4">Ann Vermeulen</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Datum</b></div><div class="col-xs-4 col-md-4">14/02/2014</div>
+                <div class="col-xs-2 col-md-2"><b>Land</b></div><div class="col-xs-4 col-md-4">België</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-date">
+              <time datetime="2014-02-14">14/02/2014</time>
+            </div>
+            <div class="panel-body">
+              <h4>Burgerlijke stand</h4>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Relatie</b></div><div class="col-xs-4 col-md-4">Gescheiden</div>
+                <div class="col-xs-2 col-md-2"><b>Met</b></div><div class="col-xs-4 col-md-4">Ann Vermeulen</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Datum</b></div><div class="col-xs-4 col-md-4">14/02/2014</div>
+                <div class="col-xs-2 col-md-2"><b>Land</b></div><div class="col-xs-4 col-md-4">België</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-date">
+              <time datetime="2014-02-14">14/02/2014</time>
+            </div>
+            <div class="panel-body">
+              <h4>Burgerlijke stand</h4>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Relatie</b></div><div class="col-xs-4 col-md-4">Gescheiden</div>
+                <div class="col-xs-2 col-md-2"><b>Met</b></div><div class="col-xs-4 col-md-4">Ann Vermeulen</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-md-2"><b>Datum</b></div><div class="col-xs-4 col-md-4">14/02/2014</div>
+                <div class="col-xs-2 col-md-2"><b>Land</b></div><div class="col-xs-4 col-md-4">België</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="col-xs-12 text-center">
+  <a href="javascript:void(0)" class="btn">Meer laden</a>
+</div>
+<div class="col-xs-12 text-center margin-top margin-bottom">
+  <a href="javascript:void(0)" class="">Alles laden</a>
+</div> -->

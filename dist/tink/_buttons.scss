@@ -109,6 +109,17 @@ input[type="submit"],
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
+
+// Transparent used on a dark background
+.btn-transparent {
+  @include button-variant($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border, $btn-transparent-hover-bg);
+}
+// Transparent used on a light background
+.btn-transparent-inverse {
+  @include button-variant($btn-transparent-inverse-color, $btn-transparent-inverse-bg, $btn-transparent-inverse-border, $btn-transparent-inverse-hover-bg);
+}
+
+
 // Line buttons (only outline has color)
 // --------------------------------------------------
 

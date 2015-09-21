@@ -2522,6 +2522,32 @@ button[type="submit"], input[type="submit"], .btn-primary {
     background-color: #e60038;
     border-color: #d20033; }
 
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active, .btn-transparent.active, .open > .btn-transparent.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); }
+  .btn-transparent:active, .btn-transparent.active, .open > .btn-transparent.dropdown-toggle {
+    background-image: none; }
+  .btn-transparent.disabled, .btn-transparent.disabled:hover, .btn-transparent.disabled:focus, .btn-transparent.disabled:active, .btn-transparent.disabled.active, .btn-transparent[disabled], .btn-transparent[disabled]:hover, .btn-transparent[disabled]:focus, .btn-transparent[disabled]:active, .btn-transparent[disabled].active, fieldset[disabled] .btn-transparent, fieldset[disabled] .btn-transparent:hover, fieldset[disabled] .btn-transparent:focus, fieldset[disabled] .btn-transparent:active, fieldset[disabled] .btn-transparent.active {
+    background-color: transparent;
+    border-color: transparent; }
+
+.btn-transparent-inverse {
+  color: #333;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-transparent-inverse:hover, .btn-transparent-inverse:focus, .btn-transparent-inverse:active, .btn-transparent-inverse.active, .open > .btn-transparent-inverse.dropdown-toggle {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.1); }
+  .btn-transparent-inverse:active, .btn-transparent-inverse.active, .open > .btn-transparent-inverse.dropdown-toggle {
+    background-image: none; }
+  .btn-transparent-inverse.disabled, .btn-transparent-inverse.disabled:hover, .btn-transparent-inverse.disabled:focus, .btn-transparent-inverse.disabled:active, .btn-transparent-inverse.disabled.active, .btn-transparent-inverse[disabled], .btn-transparent-inverse[disabled]:hover, .btn-transparent-inverse[disabled]:focus, .btn-transparent-inverse[disabled]:active, .btn-transparent-inverse[disabled].active, fieldset[disabled] .btn-transparent-inverse, fieldset[disabled] .btn-transparent-inverse:hover, fieldset[disabled] .btn-transparent-inverse:focus, fieldset[disabled] .btn-transparent-inverse:active, fieldset[disabled] .btn-transparent-inverse.active {
+    background-color: transparent;
+    border-color: transparent; }
+
 .btn-lg {
   border-radius: 0.28571rem ;
   font-size: 1.28571rem ;
@@ -3887,6 +3913,7 @@ html {
         color: #eaeaea; }
   .nav-top-app a {
     color: #fff;
+    margin: 0rem 0.85714rem 0rem 0rem ;
     text-decoration: none; }
     .nav-top-app a:hover, .nav-top-app a:active, .nav-top-app a:focus {
       color: #eaeaea; }

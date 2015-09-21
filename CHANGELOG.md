@@ -16,11 +16,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.6.0] - 2015-xx-xx
+## [1.6.0] - 2015-09-21
 
 ### Added
 - Added an arrow component and applied it to the popover and tooltip component
 - Added a basic loader
+- Added buttons with a transparent background
 
 ### Changed
 - Refactored the bar component to support flex properties
