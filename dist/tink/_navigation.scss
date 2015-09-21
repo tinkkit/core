@@ -224,10 +224,10 @@ html {
   z-index: layer('nav-top');
 
   a.btn,
-  a.btn-primary,
   button,
   input {
     border: none;
+    font-weight: normal;
   }
 
   &-left {

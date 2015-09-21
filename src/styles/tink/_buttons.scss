@@ -94,34 +94,28 @@ input[type="submit"],
 // }
 // Success appears as green
 .btn-success {
-  @extend %btn;
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
 }
 // Info appears as blue-green
 .btn-info {
-  @extend %btn;
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
 // Warning appears as orange
 .btn-warning {
-  @extend %btn;
   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
 }
 // Danger and error appear as red
 .btn-danger {
-  @extend %btn;
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
 
 // Transparent used on a dark background
 .btn-transparent {
-  @extend %btn;
   @include button-variant($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border, $btn-transparent-hover-bg);
 }
 // Transparent used on a light background
 .btn-transparent-inverse {
-  @extend %btn;
   @include button-variant($btn-transparent-inverse-color, $btn-transparent-inverse-bg, $btn-transparent-inverse-border, $btn-transparent-inverse-hover-bg);
 }
 
