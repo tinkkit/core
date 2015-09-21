@@ -360,7 +360,7 @@ $bar-bg-color:                          transparent !default;
 $bar-color:                             $gray-darker !default;
 $bar-link-color:                        $link-color !default;
 $bar-link-hover-color:                  $link-hover-color !default;
-$bar-link-bg-hover-color:               $gray-lighter;
+$bar-link-bg-hover-color:               $gray-lighter !default;
 $bar-padding:                           $padding-base-horizontal !default;
 
 
@@ -386,7 +386,7 @@ $nav-top-bg-color:                       $gray-darker !default;
 $nav-top-color:                          $white !default;
 $nav-top-link-color:                     $white !default;
 $nav-top-link-hover-color:               $gray-lighter !default;
-$nav-top-link-bg-hover-color:            lighten($nav-top-bg-color, 10);
+$nav-top-link-bg-hover-color:            lighten($nav-top-bg-color, 10) !default;
 $nav-top-padding:                        $bar-padding !default;
 
 $nav-aside-horizontal-padding:                  15px !default;
@@ -478,12 +478,12 @@ $callout-border-radius         : 0 !default;
 $callout-color                 : $brand !default;
 $callout-bgcolor               : lighten($callout-color, 50%) !default;
 
-$callout-color-success         : $state-success-text;
-$callout-bgcolor-success       : $state-success-bg;
-$callout-color-warning         : $state-warning-text;
-$callout-bgcolor-warning       : $state-warning-bg;
-$callout-color-danger          : $state-danger-text;
-$callout-bgcolor-danger        : $state-danger-bg;
+$callout-color-success         : $state-success-text !default;
+$callout-bgcolor-success       : $state-success-bg !default;
+$callout-color-warning         : $state-warning-text !default;
+$callout-bgcolor-warning       : $state-warning-bg !default;
+$callout-color-danger          : $state-danger-text !default;
+$callout-bgcolor-danger        : $state-danger-bg !default;
 
 
 
@@ -616,10 +616,10 @@ $label-danger:             $brand-danger !default;
 /**
  * Modals
  */
-$modal-inner-padding:         25px !default;
-$modal-border-radius:         $border-radius-base !default;
-$modal-backdropcolor:       rgba(0, 0, 0, .7) !default;
-$modal-bgcolor:         $gray-lighter !default;
+$modal-inner-padding:        25px !default;
+$modal-border-radius:        $border-radius-base !default;
+$modal-backdropcolor:        rgba(0, 0, 0, .7) !default;
+$modal-bgcolor:              $gray-lighter !default;
 
 
 
@@ -703,8 +703,8 @@ $thumbnail-border-radius:     $border-radius-base !default;
 /**
  * Pagination
  */
-$pagination-padding-horizontal:   $padding-small-horizontal * 2/3;
-$pagination-padding-vertical:     $padding-small-vertical * 2/3;
+$pagination-padding-horizontal:   $padding-small-horizontal * 2/3 !default;
+$pagination-padding-vertical:     $padding-small-vertical * 2/3 !default;
 
 $pagination-color:                $gray !default;
 
@@ -803,6 +803,6 @@ $breadcrumb-separator-size:     $breadcrumb-font-size * .6 !default;
  * Loader
  */
 
-$loader-color: rgba($brand, .8);
-$loader-color-alt: rgba($brand-light, .8);
-$loader-border-width: 2px;
+$loader-color: rgba($brand, .8) !default;
+$loader-color-alt: rgba($brand-light, .8) !default;
+$loader-border-width: 2px !default;
