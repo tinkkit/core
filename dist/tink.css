@@ -3634,6 +3634,35 @@ html.has-open-modal {
   top: 20%; }
 
 /**
+ * Action styling
+ */
+.table-interactive-bar {
+  margin: 0rem 0rem 0.71429rem ; }
+.table-interactive-actions li {
+  padding-right: 0 !important; }
+  .table-interactive-actions li.hr {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    position: relative;
+    width: 10px; }
+    .table-interactive-actions li.hr:before {
+      background: #eaeaea;
+      bottom: 0;
+      content: '';
+      margin-left: 0.28571rem ;
+      left: calc(50% - 2px);
+      position: absolute;
+      top: 0;
+      width: 1px; }
+.table-interactive-actions i + span {
+  display: none; }
+@media (min-width: 992px) {
+  .table-interactive-actions i + span {
+    display: inline; }
+ }
+
+/**
  * Sort styling
  */
 .table-interactive-options {

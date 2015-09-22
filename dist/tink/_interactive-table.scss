@@ -42,39 +42,6 @@
       top: rem(50);
     }
   }
-  // }
-
-  // &.is-loading {
-    // tbody > tr {
-    //   position: relative;
-
-    //   &:before {
-    //     background: rgba($white, .2);
-    //     bottom: 0;
-    //     content: '';
-    //     left: 0;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 0;
-    //     z-index: layer('pseudo');
-    //   }
-    // }
-  // }
-
-
-  // &:focus {
-  //   outline: none;
-  // }
-
-  // table {
-  //   input[type="checkbox"] + label {
-  //     padding: 0; // remove padding so the tablecell width can be adjusted
-
-  //     @include mq($screen-xs-max, "max") {
-  //       padding-right: rem(24);
-  //     }
-  //   }
-  // }
 
   > thead > tr > th {
     position: relative;
@@ -123,6 +90,51 @@
       left: 0;
       position: absolute;
       top: 20%;
+    }
+  }
+}
+
+
+
+/**
+ * Action styling
+ */
+.table-interactive {
+  &-bar {
+    margin: rem(0 0 10);
+  }
+
+  &-actions {
+    li {
+      padding-right: 0 !important;
+
+      &.hr {
+        align-self: stretch;
+        // border-left: 1px solid $hr-border;
+        position: relative;
+        width: 10px;
+
+        &:before {
+          background: $hr-border;
+          bottom: 0;
+          content: '';
+          margin-left: rem(4);
+          left: calc(50% - 2px);
+          position: absolute;
+          top: 0;
+          width: 1px;
+        }
+      }
+    }
+
+    i + span {
+      display: none;
+    }
+
+    @include mq($screen-md) {
+      i + span {
+        display: inline;
+      }
     }
   }
 }

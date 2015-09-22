@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.6.2] - 2015-09-22
+
+### Changed
+- Refactored interactive table styling
+
+
+
 ## [1.6.1] - 2015-09-21
 
 ### Fixed
