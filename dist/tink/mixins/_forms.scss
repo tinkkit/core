@@ -6,9 +6,9 @@
 
 @mixin form-control-validation($text-color: #555, $border-color: #ccc, $background-color: #f5f5f5, $font-icon: "\f00c") {
 
-  > label {
-    color: $text-color;
-  }
+  // > label {
+  //   color: $text-color;
+  // }
 
   input[type="color"],
   input[type="date"],
@@ -107,7 +107,7 @@
     border-color: $color;
     box-shadow: 0 0 0 2px rgba($color-rgba, .25);
     outline: 0;
-    position: relative;
+    // position: relative;
     z-index: layer("base");
   }
 }

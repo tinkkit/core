@@ -1,0 +1,256 @@
+/**
+ * Arrow mixin
+ * --------------------------------------------------
+ * Arrow
+ * :before is the arrow border
+ * :after is the arrow background
+ */
+
+@mixin arrow($arrow-width, $arrow-color, $arrow-offset, $arrow-border-color: transparent) {
+
+  @extend %arrow;
+
+  &.arrow-top {
+    @if $arrow-border-color != transparent {
+      &:before {
+        margin-top: -$arrow-width;
+        margin-left: -$arrow-width;
+        border-bottom: $arrow-width $arrow-border-color solid;
+        border-left: $arrow-width transparent solid;
+        border-right: $arrow-width transparent solid;
+      }
+    }
+    &:after {
+      margin-top: -($arrow-width - .5);
+      margin-left: -$arrow-width;
+      border-bottom: $arrow-width $arrow-color solid;
+      border-left: $arrow-width transparent solid;
+      border-right: $arrow-width transparent solid;
+    }
+    &-left {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-top: -$arrow-width;
+          margin-left: -$arrow-width;
+          border-bottom: $arrow-width $arrow-border-color solid;
+          border-left: $arrow-width transparent solid;
+          border-right: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-top: -($arrow-width - .5);
+        margin-left: -$arrow-width;
+        border-bottom: $arrow-width $arrow-color solid;
+        border-left: $arrow-width transparent solid;
+        border-right: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        left: $arrow-width + $arrow-offset;
+      }
+    }
+    &-right {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-top: -$arrow-width;
+          margin-left: -$arrow-width;
+          border-bottom: $arrow-width $arrow-border-color solid;
+          border-left: $arrow-width transparent solid;
+          border-right: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-top: -($arrow-width - .5);
+        margin-left: -$arrow-width;
+        border-bottom: $arrow-width $arrow-color solid;
+        border-left: $arrow-width transparent solid;
+        border-right: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        right: $arrow-offset;
+      }
+    }
+  }
+
+  &.arrow-right {
+    @if $arrow-border-color != transparent {
+      &:before {
+        margin-top: -$arrow-width;
+        margin-right: -$arrow-width;
+        border-left: $arrow-width $arrow-border-color solid;
+        border-top: $arrow-width transparent solid;
+        border-bottom: $arrow-width transparent solid;
+      }
+    }
+    &:after {
+      margin-top: -$arrow-width;
+      margin-right: -($arrow-width - .5);
+      border-left: $arrow-width $arrow-color solid;
+      border-top: $arrow-width transparent solid;
+      border-bottom: $arrow-width transparent solid;
+    }
+    &-top {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-top: -$arrow-width;
+          margin-right: -$arrow-width;
+          border-left: $arrow-width $arrow-border-color solid;
+          border-top: $arrow-width transparent solid;
+          border-bottom: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-top: -$arrow-width;
+        margin-right: -($arrow-width - .5);
+        border-left: $arrow-width $arrow-color solid;
+        border-top: $arrow-width transparent solid;
+        border-bottom: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        top: $arrow-width + $arrow-offset;
+      }
+    }
+    &-bottom {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-top: -$arrow-width;
+          margin-right: -$arrow-width;
+          border-left: $arrow-width $arrow-border-color solid;
+          border-top: $arrow-width transparent solid;
+          border-bottom: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-top: -$arrow-width;
+        margin-right: -($arrow-width - .5);
+        border-left: $arrow-width $arrow-color solid;
+        border-top: $arrow-width transparent solid;
+        border-bottom: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        bottom: $arrow-offset;
+      }
+    }
+  }
+
+  &.arrow-bottom {
+    @if $arrow-border-color != transparent {
+      &:before {
+        margin-bottom: -$arrow-width;
+        margin-left: -$arrow-width;
+        border-top: $arrow-width $arrow-border-color solid;
+        border-left: $arrow-width transparent solid;
+        border-right: $arrow-width transparent solid;
+      }
+    }
+    &:after {
+      margin-bottom: -($arrow-width - .5);
+      margin-left: -$arrow-width;
+      border-top: $arrow-width $arrow-color solid;
+      border-left: $arrow-width transparent solid;
+      border-right: $arrow-width transparent solid;
+    }
+    &-left {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-bottom: -$arrow-width;
+          margin-left: -$arrow-width;
+          border-top: $arrow-width $arrow-border-color solid;
+          border-left: $arrow-width transparent solid;
+          border-right: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-bottom: -($arrow-width - .5);
+        margin-left: -$arrow-width;
+        border-top: $arrow-width $arrow-color solid;
+        border-left: $arrow-width transparent solid;
+        border-right: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        left: $arrow-width + $arrow-offset;
+      }
+    }
+    &-right {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-bottom: -$arrow-width;
+          margin-left: -$arrow-width;
+          border-top: $arrow-width $arrow-border-color solid;
+          border-left: $arrow-width transparent solid;
+          border-right: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-bottom: -($arrow-width - .5);
+        margin-left: -$arrow-width;
+        border-top: $arrow-width $arrow-color solid;
+        border-left: $arrow-width transparent solid;
+        border-right: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        right: $arrow-offset;
+      }
+    }
+  }
+
+  &.arrow-left {
+    @if $arrow-border-color != transparent {
+      &:before {
+        margin-top: -$arrow-width;
+        margin-left: -$arrow-width;
+        border-right: $arrow-width $arrow-border-color solid;
+        border-top: $arrow-width transparent solid;
+        border-bottom: $arrow-width transparent solid;
+      }
+    }
+    &:after {
+      margin-top: -$arrow-width;
+      margin-left: -($arrow-width - .5);
+      border-right: $arrow-width $arrow-color solid;
+      border-top: $arrow-width transparent solid;
+      border-bottom: $arrow-width transparent solid;
+    }
+    &-top {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-top: -$arrow-width;
+          margin-left: -$arrow-width;
+          border-right: $arrow-width $arrow-border-color solid;
+          border-top: $arrow-width transparent solid;
+          border-bottom: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-top: -$arrow-width;
+        margin-left: -($arrow-width - .5);
+        border-right: $arrow-width $arrow-color solid;
+        border-top: $arrow-width transparent solid;
+        border-bottom: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        top: $arrow-width + $arrow-offset;
+      }
+    }
+    &-bottom {
+      @if $arrow-border-color != transparent {
+        &:before {
+          margin-top: -$arrow-width;
+          margin-left: -$arrow-width;
+          border-right: $arrow-width $arrow-border-color solid;
+          border-top: $arrow-width transparent solid;
+          border-bottom: $arrow-width transparent solid;
+        }
+      }
+      &:after {
+        margin-top: -$arrow-width;
+        margin-left: -($arrow-width - .5);
+        border-right: $arrow-width $arrow-color solid;
+        border-top: $arrow-width transparent solid;
+        border-bottom: $arrow-width transparent solid;
+      }
+      &:before, &:after {
+        bottom: $arrow-offset;
+      }
+    }
+  }
+}

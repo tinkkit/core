@@ -15,10 +15,11 @@
   }
 
   .faux-input {
-// bugfix so the input field won't collapse when it's used in a absolute container.
-// min-width preferred over padding (size changes when content changes). (LVG)
+    // bugfix so the input field won't collapse when it's used in a absolute container.
+    // min-width preferred over padding (size changes when content changes). (LVG)
     min-width: rem(120);
     position: relative;
+    text-align: left;
 
     &:focus {
       z-index: layer("base");
@@ -175,6 +176,10 @@
   padding: 1.5%;
   position: absolute;
   width: rem(260); // removed min-width
+
+  &.aligns-right {
+    right: 0;
+  }
 }
 
 .datepickerrange {

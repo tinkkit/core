@@ -13,9 +13,15 @@ padding : 0; }
 // source idea http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
 // Adjusted for modern browsers
 @mixin mq($point, $query1: min, $query2: width) {
-    @media (#{$query1}-#{$query2}: #{$point}) {
-        @content;
-    }
+  @media (#{$query1}-#{$query2}: #{$point}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+    @content;
+  }
 }
 
 

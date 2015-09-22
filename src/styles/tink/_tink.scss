@@ -32,30 +32,33 @@
 /**
  * Components
  */
-@import "button-groups";
-@import "panels";
+@import "arrows";
+// @import "button-groups";
+@import "cards"; // @import "panels";
 @import "breadcrumbs";
 @import "badges";
-// @import "input-groups";
-// @import "dropdowns";
 @import "navs";
 @import "modal";
-@import "accordion";
+@import "loader";
 @import "callout";
 @import "labels";
-@import "upload";
 @import "hit-area-box";
-@import "pagination";
-@import "interactive-table";
-@import "sticky";
+// @import "timeline";
+@import "bar";
+
 /**
  * Angular related components
  */
-@import "popovers";
-@import "tooltip";
-@import "navigation";
+@import "accordion";
 @import "datepicker";
+@import "pagination";
+@import "interactive-table";
+@import "navigation";
+@import "popovers";
+@import "sticky";
 @import "timepicker";
+@import "tooltip";
+@import "upload";
 
 /**
  * Utilities

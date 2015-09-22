@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script type="text/ng-template" id="views/popover-template.html">
   <h2 class="h4">Bedrijfseenheid aanpassen</h2>
   <div class="form-group">
@@ -17,9 +18,7 @@
         <select><option selected="selected" disabled="disabled">Selecteer…</option><optgroup label="Groep 1"><option value="1">Optie 1</option><option value="1">Optie 2</option><option value="1">Optie 3</option></optgroup><optgroup label="Groep 2"><option value="1">Optie 1</option><option value="1">Optie 2</option><option value="1">Optie 3</option></optgroup>
         </select>
       </div>
-    </div>
-  </div>
-</div>
+=======
 
 <div class="container margin-top">
   <div class="row margin-top">
@@ -28,6 +27,7 @@
       <p class="tink-bg-gray-lightest"><a class="btn btn-transparent-inverse" href="#/start" role="button">Transparent button inverse</a></p>
       <p class="tink-bg-brand"><a class="btn btn-transparent" href="#/start" role="button">Transparent button</a></p>
       <p class="tink-bg-brand-light"><a class="btn btn-transparent-inverse" href="#/start" role="button">Transparent button inverse</a></p>
+>>>>>>> feature/btn-transparent
     </div>
   </div>
 </div>

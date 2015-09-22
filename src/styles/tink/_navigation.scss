@@ -119,13 +119,9 @@ html {
 
       // Make sure the toggle is always visible
       .nav-top {
-        &-branding {
-          > li {
-            &.toggle {
-              @include mq($screen-sm) {
-                display: block;
-              }
-            }
+        &-toggle {
+          @include mq($screen-sm) {
+            display: block;
           }
         }
       }
@@ -168,13 +164,9 @@ html {
 
       // Make sure the toggle is always visible
       .nav-top {
-        &-branding {
-          > li {
-            &.toggle {
-              @include mq($screen-sm) {
-                display: block;
-              }
-            }
+        &-toggle {
+          @include mq($screen-sm) {
+            display: block;
           }
         }
       }
@@ -220,34 +212,90 @@ html {
 
 /**
  * Top navigation
+ * --------------------------------------------------
  */
-
 .nav-top {
-  @include bar($nav-top-height, $nav-top-bg-color, $nav-top-color, $nav-top-link-color, $nav-top-link-hover-color, $nav-top-link-bg-hover-color, $nav-top-padding);
+  @extend .bar;
+  background-color: $nav-top-bg-color;
+  color: $nav-top-color;
   left: 0;
   position: fixed;
   top: 0;
-  transition: height $animation-speed linear;
-  width: 100%;
   z-index: layer('nav-top');
 
   a.btn,
-  a.btn-primary,
   button,
   input {
     border: none;
+    font-weight: normal;
   }
 
-  &-branding {
-    float: left;
-    height: rem($nav-top-height);
-    line-height: rem($nav-top-height);
-    overflow: hidden;
-    position: relative;
-    z-index: layer('base');
+  &-left {
+    @extend .bar-left;
+  }
+
+  &-center {
+    @extend .bar-center;
+  }
+
+  &-right {
+    @extend .bar-right;
+    margin-right: 0;
+  }
+
+  // Not so easy to override
+  > ul {
+    > li {
+      &.nav-top-toggle{
+        @include mq($screen-sm) {
+          display: none;
+        }
+      }
+      &.nav-top-app {
+        @include mq($screen-xs-max, "max") {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-logo {
+    overflow: hidden; // correction for webkit 1px render bug
+
+    a {
+      background: $logo-bg-color image-url($logo) no-repeat center center;
+      background-size: cover;
+      display: inline-block;
+      height: rem($logo-height);
+      margin: rem(0 $nav-top-padding 0 0);
+      // padding: 0; // isn't really necessary
+      vertical-align: middle;
+      width: rem($logo-width);
+
+      span {
+        @extend .sr-only;
+      }
+    }
+  }
+
+  &-toggle {
+    cursor: pointer;
 
     a {
       color: $nav-top-link-color;
+      text-decoration: none;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $nav-top-link-hover-color;
+      }
+    }
+  }
+
+  &-app {
+    a {
+      color: $nav-top-link-color;
+      margin: rem(0 $nav-top-padding 0 0);
       text-decoration: none;
 
       &:hover,
@@ -255,52 +303,6 @@ html {
       &:focus {
         color: $nav-top-link-hover-color;
       }
-    }
-
-    > li {
-      float: left;
-      height: rem($nav-top-height);
-      line-height: rem($nav-top-height);
-
-      &.logo {
-        padding: 0;
-
-        a {
-          background: $logo-bg-color image-url($logo) no-repeat center center;
-          background-size: cover;
-          display: block;
-          height: rem($logo-height);
-          margin: rem(0 $nav-top-padding 0 0);
-          padding: 0;
-          // transition: height $animation-speed linear;
-          width: rem($logo-width);
-
-          span {
-            @extend .sr-only;
-          }
-        }
-      }
-
-      &.toggle {
-        cursor: pointer;
-
-        @include mq($screen-sm) {
-          display: none;
-        }
-      }
-
-      &.app {
-        padding: rem(0 $nav-top-padding);
-        @include mq($screen-xs-max, "max") {
-          display: none;
-        }
-      }
-    }
-
-    img {
-      float: left;
-      height: rem($nav-top-height);
-      width: auto;
     }
 
     h1 {
@@ -314,21 +316,14 @@ html {
       }
     }
   }
-
-  &-section-left {
-    margin-left: rem($bar-padding);
-  }
-
-  &-section-right {
-    margin-right: rem($bar-padding);
-  }
 }
 
 
 
 
 /**
- * Side navigation
+ * Side navigation (styling for both left and right navigation)
+ * --------------------------------------------------
  */
 
 .nav-aside {
@@ -425,23 +420,18 @@ html {
           .badge {
             @include badge-variant($nav-aside-badge-hover-color, $nav-aside-badge-hover-background-color);
           }
-
           // .badge-info {
           //   @include badge-variant($badge-info-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-primary {
           //   @include badge-variant($badge-primary-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-success {
           //   @include badge-variant($badge-success-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-warning {
           //   @include badge-variant($badge-warning-bg, $nav-aside-badge-hover-background-color);
           // }
-
           // .badge-danger {
           //   @include badge-variant($badge-danger-bg, $nav-aside-badge-hover-background-color);
           // }
@@ -633,11 +623,11 @@ html {
 
 
 /**
- * Bar
+ * Bar -- See separate _bar.scss file
  */
-.bar {
-  @include bar($nav-top-height, transparent, $bar-color);
-}
+// .bar {
+//   @include bar($nav-top-height, transparent, $bar-color);
+// }
 
 
 

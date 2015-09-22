@@ -1,0 +1,109 @@
+/**
+ * Cards
+ * --------------------------------------------------
+ */
+
+// Base class
+
+.card {
+  @include card-variant($card-default-border, $card-default-text, $card-default-heading-bg, $card-default-border);
+
+  background-color: $card-bg;
+  border: 1px solid $card-default-border;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  margin-bottom: rem($line-height-computed);
+
+  &:not(.accordion-panel) {
+    border-radius: $card-border-radius;
+  }
+
+  > .card-heading {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+}
+
+// Card contents
+
+.card-body {
+  @include clearfix();
+  padding: rem($card-body-padding);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $card-default-border;
+  }
+
+  &.has-no-padding {
+    padding: 0;
+  }
+}
+
+// Optional heading
+
+.card-heading {
+  font-size: rem(16);
+  font-weight: 700;
+  padding: rem($card-heading-padding ($card-heading-padding * 2));
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+
+  .fa {
+    color: $card-default-icon-color;
+  }
+
+  /**
+   * !!!! Panel title should be removed later…
+   */
+  .card-title,
+  .panel-title {
+    background: none;
+    color: $card-default-text;
+    display: inline-block;
+    font-size: rem($card-title-font-size);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Icon margin
+  // Badge margin
+  .fa + .card-title,
+  .fa + .panel-title,
+  [class^="badge"] + .card-title,
+  [class^="badge"] + .panel-title,
+  .card-title + [class^="badge"],
+  .panel-title + [class^="badge"] {
+    margin-left: rem(9);
+  }
+}
+
+// Optional footer
+
+.card-footer {
+  background: $card-default-footer-bg;
+  border-top: 1px solid $card-default-border;
+  // font-size: rem(12);
+  padding: rem($card-heading-padding ($card-heading-padding * 2));
+}
+
+
+
+// Card variations
+
+// .card-primary {
+//   @include card-variant($card-primary-border, $card-primary-text, $card-primary-heading-bg, $card-primary-border);
+// }
+// .card-success {
+//   @include card-variant($card-success-border, $card-success-text, $card-success-heading-bg, $card-success-border);
+// }
+// .card-info {
+//   @include card-variant($card-info-border, $card-info-text, $card-info-heading-bg, $card-info-border);
+// }
+// .card-warning {
+//   @include card-variant($card-warning-border, $card-warning-text, $card-warning-heading-bg, $card-warning-border);
+// }
+// .card-danger {
+//   @include card-variant($card-danger-border, $card-danger-text, $card-danger-heading-bg, $card-danger-border);
+// }

@@ -1,0 +1,92 @@
+/**
+ * Flex Bar component
+ * --------------------------------------------------
+ * - basic bar
+ * - IE9 overrides (delete this section later)
+ */
+
+
+/**
+ * 1st level container
+ * --------------------------------
+ */
+
+.bar {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  label {
+    display: inline; // fix for inline-block setting that made the flex baseline align with the lower baseline when wrapping
+  }
+
+  input,
+  select,
+  .faux-input {
+    display: inline-block;
+  }
+
+  /**
+   * 2nd level container
+   */
+
+  > ul {
+    @extend .list-inline;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      vertical-align: middle;
+    }
+
+    img {
+      @extend img.non-responsive;
+    }
+  }
+
+  &-left {
+    order: 1;
+  }
+
+  &-center {
+    justify-content: center;
+    order: 2;
+    text-align: center;
+  }
+
+  &-right {
+    float: right;
+    justify-content: flex-end;
+    margin-right: rem(-6); // compensation for padding-right of .list-inline
+    order: 3;
+    text-align: right;
+  }
+}
+
+
+
+/**
+ * IE9 fall back
+ * --------------------------------
+ */
+
+.bar {
+  > ul {
+    > li {
+      line-height: rem(2.5 * $font-size-base) \9;
+    }
+  }
+
+  &-left {
+    float: left;
+  }
+
+  &-center {
+  }
+
+  &-right {
+    float: right;
+  }
+}

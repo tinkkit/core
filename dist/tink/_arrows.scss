@@ -1,0 +1,121 @@
+/**
+ * Arrows
+ * --------------------------------------------------
+ * - Extend class
+ * - Styling needed for all arrows
+ *
+ * :before is the arrow border
+ * :after is the arrow background
+ */
+
+%arrow {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+  }
+}
+
+.arrow-top {
+  &:before {
+    top: -1px;
+    left: 50%;
+  }
+  &:after {
+    top: 0;
+    left: 50%;
+  }
+  &-left,
+  &-right {
+    &:before {
+      top: -1px;
+      left: 50%;
+    }
+    &:after {
+      top: 0;
+      left: 50%;
+    }
+    &:before, &:after {
+      left: auto; //(100 - $popover-arrow-offset) * 1%;
+    }
+  }
+}
+
+.arrow-right {
+  &:before {
+    right: -1px;
+    top: 50%;
+  }
+  &:after {
+    right: 0;
+    top: 50%;
+  }
+  &-bottom,
+  &-top {
+    &:before {
+      right: -1px;
+      top: 50%;
+    }
+    &:after {
+      right: 0;
+      top: 50%;
+    }
+    &:before, &:after {
+      top: auto;
+    }
+  }
+}
+
+.arrow-bottom {
+  &:before {
+    bottom: -1px;
+    left: 50%;
+  }
+  &:after {
+    bottom: 0;
+    left: 50%;
+  }
+  &-left,
+  &-right {
+    &:before {
+      bottom: -1px;
+      left: 50%;
+    }
+    &:after {
+      bottom: 0;
+      left: 50%;
+    }
+    &:before, &:after {
+      left: auto; //(100 - $popover-arrow-offset) * 1%;
+    }
+  }
+}
+
+.arrow-left {
+  &:before {
+    left: -1px;
+    top: 50%;
+  }
+  &:after {
+    left: 0;
+    top: 50%;
+  }
+  &-bottom,
+  &-top {
+    &:before {
+      left: -1px;
+      top: 50%;
+    }
+    &:after {
+      left: 0;
+      top: 50%;
+    }
+    &:before, &:after {
+      top: auto;
+    }
+  }
+}
