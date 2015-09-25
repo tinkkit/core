@@ -2435,7 +2435,7 @@ button, input[type="button"], .btn, button[type="submit"], input[type="submit"],
     pointer-events: none; }
   button.btn-text .fa, input.btn-text[type="button"] .fa, .btn-text.btn .fa, input.btn-text[type="submit"] .fa, .btn-text.btn-primary .fa {
     margin-right: 0.57143rem ; }
-  button .loader, input[type="button"] .loader, .btn .loader, input[type="submit"] .loader, .btn-primary .loader {
+  button .loader, input[type="button"] .loader, .btn .loader, input[type="submit"] .loader, .btn-primary .loader, button .table-interactive.is-loading:after, input[type="button"] .table-interactive.is-loading:after, .btn .table-interactive.is-loading:after, input[type="submit"] .table-interactive.is-loading:after, .btn-primary .table-interactive.is-loading:after {
     height: 1em;
     line-height: 1em;
     top: 0.14286rem ;
@@ -2961,7 +2961,7 @@ html.has-open-modal {
  * Loader
  * --------------------------------------------------
  */
-.loader {
+.loader, .table-interactive.is-loading:after {
   -webkit-animation: spin 0.7s infinite linear, loader-color 2.8s infinite linear;
   animation: spin 0.7s infinite linear, loader-color 2.8s infinite linear;
   -webkit-backface-visibility: hidden;
@@ -2977,7 +2977,7 @@ html.has-open-modal {
   -webkit-transform: translateZ(0) scale(1, 1);
   transform: translateZ(0) scale(1, 1);
   width: 2rem ; }
-  .loader-lg {
+  .loader-lg, .table-interactive.is-loading:after {
     border-width: 3px;
     height: 2.57143rem ;
     width: 2.57143rem ; }
@@ -3591,16 +3591,10 @@ html.has-open-modal {
     left: 0;
     right: 0; }
   .table-interactive.is-loading:after {
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-    color: #888;
-    content: "\f021";
-    font-family: FontAwesome;
-    font-size: 2em;
-    font-style: normal;
-    font-weight: normal;
+    content: '';
     left: 50%;
-    margin-left: -0.5em;
+    margin-left: -1.28571rem ;
+    pointer-events: none;
     top: 3.57143rem ; }
 .table-interactive > thead > tr > th {
   position: relative;
@@ -3666,7 +3660,8 @@ html.has-open-modal {
  * Sort styling
  */
 .table-interactive-options {
-  overflow: visible; }
+  overflow: visible;
+  text-align: left; }
   .table-interactive-options .is-selectable {
     padding-left: 0.28571rem ;
     padding-right: 0.28571rem ;
@@ -3702,7 +3697,6 @@ html.has-open-modal {
       right: 0;
       top: 0;
       z-index: 2; }
-
 .table-interactive-sort {
   padding: 0.35714rem ;
   text-align: right; }
@@ -3720,7 +3714,6 @@ html.has-open-modal {
     user-select: none; }
     .table-interactive-sort i:first-child {
       margin-right: 0.28571rem ; }
-
 .table-interactive-cols {
   display: block;
   margin: 0.35714rem 0rem ;
@@ -3735,11 +3728,9 @@ html.has-open-modal {
     outline: none; }
   .table-interactive-cols li {
     overflow: hidden; }
-
-.draggable-elem:focus {
+.table-interactive .draggable-elem:focus {
   outline: none; }
-
-button i {
+.table-interactive button i {
   position: relative;
   z-index: 0; }
 

@@ -29,16 +29,12 @@
     }
 
     &:after {
-      animation: spin 1s linear infinite;
-      color: $gray;
-      content: "\f021";
-      font-family: FontAwesome;
-      font-size: 2em;
-      font-style: normal;
-      font-weight: normal;
+      @extend .loader;
+      @extend .loader-lg;
+      content: '';
       left: 50%;
-      margin-left: -.5em;
-      // pointer-events: none;
+      margin-left: rem(-18);
+      pointer-events: none;
       top: rem(50);
     }
   }
@@ -144,125 +140,128 @@
 /**
  * Sort styling
  */
-.table-interactive-options {
-  overflow: visible;
+.table-interactive {
+  &-options {
+    overflow: visible;
+    text-align: left;
 
-  .is-selectable {
-    padding-left: rem(4);
-    padding-right: rem(4);
-    transition: background-color $animation-speed linear;
+    .is-selectable {
+      padding-left: rem(4);
+      padding-right: rem(4);
+      transition: background-color $animation-speed linear;
 
-    &.selected {
-      background-color: $table-interactive-options-selected-bgcolor;
-    }
+      &.selected {
+        background-color: $table-interactive-options-selected-bgcolor;
+      }
 
-    label {
-      display: block;
-
-      span {
+      label {
         display: block;
-        margin: rem(-2 -4 0 -6);
-        padding: rem(2 6 2 6);
-      }
-    }
-  }
 
-  .is-draggable {
-    &:hover {
-      label {
         span {
-          cursor: grab;
+          display: block;
+          margin: rem(-2 -4 0 -6);
+          padding: rem(2 6 2 6);
         }
       }
     }
 
-    &:not(.selected) {
+    .is-draggable {
       &:hover {
-        background-color: $table-interactive-options-hover-bgcolor;
+        label {
+          span {
+            cursor: grab;
+          }
+        }
       }
-    }
 
-    &:active {
-      label {
-        span {
-          cursor: grabbing;
+      &:not(.selected) {
+        &:hover {
+          background-color: $table-interactive-options-hover-bgcolor;
+        }
+      }
+
+      &:active {
+        label {
+          span {
+            cursor: grabbing;
+          }
         }
       }
     }
-  }
 
-  .draggable-placeholder > div {
-    opacity: .32;
-    position: relative;
-
-    &:before {
-      background: $white;
-      border: 1px dashed $table-interactive-options-dropzone-border;
-      border-radius: $border-radius-base;
-      bottom: 0;
-      content: "";
-      left: 0;
-      opacity: 1;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 2;
-    }
-  }
-}
-
-.table-interactive-sort {
-  padding: rem(5);
-  text-align: right;
-
-  .btn-borderless {
-    border: none;
-    cursor: pointer;
-    padding: 0 0 0 rem(4);
-
-    &[disabled] {
+    .draggable-placeholder > div {
       opacity: .32;
-      pointer-events: none;
+      position: relative;
+
+      &:before {
+        background: $white;
+        border: 1px dashed $table-interactive-options-dropzone-border;
+        border-radius: $border-radius-base;
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+      }
     }
   }
 
-  i {
+  &-sort {
+    padding: rem(5);
+    text-align: right;
+
+    .btn-borderless {
+      border: none;
+      cursor: pointer;
+      padding: 0 0 0 rem(4);
+
+      &[disabled] {
+        opacity: .32;
+        pointer-events: none;
+      }
+    }
+
+    i {
+      user-select: none;
+
+      &:first-child {
+        margin-right: rem(4);
+      }
+    }
+  }
+
+  &-cols {
+    @extend .list-unstyled;
+    @extend .clearfix;
+    display: block;
+    margin: rem(5 0);
+    max-height: rem(150);
+    overflow: hidden;
+    overflow-y: auto;
     user-select: none;
 
-    &:first-child {
-      margin-right: rem(4);
+    &:focus {
+      outline: none;
+    }
+
+    li {
+      overflow: hidden;
     }
   }
-}
 
-.table-interactive-cols {
-  @extend .list-unstyled;
-  @extend .clearfix;
-  display: block;
-  margin: rem(5 0);
-  max-height: rem(150);
-  overflow: hidden;
-  overflow-y: auto;
-  user-select: none;
-
-  &:focus {
-    outline: none;
+  .draggable-elem {
+    &:focus {
+      outline: none;
+    }
   }
 
-  li {
-    overflow: hidden;
+  button i {
+    position: relative;
+    z-index: 0;
   }
-}
-
-.draggable-elem {
-  &:focus {
-    outline: none;
-  }
-}
-
-button i {
-  position: relative;
-  z-index: 0;
 }
 
 

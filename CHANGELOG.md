@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.6.3] - 2015-09-25
+
+### Changed
+- Implemented the new loader in the interactive table
+
+### Fixed
+- Fixed an issue with the alignment of column sorting in the interactive table
+
+
+
 ## [1.6.2] - 2015-09-22
 
 ### Changed
