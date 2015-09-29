@@ -40,7 +40,6 @@
   }
 
   > thead > tr > th {
-    // position: relative;
     transition: background-color $animation-speed linear, color $animation-speed linear;
     user-select: none;
   }
@@ -54,8 +53,8 @@
     // Only sortable columns should have an hover effect
     &.is-sortable {
       position: relative;
+
       &:hover {
-      //   background-color: $table-interactive-heading-hover-bg;
         color: $table-interactive-heading-hover-color;
         cursor: pointer;
       }
@@ -87,6 +86,12 @@
           content: '\f0de';
         }
       }
+    }
+  }
+
+  tr {
+    &.is-selected {
+      background-color: #e8f5e9;
     }
   }
 }
