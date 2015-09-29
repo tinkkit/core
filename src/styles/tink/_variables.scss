@@ -212,8 +212,8 @@ $table-border-color:            $gray-light !default; // Border color for table 
 // $table-bg-active:               $table-bg-hover !default;
 $table-bg-active:               $gray-lighter !default;
 
-$table-heading-bg:               $gray-lighter !default;
-$table-heading-color:            $gray-darker !default;
+$table-heading-bg:               lighten($gray-lighter, 4%) !default;
+$table-heading-color:            $gray !default;
 
 
 
@@ -671,7 +671,7 @@ $card-default-footer-bg:     $card-default-heading-bg !default;
 //$table-interactive-heading-color:       $card-default-text !default;
 $table-interactive-heading-line:             lighten($table-heading-color, 48%) !default;
 $table-interactive-heading-hover-bg:         darken($table-heading-bg, 5%) !default;
-$table-interactive-heading-hover-color:      $table-heading-color !default;
+$table-interactive-heading-hover-color:      $text-color !default;
 $table-interactive-options-selected-bgcolor: lighten($brand, 50%) !default;
 $table-interactive-options-hover-bgcolor:    rgba($black, .05) !default;
 $table-interactive-options-dropzone-border:  $brand !default;

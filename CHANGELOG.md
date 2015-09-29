@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.6.4] - 2015-09-xx
+
+### Changed
+- Changed the styling of the interactive table
+
+### Fixed
+- Color classes now override any other specified color
+
+
+
 ## [1.6.3] - 2015-09-25
 
 ### Changed
