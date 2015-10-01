@@ -40,10 +40,11 @@
   }
 
   > thead > tr > th {
-    position: relative;
-    transition: background-color $animation-speed linear;
+    transition: background-color $animation-speed linear, color $animation-speed linear;
     user-select: none;
+  }
 
+  th {
     // Fixed width for column with only checkboxes
     &.has-checkbox {
       width: rem(35);
@@ -51,41 +52,46 @@
 
     // Only sortable columns should have an hover effect
     &.is-sortable {
+      position: relative;
+
       &:hover {
-        background-color: $table-interactive-heading-hover-bg;
         color: $table-interactive-heading-hover-color;
         cursor: pointer;
       }
-    }
 
-    &.sort-asc {
       &:after {
-        content: '\f106';
+        content: '\f0dc';
         font-family: 'FontAwesome';
-        position: absolute;
-        right: rem(8);
+        font-size: .65em;
+        line-height: rem(18);
+        margin-left: rem(4);
       }
-    }
 
-    &.sort-desc {
-      &:after {
-        content: '\f107';
-        font-family: 'FontAwesome';
-        position: absolute;
-        right: rem(8);
+      &.sort-asc,
+      &.sort-desc {
+        color: $table-interactive-heading-hover-color;
+        font-weight: 600;
+      }
+
+      &.sort-asc {
+        &:after {
+          // content: '\f0d7';
+          content: '\f0dd';
+        }
+      }
+
+      &.sort-desc {
+        &:after {
+          // content: '\f0d8';
+          content: '\f0de';
+        }
       }
     }
   }
 
-  // adding vertical separator to table heading
-  &:not(.table-bordered) {
-    > thead > tr > th:not(:first-child):before {
-      border-left: solid 1px $table-interactive-heading-line;
-      content: '';
-      height: 60%;
-      left: 0;
-      position: absolute;
-      top: 20%;
+  tr {
+    &.is-selected {
+      background-color: #e8f5e9;
     }
   }
 }
@@ -94,19 +100,20 @@
 
 /**
  * Action styling
+ * --------------------------------
  */
 .table-interactive {
   &-bar {
-    margin: rem(0 0 10);
+    margin: rem(0 0 5);
   }
 
   &-actions {
     li {
+      padding-bottom: rem(5);
       padding-right: 0 !important;
 
       &.hr {
         align-self: stretch;
-        // border-left: 1px solid $hr-border;
         position: relative;
         width: 10px;
 
@@ -139,6 +146,7 @@
 
 /**
  * Sort styling
+ * --------------------------------
  */
 .table-interactive {
   &-options {
@@ -268,7 +276,6 @@
 
 /**
  * Table alternative heading -> this will be added to the table css when finished
- * --------------------------------------------------
  */
 
 .table-alternative-heading {

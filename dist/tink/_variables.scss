@@ -212,8 +212,8 @@ $table-border-color:            $gray-light !default; // Border color for table 
 // $table-bg-active:               $table-bg-hover !default;
 $table-bg-active:               $gray-lighter !default;
 
-$table-heading-bg:               $gray-lighter !default;
-$table-heading-color:            $gray-darker !default;
+$table-heading-bg:               lighten($gray-lighter, 4%) !default;
+$table-heading-color:            $gray !default;
 
 
 
@@ -477,13 +477,23 @@ $datepicker-btn-today-hover-border-color:             $datepicker-btn-today-bord
 $callout-border-radius         : 0 !default;
 $callout-color                 : $brand !default;
 $callout-bgcolor               : lighten($callout-color, 50%) !default;
+$callout-link-color            : $callout-color !default;
+$callout-border                : $callout-color !default;
 
 $callout-color-success         : $state-success-text !default;
 $callout-bgcolor-success       : $state-success-bg !default;
+$callout-link-color-success    : $callout-color-success !default;
+$callout-border-success        : $callout-color-success !default;
+
 $callout-color-warning         : $state-warning-text !default;
 $callout-bgcolor-warning       : $state-warning-bg !default;
+$callout-link-color-warning    : $callout-color-warning !default;
+$callout-border-warning        : $callout-color-warning !default;
+
 $callout-color-danger          : $state-danger-text !default;
 $callout-bgcolor-danger        : $state-danger-bg !default;
+$callout-link-color-danger    : $callout-color-danger !default;
+$callout-border-danger        : $callout-color-danger !default;
 
 
 
@@ -534,11 +544,10 @@ $zindex-tooltip:              layer("popover") !default;
 //** Tooltip max width
 $tooltip-max-width:           200px !default;
 //** Tooltip text color
-$tooltip-color:               $text-color !default;
+$tooltip-color:               $white !default;
 //** Tooltip background color
-$tooltip-bg:                  #fff176 !default; // lighten($gray-light, 10) !default;
+$tooltip-bg:                  $gray-dark !default; // lighten($gray-light, 10) !default;
 // $tooltip-opacity:             .9 !default;
-// $tooltip-border-color:        darken($tooltip-bg, 2) !default;
 $tooltip-border-color:        transparent !default;
 
 //** Tooltip arrow width
@@ -546,7 +555,7 @@ $tooltip-arrow-width:         6px !default;
 //** Tooltip arrow color
 $tooltip-arrow-border-color:  $tooltip-border-color !default;
 $tooltip-arrow-color:         $tooltip-bg !default;
-$tooltip-arrow-offset:        16px !default;
+$tooltip-arrow-offset:        12px !default;
 
 
 
@@ -667,11 +676,8 @@ $card-default-footer-bg:     $card-default-heading-bg !default;
  */
 
 // heading bg and color are standard the values of tables
-//$table-interactive-heading-bg:          $card-default-heading-bg !default;
-//$table-interactive-heading-color:       $card-default-text !default;
-$table-interactive-heading-line:             lighten($table-heading-color, 48%) !default;
-$table-interactive-heading-hover-bg:         darken($table-heading-bg, 5%) !default;
-$table-interactive-heading-hover-color:      $table-heading-color !default;
+$table-interactive-heading-hover-color:      $text-color !default;
+$table-interactive-heading-active-color:     $table-interactive-heading-hover-color !default;
 $table-interactive-options-selected-bgcolor: lighten($brand, 50%) !default;
 $table-interactive-options-hover-bgcolor:    rgba($black, .05) !default;
 $table-interactive-options-dropzone-border:  $brand !default;
@@ -684,6 +690,8 @@ $table-alternative-heading-color:       $card-default-text !default;
 $table-alternative-heading-line:        darken($card-default-text, 48%) !default;
 $table-alternative-heading-hover-bg:    darken($table-alternative-heading-bg, 5%) !default;
 $table-alternative-heading-hover-color: $table-alternative-heading-color !default;
+
+
 
 /**
  * Thumbnails

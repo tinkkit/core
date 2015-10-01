@@ -14,11 +14,16 @@ table {
   > tfoot,
   > thead {
     > tr {
+      > td {
+        padding: rem($table-cell-padding);
+      }
+      > th {
+        padding: rem(($table-cell-padding/4*3) $table-cell-padding);
+      }
       > td,
       > th {
         border-top: 1px solid $table-border-color;
         line-height: $line-height-base;
-        padding: rem($table-cell-padding);
         text-align: left;
         vertical-align: top;
       }
@@ -28,6 +33,8 @@ table {
   > thead > tr > th {
     background-color: $table-heading-bg;
     border-bottom: 2px solid $table-border-color;
+    color: $table-heading-color;
+    font-weight: normal;
     vertical-align: bottom; // Bottom align for column headings
   }
 

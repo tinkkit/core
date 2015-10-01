@@ -36,9 +36,9 @@ $color-list: (
 // For each key in the map, a class is created
 @each $class-name, $variable-name in $color-list {
   .tink-text-#{$class-name} {
-    color: $variable-name;
+    color: $variable-name !important;
   }
   .tink-bg-#{$class-name} {
-    background-color: $variable-name;
+    background-color: $variable-name !important;
   }
 }
