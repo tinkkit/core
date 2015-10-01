@@ -5,7 +5,6 @@
 
 .tooltip {
   @include arrow($tooltip-arrow-width, $tooltip-arrow-color, $tooltip-arrow-offset, $tooltip-arrow-border-color);
-
   background-color: $tooltip-bg;
   border: 1px solid $tooltip-border-color;
   border-radius: $border-radius-base;
@@ -29,5 +28,4 @@
     display: block;
     padding: ($padding-large-vertical 0);
   }
-
 }
