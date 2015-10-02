@@ -181,7 +181,7 @@ $animation-slow:                 $animation-speed * 8 !default;
 //## Define colors for form feedback states and, by default, alerts.
 
 $state-success-text:             $brand-success !default;
-$state-success-bg:               lighten($state-success-text, 60%) !default;
+$state-success-bg:               lighten($state-success-text, 61%) !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
 $state-info-text:                $brand-info !default;
@@ -189,11 +189,11 @@ $state-info-bg:                  lighten($state-info-text, 24%) !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
 $state-warning-text:             $brand-warning !default;
-$state-warning-bg:               lighten($state-warning-text, 45%) !default;
+$state-warning-bg:               lighten($state-warning-text, 46%) !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
 $state-danger-text:              $brand-danger !default;
-$state-danger-bg:                lighten($state-danger-text, 48%) !default;
+$state-danger-bg:                lighten($state-danger-text, 51%) !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
@@ -475,25 +475,25 @@ $datepicker-btn-today-hover-border-color:             $datepicker-btn-today-bord
  * Callout
  */
 $callout-border-radius         : 0 !default;
-$callout-color                 : $brand !default;
-$callout-bgcolor               : lighten($callout-color, 50%) !default;
-$callout-link-color            : $callout-color !default;
-$callout-border                : $callout-color !default;
+$callout-color                 : mix($brand, $gray-darker, 40%) !default;
+$callout-bgcolor               : lighten($brand, 53%) !default;
+$callout-link-color            : $link-color !default;
+$callout-border                : $brand !default;
 
-$callout-color-success         : $state-success-text !default;
-$callout-bgcolor-success       : $state-success-bg !default;
-$callout-link-color-success    : $callout-color-success !default;
-$callout-border-success        : $callout-color-success !default;
+$callout-color-success         : mix($state-success-text, $gray-darker, 40%) !default;
+$callout-bgcolor-success       : lighten($state-success-bg, 1%) !default;
+$callout-link-color-success    : $link-color !default;
+$callout-border-success        : $state-success-text !default;
 
-$callout-color-warning         : $state-warning-text !default;
-$callout-bgcolor-warning       : $state-warning-bg !default;
-$callout-link-color-warning    : $callout-color-warning !default;
-$callout-border-warning        : $callout-color-warning !default;
+$callout-color-warning         : mix($state-warning-text, $gray-darker, 40%) !default;
+$callout-bgcolor-warning       : lighten($state-warning-bg, 1%) !default;
+$callout-link-color-warning    : $link-color !default;
+$callout-border-warning        : $state-warning-text !default;
 
-$callout-color-danger          : $state-danger-text !default;
-$callout-bgcolor-danger        : $state-danger-bg !default;
-$callout-link-color-danger    : $callout-color-danger !default;
-$callout-border-danger        : $callout-color-danger !default;
+$callout-color-danger          : mix($state-danger-text, $gray-darker, 40%) !default;
+$callout-bgcolor-danger        : lighten($state-danger-bg, 1%) !default;
+$callout-link-color-danger     : $link-color !default;
+$callout-border-danger         : $state-danger-text !default;
 
 
 
