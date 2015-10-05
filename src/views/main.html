@@ -480,11 +480,11 @@
         <table tink-sort-table="data.content" tink-callback="sorted($property,$order,$type)" tink-asc="ctrl.asc" tink-sort-field="firstname">
           <thead>
             <tr>
-              <th ng-repeat='view in tinkHeaders' tink-sort-header="{{view.alias}}">{{ view.alias }}</th>
+              <th ng-repeat="view in tinkHeaders" tink-sort-header="{{view.sort}}">{{ view.alias }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-click="$parent.$parent.load()" ng-repeat='view in tinkData'>
+            <tr ng-click="$parent.$parent.load()" ng-repeat="view in tinkData">
               <td>{{ view.firstname | date:'dd/MM/yyyy' }}</td>
               <td>{{ view.lastname }}</td>
               <td>{{ view.username }}</td>

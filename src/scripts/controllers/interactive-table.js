@@ -123,15 +123,18 @@ angular.module('tinkApp')
   scope.headers = [{
     name:'firstname',
     alias:'voornaam',
+    sort:'firstname',
     checked:true
   },{
     name:'lastname',
     disabled:true,
     alias:'lastname',
+    sort:'lastname',
     checked:true
   },{
     name:'username',
     alias:'username',
+    sort:'',
     checked:true
   }];
 

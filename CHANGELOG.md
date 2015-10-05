@@ -23,8 +23,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Revamped the styling of the interactive table
-- Tweaked the color palette
+- Reverted course on responsive images
 - Refactored callouts
+- Changed the tooltip styling
+- Tweaked the color palette
 
 ### Fixed
 - Color classes now override any other specified color
