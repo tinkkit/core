@@ -1431,20 +1431,7 @@ figcaption {
   font-style: italic; }
 
 img {
-  display: block;
-  height: auto;
-  height: 100% \9;
-  max-height: 100%;
-  max-width: 100%;
-  width: 100%;
   vertical-align: middle; }
-  img.non-responsive, .media-object, .bar > ul img, .nav-top > ul img {
-    display: inline;
-    height: auto;
-    height: auto \9;
-    max-height: none;
-    max-width: none;
-    width: auto; }
 
 hr {
   margin-top: 1.42857rem ;
@@ -1947,6 +1934,12 @@ table > thead > tr > td.danger, table > thead > tr > th.danger, table > thead > 
 /**
  * Image styles
  */
+.img-responsive {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto; }
+
 .img-rounded {
   border-radius: 4px; }
 
@@ -1958,11 +1951,9 @@ table > thead > tr > td.danger, table > thead > tr > th.danger, table > thead > 
   padding: 4px;
   transition: all 0.1s linear;
   display: inline-block;
-  height: auto;
-  height: 100% \9;
-  max-height: 100%;
+  width: 100% \9;
   max-width: 100%;
-  width: 100%; }
+  height: auto; }
 
 .img-circle {
   border-radius: 50%; }

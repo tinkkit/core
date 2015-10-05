@@ -9,6 +9,11 @@
  * Image styles
  */
 
+// Responsive image
+.img-responsive {
+  @include img-responsive();
+}
+
 // Rounded corners
 .img-rounded {
   border-radius: $border-radius-large;
