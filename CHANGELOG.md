@@ -22,7 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added breakpoints that can be read from JavaScript
 
 ### Changed
-- Revamped the styling of the interactive table
+- Revamped the header styling of the table and the interactive table
 - Reverted course on responsive images
 - Refactored callouts
 - Changed the tooltip styling
