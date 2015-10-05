@@ -1431,6 +1431,7 @@ figcaption {
   font-style: italic; }
 
 img {
+  max-width: 100%;
   vertical-align: middle; }
 
 hr {
@@ -1937,7 +1938,6 @@ table > thead > tr > td.danger, table > thead > tr > th.danger, table > thead > 
 .img-responsive {
   display: block;
   width: 100% \9;
-  max-width: 100%;
   height: auto; }
 
 .img-rounded {
@@ -1952,7 +1952,6 @@ table > thead > tr > td.danger, table > thead > tr > th.danger, table > thead > 
   transition: all 0.1s linear;
   display: inline-block;
   width: 100% \9;
-  max-width: 100%;
   height: auto; }
 
 .img-circle {
@@ -2519,28 +2518,28 @@ button[type="submit"], input[type="submit"], .btn-primary {
     border-color: #d20033; }
 
 .btn-transparent {
-  color: #fff;
+  color: #333;
   background-color: transparent;
   border-color: transparent; }
   .btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active, .btn-transparent.active, .open > .btn-transparent.dropdown-toggle {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1); }
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.1); }
   .btn-transparent:active, .btn-transparent.active, .open > .btn-transparent.dropdown-toggle {
     background-image: none; }
   .btn-transparent.disabled, .btn-transparent.disabled:hover, .btn-transparent.disabled:focus, .btn-transparent.disabled:active, .btn-transparent.disabled.active, .btn-transparent[disabled], .btn-transparent[disabled]:hover, .btn-transparent[disabled]:focus, .btn-transparent[disabled]:active, .btn-transparent[disabled].active, fieldset[disabled] .btn-transparent, fieldset[disabled] .btn-transparent:hover, fieldset[disabled] .btn-transparent:focus, fieldset[disabled] .btn-transparent:active, fieldset[disabled] .btn-transparent.active {
     background-color: transparent;
     border-color: transparent; }
 
-.btn-transparent-inverse {
-  color: #333;
+.btn-transparent-invert {
+  color: #fff;
   background-color: transparent;
   border-color: transparent; }
-  .btn-transparent-inverse:hover, .btn-transparent-inverse:focus, .btn-transparent-inverse:active, .btn-transparent-inverse.active, .open > .btn-transparent-inverse.dropdown-toggle {
-    color: #333;
-    background-color: rgba(0, 0, 0, 0.1); }
-  .btn-transparent-inverse:active, .btn-transparent-inverse.active, .open > .btn-transparent-inverse.dropdown-toggle {
+  .btn-transparent-invert:hover, .btn-transparent-invert:focus, .btn-transparent-invert:active, .btn-transparent-invert.active, .open > .btn-transparent-invert.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); }
+  .btn-transparent-invert:active, .btn-transparent-invert.active, .open > .btn-transparent-invert.dropdown-toggle {
     background-image: none; }
-  .btn-transparent-inverse.disabled, .btn-transparent-inverse.disabled:hover, .btn-transparent-inverse.disabled:focus, .btn-transparent-inverse.disabled:active, .btn-transparent-inverse.disabled.active, .btn-transparent-inverse[disabled], .btn-transparent-inverse[disabled]:hover, .btn-transparent-inverse[disabled]:focus, .btn-transparent-inverse[disabled]:active, .btn-transparent-inverse[disabled].active, fieldset[disabled] .btn-transparent-inverse, fieldset[disabled] .btn-transparent-inverse:hover, fieldset[disabled] .btn-transparent-inverse:focus, fieldset[disabled] .btn-transparent-inverse:active, fieldset[disabled] .btn-transparent-inverse.active {
+  .btn-transparent-invert.disabled, .btn-transparent-invert.disabled:hover, .btn-transparent-invert.disabled:focus, .btn-transparent-invert.disabled:active, .btn-transparent-invert.disabled.active, .btn-transparent-invert[disabled], .btn-transparent-invert[disabled]:hover, .btn-transparent-invert[disabled]:focus, .btn-transparent-invert[disabled]:active, .btn-transparent-invert[disabled].active, fieldset[disabled] .btn-transparent-invert, fieldset[disabled] .btn-transparent-invert:hover, fieldset[disabled] .btn-transparent-invert:focus, fieldset[disabled] .btn-transparent-invert:active, fieldset[disabled] .btn-transparent-invert.active {
     background-color: transparent;
     border-color: transparent; }
 

@@ -124,6 +124,7 @@ figcaption {
 // Images
 
 img {
+  max-width: 100%; // Who wants images that are larger than they were designed for?
   vertical-align: middle;
 }
 
