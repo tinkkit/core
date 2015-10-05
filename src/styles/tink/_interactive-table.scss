@@ -7,7 +7,6 @@
 
 
 .table-interactive {
-
   &.is-loading {
     cursor: not-allowed;
     position: relative;
@@ -119,7 +118,7 @@
 
         &:before {
           background: $hr-border;
-          bottom: 0;
+          bottom: rem(5);
           content: '';
           margin-left: rem(4);
           left: calc(50% - 2px);
@@ -130,15 +129,15 @@
       }
     }
 
-    i + span {
-      display: none;
-    }
+    // i + span {
+    //   display: none;
+    // }
 
-    @include mq($screen-md) {
-      i + span {
-        display: inline;
-      }
-    }
+    // @include mq($screen-md) {
+    //   i + span {
+    //     display: inline;
+    //   }
+    // }
   }
 }
 

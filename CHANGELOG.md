@@ -16,10 +16,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.6.4] - 2015-09-xx
+## [1.7.0] - 2015-10-05
+
+### Added
+- Added breakpoints that can be read from JavaScript
 
 ### Changed
-- Changed the styling of the interactive table
+- Revamped the styling of the interactive table
+- Tweaked the color palette
+- Refactored callouts
 
 ### Fixed
 - Color classes now override any other specified color

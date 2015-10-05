@@ -18,7 +18,7 @@
  */
 
 body:before {
-  content: "smartphone-view";
+  content: "phone-view";
   display: none; /* Prevent from displaying. */
 }
 
@@ -27,9 +27,16 @@ body:before {
     content: "tablet-view";
   }
 }
+
+@include mq($screen-md) {
+  body:before {
+    content: "desktop-view";
+  }
+}
+
 @include mq($screen-lg) {
   body:before {
-    content: "wide-xl-view";
+    content: "widescreen-view";
   }
 }
 

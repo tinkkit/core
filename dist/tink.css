@@ -1928,16 +1928,16 @@ table > thead > tr > td.active, table > thead > tr > th.active, table > thead > 
   background-color: #eaeaea; }
 
 table > thead > tr > td.success, table > thead > tr > th.success, table > thead > tr.success > td, table > thead > tr.success > th, table > tbody > tr > td.success, table > tbody > tr > th.success, table > tbody > tr.success > td, table > tbody > tr.success > th, table > tfoot > tr > td.success, table > tfoot > tr > th.success, table > tfoot > tr.success > td, table > tfoot > tr.success > th {
-  background-color: #effae9; }
+  background-color: #f2fbed; }
 
 table > thead > tr > td.info, table > thead > tr > th.info, table > thead > tr.info > td, table > thead > tr.info > th, table > tbody > tr > td.info, table > tbody > tr > th.info, table > tbody > tr.info > td, table > tbody > tr.info > th, table > tfoot > tr > td.info, table > tfoot > tr > th.info, table > tfoot > tr.info > td, table > tfoot > tr.info > th {
   background-color: #e7f3fd; }
 
 table > thead > tr > td.warning, table > thead > tr > th.warning, table > thead > tr.warning > td, table > thead > tr.warning > th, table > tbody > tr > td.warning, table > tbody > tr > th.warning, table > tbody > tr.warning > td, table > tbody > tr.warning > th, table > tfoot > tr > td.warning, table > tfoot > tr > th.warning, table > tfoot > tr.warning > td, table > tfoot > tr.warning > th {
-  background-color: #fff4e5; }
+  background-color: #fff6eb; }
 
 table > thead > tr > td.danger, table > thead > tr > th.danger, table > thead > tr.danger > td, table > thead > tr.danger > th, table > tbody > tr > td.danger, table > tbody > tr > th.danger, table > tbody > tr.danger > td, table > tbody > tr.danger > th, table > tfoot > tr > td.danger, table > tfoot > tr > th.danger, table > tfoot > tr.danger > td, table > tfoot > tr.danger > th {
-  background-color: #ffdce4; }
+  background-color: #ffebf0; }
 
 /**
  * Media objects
@@ -3000,19 +3000,19 @@ html.has-open-modal {
  * --------------------------------------------------
  */
 .callout, .callout-success, .callout-warning, .callout-danger {
-  background: #e3eff6;
+  background: #eef6fa;
   border: 1px solid #347ea6;
   border-left: 5px solid #347ea6;
   border-radius: 0rem ;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  color: #347ea6;
+  color: #203e4e;
   margin: 1.42857rem  0;
   padding: 0.71429rem 1.14286rem ; }
   .callout a, .callout-success a, .callout-warning a, .callout-danger a {
-    color: #2a6687;
+    color: #3fa1ce;
     text-decoration: underline; }
     .callout a:hover, .callout-success a:hover, .callout-warning a:hover, .callout-danger a:hover, .callout a:focus, .callout-success a:focus, .callout-warning a:focus, .callout-danger a:focus {
-      color: #1e4960; }
+      color: #2c85ad; }
   .callout hr, .callout-success hr, .callout-warning hr, .callout-danger hr {
     border-top-color: #347ea6;
     margin: 0.71429rem  0; }
@@ -3020,35 +3020,35 @@ html.has-open-modal {
     margin-bottom: 0; }
 
 .callout-success {
-  background-color: #effae9;
+  background-color: #f5fcf1;
   border-color: #4a921f;
-  color: #4a921f; }
+  color: #294618; }
   .callout-success a {
-    color: #397018; }
+    color: #3fa1ce; }
     .callout-success a:hover, .callout-success a:focus {
-      color: #24460f; }
+      color: #2c85ad; }
   .callout-success hr {
     border-top-color: #4a921f; }
 
 .callout-warning {
-  background-color: #fff4e5;
+  background-color: #fff8f0;
   border-color: #ff8d00;
-  color: #ff8d00; }
+  color: #72440c; }
   .callout-warning a {
-    color: #d67600; }
+    color: #3fa1ce; }
     .callout-warning a:hover, .callout-warning a:focus {
-      color: #a35a00; }
+      color: #2c85ad; }
   .callout-warning hr {
     border-top-color: #ff8d00; }
 
 .callout-danger {
-  background-color: #ffdce4;
+  background-color: #fff0f4;
   border-color: #e60038;
-  color: #e60038; }
+  color: #680c22; }
   .callout-danger a {
-    color: #bd002e; }
+    color: #3fa1ce; }
     .callout-danger a:hover, .callout-danger a:focus {
-      color: #8a0022; }
+      color: #2c85ad; }
   .callout-danger hr {
     border-top-color: #e60038; }
 
@@ -3647,19 +3647,13 @@ html.has-open-modal {
     width: 10px; }
     .table-interactive-actions li.hr:before {
       background: #eaeaea;
-      bottom: 0;
+      bottom: 0.35714rem ;
       content: '';
       margin-left: 0.28571rem ;
       left: calc(50% - 2px);
       position: absolute;
       top: 0;
       width: 1px; }
-.table-interactive-actions i + span {
-  display: none; }
-@media (min-width: 992px) {
-  .table-interactive-actions i + span {
-    display: inline; }
- }
 
 /**
  * Sort styling
@@ -3768,7 +3762,7 @@ html.has-open-modal {
  * Breakpoints to import into JavaScript
  */
 body:before {
-  content: "smartphone-view";
+  content: "phone-view";
   display: none;
   /* Prevent from displaying. */ }
 
@@ -3777,9 +3771,14 @@ body:before {
     content: "tablet-view"; }
  }
 
+@media (min-width: 992px) {
+  body:before {
+    content: "desktop-view"; }
+ }
+
 @media (min-width: 1200px) {
   body:before {
-    content: "wide-xl-view"; }
+    content: "widescreen-view"; }
  }
 
 /**
