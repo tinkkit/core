@@ -30,6 +30,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Color classes now override any other specified color
+- Switched the looks of both the transparent buttons
 
 
 

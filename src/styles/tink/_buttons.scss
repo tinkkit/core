@@ -115,8 +115,8 @@ input[type="submit"],
   @include button-variant($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border, $btn-transparent-hover-bg);
 }
 // Transparent used on a light background
-.btn-transparent-inverse {
-  @include button-variant($btn-transparent-inverse-color, $btn-transparent-inverse-bg, $btn-transparent-inverse-border, $btn-transparent-inverse-hover-bg);
+.btn-transparent-invert {
+  @include button-variant($btn-transparent-invert-color, $btn-transparent-invert-bg, $btn-transparent-invert-border, $btn-transparent-invert-hover-bg);
 }
 
 
