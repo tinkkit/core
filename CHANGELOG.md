@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.7.1] - 2015-10-xx
+
+### Changed
+- Changed the zebra striping in the striped table
+
+### Fixed
+- Fixed a bug where the datepicker would collapse when its container was too small
+
+
+
 ## [1.7.0] - 2015-10-05
 
 ### Added

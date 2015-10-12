@@ -7,6 +7,7 @@
 
 
 .datepicker-input-fields {
+  min-width: rem(110); // Prevents the datepicker from collapsing
   position: relative;
 
   .datepicker-icon {
@@ -15,10 +16,8 @@
   }
 
   .faux-input {
-    // bugfix so the input field won't collapse when it's used in a absolute container.
-    // min-width preferred over padding (size changes when content changes). (LVG)
-    min-width: rem(120);
     position: relative;
+    overflow-y: visible;
     text-align: left;
 
     &:focus {
