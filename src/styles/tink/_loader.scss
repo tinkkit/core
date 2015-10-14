@@ -25,10 +25,14 @@
   }
 }
 
-/**
- * Loader in a button
- * -> check _buttons.scss
- */
+// Set the loader inline and adjust the size to its adjacent content
+span.loader {
+  @extend .loader;
+  height: 1em;
+  line-height: 1em;
+  top: .125em;
+  width: 1em;
+}
 
 /**
  * To do: give the loader a decent fallback for IE9.

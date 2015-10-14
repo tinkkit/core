@@ -1,136 +1,32 @@
-<script type="text/ng-template" id="views/popover-template.html">
-  <h2 class="h4">Bedrijfseenheid aanpassen</h2>
-  <div class="form-group">
-    <label for="input-name">Naam</label>
-    <input type="text" id="input-name" placeholder="Voornaam / Achternaam">
-  </div>
-  <div class="form-group">
-    <label for="input-code">Code</label>
-    <input type="text" id="input-code" placeholder="XXXX">
-  </div>
-</script>
-
-<div class="container margin-top">
-  <div class="row margin-top">
-    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-      <div class="callout">
-        <p><strong>Hi!</strong> I just called for your attention. <a href="#">Link</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-      <div class="callout-success">
-        <p><strong>Well done!</strong> You successfully read this alert message. <a href="#">Link</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-      <div class="callout-warning">
-        <p><strong>Warning!</strong> Best check yourself, you're not looking too good. <a href="#">Link</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-      <div class="callout-danger">
-        <p><strong>Danger!</strong> All your base are belong to us. <a href="#">Link</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container margin-top">
-  <div class="row margin-top">
-    <div class="col-xs-6 col-xs-push-3">
-      <div class="select">
-        <select><option selected="selected" disabled="disabled">Selecteer…</option><optgroup label="Groep 1"><option value="1">Optie 1</option><option value="1">Optie 2</option><option value="1">Optie 3</option></optgroup><optgroup label="Groep 2"><option value="1">Optie 1</option><option value="1">Optie 2</option><option value="1">Optie 3</option></optgroup>
-        </select>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="container margin-top">
   <div class="row margin-top">
     <div class="col-xs-12 text-center">
-      <p class="tink-bg-gray-lightest"><a class="btn btn-transparent" href="#/start" role="button">Transparent button</a></p>
-      <p class="tink-bg-gray"><a class="btn btn-transparent-invert" href="#/start" role="button">Transparent button inverted</a></p>
-      <p class="tink-bg-brand-light"><a class="btn btn-transparent" href="#/start" role="button">Transparent button</a></p>
-      <p class="tink-bg-brand"><a class="btn btn-transparent-invert" href="#/start" role="button">Transparent button inverted</a></p>
-    </div>
-  </div>
-</div>
-
-<div class="container margin-top">
-  <div class="row margin-top">
-    <h3 class="text-center">Flex nav bar links / text fields WORKS! (except for splitting of spans)</h3>
-    <div class="bar">
-      <ul class="bar-left">
-        <li>
-          <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-      </ul>
-
-      <ul class="bar-center">
-        <li>
-          <input type="search" placeholder="search bar">
-        </li>
-      </ul>
-      <ul class="bar-right">
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li>
-          <a class="filter-toggle" data-tink-popover="" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="views/popover-template.html" title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="container margin-top">
-  <div class="row margin-top">
-    <div class="col-xs-12 text-center">
-      <div class="loader loader-lg">Aan het laden…</div>
-    </div>
-  </div>
-  <div class="row margin-top">
-    <div class="col-xs-12 text-center">
+      <h3>Basic loader</h3>
       <div class="loader">Aan het laden…</div>
     </div>
   </div>
   <div class="row margin-top">
     <div class="col-xs-12 text-center">
-      <button>Inloggen</button>  <button>Inloggen <div class="loader">Aan het laden…</div></button>
+      <h3>Large loader</h3>
+      <div class="loader loader-lg">Aan het laden…</div>
+    </div>
+  </div>
+  <div class="row margin-top">
+    <div class="col-xs-12 text-center">
+      <h3>Inline loader</h3>
+      <p>This loader is inline with me <span class="loader">Aan het laden…</span></p>
+    </div>
+  </div>
+  <div class="row margin-top">
+    <div class="col-xs-12 text-center">
+      <button>Inloggen</button>  <button>Inloggen <span class="loader">Aan het laden…</span></button>
     </div>
     <div class="col-xs-12 margin-top text-center">
-      <button class="btn-lg">Inloggen</button>  <button class="btn-lg">Inloggen <div class="loader">Aan het laden…</div></button>
+      <button class="btn-lg">Inloggen</button>  <button class="btn-lg">Inloggen <span class="loader">Aan het laden…</span></button>
     </div>
     <div class="col-xs-12 margin-top text-center">
-      <button class="btn-sm">Inloggen</button>  <button class="btn-sm">Inloggen <div class="loader">Aan het laden…</div></button>
+      <button class="btn-sm">Inloggen</button>  <button class="btn-sm">Inloggen <span class="loader">Aan het laden…</span></button>
     </div>
   </div>
 </div>
