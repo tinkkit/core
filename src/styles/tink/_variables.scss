@@ -814,3 +814,11 @@ $breadcrumb-separator-size:     $breadcrumb-font-size * .6 !default;
 $loader-color: rgba($brand, .8) !default;
 $loader-color-alt: rgba($brand-light, .8) !default;
 $loader-border-width: 2px !default;
+
+
+
+/**
+ * Notification
+ */
+
+$notification-top: $nav-top-height !default;

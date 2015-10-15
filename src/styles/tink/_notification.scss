@@ -4,14 +4,15 @@
  */
 
 .notification {
-    left: 0;
-    margin: 0 auto;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    text-align: center;
-    top: 50px;
-    width: 50%;
-    z-index: layer('notification');
+  left: 0;
+  margin: 1rem auto 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: $notification-top;
+  z-index: layer('notification');
 
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 }
