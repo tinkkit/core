@@ -27,7 +27,6 @@
 
 // Set the loader inline and adjust the size to its adjacent content
 span.loader {
-  @extend .loader;
   height: 1em;
   line-height: 1em;
   top: .125em;
