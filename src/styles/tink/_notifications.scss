@@ -3,44 +3,56 @@
  * --------------------------------------------------
  */
 
+$position-top: rem($padding-base-vertical);
+$grid-gutter-width-half: $grid-gutter-width / 2;
+
 .notifications {
+  @extend .container;
   left: 0;
   overflow: hidden;
   position: fixed;
   right: 0;
-  top: rem($notification-top); //  = height top-nav
+  top: rem($bar-height); //  = height top-nav + spacing
   z-index: layer('notification');
 
   ul {
     @extend .list-unstyled;
-    @extend .container;
+    @extend .row;
+    margin-top: $grid-gutter-width-half;
 
     li {
-      @extend .row;
+      @extend .col-xs-12;
       margin-bottom: rem(3); // set some bottom spacing between stacked notifications
       position: relative;
 
+      @media (min-width: $screen-sm) {
+        @extend .col-sm-8;
+        @extend .col-sm-offset-2;
+      }
+
+      @media (min-width: $screen-md) {
+        @extend .col-md-6;
+        @extend .col-md-offset-3;
+      }
+
+      @media (min-width: $screen-lg) {
+        @extend .col-lg-4;
+        @extend .col-lg-offset-4;
+      }
+
       // callout styling when it's in a notification
       .callout {
-        @extend .col-xs-10;
-        @extend .col-xs-offset-1;
         border-left-width: 1px;
         box-shadow: 0px 1px 3px rgba($black, .15);
-        padding-right: calc(3*#{$padding-large-horizontal});
-
-        @media (min-width: 768px) {
-          @extend .col-md-6;
-          @extend .col-md-offset-3;
-        }
+        padding-right: calc(2 * #{$padding-large-horizontal});
       }
 
       // position the close button
       .close {
         @extend .btn-close;
-
         position: absolute;
-        right: rem($padding-base-horizontal);
-        top: rem($padding-base-horizontal);
+        top: $position-top;
+        right: calc(#{$position-top} + #{$grid-gutter-width-half});
       }
     }
   }

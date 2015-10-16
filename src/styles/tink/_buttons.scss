@@ -125,7 +125,6 @@ input[type="submit"],
   @include button-variant($upload-delete-icon-color, $btn-transparent-bg, $btn-transparent-border, $upload-delete-icon-bg-hover-color);
   @include button-size(0, 0, $font-size-base, rem(15), $border-radius-base);
     height: rem(15);
-    line-height: rem(15);
     opacity: .5;
     text-align: center;
     text-decoration: none;
