@@ -119,6 +119,38 @@ input[type="submit"],
   @include button-variant($btn-transparent-invert-color, $btn-transparent-invert-bg, $btn-transparent-invert-border, $btn-transparent-invert-hover-bg);
 }
 
+// Close button
+.btn-close {
+  //@extend %btn;
+  @include button-variant($upload-delete-icon-color, $btn-transparent-bg, $btn-transparent-border, $upload-delete-icon-bg-hover-color);
+  @include button-size(0, 0, $font-size-base, rem(15), $border-radius-base);
+    height: rem(15);
+    line-height: rem(15);
+    opacity: .5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: all $animation-speed linear;
+    width: rem(15);
+
+    &:before {
+      content: "×";
+    }
+
+    &:hover {
+      //background-color: $upload-delete-icon-bg-hover-color;
+
+      &:before {
+        color: rgba($black, .85)
+      }
+    }
+    span {
+      @extend .sr-only;
+    }
+  }
+
+
+
 
 // Line buttons (only outline has color)
 // --------------------------------------------------

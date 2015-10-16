@@ -10,7 +10,7 @@
   border-radius: rem($callout-border-radius);
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   color: $callout-color;
-  margin: rem($line-height-computed) 0;
+  //margin: rem($line-height-computed) 0;
   padding: rem($padding-large-vertical $padding-large-horizontal);
 
   a {
@@ -28,8 +28,8 @@
     margin: rem($line-height-computed / 2) 0;
   }
 
-  > p:last-child,
-  > ul {
+  > p:last-of-type,
+  > ul:last-of-type {
     margin-bottom: 0;
   }
 }
