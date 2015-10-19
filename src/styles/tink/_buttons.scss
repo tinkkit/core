@@ -54,13 +54,6 @@
   &.btn-text {
     .fa { margin-right: rem($btn-icon-margin); } // Add margin to buttons with text + icons -- REMOVED
   }
-
-  .loader {
-    height: 1em;
-    line-height: 1em;
-    top: rem(2);
-    width: 1em;
-  }
 }
 
 
