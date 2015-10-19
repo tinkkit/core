@@ -37,12 +37,6 @@
         @extend .col-lg-offset-4;
       }
 
-      // callout styling when it's in a notification
-      .callout {
-        border-left-width: 1px;
-        box-shadow: 0px 1px 3px rgba($black, .15);
-      }
-
       // all direct children of li
       > * {
         padding-right: $notification-padding-right;
@@ -55,6 +49,12 @@
           top: rem($notification-padding);
           right: rem($notification-padding);
         }
+      }
+
+      // callout styling when it's set in a notification
+      .callout {
+        border-left-width: 1px;
+        box-shadow: 0px 1px 3px rgba($black, .15);
       }
     }
   }
