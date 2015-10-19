@@ -27,10 +27,11 @@
 
 .card-body {
   @include clearfix();
+  border-bottom: 1px solid $card-default-border;
   padding: rem($card-body-padding);
 
-  &:not(:last-child) {
-    border-bottom: 1px solid $card-default-border;
+  &:last-child {
+    border-bottom: none;
   }
 
   &.has-no-padding {
