@@ -13,7 +13,7 @@
   //margin: rem($line-height-computed) 0;
   padding: rem($padding-large-vertical $padding-large-horizontal);
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color, 8%);
     text-decoration: underline;
 
@@ -40,7 +40,7 @@
   border-color: $callout-border-success;
   color: $callout-color-success;
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color-success, 8%);
 
     &:hover,
@@ -60,7 +60,7 @@
   border-color: $callout-border-warning;
   color: $callout-color-warning;
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color-warning, 8%);
 
     &:hover,
@@ -80,7 +80,7 @@
   border-color: $callout-border-danger;
   color: $callout-color-danger;
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color-danger, 8%);
 
     &:hover,

@@ -43,8 +43,7 @@
         position: relative;
 
         // position the close button
-        .close {
-          @extend .btn-close;
+        .btn-close {
           position: absolute;
           top: rem($notification-padding);
           right: rem($notification-padding);
