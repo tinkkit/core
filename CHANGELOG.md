@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Changed the zebra striping in the striped table
+- The loader now also works inline and will adjusted its size to its parent
 
 ### Fixed
 - Fixed a bug where the datepicker would collapse when its container was too small
