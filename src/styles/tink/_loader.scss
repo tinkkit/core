@@ -1,6 +1,8 @@
 /**
  * Loader
  * --------------------------------------------------
+ * To do: give the loader a decent fallback for IE9.
+ * Check the comment signs at the end of the lines below.
  */
 
 .loader {
@@ -19,6 +21,7 @@
   width: rem(28);
 
   &-lg {
+    @extend .loader;
     border-width: ($loader-border-width + 1px);
     height: rem(36);
     width: rem(36);
@@ -26,14 +29,10 @@
 }
 
 // Set the loader inline and adjust the size to its adjacent content
-span.loader {
+span.loader,
+span.loader-lg {
   height: 1em;
   line-height: 1em;
   top: .125em;
   width: 1em;
 }
-
-/**
- * To do: give the loader a decent fallback for IE9.
- * Check the comment signs at the end of the lines above.
- */
