@@ -3,27 +3,24 @@
  * --------------------------------------------------
  */
 
-$position-top: rem($padding-base-vertical);
-$grid-gutter-width-half: $grid-gutter-width / 2;
-
 .notifications {
   @extend .container;
   left: 0;
   overflow: hidden;
   position: fixed;
   right: 0;
-  top: rem($bar-height); //  = height top-nav + spacing
+  top: rem($bar-height);
   z-index: layer('notification');
 
   ul {
     @extend .list-unstyled;
     @extend .row;
-    margin-top: $grid-gutter-width-half;
+    margin-top: $grid-gutter-width / 2; // set some top spacing between top-nav and notifications
 
+    // actual notification
     li {
       @extend .col-xs-12;
       margin-bottom: rem(3); // set some bottom spacing between stacked notifications
-      position: relative;
 
       @media (min-width: $screen-sm) {
         @extend .col-sm-8;
@@ -44,15 +41,20 @@ $grid-gutter-width-half: $grid-gutter-width / 2;
       .callout {
         border-left-width: 1px;
         box-shadow: 0px 1px 3px rgba($black, .15);
-        padding-right: calc(2 * #{$padding-large-horizontal});
       }
 
-      // position the close button
-      .close {
-        @extend .btn-close;
-        position: absolute;
-        top: $position-top;
-        right: calc(#{$position-top} + #{$grid-gutter-width-half});
+      // all direct children of li
+      > * {
+        padding-right: $notification-padding-right;
+        position: relative;
+
+        // position the close button
+        .close {
+          @extend .btn-close;
+          position: absolute;
+          top: rem($notification-padding);
+          right: rem($notification-padding);
+        }
       }
     }
   }

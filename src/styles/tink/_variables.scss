@@ -821,4 +821,7 @@ $loader-border-width: 2px !default;
  * Notification
  */
 
-$notification-top: $nav-top-height !default;
+$notification-padding: $padding-base-vertical !default;
+$notification-padding-right: $padding-large-horizontal * 2 !default;
+
+
