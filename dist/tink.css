@@ -4164,7 +4164,6 @@ html {
   line-height: 1.428571429;
   padding: 0.42857rem ;
   position: relative;
-  transition: bottom 0.1s linear, left 0.1s linear, right 0.1s linear, top 0.1s linear;
   white-space: normal;
   z-index: 5; }
   .popover.arrow-top:before {
@@ -4327,6 +4326,8 @@ html {
     border-bottom: 11px transparent solid; }
   .popover.arrow-left-bottom:before, .popover.arrow-left-bottom:after {
     bottom: 16px; }
+  .popover-animation {
+    transition: bottom 0.1s linear, left 0.1s linear, right 0.1s linear, top 0.1s linear; }
   .popover-header {
     margin: 0.42857rem 0rem 0.85714rem ;
     text-align: center; }
