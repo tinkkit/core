@@ -412,7 +412,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean',
+    'clean:dist',
     // 'ngtemplates',
     'replace',
     'copy:dist',
