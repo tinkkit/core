@@ -66,7 +66,9 @@
 .accordion-panel-heading {
   @extend .card-heading;
 
-  &:hover, :focus, :active {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: darken($card-default-heading-bg, 4);
     transition: background $animation-speed linear;
   }
