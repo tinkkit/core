@@ -25,6 +25,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fixed a bug where the datepicker would collapse when its container was too small
 - Fixed a panel heading background issue
+- Fixed an issue where the popover animation would start too early
 
 
 
