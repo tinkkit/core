@@ -100,8 +100,9 @@
       &:focus {
         > td,
         > th {
-          background-color: lighten($brand, 52%) !important;
+          background-color: $table-interactive-hoverable-row-bgcolor !important;
           // background-color: rgba($black, .08);
+          color: $table-interactive-hoverable-row-color !important;
           cursor: pointer;
         }
       }
@@ -109,8 +110,9 @@
     &.is-selected {
       > td,
       > th {
-        background-color: lighten($brand, 50%) !important;
+        background-color: $table-interactive-selected-row-bgcolor !important;
         // background-color: lighten($mark-bgcolor,10%);
+        color: $table-interactive-selected-row-color !important;
       }
     }
   }

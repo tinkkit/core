@@ -3618,9 +3618,11 @@ span.loader, span.loader-lg, span.table-interactive.is-loading:after, span.loade
   transition: background-color 0.1s linear, color 0.1s linear; }
 .table-interactive > tbody > tr.is-hoverable:hover > td, .table-interactive > tbody > tr.is-hoverable:hover > th, .table-interactive > tbody > tr.is-hoverable:active > td, .table-interactive > tbody > tr.is-hoverable:active > th, .table-interactive > tbody > tr.is-hoverable:focus > td, .table-interactive > tbody > tr.is-hoverable:focus > th {
   background-color: #ebf4f9 !important;
+  color: #333 !important;
   cursor: pointer; }
 .table-interactive > tbody > tr.is-selected > td, .table-interactive > tbody > tr.is-selected > th {
-  background-color: #e3eff6 !important; }
+  background-color: #e3eff6 !important;
+  color: #333 !important; }
 
 /**
  * Action styling

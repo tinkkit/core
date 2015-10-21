@@ -678,6 +678,10 @@ $card-default-footer-bg:     $card-default-heading-bg !default;
 // heading bg and color are standard the values of tables
 $table-interactive-heading-hover-color:      $text-color !default;
 $table-interactive-heading-active-color:     $table-interactive-heading-hover-color !default;
+$table-interactive-hoverable-row-bgcolor:    lighten($brand, 52%) !default;
+$table-interactive-hoverable-row-color:      $text-color !default;
+$table-interactive-selected-row-bgcolor:     lighten($brand, 50%) !default;
+$table-interactive-selected-row-color:       $text-color !default;
 $table-interactive-options-selected-bgcolor: lighten($brand, 50%) !default;
 $table-interactive-options-hover-bgcolor:    rgba($black, .05) !default;
 $table-interactive-options-dropzone-border:  $brand !default;
@@ -685,11 +689,11 @@ $table-interactive-options-dropzone-border:  $brand !default;
 /**
  * Table alternative heading
  */
-$table-alternative-heading-bg:          $card-default-heading-bg !default;
-$table-alternative-heading-color:       $card-default-text !default;
-$table-alternative-heading-line:        darken($card-default-text, 48%) !default;
-$table-alternative-heading-hover-bg:    darken($table-alternative-heading-bg, 5%) !default;
-$table-alternative-heading-hover-color: $table-alternative-heading-color !default;
+// $table-alternative-heading-bg:          $card-default-heading-bg !default;
+// $table-alternative-heading-color:       $card-default-text !default;
+// $table-alternative-heading-line:        darken($card-default-text, 48%) !default;
+// $table-alternative-heading-hover-bg:    darken($table-alternative-heading-bg, 5%) !default;
+// $table-alternative-heading-hover-color: $table-alternative-heading-color !default;
 
 
 
