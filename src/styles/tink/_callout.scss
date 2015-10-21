@@ -10,10 +10,10 @@
   border-radius: rem($callout-border-radius);
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   color: $callout-color;
-  margin: rem($line-height-computed) 0;
+  //margin: rem($line-height-computed) 0;
   padding: rem($padding-large-vertical $padding-large-horizontal);
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color, 8%);
     text-decoration: underline;
 
@@ -28,8 +28,8 @@
     margin: rem($line-height-computed / 2) 0;
   }
 
-  > p:last-child,
-  > ul {
+  > p:last-of-type,
+  > ul:last-of-type {
     margin-bottom: 0;
   }
 }
@@ -40,7 +40,7 @@
   border-color: $callout-border-success;
   color: $callout-color-success;
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color-success, 8%);
 
     &:hover,
@@ -60,7 +60,7 @@
   border-color: $callout-border-warning;
   color: $callout-color-warning;
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color-warning, 8%);
 
     &:hover,
@@ -80,7 +80,7 @@
   border-color: $callout-border-danger;
   color: $callout-color-danger;
 
-  a {
+  a:not(.btn-close) {
     color: darken($callout-link-color-danger, 8%);
 
     &:hover,

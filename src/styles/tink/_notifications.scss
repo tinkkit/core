@@ -1,0 +1,59 @@
+/**
+ * Notifications
+ * --------------------------------------------------
+ */
+
+.notifications {
+  @extend .container;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: rem($bar-height);
+  z-index: layer('notification');
+
+  > ul {
+    @extend .list-unstyled;
+    @extend .row;
+    margin-top: $grid-gutter-width / 2;
+
+    // actual notification
+    > li {
+      @extend .col-xs-12;
+      margin-bottom: rem(3);
+
+      @media (min-width: $screen-sm) {
+        @extend .col-sm-8;
+        @extend .col-sm-offset-2;
+      }
+
+      @media (min-width: $screen-md) {
+        @extend .col-md-6;
+        @extend .col-md-offset-3;
+      }
+
+      @media (min-width: $screen-lg) {
+        @extend .col-lg-4;
+        @extend .col-lg-offset-4;
+      }
+
+      > * {
+        padding-right: $notification-padding-right;
+        position: relative;
+
+        // close button
+        .btn-close {
+          position: absolute;
+          top: rem($notification-padding);
+          right: rem($notification-padding);
+        }
+      }
+
+      // callout styling is a bit different
+      .callout {
+        border-left-width: 1px;
+        box-shadow: 0px 1px 3px rgba($black, .15);
+      }
+    }
+  }
+}
