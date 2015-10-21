@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.7.1] - 2015-10-xx
+## [1.7.1] - 2015-10-21
 
 ### Changed
 - Changed the zebra striping in the striped table
