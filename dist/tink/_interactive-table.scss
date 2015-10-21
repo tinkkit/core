@@ -88,9 +88,30 @@
     }
   }
 
-  tr {
+  > tbody > tr {
+    > td,
+    > th {
+      transition: background-color $animation-speed linear, color $animation-speed linear;
+    }
+
+    &.is-hoverable {
+      &:hover,
+      &:active,
+      &:focus {
+        > td,
+        > th {
+          background-color: lighten($brand, 52%) !important;
+          // background-color: rgba($black, .08);
+          cursor: pointer;
+        }
+      }
+    }
     &.is-selected {
-      background-color: #e8f5e9;
+      > td,
+      > th {
+        background-color: lighten($brand, 50%) !important;
+        // background-color: lighten($mark-bgcolor,10%);
+      }
     }
   }
 }
@@ -267,18 +288,18 @@
  * Table alternative heading -> this will be added to the table css when finished
  */
 
-.table-alternative-heading {
-  > thead > tr > th {
-    background-color: $table-alternative-heading-bg;
-    border-bottom: 0;
-    color: $table-alternative-heading-color;
-    transition: background-color linear $animation-speed;
-  }
-}
+// .table-alternative-heading {
+//   > thead > tr > th {
+//     background-color: $table-alternative-heading-bg;
+//     border-bottom: 0;
+//     color: $table-alternative-heading-color;
+//     transition: background-color linear $animation-speed;
+//   }
+// }
 
-.table-alternative-heading.table-interactive {
-  > thead > tr > th:hover {
-    background-color: $table-alternative-heading-hover-bg;
-    color:  $table-alternative-heading-hover-color;
-  }
-}
+// .table-alternative-heading.table-interactive {
+//   > thead > tr > th:hover {
+//     background-color: $table-alternative-heading-hover-bg;
+//     color:  $table-alternative-heading-hover-color;
+//   }
+// }
