@@ -20,6 +20,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Changed the zebra striping in the striped table
+- Changed the table highlight color
+- Added hoverable and selected states to table rows
 - The loader now also works inline and will adjust its size to its parent
 
 ### Fixed
