@@ -1,0 +1,11 @@
+/**
+ * List-filter-bar
+ * --------------------------------------------------
+ */
+
+
+// Base class
+.list-filter-bar {
+  @extend .bar;
+  background-color: $gray-lightest;
+}
