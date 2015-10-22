@@ -4,8 +4,32 @@
  */
 
 
-// Base class
 .list-filter-bar {
   @extend .bar;
   background-color: $gray-lightest;
+  border: solid 1px $gray-light;
+  border-radius: $border-radius-base;
+  line-height: 2rem;
+  padding: rem($padding-small-vertical $padding-small-horizontal);
+
+  a.filter-toggle {
+    border-radius: $border-radius-base;
+    color: $text-color;
+    cursor: pointer;
+    padding: rem($padding-small-vertical $padding-small-horizontal);
+    text-decoration: none;
+    user-select: none;
+
+    &[disabled] {
+      color: $gray-light;
+      cursor: not-allowed;
+    }
+
+    &:hover:not([disabled]),
+    &:active:not([disabled]),
+    &:focus:not([disabled]) {
+      background-color: $gray-lighter;
+      transition: all $animation-speed linear;
+    }
+  }
 }
