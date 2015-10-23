@@ -128,7 +128,7 @@ html {
       .nav-top {
         &-toggle {
           @include mq($screen-sm) {
-            display: block;
+            display: inline-block;
           }
         }
       }
@@ -173,7 +173,7 @@ html {
       .nav-top {
         &-toggle {
           @include mq($screen-sm) {
-            display: block;
+            display: inline-block;
           }
         }
       }
