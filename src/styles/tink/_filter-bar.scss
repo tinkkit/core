@@ -36,6 +36,7 @@ a.filter-item {
     }
 
     &-external {
+      @extend .filter-item-more;
       margin-left: $padding-base-horizontal;
     }
   }
