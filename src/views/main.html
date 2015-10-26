@@ -1,61 +1,48 @@
+<!-- LIST FILTER BAR EXAMPLE -->
+<h4 class="text-center tink-bg-gray-lightest margin-top margin-bottom">LIST FILTER BAR EXAMPLE</h4>
 
 
-<div class="container">
-  <div class="row margin-top">
-    <div class="col-xs-12">
-
-     <!-- LIST FILTER BAR EXAMPLE -->
-
-      <h4 class="text-center tink-bg-gray-lightest margin-top margin-bottom">LIST FILTER BAR EXAMPLE</h4>
-
-      <div class="margin-top">
-        <div class="list-filter-bar">
+<div class="container margin-top">
+  <div class="filter-bar">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-sm-push-9">
+        <input class="filter-item" type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+      </div>
+      <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+        <div class="bar">
           <ul>
             <li>
-              <input type="search" id="input-search" placeholder="Dossiernummer of naam klant...">
+              <a class="filter-item" data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
             <li>
-              <a class="filter-toggle" data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html" title="Referentienummer">Referentienummer: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+              <a class="filter-item" data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
             <li>
-              <a class="filter-toggle" data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html" title="Type">Type: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+              <a class="filter-item"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
             <li>
-              <a class="filter-toggle"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Kazerne">Kazerne: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+              <a class="filter-item"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
             <li>
-              <a class="filter-toggle"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Ploeg" disabled="disabled">Ploeg: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+              <a class="filter-item"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
             <li>
-              <a class="filter-toggle"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Datum">Datum: <span>alle</span> <i class="fa fa-caret-down"></i></a>
+              <a class="filter-item"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
             </li>
             <li>
-              <a class="filter-toggle"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Status">Status: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-            </li>
-            <li>
-              <a class="filter-toggle"  data-tink-popover="" data-tink-arrow="false" tink-popover-place="bottom" tink-popover-align="left" tink-popover-template="templates/popover-template.html"  title="Locatie">Locatie: <span>alle</span> <i class="fa fa-caret-down"></i></a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <div class="checkbox">
-                <input type="checkbox" id="Knipperlicht" name="Knipperlicht" value="Knipperlicht" checked=""> <label for="Knipperlicht"><span class="">Enkel dossiers met knipperlicht</span></label>
-              </div>
+              <a href="#">Meer filters</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="container margin-top">
   <div class="row">
     <div class="col-xs-12">
       <a href="#">Meer filters</a>
     </div>
   </div>
-
+</div>
 
 <div class="container margin-top">
   <div class="row margin-top">
