@@ -3,52 +3,40 @@
  * --------------------------------------------------
  */
 
+$padding-base-horizontal-double: ($padding-base-horizontal * 2);
+
 .filter-bar {
   background-color: $gray-lightest;
   border: solid 1px $gray-light;
   border-radius: $border-radius-base;
-  //line-height: 2rem;
-  //padding: rem($padding-small-vertical 0);
 
-  // .bar {
-
-  //   margin: $padding-small-vertical 0;
-  //   > ul {
-  //     @extend .list-unstyled;
-
-  //     li {
-  //       //margin: rem($padding-base-vertical 0);
-  //       //margin-top: rem($padding-small-vertical);
-  //       padding: rem($padding-small-vertical 0);
-  //     }
-  //   }
-  // }
-
-  .filter-item {
-    margin: 0;//rem($padding-small-vertical 0);
+  > .row {
+    padding: rem($padding-small-vertical $padding-small-horizontal);
   }
+}
 
-  a.filter-item {
-    @extend .btn;
-    @extend .btn-transparent;
-    // border-radius: $border-radius-base;
-    // color: $text-color;
-    // cursor: pointer;
-    // display: inline-block;
-    // padding: rem($padding-small-vertical $padding-small-horizontal);
-    // text-decoration: none;
-    // user-select: none;
+a.filter-item {
+  @extend .btn;
+  @extend .btn-transparent;
+  font-weight: normal;
 
-    // &[disabled] {
-    //   color: $gray-light;
-    //   cursor: not-allowed;
-    // }
+  &-more {
+    color: $link-color;
+    transition: all $animation-speed linear;
 
-    // &:hover:not([disabled]),
-    // &:active:not([disabled]),
-    // &:focus:not([disabled]) {
-    //   background-color: $gray-lighter;
-    //   transition: all $animation-speed linear;
-    // }
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      @include tab-focus();
+    }
+
+    &-external {
+      margin-left: $padding-base-horizontal;
+    }
   }
 }
