@@ -3,15 +3,26 @@
  * --------------------------------------------------
  */
 
-$padding-base-horizontal-double: ($padding-base-horizontal * 2);
+$filter-bar-padding-horizontal : 18px;
 
 .filter-bar {
   background-color: $gray-lightest;
   border: solid 1px $gray-light;
   border-radius: $border-radius-base;
+  padding: rem($padding-base-vertical $filter-bar-padding-horizontal);
 
-  > .row {
-    padding: rem($padding-small-vertical $padding-small-horizontal);
+  .bar {
+    margin-left: rem(-12);
+    > ul {
+      > li {
+        margin-bottom: rem(3);
+        padding-right: rem(3);
+      }
+    }
+  }
+
+  .filter-item {
+    margin-bottom: rem(3);
   }
 }
 
@@ -37,7 +48,7 @@ a.filter-item {
 
     &-external {
       @extend .filter-item-more;
-      margin-left: $padding-base-horizontal;
+      margin-left: rem(6);
     }
   }
 }
