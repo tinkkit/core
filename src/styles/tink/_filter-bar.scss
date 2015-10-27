@@ -3,8 +3,9 @@
  * --------------------------------------------------
  */
 
-$filter-bar-padding-horizontal: 6px;
-$filter-bar-item-padding:       0 ($filter-bar-padding-horizontal/2) $filter-bar-padding-horizontal 0;
+// To do: put in _variables.scss
+$filter-bar-padding-horizontal: 6px !default;
+$filter-bar-item-padding: 0 ($filter-bar-padding-horizontal/2) $filter-bar-padding-horizontal 0 !default;
 
 .filter-bar {
   background-color: $gray-lightest;
