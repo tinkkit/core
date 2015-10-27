@@ -330,24 +330,40 @@ $input-group-addon-border-color: $input-border !default; // Border color for tex
 
 /**
  * Z-index, a better implementation
+ * http://www.sitepoint.com/better-solution-managing-z-index-sass/
  *
  * Use like this:
  *   z-index: layer("popover");
  *     where popover is a list item of the default list "$layers" (see below)
- *   or
- *   z-index: layer("popover", $other-layers);
- *     where popover is a list item of a custom list named "$other-layers"
  *
- * Current layer list
- * z-index: -1  // cellar
- * z-index: 0   // ground
- * z-index: 1   // base => here's where $layers start
+ * The list is also upgradeable in that nesting is permitted, e.g.:
+ * $z-layers: (
+ *   'modal': (
+ *     'back': 50,
+ *     'front': 60
+ *   ),
+ *   'nav-top': 49,
+ *   ...
+ * )
  *
  * Complete layer list (for reference, add these to $layers only if needed)
  * $layers: base, navbar, dropdown, tooltip, navbar-sticky, navbar-fixed, modal-background, modal, popover;
+ * Old layer list
+ * $layers: base, pseudo, above-pseudo, nav-aside, popover, sticky, nav-top, modal !default;
  */
-$layers: base, pseudo, above-pseudo, nav-aside, popover, sticky, nav-top, modal !default;
 
+$z-layers: (
+  'modal':        50,
+  'nav-top':      49,
+  'sticky':       10,
+  'popover':      5,
+  'nav-aside':    4,
+  'above-pseudo': 3,
+  'pseudo':       2,
+  'base':         1,
+  'ground':       0,
+  'cellar':       -1
+);
 
 
 /**

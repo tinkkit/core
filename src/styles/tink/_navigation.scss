@@ -361,6 +361,7 @@ html {
 
   &-toggle {
     cursor: pointer;
+    margin-right: rem($nav-top-padding / 2);
 
     a {
       color: $nav-top-link-color;

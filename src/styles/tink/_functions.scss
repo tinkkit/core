@@ -40,33 +40,44 @@
   @return unquote($v);
 }
 
-
-// Black transparent background
-@function black($opacity){
-    @return rgba(0, 0, 0, $opacity);
+/**
+ * image-url function (cfr. Compass)
+ */
+@function image-url($img) {
+  @return unquote('url(../images/#{$img})');
 }
 
-// White transparent background
-@function white($opacity){
-    @return rgba(255, 255, 255, $opacity);
-}
+/**
+ * All functions needed for handling z-index
+ * - check for nested keys
+ * - get a nested list item
+ * - return a z-index list property
+ */
 
-// Handle z-index (layers)
-@function layer($layer, $list: $layers, $zero: 'ground', $minus-one: 'cellar') {
-
-    // Layer
-    $z-index: index($list, $layer);
-
-    // Return layer
-    @if $z-index {
-        @return $z-index;
-    } @else if $layer == $minus-one {
-        @return -1;
-    } @else if $layer == $zero {
-        @return 0;
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
     }
+    $map: map-get($map, $key);
+  }
 
-    // Return warning if $layer doesn't exist
-    @warn 'There is no item "#{$layer}" in this list; choose one of: #{$list}';
-    @return null;
+  @return true;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+@function layer($layers...) {
+  @if not map-has-nested-keys($z-layers, $layers...) {
+    // @warn 'There is no item "#{inspect($layers...)}" in this list; choose one of: #{$layers}';
+    @warn 'No layer found for "#{inspect($layers...)}" in $z-layers map. Property omitted.';
+  }
+
+  @return map-deep-get($z-layers, $layers...);
 }

@@ -346,8 +346,25 @@ $input-group-addon-border-color: $input-border !default; // Border color for tex
  * Complete layer list (for reference, add these to $layers only if needed)
  * $layers: base, navbar, dropdown, tooltip, navbar-sticky, navbar-fixed, modal-background, modal, popover;
  */
-$layers: base, pseudo, above-pseudo, nav-aside, popover, sticky, nav-top, modal !default;
+// $layers: base, pseudo, above-pseudo, nav-aside, popover, sticky, nav-top, modal !default;
 
+/**
+ * ***************************** NEW *****************************
+ * http://www.sitepoint.com/better-solution-managing-z-index-sass/
+ * ***************************************************************
+ */
+$z-layers: (
+  'modal':        50,
+  'nav-top':      49,
+  'sticky':       10,
+  'popover':      5,
+  'nav-aside':    4,
+  'above-pseudo': 3,
+  'pseudo':       2,
+  'base':         1,
+  'ground':       0,
+  'cellar':       -1
+);
 
 
 /**

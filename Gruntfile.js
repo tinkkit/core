@@ -219,7 +219,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        imagePath:'../images',
+        // imagePath:'../images',
         includePaths: [
             'bower_components'
         ]
