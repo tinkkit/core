@@ -3,52 +3,45 @@
  * --------------------------------------------------
  */
 
-$filter-bar-padding-horizontal : 18px;
+$filter-bar-padding-horizontal: 6px;
+$filter-bar-item-padding:       0 ($filter-bar-padding-horizontal/2) $filter-bar-padding-horizontal 0;
 
 .filter-bar {
   background-color: $gray-lightest;
   border: solid 1px $gray-light;
   border-radius: $border-radius-base;
-  padding: rem($padding-base-vertical $filter-bar-padding-horizontal);
+  padding: rem($padding-base-vertical $padding-base-vertical 0);  // Bottom 'padding' is set by filter bar items' bottom margin
 
   .bar {
-    margin-left: rem(-12);
     > ul {
+      margin-left: 0;
+
       > li {
-        margin-bottom: rem(3);
-        padding-right: rem(3);
+        padding: 0;
       }
     }
   }
 
-  .filter-item {
-    margin-bottom: rem(3);
+  &-item {
+    margin: rem($filter-bar-item-padding) !important;
+
+    &-link {
+      display: inline-block;
+      margin: rem($filter-bar-item-padding) !important;
+      padding: rem($padding-base-vertical $padding-base-horizontal) !important;
+    }
   }
 }
 
-a.filter-item {
+a.filter-bar-item {
   @extend .btn;
   @extend .btn-transparent;
   font-weight: normal;
+  margin: rem($filter-bar-item-padding);
+}
 
-  &-more {
-    color: $link-color;
-    transition: all $animation-speed linear;
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      color: $link-hover-color;
-      text-decoration: underline;
-    }
-
-    &:focus {
-      @include tab-focus();
-    }
-
-    &-external {
-      @extend .filter-item-more;
-      margin-left: rem(6);
-    }
-  }
+a.filter-bar-link-external {
+  display: inline-block;
+  margin: rem($filter-bar-padding-horizontal 0 0 $filter-bar-padding-horizontal);
+  padding: rem($padding-base-vertical $padding-base-horizontal);
 }
