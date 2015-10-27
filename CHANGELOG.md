@@ -18,6 +18,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.x.x] - 2015-10-xx
 
+### Added
+- Added another possibility to always leave the sidenav open
+
 ### Fixed
 - Fixed an issue that broke the navbar in IE9 in some cases
 
