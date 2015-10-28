@@ -813,6 +813,20 @@ $breadcrumb-separator-size:     $breadcrumb-font-size * .6 !default;
 
 
 /**
+ * Filter bar
+ */
+$filter-bar-padding: $padding-base-vertical !default;
+$filter-bar-border-radius: $border-radius-base !default;
+$filter-bar-padding-horizontal: 6px !default;
+$filter-bar-item-margin: 0 ($filter-bar-padding-horizontal/2) $filter-bar-padding-horizontal 0 !default;
+$filter-bar-item-padding: $padding-base-vertical $padding-base-horizontal !default;
+
+$filter-bar-bgcolor: $gray-lightest !default;
+$filter-bar-border: $gray-light !default;
+
+
+
+/**
  * Loader
  */
 

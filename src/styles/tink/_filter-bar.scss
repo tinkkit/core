@@ -3,15 +3,11 @@
  * --------------------------------------------------
  */
 
-// To do: put in _variables.scss
-$filter-bar-padding-horizontal: 6px !default;
-$filter-bar-item-padding: 0 ($filter-bar-padding-horizontal/2) $filter-bar-padding-horizontal 0 !default;
-
 .filter-bar {
-  background-color: $gray-lightest;
-  border: solid 1px $gray-light;
-  border-radius: $border-radius-base;
-  padding: rem($padding-base-vertical $padding-base-vertical 0);  // Bottom 'padding' is set by filter bar items' bottom margin
+  background-color: $filter-bar-bgcolor;
+  border: solid 1px $filter-bar-border;
+  border-radius: $filter-bar-border-radius;
+  padding: rem($filter-bar-padding $filter-bar-padding 0);  // Bottom 'padding' is set by filter bar items' bottom margin
 
   .bar {
     > ul {
@@ -24,12 +20,12 @@ $filter-bar-item-padding: 0 ($filter-bar-padding-horizontal/2) $filter-bar-paddi
   }
 
   &-item {
-    margin: rem($filter-bar-item-padding) !important;
+    margin: rem($filter-bar-item-margin) !important;
 
     &-link {
       display: inline-block;
-      margin: rem($filter-bar-item-padding) !important;
-      padding: rem($padding-base-vertical $padding-base-horizontal) !important;
+      margin: rem($filter-bar-item-margin) !important;
+      padding: rem($filter-bar-item-padding) !important;
     }
   }
 }
@@ -38,11 +34,11 @@ a.filter-bar-item {
   @extend .btn;
   @extend .btn-transparent;
   font-weight: normal;
-  margin: rem($filter-bar-item-padding);
+  margin: rem($filter-bar-item-margin);
 }
 
 a.filter-bar-link-external {
   display: inline-block;
-  margin: rem($filter-bar-padding-horizontal 0 0 $filter-bar-padding-horizontal);
-  padding: rem($padding-base-vertical $padding-base-horizontal);
+  margin: rem($filter-bar-padding-horizontal);
+  padding: rem($filter-bar-item-padding);
 }
