@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-ng-app="tinkApp">
+<html data-ng-app="tinkApp" class="has-nav-left nav-left-can-always-close-and-starts-open">
 <head>
   <meta charset="utf-8">
   <title>Tink core</title>
@@ -17,7 +17,7 @@
     <li class="nav-top-logo">
       <a href="#/" title="Tink"><span>Tink</span></a>
     </li>
-    <li class="nav-top-toggle" data-tink-sidenav-collapse="asideNavLeft">
+    <li class="nav-top-toggle nav-top-toggle-visible" data-tink-sidenav-collapse="asideNavLeft">
       <a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open menu</span></i></a>
     </li>
     <li class="nav-top-app">
@@ -29,7 +29,7 @@
   </ul>
   <ul class="nav-top-right">
     <li>
-      <a href="#/" class="btn btn-xs btn-primary">Link 2</a>
+      <a href="#/" class="btn btn-xs btn-primary" data-tink-popover  tink-popover-template="templates/popover.html">Popover</a>
     </li>
     <li>
       <a href="#/" class="btn btn-xs btn-transparent">Link 3</a>
@@ -41,6 +41,18 @@
     </li>
   </ul>
 </nav>
+
+<div data-tink-nav-aside data-toggle-id="asideNavLeft" class="nav-left nav-aside">
+  <aside>
+    <div class="nav-aside-section">
+      <ul>
+        <li>
+          <a href="#/start"><span data-i18n="Getting started">Getting started</span></a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>
 
 <div>
   <div class="main" role="main" data-ng-view="" data-autoscroll="true"></div>
