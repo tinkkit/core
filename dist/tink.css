@@ -51,26 +51,26 @@
  */
 /**
  * Z-index, a better implementation
+ * http://www.sitepoint.com/better-solution-managing-z-index-sass/
  *
  * Use like this:
  *   z-index: layer("popover");
  *     where popover is a list item of the default list "$layers" (see below)
- *   or
- *   z-index: layer("popover", $other-layers);
- *     where popover is a list item of a custom list named "$other-layers"
  *
- * Current layer list
- * z-index: -1  // cellar
- * z-index: 0   // ground
- * z-index: 1   // base => here's where $layers start
+ * The list is also upgradeable in that nesting is permitted, e.g.:
+ * $z-layers: (
+ *   'modal': (
+ *     'back': 50,
+ *     'front': 60
+ *   ),
+ *   'nav-top': 49,
+ *   ...
+ * )
  *
  * Complete layer list (for reference, add these to $layers only if needed)
  * $layers: base, navbar, dropdown, tooltip, navbar-sticky, navbar-fixed, modal-background, modal, popover;
- */
-/**
- * ***************************** NEW *****************************
- * http://www.sitepoint.com/better-solution-managing-z-index-sass/
- * ***************************************************************
+ * Old layer list
+ * $layers: base, pseudo, above-pseudo, nav-aside, popover, sticky, nav-top, modal !default;
  */
 /**
  * Bar component
@@ -157,6 +157,15 @@
 /**
  * Return a space separated list as rem values
  * e.g. padding: rem(10 20 10 15);
+ */
+/**
+ * image-url function (cfr. Compass)
+ */
+/**
+ * All functions needed for handling z-index
+ * - check for nested keys
+ * - get a nested list item
+ * - return a z-index list property
  */
 /**
  * Mixins
@@ -3680,7 +3689,7 @@ html.has-open-modal {
   -ms-user-select: none;
   user-select: none;
   width: 100%;
-  z-index: 50; }
+  z-index: 20; }
   .modal:before {
     content: '';
     display: inline-block;
@@ -4752,7 +4761,7 @@ html {
   left: 0;
   position: fixed;
   top: 0;
-  z-index: 49; }
+  z-index: 19; }
   .nav-top a.btn,
   .nav-top button,
   .nav-top input {
@@ -4777,7 +4786,8 @@ html {
       vertical-align: middle;
       width: 3.5714285714rem ; }
   .nav-top-toggle {
-    cursor: pointer; }
+    cursor: pointer;
+    margin-right: 0.4285714286rem ; }
     .nav-top-toggle a {
       color: #fff;
       text-decoration: none; }
@@ -5249,7 +5259,7 @@ html {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
-  z-index: 10; }
+  z-index: 18; }
 
 /**
  * Fixes when a navigation menu is present

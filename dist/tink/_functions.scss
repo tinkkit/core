@@ -40,36 +40,19 @@
   @return unquote($v);
 }
 
-
-// Black transparent background
-@function black($opacity){
-    @return rgba(0, 0, 0, $opacity);
+/**
+ * image-url function (cfr. Compass)
+ */
+@function image-url($img) {
+  @return unquote('url(../images/#{$img})');
 }
 
-// White transparent background
-@function white($opacity){
-    @return rgba(255, 255, 255, $opacity);
-}
-
-// Handle z-index (layers)
-// @function layer($layer, $list: $layers, $zero: 'ground', $minus-one: 'cellar') {
-
-//     // Layer
-//     $z-index: index($list, $layer);
-
-//     // Return layer
-//     @if $z-index {
-//         @return $z-index;
-//     } @else if $layer == $minus-one {
-//         @return -1;
-//     } @else if $layer == $zero {
-//         @return 0;
-//     }
-
-//     // Return warning if $layer doesn't exist
-//     @warn 'There is no item "#{$layer}" in this list; choose one of: #{$list}';
-//     @return null;
-// }
+/**
+ * All functions needed for handling z-index
+ * - check for nested keys
+ * - get a nested list item
+ * - return a z-index list property
+ */
 
 @function map-has-nested-keys($map, $keys...) {
   @each $key in $keys {
@@ -97,16 +80,4 @@
   }
 
   @return map-deep-get($z-layers, $layers...);
-}
-
-@function map-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-
-  @return $map;
-}
-
-@function image-url($img) {
-  @return unquote('url(../images/#{$img})');
 }
