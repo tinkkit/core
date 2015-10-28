@@ -19,6 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.x.x] - 2015-10-xx
 
 ### Added
+- Added a new filter bar component
 - Added another possibility to always leave the sidenav open
 
 ### Changed
