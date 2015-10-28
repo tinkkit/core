@@ -1,0 +1,44 @@
+/**
+ * Filter-bar
+ * --------------------------------------------------
+ */
+
+.filter-bar {
+  background-color: $filter-bar-bgcolor;
+  border: solid 1px $filter-bar-border;
+  border-radius: $filter-bar-border-radius;
+  padding: rem($filter-bar-padding $filter-bar-padding 0);  // Bottom 'padding' is set by filter bar items' bottom margin
+
+  .bar {
+    > ul {
+      margin-left: 0;
+
+      > li {
+        padding: 0;
+      }
+    }
+  }
+
+  &-item {
+    margin: rem($filter-bar-item-margin) !important;
+
+    &-link {
+      display: inline-block;
+      margin: rem($filter-bar-item-margin) !important;
+      padding: rem($filter-bar-item-padding) !important;
+    }
+  }
+}
+
+a.filter-bar-item {
+  @extend .btn;
+  @extend .btn-transparent;
+  font-weight: normal;
+  margin: rem($filter-bar-item-margin);
+}
+
+a.filter-bar-link-external {
+  display: inline-block;
+  margin: rem($filter-bar-padding-horizontal);
+  padding: rem($filter-bar-item-padding);
+}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @charset "UTF-8";
 /**
  * Tink default theme
@@ -139,6 +137,9 @@
  */
 /**
  * Breadcrumbs
+ */
+/**
+ * Filter bar
  */
 /**
  * Loader
@@ -2799,14 +2800,14 @@ output {
   display: inline-block;
   margin-left: 0.5714285714rem ; }
 
-.btn.search-submit {
+.btn.search-submit, a.search-submit.filter-bar-item {
   background: none;
   border: none;
   color: #333;
   position: absolute;
   right: 1.0em;
   top: 0em; }
-  .btn.search-submit:hover {
+  .btn.search-submit:hover, a.search-submit.filter-bar-item:hover {
     background: none;
     border: none;
     color: #333; }
@@ -2824,7 +2825,7 @@ output {
  */
 button,
 input[type="button"],
-.btn, button[type="submit"],
+.btn, a.filter-bar-item, button[type="submit"],
 input[type="submit"],
 .btn-primary {
   border-radius: 0.2142857143rem ;
@@ -2847,37 +2848,37 @@ input[type="submit"],
   white-space: nowrap; }
   button:focus,
   input[type="button"]:focus,
-  .btn:focus,
+  .btn:focus, a.filter-bar-item:focus,
   input[type="submit"]:focus,
   .btn-primary:focus, button:active:focus,
   input[type="button"]:active:focus,
-  .btn:active:focus,
+  .btn:active:focus, a.filter-bar-item:active:focus,
   input[type="submit"]:active:focus,
   .btn-primary:active:focus, button.active:focus,
   input.active[type="button"]:focus,
-  .active.btn:focus,
+  .active.btn:focus, a.active.filter-bar-item:focus,
   input.active[type="submit"]:focus,
   .active.btn-primary:focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(95, 177, 214, 0.25); }
   button:hover,
   input[type="button"]:hover,
-  .btn:hover,
+  .btn:hover, a.filter-bar-item:hover,
   input[type="submit"]:hover,
   .btn-primary:hover, button:focus,
   input[type="button"]:focus,
-  .btn:focus,
+  .btn:focus, a.filter-bar-item:focus,
   input[type="submit"]:focus,
   .btn-primary:focus {
     color: #333;
     text-decoration: none; }
   button:active,
   input[type="button"]:active,
-  .btn:active,
+  .btn:active, a.filter-bar-item:active,
   input[type="submit"]:active,
   .btn-primary:active, button.active,
   input.active[type="button"],
-  .active.btn,
+  .active.btn, a.active.filter-bar-item,
   input.active[type="submit"],
   .active.btn-primary {
     background-image: none;
@@ -2885,11 +2886,11 @@ input[type="submit"],
     outline: 0; }
   button.disabled,
   input.disabled[type="button"],
-  .disabled.btn,
+  .disabled.btn, a.disabled.filter-bar-item,
   input.disabled[type="submit"],
   .disabled.btn-primary, button[disabled],
   input[disabled][type="button"],
-  [disabled].btn,
+  [disabled].btn, a[disabled].filter-bar-item,
   input[disabled][type="submit"],
   [disabled].btn-primary,
   fieldset[disabled] button,
@@ -2897,6 +2898,7 @@ input[type="submit"],
   input[type="button"],
   fieldset[disabled]
   .btn,
+  fieldset[disabled] a.filter-bar-item,
   fieldset[disabled]
   input[type="submit"],
   fieldset[disabled]
@@ -2907,7 +2909,7 @@ input[type="submit"],
     pointer-events: none; }
   button.btn-text .fa,
   input.btn-text[type="button"] .fa,
-  .btn-text.btn .fa,
+  .btn-text.btn .fa, a.btn-text.filter-bar-item .fa,
   input.btn-text[type="submit"] .fa,
   .btn-text.btn-primary .fa {
     margin-right: 0.5714285714rem ; }
@@ -2917,7 +2919,8 @@ input[type="submit"],
  */
 button,
 input[type="button"],
-.btn {
+.btn,
+a.filter-bar-item {
   color: #333;
   background-color: #fff;
   border-color: #bbb; }
@@ -2930,11 +2933,16 @@ input[type="button"],
   .open >
   input[type="button"].dropdown-toggle,
   .btn:hover,
+  a.filter-bar-item:hover,
   .btn:focus,
+  a.filter-bar-item:focus,
   .btn:active,
+  a.filter-bar-item:active,
   .btn.active,
+  a.active.filter-bar-item,
   .open >
-  .btn.dropdown-toggle {
+  .btn.dropdown-toggle,
+  .open > a.dropdown-toggle.filter-bar-item {
     color: #333;
     background-color: #f2f2f2; }
   button:active, button.active,
@@ -2944,9 +2952,12 @@ input[type="button"],
   .open >
   input[type="button"].dropdown-toggle,
   .btn:active,
+  a.filter-bar-item:active,
   .btn.active,
+  a.active.filter-bar-item,
   .open >
-  .btn.dropdown-toggle {
+  .btn.dropdown-toggle,
+  .open > a.dropdown-toggle.filter-bar-item {
     background-image: none; }
   button.disabled, button.disabled:hover, button.disabled:focus, button.disabled:active, button.disabled.active, button[disabled], button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button[disabled].active,
   fieldset[disabled] button,
@@ -2975,25 +2986,40 @@ input[type="button"],
   fieldset[disabled]
   input[type="button"].active,
   .btn.disabled,
+  a.disabled.filter-bar-item,
   .btn.disabled:hover,
+  a.disabled.filter-bar-item:hover,
   .btn.disabled:focus,
+  a.disabled.filter-bar-item:focus,
   .btn.disabled:active,
+  a.disabled.filter-bar-item:active,
   .btn.disabled.active,
+  a.disabled.active.filter-bar-item,
   .btn[disabled],
+  a[disabled].filter-bar-item,
   .btn[disabled]:hover,
+  a[disabled].filter-bar-item:hover,
   .btn[disabled]:focus,
+  a[disabled].filter-bar-item:focus,
   .btn[disabled]:active,
+  a[disabled].filter-bar-item:active,
   .btn[disabled].active,
+  a[disabled].active.filter-bar-item,
   fieldset[disabled]
   .btn,
+  fieldset[disabled] a.filter-bar-item,
   fieldset[disabled]
   .btn:hover,
+  fieldset[disabled] a.filter-bar-item:hover,
   fieldset[disabled]
   .btn:focus,
+  fieldset[disabled] a.filter-bar-item:focus,
   fieldset[disabled]
   .btn:active,
+  fieldset[disabled] a.filter-bar-item:active,
   fieldset[disabled]
-  .btn.active {
+  .btn.active,
+  fieldset[disabled] a.active.filter-bar-item {
     background-color: #fff;
     border-color: #bbb; }
 
@@ -3159,23 +3185,30 @@ input[type="submit"],
     background-color: #e60038;
     border-color: #d20033; }
 
-.btn-transparent {
+.btn-transparent, a.filter-bar-item {
   color: #333;
   background-color: transparent;
   border-color: transparent; }
-  .btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active, .btn-transparent.active,
-  .open > .btn-transparent.dropdown-toggle {
+  .btn-transparent:hover, a.filter-bar-item:hover, .btn-transparent:focus, a.filter-bar-item:focus, .btn-transparent:active, a.filter-bar-item:active, .btn-transparent.active, a.active.filter-bar-item,
+  .open > .btn-transparent.dropdown-toggle,
+  .open > a.dropdown-toggle.filter-bar-item {
     color: #333;
     background-color: rgba(0, 0, 0, 0.1); }
-  .btn-transparent:active, .btn-transparent.active,
-  .open > .btn-transparent.dropdown-toggle {
+  .btn-transparent:active, a.filter-bar-item:active, .btn-transparent.active, a.active.filter-bar-item,
+  .open > .btn-transparent.dropdown-toggle,
+  .open > a.dropdown-toggle.filter-bar-item {
     background-image: none; }
-  .btn-transparent.disabled, .btn-transparent.disabled:hover, .btn-transparent.disabled:focus, .btn-transparent.disabled:active, .btn-transparent.disabled.active, .btn-transparent[disabled], .btn-transparent[disabled]:hover, .btn-transparent[disabled]:focus, .btn-transparent[disabled]:active, .btn-transparent[disabled].active,
+  .btn-transparent.disabled, a.disabled.filter-bar-item, .btn-transparent.disabled:hover, a.disabled.filter-bar-item:hover, .btn-transparent.disabled:focus, a.disabled.filter-bar-item:focus, .btn-transparent.disabled:active, a.disabled.filter-bar-item:active, .btn-transparent.disabled.active, a.disabled.active.filter-bar-item, .btn-transparent[disabled], a[disabled].filter-bar-item, .btn-transparent[disabled]:hover, a[disabled].filter-bar-item:hover, .btn-transparent[disabled]:focus, a[disabled].filter-bar-item:focus, .btn-transparent[disabled]:active, a[disabled].filter-bar-item:active, .btn-transparent[disabled].active, a[disabled].active.filter-bar-item,
   fieldset[disabled] .btn-transparent,
+  fieldset[disabled] a.filter-bar-item,
   fieldset[disabled] .btn-transparent:hover,
+  fieldset[disabled] a.filter-bar-item:hover,
   fieldset[disabled] .btn-transparent:focus,
+  fieldset[disabled] a.filter-bar-item:focus,
   fieldset[disabled] .btn-transparent:active,
-  fieldset[disabled] .btn-transparent.active {
+  fieldset[disabled] a.filter-bar-item:active,
+  fieldset[disabled] .btn-transparent.active,
+  fieldset[disabled] a.active.filter-bar-item {
     background-color: transparent;
     border-color: transparent; }
 
@@ -3428,15 +3461,15 @@ input[type="submit"],
  * Badges
  * --------------------------------------------------
  */
-.badge, .badge-primary, .badge-success, .badge-info, .badge-warning, .badge-danger, .btn .badge-primary,
+.badge, .badge-primary, .badge-success, .badge-info, .badge-warning, .badge-danger, .btn .badge-primary, a.filter-bar-item .badge-primary,
 .btn-sm .badge-primary,
-.btn-xs .badge-primary, .btn .badge-success,
+.btn-xs .badge-primary, .btn .badge-success, a.filter-bar-item .badge-success,
 .btn-sm .badge-success,
-.btn-xs .badge-success, .btn .badge-info,
+.btn-xs .badge-success, .btn .badge-info, a.filter-bar-item .badge-info,
 .btn-sm .badge-info,
-.btn-xs .badge-info, .btn .badge-warning,
+.btn-xs .badge-info, .btn .badge-warning, a.filter-bar-item .badge-warning,
 .btn-sm .badge-warning,
-.btn-xs .badge-warning, .btn .badge-danger,
+.btn-xs .badge-warning, .btn .badge-danger, a.filter-bar-item .badge-danger,
 .btn-sm .badge-danger,
 .btn-xs .badge-danger {
   border-radius: 0.2142857143rem ;
@@ -3453,7 +3486,7 @@ input[type="submit"],
   white-space: nowrap; }
   .badge:empty, .badge-primary:empty, .badge-success:empty, .badge-info:empty, .badge-warning:empty, .badge-danger:empty {
     display: none; }
-  .btn .badge, .btn .badge-primary, .btn .badge-success, .btn .badge-info, .btn .badge-warning, .btn .badge-danger {
+  .btn .badge, a.filter-bar-item .badge, .btn .badge-primary, a.filter-bar-item .badge-primary, .btn .badge-success, a.filter-bar-item .badge-success, .btn .badge-info, a.filter-bar-item .badge-info, .btn .badge-warning, a.filter-bar-item .badge-warning, .btn .badge-danger, a.filter-bar-item .badge-danger {
     margin-left: 0.8571428571rem ; }
   .btn-large .badge, .btn-large .badge-primary, .btn-large .badge-success, .btn-large .badge-info, .btn-large .badge-warning, .btn-large .badge-danger {
     margin-left: 1.1428571429rem ; }
@@ -3478,15 +3511,15 @@ input[type="submit"],
   .btn-xs .badge-warning,
   .btn-xs .badge-danger {
     line-height: 1.2; }
-  a.list-group-item.active > .badge, a.list-group-item.active > .badge-primary, a.list-group-item.active > .badge-success, a.list-group-item.active > .badge-info, a.list-group-item.active > .badge-warning, a.list-group-item.active > .badge-danger, .btn a.list-group-item.active > .badge-primary,
+  a.list-group-item.active > .badge, a.list-group-item.active > .badge-primary, a.list-group-item.active > .badge-success, a.list-group-item.active > .badge-info, a.list-group-item.active > .badge-warning, a.list-group-item.active > .badge-danger, .btn a.list-group-item.active > .badge-primary, a.filter-bar-item a.list-group-item.active > .badge-primary,
   .btn-sm a.list-group-item.active > .badge-primary,
-  .btn-xs a.list-group-item.active > .badge-primary, .btn a.list-group-item.active > .badge-success,
+  .btn-xs a.list-group-item.active > .badge-primary, .btn a.list-group-item.active > .badge-success, a.filter-bar-item a.list-group-item.active > .badge-success,
   .btn-sm a.list-group-item.active > .badge-success,
-  .btn-xs a.list-group-item.active > .badge-success, .btn a.list-group-item.active > .badge-info,
+  .btn-xs a.list-group-item.active > .badge-success, .btn a.list-group-item.active > .badge-info, a.filter-bar-item a.list-group-item.active > .badge-info,
   .btn-sm a.list-group-item.active > .badge-info,
-  .btn-xs a.list-group-item.active > .badge-info, .btn a.list-group-item.active > .badge-warning,
+  .btn-xs a.list-group-item.active > .badge-info, .btn a.list-group-item.active > .badge-warning, a.filter-bar-item a.list-group-item.active > .badge-warning,
   .btn-sm a.list-group-item.active > .badge-warning,
-  .btn-xs a.list-group-item.active > .badge-warning, .btn a.list-group-item.active > .badge-danger,
+  .btn-xs a.list-group-item.active > .badge-warning, .btn a.list-group-item.active > .badge-danger, a.filter-bar-item a.list-group-item.active > .badge-danger,
   .btn-sm a.list-group-item.active > .badge-danger,
   .btn-xs a.list-group-item.active > .badge-danger,
   .nav-pills > .active > a > .badge,
@@ -3495,26 +3528,31 @@ input[type="submit"],
   .nav-pills > .active > a > .badge-info,
   .nav-pills > .active > a > .badge-warning,
   .nav-pills > .active > a > .badge-danger, .btn
+  .nav-pills > .active > a > .badge-primary, a.filter-bar-item
   .nav-pills > .active > a > .badge-primary,
   .btn-sm
   .nav-pills > .active > a > .badge-primary,
   .btn-xs
   .nav-pills > .active > a > .badge-primary, .btn
+  .nav-pills > .active > a > .badge-success, a.filter-bar-item
   .nav-pills > .active > a > .badge-success,
   .btn-sm
   .nav-pills > .active > a > .badge-success,
   .btn-xs
   .nav-pills > .active > a > .badge-success, .btn
+  .nav-pills > .active > a > .badge-info, a.filter-bar-item
   .nav-pills > .active > a > .badge-info,
   .btn-sm
   .nav-pills > .active > a > .badge-info,
   .btn-xs
   .nav-pills > .active > a > .badge-info, .btn
+  .nav-pills > .active > a > .badge-warning, a.filter-bar-item
   .nav-pills > .active > a > .badge-warning,
   .btn-sm
   .nav-pills > .active > a > .badge-warning,
   .btn-xs
   .nav-pills > .active > a > .badge-warning, .btn
+  .nav-pills > .active > a > .badge-danger, a.filter-bar-item
   .nav-pills > .active > a > .badge-danger,
   .btn-sm
   .nav-pills > .active > a > .badge-danger,
@@ -3522,15 +3560,15 @@ input[type="submit"],
   .nav-pills > .active > a > .badge-danger {
     background-color: #fff;
     color: #5fb1d6; }
-  .nav-pills > li > a > .badge, .nav-pills > li > a > .badge-primary, .nav-pills > li > a > .badge-success, .nav-pills > li > a > .badge-info, .nav-pills > li > a > .badge-warning, .nav-pills > li > a > .badge-danger, .btn .nav-pills > li > a > .badge-primary,
+  .nav-pills > li > a > .badge, .nav-pills > li > a > .badge-primary, .nav-pills > li > a > .badge-success, .nav-pills > li > a > .badge-info, .nav-pills > li > a > .badge-warning, .nav-pills > li > a > .badge-danger, .btn .nav-pills > li > a > .badge-primary, a.filter-bar-item .nav-pills > li > a > .badge-primary,
   .btn-sm .nav-pills > li > a > .badge-primary,
-  .btn-xs .nav-pills > li > a > .badge-primary, .btn .nav-pills > li > a > .badge-success,
+  .btn-xs .nav-pills > li > a > .badge-primary, .btn .nav-pills > li > a > .badge-success, a.filter-bar-item .nav-pills > li > a > .badge-success,
   .btn-sm .nav-pills > li > a > .badge-success,
-  .btn-xs .nav-pills > li > a > .badge-success, .btn .nav-pills > li > a > .badge-info,
+  .btn-xs .nav-pills > li > a > .badge-success, .btn .nav-pills > li > a > .badge-info, a.filter-bar-item .nav-pills > li > a > .badge-info,
   .btn-sm .nav-pills > li > a > .badge-info,
-  .btn-xs .nav-pills > li > a > .badge-info, .btn .nav-pills > li > a > .badge-warning,
+  .btn-xs .nav-pills > li > a > .badge-info, .btn .nav-pills > li > a > .badge-warning, a.filter-bar-item .nav-pills > li > a > .badge-warning,
   .btn-sm .nav-pills > li > a > .badge-warning,
-  .btn-xs .nav-pills > li > a > .badge-warning, .btn .nav-pills > li > a > .badge-danger,
+  .btn-xs .nav-pills > li > a > .badge-warning, .btn .nav-pills > li > a > .badge-danger, a.filter-bar-item .nav-pills > li > a > .badge-danger,
   .btn-sm .nav-pills > li > a > .badge-danger,
   .btn-xs .nav-pills > li > a > .badge-danger {
     margin-left: 0.2142857143rem ; }
@@ -3564,31 +3602,31 @@ a.badge:hover, a.badge:focus {
   background-color: #e60038;
   color: #fff; }
 
-.btn .badge-primary,
+.btn .badge-primary, a.filter-bar-item .badge-primary,
 .btn-sm .badge-primary,
 .btn-xs .badge-primary {
   background-color: #fff;
   color: #347ea6; }
 
-.btn .badge-success,
+.btn .badge-success, a.filter-bar-item .badge-success,
 .btn-sm .badge-success,
 .btn-xs .badge-success {
   background-color: #fff;
   color: #4a921f; }
 
-.btn .badge-info,
+.btn .badge-info, a.filter-bar-item .badge-info,
 .btn-sm .badge-info,
 .btn-xs .badge-info {
   background-color: #fff;
   color: #76b9f4; }
 
-.btn .badge-warning,
+.btn .badge-warning, a.filter-bar-item .badge-warning,
 .btn-sm .badge-warning,
 .btn-xs .badge-warning {
   background-color: #fff;
   color: #ff8d00; }
 
-.btn .badge-danger,
+.btn .badge-danger, a.filter-bar-item .badge-danger,
 .btn-sm .badge-danger,
 .btn-xs .badge-danger {
   background-color: #fff;
@@ -3834,7 +3872,7 @@ span.table-interactive.is-loading:after {
   white-space: nowrap; }
   .label:empty, .label-primary:empty, .label-success:empty, .label-info:empty, .label-warning:empty, .label-danger:empty {
     display: none; }
-  .btn .label, .btn .label-primary, .btn .label-success, .btn .label-info, .btn .label-warning, .btn .label-danger {
+  .btn .label, a.filter-bar-item .label, .btn .label-primary, a.filter-bar-item .label-primary, .btn .label-success, a.filter-bar-item .label-success, .btn .label-info, a.filter-bar-item .label-info, .btn .label-warning, a.filter-bar-item .label-warning, .btn .label-danger, a.filter-bar-item .label-danger {
     position: relative;
     top: -1px; }
 
@@ -4009,6 +4047,35 @@ span.table-interactive.is-loading:after {
   float: right; }
 
 /**
+ * Filter-bar
+ * --------------------------------------------------
+ */
+.filter-bar {
+  background-color: #f7f7f7;
+  border: solid 1px #bbb;
+  border-radius: 3px;
+  padding: 0.4285714286rem 0.4285714286rem 0rem ; }
+  .filter-bar .bar > ul, .filter-bar .nav-top > ul {
+    margin-left: 0; }
+    .filter-bar .bar > ul > li, .filter-bar .nav-top > ul > li {
+      padding: 0; }
+  .filter-bar-item {
+    margin: 0rem 0.2142857143rem 0.4285714286rem 0rem  !important; }
+    .filter-bar-item-link {
+      display: inline-block;
+      margin: 0rem 0.2142857143rem 0.4285714286rem 0rem  !important;
+      padding: 0.4285714286rem 0.8571428571rem  !important; }
+
+a.filter-bar-item {
+  font-weight: normal;
+  margin: 0rem 0.2142857143rem 0.4285714286rem 0rem ; }
+
+a.filter-bar-link-external {
+  display: inline-block;
+  margin: 0.4285714286rem ;
+  padding: 0.4285714286rem 0.8571428571rem ; }
+
+/**
  * Angular related components
  */
 /**
@@ -4143,8 +4210,9 @@ span.table-interactive.is-loading:after {
   position: relative;
   top: 2.4285714286rem ;
   z-index: 5; }
-  .datepicker .btn,
-  .datepickerrange .btn {
+  .datepicker .btn, .datepicker a.filter-bar-item,
+  .datepickerrange .btn,
+  .datepickerrange a.filter-bar-item {
     background: #fff;
     border: 1px solid transparent;
     color: #888;
@@ -4152,56 +4220,67 @@ span.table-interactive.is-loading:after {
     padding: 0.4285714286rem 0rem ;
     width: 100%; }
     @media (min-width: 992px) {
-      .datepicker .btn,
-      .datepickerrange .btn {
+      .datepicker .btn, .datepicker a.filter-bar-item,
+      .datepickerrange .btn,
+      .datepickerrange a.filter-bar-item {
         min-width: 38px; } }
-    .datepicker .btn:hover,
-    .datepickerrange .btn:hover {
+    .datepicker .btn:hover, .datepicker a.filter-bar-item:hover,
+    .datepickerrange .btn:hover,
+    .datepickerrange a.filter-bar-item:hover {
       background: rgba(0, 0, 0, 0.07);
       border-color: transparent;
       color: #347ea6; }
-    .datepicker .btn.btn-today,
-    .datepickerrange .btn.btn-today {
+    .datepicker .btn.btn-today, .datepicker a.btn-today.filter-bar-item,
+    .datepickerrange .btn.btn-today,
+    .datepickerrange a.btn-today.filter-bar-item {
       background: #dbebf4;
       border-color: #acd1e5;
       color: #347ea6; }
-      .datepicker .btn.btn-today:hover,
-      .datepickerrange .btn.btn-today:hover {
+      .datepicker .btn.btn-today:hover, .datepicker a.btn-today.filter-bar-item:hover,
+      .datepickerrange .btn.btn-today:hover,
+      .datepickerrange a.btn-today.filter-bar-item:hover {
         background: #bcdaea;
         border-color: #acd1e5;
         color: #2a6687; }
-    .datepicker .btn.btn-selected,
-    .datepickerrange .btn.btn-selected {
+    .datepicker .btn.btn-selected, .datepicker a.btn-selected.filter-bar-item,
+    .datepickerrange .btn.btn-selected,
+    .datepickerrange a.btn-selected.filter-bar-item {
       background: #347ea6;
       border-color: transparent;
       color: #fff; }
-      .datepicker .btn.btn-selected-clicked,
-      .datepickerrange .btn.btn-selected-clicked {
+      .datepicker .btn.btn-selected-clicked, .datepicker a.btn-selected-clicked.filter-bar-item,
+      .datepickerrange .btn.btn-selected-clicked,
+      .datepickerrange a.btn-selected-clicked.filter-bar-item {
         background: #2a6687;
         border-color: transparent;
         color: #fff; }
-    .datepicker .btn.btn-info,
-    .datepickerrange .btn.btn-info {
+    .datepicker .btn.btn-info, .datepicker a.btn-info.filter-bar-item,
+    .datepickerrange .btn.btn-info,
+    .datepickerrange a.btn-info.filter-bar-item {
       background: #347ea6;
       border-color: transparent;
       color: #fff; }
-    .datepicker .btn.btn-grayed,
-    .datepickerrange .btn.btn-grayed {
+    .datepicker .btn.btn-grayed, .datepicker a.btn-grayed.filter-bar-item,
+    .datepickerrange .btn.btn-grayed,
+    .datepickerrange a.btn-grayed.filter-bar-item {
       background: #fff;
       border-color: transparent;
       color: #bbb; }
-      .datepicker .btn.btn-grayed:hover,
-      .datepickerrange .btn.btn-grayed:hover {
+      .datepicker .btn.btn-grayed:hover, .datepicker a.btn-grayed.filter-bar-item:hover,
+      .datepickerrange .btn.btn-grayed:hover,
+      .datepickerrange a.btn-grayed.filter-bar-item:hover {
         background: rgba(0, 0, 0, 0.07);
         border-color: transparent;
         color: #888; }
-      .datepicker .btn.btn-grayed-selected,
-      .datepickerrange .btn.btn-grayed-selected {
+      .datepicker .btn.btn-grayed-selected, .datepicker a.btn-grayed-selected.filter-bar-item,
+      .datepickerrange .btn.btn-grayed-selected,
+      .datepickerrange a.btn-grayed-selected.filter-bar-item {
         background: #888;
         border-color: transparent;
         color: #fff; }
-        .datepicker .btn.btn-grayed-selected-clicked,
-        .datepickerrange .btn.btn-grayed-selected-clicked {
+        .datepicker .btn.btn-grayed-selected-clicked, .datepicker a.btn-grayed-selected-clicked.filter-bar-item,
+        .datepickerrange .btn.btn-grayed-selected-clicked,
+        .datepickerrange a.btn-grayed-selected-clicked.filter-bar-item {
           background: #747474;
           border-color: transparent;
           color: #fff; }
@@ -4764,7 +4843,7 @@ html {
   position: fixed;
   top: 0;
   z-index: 19; }
-  .nav-top a.btn,
+  .nav-top a.btn, .nav-top a.filter-bar-item,
   .nav-top button,
   .nav-top input {
     border: none;
@@ -5867,4 +5946,3 @@ html {
 @media print {
   .hidden-print {
     display: none !important; } }
->>>>>>> development

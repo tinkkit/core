@@ -75,6 +75,7 @@ $gray-dark:             #333 !default;
 $gray:                  #888 !default;
 $gray-light:            #bbb !default;
 $gray-lighter:          #eaeaea !default;
+$gray-lightest:         #f7f7f7 !default;
 
 $brand:                 #347ea6 !default; // Digipolis dark blue - was #698ab2
 $brand-light:           #5fb1d6 !default; // Digipolis light blue - was #264a7a
@@ -86,7 +87,7 @@ $brand-danger:          #e60038 !default; // red
 
 // Settings for some of the most global styles.
 $body-bg:               $white !default;
-$body-bg-alt:           #f7f7f7 !default;
+$body-bg-alt:           $gray-lightest !default;
 $text-color:            $gray-dark !default;
 $link-color:            $brand-light !default;
 $link-hover-color:      darken($link-color, 10%) !default;
@@ -824,6 +825,20 @@ $breadcrumb-separator:          "\f054" !default;
 $breadcrumb-separator-color:    $gray-light !default;
 $breadcrumb-separator-padding:  8px !default;
 $breadcrumb-separator-size:     $breadcrumb-font-size * .6 !default;
+
+
+
+/**
+ * Filter bar
+ */
+$filter-bar-padding: $padding-base-vertical !default;
+$filter-bar-border-radius: $border-radius-base !default;
+$filter-bar-padding-horizontal: 6px !default;
+$filter-bar-item-margin: 0 ($filter-bar-padding-horizontal/2) $filter-bar-padding-horizontal 0 !default;
+$filter-bar-item-padding: $padding-base-vertical $padding-base-horizontal !default;
+
+$filter-bar-bgcolor: $gray-lightest !default;
+$filter-bar-border: $gray-light !default;
 
 
 
