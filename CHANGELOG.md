@@ -16,10 +16,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.x.x] - 2015-10-xx
+## [1.8.0] - 2015-10-30
 
 ### Added
-- Added a new filter bar component
+- Added buttons groups
+- Added a filter bar component
+- Added a timeline component
 - Added another possibility to always leave the sidenav open
 - Added button group
 
