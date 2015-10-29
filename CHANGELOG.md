@@ -23,9 +23,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added a filter bar component
 - Added a timeline component
 - Added another possibility to always leave the sidenav open
+- Added button group
 
 ### Changed
 - Changed the way z-indexes are handled
+- Cleaned up badges
 
 ### Fixed
 - Fixed an issue that broke the navbar in IE9 in some cases
