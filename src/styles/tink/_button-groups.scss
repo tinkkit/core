@@ -3,8 +3,7 @@
 // --------------------------------------------------
 
 // Make the div behave like a button
-.btn-group,
-.btn-group-vertical {
+.btn-group {
   position: relative;
   display: inline-block;
   vertical-align: middle; // match .btn alignment given font-size hack above
@@ -27,10 +26,10 @@
 
 // Prevent double borders when buttons are next to each other
 .btn-group {
-  .btn + .btn,
-  .btn + .btn-group,
-  .btn-group + .btn,
-  .btn-group + .btn-group {
+  .btn + .btn {
+  // .btn + .btn-group,
+  // .btn-group + .btn,
+  // .btn-group + .btn-group {
     margin-left: -1px;
   }
 }
@@ -56,13 +55,12 @@
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group > .btn:first-child {
   margin-left: 0;
-  &:not(:last-child):not(.dropdown-toggle) {
+  &:not(:last-child) {
     @include border-right-radius(0);
   }
 }
 // // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
-.btn-group > .btn:last-child:not(:first-child),
-.btn-group > .dropdown-toggle:not(:first-child) {
+.btn-group > .btn:last-child:not(:first-child) {
   @include border-left-radius(0);
 }
 
