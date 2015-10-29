@@ -3,18 +3,6 @@
  * --------------------------------------------------
  */
 
-/**
- * Variables
- */
-$timeline-padding: 20px;
-$timeline-border-radius: $border-radius-base;
-$timeline-line-color: $brand-light;
-$timeline-label-color: $white;
-$timeline-label-bgcolor: $brand-light;
-$timeline-card-offset: 24px;
-$timeline-date-color: $brand-light;
-$timeline-date-bgcolor: $white;
-$timeline-date-border: $brand-light;
 
 /**
  * The timeline
@@ -186,8 +174,17 @@ $timeline-date-border: $brand-light;
    */
   &-date {
     display: block;
-    margin: rem(-10 0 -10 10);
+    margin: rem(-10 0 -10 8);
     width: 100%;
+
+    @include mq($screen-sm, "max") {
+      & + .card-heading {
+        padding-top: rem(12);
+      }
+      & + .card-body {
+        padding-top: rem(20);
+      }
+    }
 
     @include mq($screen-sm) {
       margin: rem(0);
@@ -214,42 +211,42 @@ $timeline-date-border: $brand-light;
     }
   }
 
-  &.save-space {
-    .timeline-list {
-      > li {
-        @include mq($screen-sm) {
-          &:nth-child(odd) {
-            float: left;
+  // &.save-space {
+  //   .timeline-list {
+  //     > li {
+  //       @include mq($screen-sm) {
+  //         &:nth-child(odd) {
+  //           float: left;
 
-            .timeline-date {
-              margin: rem(-10 0 -10 -10);
+  //           .timeline-date {
+  //             margin: rem(-10 0 -10 -10);
 
-              time {
-                float: right;
-              }
-            }
-          }
+  //             time {
+  //               float: right;
+  //             }
+  //           }
+  //         }
 
-          &:nth-child(even) {
-            .timeline-date {
-              margin: rem(-10 0 -10 10);
+  //         &:nth-child(even) {
+  //           .timeline-date {
+  //             margin: rem(-10 0 -10 10);
 
-              time {
-                float: left;
-              }
-            }
-          }
-        }
-      }
-    }
+  //             time {
+  //               float: left;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
 
-    .timeline-date {
-      @include clearfix();
-      position: static;
+  //   .timeline-date {
+  //     @include clearfix();
+  //     position: static;
 
-      &:before {
-        content: none;
-      }
-    }
-  }
+  //     &:before {
+  //       content: none;
+  //     }
+  //   }
+  // }
 }
