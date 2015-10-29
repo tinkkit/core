@@ -849,3 +849,18 @@ $filter-bar-border: $gray-light !default;
 $loader-color: rgba($brand, .8) !default;
 $loader-color-alt: rgba($brand-light, .8) !default;
 $loader-border-width: 2px !default;
+
+
+
+/**
+ * Variables
+ */
+$timeline-padding: 20px !default;
+$timeline-border-radius: $border-radius-base !default;
+$timeline-line-color: $brand-light !default;
+$timeline-label-color: $white !default;
+$timeline-label-bgcolor: $brand-light !default;
+$timeline-card-offset: 24px !default;
+$timeline-date-color: $brand-light !default;
+$timeline-date-bgcolor: $white !default;
+$timeline-date-border: $brand-light !default;
