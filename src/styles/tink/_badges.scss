@@ -26,7 +26,7 @@
 
   }
 
-  .btn-large & {
+  .btn-lg & {
     margin-left: rem($badge-margin-lg-left);
 
   }
@@ -37,25 +37,22 @@
   }
 
   .btn-xs & {
+    line-height: $badge-sm-line-height;
     margin-left: rem($badge-margin-xs-left);
 
-  }
-
-  .btn-xs & {
-    line-height: $badge-sm-line-height;
   }
 
   // [converter] extracted a& to a.badge
 
   // Account for badges in navs
-  a.list-group-item.active > &,
-  .nav-pills > .active > a > & {
-    background-color: $badge-active-bg;
-    color: $badge-active-color;
-  }
-  .nav-pills > li > a > & {
-    margin-left: rem(3);
-  }
+  // a.list-group-item.active > &,
+  // .nav-pills > .active > a > & {
+  //   background-color: $badge-active-bg;
+  //   color: $badge-active-color;
+  // }
+  // .nav-pills > li > a > & {
+  //   margin-left: rem(3);
+  // }
 }
 
 // Hover state, but only for links
@@ -101,27 +98,27 @@ a.badge {
   @include badge-variant($badge-danger-color, $badge-danger-bg);
 }
 
-.btn,
-.btn-sm,
-.btn-xs {
-    .badge-primary {
-      @extend %badge;
-      @include badge-variant($badge-primary-bg, $badge-default-invert-bg);
-    }
-    .badge-success {
-      @extend %badge;
-      @include badge-variant($badge-success-bg, $badge-default-invert-bg);
-    }
-    .badge-info {
-      @extend %badge;
-      @include badge-variant($badge-info-bg, $badge-default-invert-bg);
-    }
-    .badge-warning {
-      @extend %badge;
-      @include badge-variant($badge-warning-bg, $badge-default-invert-bg);
-    }
-    .badge-danger {
-      @extend %badge;
-      @include badge-variant($badge-danger-bg, $badge-default-invert-bg);
-    }
-}
+// .btn,
+// .btn-sm,
+// .btn-xs {
+//     .badge-primary {
+//       @extend %badge;
+//       @include badge-variant($badge-primary-bg, $badge-default-invert-bg);
+//     }
+//     .badge-success {
+//       @extend %badge;
+//       @include badge-variant($badge-success-bg, $badge-default-invert-bg);
+//     }
+//     .badge-info {
+//       @extend %badge;
+//       @include badge-variant($badge-info-bg, $badge-default-invert-bg);
+//     }
+//     .badge-warning {
+//       @extend %badge;
+//       @include badge-variant($badge-warning-bg, $badge-default-invert-bg);
+//     }
+//     .badge-danger {
+//       @extend %badge;
+//       @include badge-variant($badge-danger-bg, $badge-default-invert-bg);
+//     }
+// }
