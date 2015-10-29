@@ -3235,19 +3235,19 @@ input[type="submit"],
     background-color: transparent;
     border-color: transparent; }
 
-.btn-lg {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > a.filter-bar-item {
   border-radius: 0.2857142857rem ;
   font-size: 1.2857142857rem ;
   line-height: 1.33;
   padding: 0.7142857143rem 1.1428571429rem ; }
 
-.btn-sm {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > a.filter-bar-item {
   border-radius: 0.1428571429rem ;
   font-size: 0.8571428571rem ;
   line-height: 1.428571429;
   padding: 0.3571428571rem 0.7142857143rem ; }
 
-.btn-xs {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > a.filter-bar-item {
   border-radius: 0.1428571429rem ;
   font-size: 0.8571428571rem ;
   line-height: 1.428571429;
@@ -3359,6 +3359,34 @@ input[type="submit"],
 .arrow-left-bottom:before, .arrow-left-bottom:after, .arrow-left-top:before, .arrow-left-top:after {
   top: auto; }
 
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+  .btn-group > .btn, .btn-group > a.filter-bar-item {
+    position: relative;
+    float: left; }
+    .btn-group > .btn:hover, .btn-group > a.filter-bar-item:hover, .btn-group > .btn:focus, .btn-group > a.filter-bar-item:focus, .btn-group > .btn:active, .btn-group > a.filter-bar-item:active, .btn-group > .btn.active, .btn-group > a.active.filter-bar-item {
+      z-index: 2; }
+    .btn-group > .btn:focus, .btn-group > a.filter-bar-item:focus {
+      outline: 0; }
+
+.btn-group .btn + .btn, .btn-group a.filter-bar-item + .btn, .btn-group .btn + a.filter-bar-item, .btn-group a.filter-bar-item + a.filter-bar-item {
+  margin-left: -1px; }
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > a.filter-bar-item:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0; }
+
+.btn-group > .btn:first-child, .btn-group > a.filter-bar-item:first-child {
+  margin-left: 0; }
+  .btn-group > .btn:first-child:not(:last-child), .btn-group > a.filter-bar-item:first-child:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+
+.btn-group > .btn:last-child:not(:first-child), .btn-group > a.filter-bar-item:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
+
 /**
  * Cards
  * --------------------------------------------------
@@ -3464,17 +3492,7 @@ input[type="submit"],
  * Badges
  * --------------------------------------------------
  */
-.badge, .badge-primary, .badge-success, .badge-info, .badge-warning, .badge-danger, .btn .badge-primary, a.filter-bar-item .badge-primary,
-.btn-sm .badge-primary,
-.btn-xs .badge-primary, .btn .badge-success, a.filter-bar-item .badge-success,
-.btn-sm .badge-success,
-.btn-xs .badge-success, .btn .badge-info, a.filter-bar-item .badge-info,
-.btn-sm .badge-info,
-.btn-xs .badge-info, .btn .badge-warning, a.filter-bar-item .badge-warning,
-.btn-sm .badge-warning,
-.btn-xs .badge-warning, .btn .badge-danger, a.filter-bar-item .badge-danger,
-.btn-sm .badge-danger,
-.btn-xs .badge-danger {
+.badge, .badge-primary, .badge-success, .badge-info, .badge-warning, .badge-danger {
   border-radius: 0.2142857143rem ;
   font-size: 0.7857142857rem ;
   line-height: 1.4;
@@ -3491,90 +3509,13 @@ input[type="submit"],
     display: none; }
   .btn .badge, a.filter-bar-item .badge, .btn .badge-primary, a.filter-bar-item .badge-primary, .btn .badge-success, a.filter-bar-item .badge-success, .btn .badge-info, a.filter-bar-item .badge-info, .btn .badge-warning, a.filter-bar-item .badge-warning, .btn .badge-danger, a.filter-bar-item .badge-danger {
     margin-left: 0.8571428571rem ; }
-  .btn-large .badge, .btn-large .badge-primary, .btn-large .badge-success, .btn-large .badge-info, .btn-large .badge-warning, .btn-large .badge-danger {
+  .btn-lg .badge, .btn-group-lg > .btn .badge, .btn-group-lg > a.filter-bar-item .badge, .btn-lg .badge-primary, .btn-group-lg > .btn .badge-primary, .btn-group-lg > a.filter-bar-item .badge-primary, .btn-lg .badge-success, .btn-group-lg > .btn .badge-success, .btn-group-lg > a.filter-bar-item .badge-success, .btn-lg .badge-info, .btn-group-lg > .btn .badge-info, .btn-group-lg > a.filter-bar-item .badge-info, .btn-lg .badge-warning, .btn-group-lg > .btn .badge-warning, .btn-group-lg > a.filter-bar-item .badge-warning, .btn-lg .badge-danger, .btn-group-lg > .btn .badge-danger, .btn-group-lg > a.filter-bar-item .badge-danger {
     margin-left: 1.1428571429rem ; }
-  .btn-sm .badge,
-  .btn-sm .badge-primary,
-  .btn-sm .badge-success,
-  .btn-sm .badge-info,
-  .btn-sm .badge-warning,
-  .btn-sm .badge-danger {
+  .btn-sm .badge, .btn-group-sm > .btn .badge, .btn-group-sm > a.filter-bar-item .badge, .btn-sm .badge-primary, .btn-group-sm > .btn .badge-primary, .btn-group-sm > a.filter-bar-item .badge-primary, .btn-sm .badge-success, .btn-group-sm > .btn .badge-success, .btn-group-sm > a.filter-bar-item .badge-success, .btn-sm .badge-info, .btn-group-sm > .btn .badge-info, .btn-group-sm > a.filter-bar-item .badge-info, .btn-sm .badge-warning, .btn-group-sm > .btn .badge-warning, .btn-group-sm > a.filter-bar-item .badge-warning, .btn-sm .badge-danger, .btn-group-sm > .btn .badge-danger, .btn-group-sm > a.filter-bar-item .badge-danger {
     margin-left: 0.7142857143rem ; }
-  .btn-xs .badge,
-  .btn-xs .badge-primary,
-  .btn-xs .badge-success,
-  .btn-xs .badge-info,
-  .btn-xs .badge-warning,
-  .btn-xs .badge-danger {
+  .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > a.filter-bar-item .badge, .btn-xs .badge-primary, .btn-group-xs > .btn .badge-primary, .btn-group-xs > a.filter-bar-item .badge-primary, .btn-xs .badge-success, .btn-group-xs > .btn .badge-success, .btn-group-xs > a.filter-bar-item .badge-success, .btn-xs .badge-info, .btn-group-xs > .btn .badge-info, .btn-group-xs > a.filter-bar-item .badge-info, .btn-xs .badge-warning, .btn-group-xs > .btn .badge-warning, .btn-group-xs > a.filter-bar-item .badge-warning, .btn-xs .badge-danger, .btn-group-xs > .btn .badge-danger, .btn-group-xs > a.filter-bar-item .badge-danger {
+    line-height: 1.2;
     margin-left: 0.3571428571rem ; }
-  .btn-xs .badge,
-  .btn-xs .badge-primary,
-  .btn-xs .badge-success,
-  .btn-xs .badge-info,
-  .btn-xs .badge-warning,
-  .btn-xs .badge-danger {
-    line-height: 1.2; }
-  a.list-group-item.active > .badge, a.list-group-item.active > .badge-primary, a.list-group-item.active > .badge-success, a.list-group-item.active > .badge-info, a.list-group-item.active > .badge-warning, a.list-group-item.active > .badge-danger, .btn a.list-group-item.active > .badge-primary, a.filter-bar-item a.list-group-item.active > .badge-primary,
-  .btn-sm a.list-group-item.active > .badge-primary,
-  .btn-xs a.list-group-item.active > .badge-primary, .btn a.list-group-item.active > .badge-success, a.filter-bar-item a.list-group-item.active > .badge-success,
-  .btn-sm a.list-group-item.active > .badge-success,
-  .btn-xs a.list-group-item.active > .badge-success, .btn a.list-group-item.active > .badge-info, a.filter-bar-item a.list-group-item.active > .badge-info,
-  .btn-sm a.list-group-item.active > .badge-info,
-  .btn-xs a.list-group-item.active > .badge-info, .btn a.list-group-item.active > .badge-warning, a.filter-bar-item a.list-group-item.active > .badge-warning,
-  .btn-sm a.list-group-item.active > .badge-warning,
-  .btn-xs a.list-group-item.active > .badge-warning, .btn a.list-group-item.active > .badge-danger, a.filter-bar-item a.list-group-item.active > .badge-danger,
-  .btn-sm a.list-group-item.active > .badge-danger,
-  .btn-xs a.list-group-item.active > .badge-danger,
-  .nav-pills > .active > a > .badge,
-  .nav-pills > .active > a > .badge-primary,
-  .nav-pills > .active > a > .badge-success,
-  .nav-pills > .active > a > .badge-info,
-  .nav-pills > .active > a > .badge-warning,
-  .nav-pills > .active > a > .badge-danger, .btn
-  .nav-pills > .active > a > .badge-primary, a.filter-bar-item
-  .nav-pills > .active > a > .badge-primary,
-  .btn-sm
-  .nav-pills > .active > a > .badge-primary,
-  .btn-xs
-  .nav-pills > .active > a > .badge-primary, .btn
-  .nav-pills > .active > a > .badge-success, a.filter-bar-item
-  .nav-pills > .active > a > .badge-success,
-  .btn-sm
-  .nav-pills > .active > a > .badge-success,
-  .btn-xs
-  .nav-pills > .active > a > .badge-success, .btn
-  .nav-pills > .active > a > .badge-info, a.filter-bar-item
-  .nav-pills > .active > a > .badge-info,
-  .btn-sm
-  .nav-pills > .active > a > .badge-info,
-  .btn-xs
-  .nav-pills > .active > a > .badge-info, .btn
-  .nav-pills > .active > a > .badge-warning, a.filter-bar-item
-  .nav-pills > .active > a > .badge-warning,
-  .btn-sm
-  .nav-pills > .active > a > .badge-warning,
-  .btn-xs
-  .nav-pills > .active > a > .badge-warning, .btn
-  .nav-pills > .active > a > .badge-danger, a.filter-bar-item
-  .nav-pills > .active > a > .badge-danger,
-  .btn-sm
-  .nav-pills > .active > a > .badge-danger,
-  .btn-xs
-  .nav-pills > .active > a > .badge-danger {
-    background-color: #fff;
-    color: #5fb1d6; }
-  .nav-pills > li > a > .badge, .nav-pills > li > a > .badge-primary, .nav-pills > li > a > .badge-success, .nav-pills > li > a > .badge-info, .nav-pills > li > a > .badge-warning, .nav-pills > li > a > .badge-danger, .btn .nav-pills > li > a > .badge-primary, a.filter-bar-item .nav-pills > li > a > .badge-primary,
-  .btn-sm .nav-pills > li > a > .badge-primary,
-  .btn-xs .nav-pills > li > a > .badge-primary, .btn .nav-pills > li > a > .badge-success, a.filter-bar-item .nav-pills > li > a > .badge-success,
-  .btn-sm .nav-pills > li > a > .badge-success,
-  .btn-xs .nav-pills > li > a > .badge-success, .btn .nav-pills > li > a > .badge-info, a.filter-bar-item .nav-pills > li > a > .badge-info,
-  .btn-sm .nav-pills > li > a > .badge-info,
-  .btn-xs .nav-pills > li > a > .badge-info, .btn .nav-pills > li > a > .badge-warning, a.filter-bar-item .nav-pills > li > a > .badge-warning,
-  .btn-sm .nav-pills > li > a > .badge-warning,
-  .btn-xs .nav-pills > li > a > .badge-warning, .btn .nav-pills > li > a > .badge-danger, a.filter-bar-item .nav-pills > li > a > .badge-danger,
-  .btn-sm .nav-pills > li > a > .badge-danger,
-  .btn-xs .nav-pills > li > a > .badge-danger {
-    margin-left: 0.2142857143rem ; }
 
 a.badge:hover, a.badge:focus {
   color: #fff;
@@ -3604,36 +3545,6 @@ a.badge:hover, a.badge:focus {
 .badge-danger {
   background-color: #e60038;
   color: #fff; }
-
-.btn .badge-primary, a.filter-bar-item .badge-primary,
-.btn-sm .badge-primary,
-.btn-xs .badge-primary {
-  background-color: #fff;
-  color: #347ea6; }
-
-.btn .badge-success, a.filter-bar-item .badge-success,
-.btn-sm .badge-success,
-.btn-xs .badge-success {
-  background-color: #fff;
-  color: #4a921f; }
-
-.btn .badge-info, a.filter-bar-item .badge-info,
-.btn-sm .badge-info,
-.btn-xs .badge-info {
-  background-color: #fff;
-  color: #76b9f4; }
-
-.btn .badge-warning, a.filter-bar-item .badge-warning,
-.btn-sm .badge-warning,
-.btn-xs .badge-warning {
-  background-color: #fff;
-  color: #ff8d00; }
-
-.btn .badge-danger, a.filter-bar-item .badge-danger,
-.btn-sm .badge-danger,
-.btn-xs .badge-danger {
-  background-color: #fff;
-  color: #e60038; }
 
 /**
  * Navs
@@ -5461,7 +5372,7 @@ html {
     padding-left: 0;
     text-align: left; }
     .popover-list-buttons li {
-      margin-bottom: 0.1428571429rem ; }
+      margin-bottom: 0.3571428571rem ; }
       .popover-list-buttons li:last-child {
         margin-bottom: 0; }
       .popover-list-buttons li a {
