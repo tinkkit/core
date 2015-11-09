@@ -3704,12 +3704,10 @@ a.filter-bar-link-external {
   .table-sort-pagination .prev:before {
     content: '\f104  ';
     font-family: 'FontAwesome';
-    font-size: 0.85714rem ;
     line-height: 0.10204rem ; }
   .table-sort-pagination .next:after {
     content: ' \f105';
     font-family: 'FontAwesome';
-    font-size: 0.85714rem ;
     line-height: 0.10204rem ; }
 
 /**
