@@ -3703,7 +3703,7 @@ a.filter-bar-link-external {
     cursor: default; }
   .table-sort-pagination .prev:before, .table-sort-pagination .next:after {
     font-family: 'FontAwesome';
-    line-height: 0.10204rem ; }
+    line-height: 1; }
   .table-sort-pagination .prev:before {
     content: '\f104  '; }
   .table-sort-pagination .next:after {

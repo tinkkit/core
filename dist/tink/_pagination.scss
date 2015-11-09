@@ -70,7 +70,7 @@
   .prev:before,
   .next:after {
     font-family: 'FontAwesome';
-    line-height: rem($line-height-base);
+    line-height: 1;
   }
 
   .prev {
