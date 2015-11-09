@@ -66,20 +66,22 @@
       cursor: default;
     }
   }
+
+  .prev:before,
+  .next:after {
+    font-family: 'FontAwesome';
+    line-height: rem($line-height-base);
+  }
+
   .prev {
     &:before {
       content: '\f104  ';
-      font-family: 'FontAwesome';
-      line-height: rem($line-height-base);
     }
   }
 
   .next {
     &:after {
       content: ' \f105';
-      font-family: 'FontAwesome';
-      line-height: rem($line-height-base);
-
     }
   }
 }

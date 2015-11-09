@@ -3701,14 +3701,13 @@ a.filter-bar-link-external {
     border-color: #347ea6;
     color: #fff;
     cursor: default; }
+  .table-sort-pagination .prev:before, .table-sort-pagination .next:after {
+    font-family: 'FontAwesome';
+    line-height: 0.10204rem ; }
   .table-sort-pagination .prev:before {
-    content: '\f104  ';
-    font-family: 'FontAwesome';
-    line-height: 0.10204rem ; }
+    content: '\f104  '; }
   .table-sort-pagination .next:after {
-    content: ' \f105';
-    font-family: 'FontAwesome';
-    line-height: 0.10204rem ; }
+    content: ' \f105'; }
 
 /**
  * Table interactive
