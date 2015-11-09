@@ -183,3 +183,39 @@
     }
   }
 }
+
+
+
+/**
+ * New pagination
+ * --------------------------------------------------
+ */
+.table-sort-paginatie {
+  .btn {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $pagination-link-hover-color;
+      background-color: $pagination-link-hover-bg;
+    }
+
+    &.active {
+      background-color: $pagination-link-active-bg;
+      color: $pagination-link-active-color;
+      cursor: default;
+    }
+  }
+  .vorige {
+    &:before {
+      content: ' \f104';
+      font-family: 'FontAwesome';
+    }
+  }
+
+  .volgende {
+    &:after {
+      content: ' \f105';
+      font-family: 'FontAwesome';
+    }
+  }
+}
