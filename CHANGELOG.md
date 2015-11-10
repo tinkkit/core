@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.8.x] - 2015-xx-xx
+
+### Changed
+- Changed the look of tabs
+
+
+
 ## [1.8.0] - 2015-10-30
 
 ### Added
