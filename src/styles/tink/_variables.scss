@@ -538,7 +538,7 @@ $nav-link-bgcolor:                          transparent !default;
 $nav-link-hover-color:                      $link-hover-color !default;
 $nav-link-hover-bgcolor:                    rgba(0, 0, 0, .05) !default;
 $nav-link-active-color:                     $gray-dark !default;
-$nav-link-active-bgcolor:                   transparent !default;
+$nav-link-active-bgcolor:                   $white !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
@@ -548,7 +548,6 @@ $nav-lg-link-padding:                       ($padding-base-vertical * 2) ($paddi
 /**
  * Tabs
  */
-$nav-tabs-active-color:                     $white !default;
 $nav-tabs-border-color:                     $gray-light !default;
 
 

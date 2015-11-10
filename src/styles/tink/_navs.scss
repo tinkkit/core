@@ -86,10 +86,6 @@
   > li {
     float: left;
 
-    &.active {
-      background-color: $nav-tabs-active-color;
-    }
-
     > a {
       line-height: $line-height-base;
     }
