@@ -79,7 +79,6 @@
 
 .nav-tabs {
   @extend %nav;
-  background-color: $nav-tab-bgcolor;
   border-bottom: 1px solid $nav-tabs-border-color;
   border-top: 1px solid $nav-tabs-border-color;
   margin: rem(20 0);
@@ -88,7 +87,7 @@
     float: left;
 
     &.active {
-      background-color: $white;
+      background-color: $nav-tabs-active-color;
     }
 
     > a {

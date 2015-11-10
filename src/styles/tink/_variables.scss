@@ -529,7 +529,7 @@ $hit-area-checked-bgcolor       : $brand !default;
 /**
  * Navs
  */
-$nav-bgcolor:                               transparent !default;
+$nav-bgcolor:                               rgba(0, 0, 0, .05) !default;
 
 $nav-link-padding:                          $padding-base-vertical $padding-base-horizontal !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
@@ -543,12 +543,12 @@ $nav-link-active-bgcolor:                   transparent !default;
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
 
-$nav-tab-bgcolor:                            rgba(0, 0, 0, .05) !default;
 $nav-lg-link-padding:                       ($padding-base-vertical * 2) ($padding-base-horizontal * 1.25) !default;
 
 /**
  * Tabs
  */
+$nav-tabs-active-color:                     $white !default;
 $nav-tabs-border-color:                     $gray-light !default;
 
 
