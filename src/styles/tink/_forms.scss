@@ -437,13 +437,12 @@ output {
 }
 
 .form-horizontal {
-  @include mq($screen-sm) {
-    label {
-      margin-top: rem(7);
-    }
+  label {
+    margin-top: 1px;
+    //margin-top: rem(7); //renders better in webkit
+    padding-top: rem(6);
   }
 }
-
 
 
 /**
