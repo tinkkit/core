@@ -437,10 +437,14 @@ output {
 }
 
 .form-horizontal {
-  label {
-    margin-top: 1px;
-    //margin-top: rem(7); //renders better in webkit
-    padding-top: rem(6);
+  [class|="col-sm"]:not([class|="col-sm-12"]){
+    @include mq($screen-sm) {
+      label {
+        margin-top: 1px;
+        //margin-top: rem(7); //renders better in webkit
+        padding-top: rem(6);
+      }
+    }
   }
 }
 
