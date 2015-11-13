@@ -437,7 +437,7 @@ output {
 }
 
 .form-horizontal {
-  @include mq($screen-md) {
+  @include mq($screen-sm) {
     label {
       margin-top: rem(7);
     }
@@ -624,10 +624,12 @@ output {
   @include mq($screen-sm) {
     .checkbox,
     .faux-input,
-    .select,
     .radio,
+    .select,
     .form-group,
     input,
+    label,
+    select,
     textarea {
       display: inline-block;
       width: auto;
