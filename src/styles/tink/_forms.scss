@@ -616,14 +616,11 @@ output {
 }
 
 
-
-// NEW Inline forms
-//
 // Make forms appear inline(-block) by adding the `.form-inline` class. Inline
 // forms begin stacked on extra small (mobile) devices and then go inline when
 // viewports reach <768px.
 
-.form-force-inline {
+@mixin set-inline-block() {
   .checkbox,
   .faux-input,
   .radio,
@@ -638,19 +635,13 @@ output {
   }
 }
 
+.form-force-inline {
+  @include set-inline-block();
+}
+
 .form-inline {
   @include mq($screen-sm) {
-    .checkbox,
-    .faux-input,
-    .radio,
-    .select,
-    .form-group,
-    input,
-    label,
-    select,
-    textarea {
-      display: inline-block;
-      width: auto;
-    }
+    @include set-inline-block();
   }
 }
+
