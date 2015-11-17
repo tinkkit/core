@@ -456,6 +456,9 @@ $datepicker-btn-hover-color:                          $brand !default;
 $datepicker-btn-hover-bg-color:                       rgba($black, .07) !default;
 $datepicker-btn-hover-border-color:                   $datepicker-btn-border-color !default;
 
+$datepicker-padding:                                  12px !default;
+$datepicker-btn-padding:                              2px !default;
+
 $datepicker-btn-selected-color:                       $white !default;
 $datepicker-btn-selected-bg-color:                    $brand !default;
 $datepicker-btn-selected-border-color:                $datepicker-btn-border-color !default;
@@ -485,6 +488,12 @@ $datepicker-btn-today-border-color:                   lighten($datepicker-btn-to
 $datepicker-btn-today-hover-color:                    darken($datepicker-btn-today-color, 8%) !default;
 $datepicker-btn-today-hover-bg-color:                 darken($datepicker-btn-today-bg-color, 8%) !default;
 $datepicker-btn-today-hover-border-color:             $datepicker-btn-today-border-color !default;
+
+
+$datepicker-days-bg-color:                            $gray-lightest !default;
+$datepicker-days-padding-vertical:                    4px !default;
+
+$datepicker-nav-padding:                              10px !default;
 
 
 
