@@ -620,7 +620,7 @@ output {
 // forms begin stacked on extra small (mobile) devices and then go inline when
 // viewports reach <768px.
 
-@mixin set-inline-block() {
+@mixin form-inline() {
   .checkbox,
   .faux-input,
   .radio,
@@ -636,12 +636,12 @@ output {
 }
 
 .form-force-inline {
-  @include set-inline-block();
+  @include form-inline();
 }
 
 .form-inline {
   @include mq($screen-sm) {
-    @include set-inline-block();
+    @include form-inline();
   }
 }
 
