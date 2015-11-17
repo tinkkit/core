@@ -18,6 +18,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.8.x] - 2015-xx-xx
 
+### Added
+- Added form inline styling
+
 ### Changed
 - Changed the look of tabs
 

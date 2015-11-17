@@ -437,13 +437,16 @@ output {
 }
 
 .form-horizontal {
-  @include mq($screen-md) {
-    label {
-      margin-top: rem(7);
+  [class*="col-sm"]:not([class*="col-sm-12"]) {
+    @include mq($screen-sm) {
+      label {
+        margin-top: 1px;
+        //margin-top: rem(7); //renders better in webkit
+        padding-top: rem(6);
+      }
     }
   }
 }
-
 
 
 /**
@@ -572,23 +575,23 @@ output {
  * TH
 */
 
-.input-inline {
-  float: left;
-  width: auto;
-}
+// .input-inline {
+//   float: left;
+//   width: auto;
+// }
 
-.select-box-inline {
-  display: inline-block;
-  margin-left: rem(8);
+// .select-box-inline {
+//   display: inline-block;
+//   margin-left: rem(8);
 
-  select {
-    padding-right: $padding-base-horizontal * 2;
-  }
-}
-.checkbox-inline {
-  display: inline-block;
-  margin-left: rem(8);
-}
+//   select {
+//     padding-right: $padding-base-horizontal * 2;
+//   }
+// }
+// .checkbox-inline {
+//   display: inline-block;
+//   margin-left: rem(8);
+// }
 
 .btn.search-submit {
   background: none;
@@ -611,3 +614,34 @@ output {
     height: rem($input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   }
 }
+
+
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+
+@mixin set-inline-block() {
+  .checkbox,
+  .faux-input,
+  .radio,
+  .select,
+  .form-group,
+  input,
+  label,
+  select,
+  textarea {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.form-force-inline {
+  @include set-inline-block();
+}
+
+.form-inline {
+  @include mq($screen-sm) {
+    @include set-inline-block();
+  }
+}
+
