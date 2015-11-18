@@ -23,7 +23,8 @@
    'tink.interactivetable',
    'tink.sorttable',
    'tink.modal',
-   'tink.datepicker'
+   'tink.datepicker',
+   'tink.rangedatepicker'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider
