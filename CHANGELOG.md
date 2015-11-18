@@ -16,13 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.8.x] - 2015-xx-xx
+## [1.9.0] - 2015-11-18
 
 ### Added
-- Added form inline styling
+- Added horizontal form styling
 
 ### Changed
 - Changed the look of tabs
+- Refactored inline form styling
+- Refactored pagination
+- Updated the datepicker looks
 
 
 

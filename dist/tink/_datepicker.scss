@@ -75,7 +75,7 @@
     border: 1px solid $datepicker-btn-border-color;
     color: $datepicker-btn-color;
     min-width: 20px;
-    padding: rem($padding-base-vertical 0);
+    padding: rem($datepicker-btn-padding);
     width: 100%;
 
     @include mq($screen-md) {
@@ -172,7 +172,8 @@
 }
 
 .datepicker {
-  padding: 1.5%;
+  // padding: 1.5%;
+  padding: rem($datepicker-padding);
   position: absolute;
   width: rem(260); // removed min-width
 
@@ -196,12 +197,15 @@
 }
 
 .datepicker-days th {
-  padding-bottom: rem(10);
+  border-bottom: rem($datepicker-days-padding-vertical) solid $datepicker-bg-color;
+  padding: rem($datepicker-days-padding-vertical 0);
+  background-color: $datepicker-days-bg-color;
 }
 
 .datepickerrange-header-left,
 .datepickerrange-header-right {
-  line-height: rem(30);
+  // line-height: rem(30);
+  line-height: rem(24); // adjusted line-height to center the labels
   overflow: hidden;
   padding: rem($table-cell-padding / 4);
 }
@@ -214,5 +218,19 @@
   @include mq($screen-xs) {
     padding: 1.5% 2.5%;
     width: 50%;
+  }
+}
+
+.datepicker-nav {
+  border-bottom: rem($datepicker-nav-padding) solid $datepicker-bg-color;
+}
+
+.selects-current-date {
+  border-top: rem($datepicker-nav-padding) solid $datepicker-bg-color;
+  > tr {
+    text-align: center;
+    button {
+      padding: rem($datepicker-btn-padding 8);
+    }
   }
 }
