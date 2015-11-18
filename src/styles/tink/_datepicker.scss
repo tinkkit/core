@@ -204,7 +204,8 @@
 
 .datepickerrange-header-left,
 .datepickerrange-header-right {
-  line-height: rem(30);
+  // line-height: rem(30);
+  line-height: rem(24); // adjusted line-height to center the labels
   overflow: hidden;
   padding: rem($table-cell-padding / 4);
 }

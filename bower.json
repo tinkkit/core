@@ -27,7 +27,9 @@
     "tink-interactive-table-angular": "latest",
     "tink-accordion-angular": "latest",
     "tink-modal-angular": "latest",
-    "tink-datepicker-angular": "latest"
+    "tink-datepicker-angular": "latest",
+    "tink-range-datepicker-angular": "latest"
+
   },
   "authors": [
     "Jasper Van Proeyen",
