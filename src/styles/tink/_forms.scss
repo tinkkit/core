@@ -136,9 +136,7 @@ input[type="week"],
 input[type="month"],
 input[type="number"],
 input[type="time"] {
-
   &:not(.hide-styling) {
-
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       border-left: 1px solid $input-border;
@@ -172,9 +170,7 @@ input[type="time"] {
   }
 
   &:focus {
-
     &:not(.hide-styling) {
-
       &::-webkit-inner-spin-button {
         border-left: 1px solid $input-border-focus;
 
@@ -186,6 +182,13 @@ input[type="time"] {
           border-color: $input-border-focus transparent transparent;
         }
       }
+    }
+  }
+
+  // Completely hide the spin button
+  &.hide-spin-button {
+    &::-webkit-inner-spin-button {
+      display: none;
     }
   }
 }

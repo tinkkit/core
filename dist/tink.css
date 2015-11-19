@@ -2470,6 +2470,14 @@ input[type="time"]:focus:not(.hide-styling)::-webkit-inner-spin-button {
   input[type="time"]:focus:not(.hide-styling)::-webkit-inner-spin-button:after {
     border-color: #5fb1d6 transparent transparent; }
 
+input[type="date"].hide-spin-button::-webkit-inner-spin-button,
+input[type="datetime-local"].hide-spin-button::-webkit-inner-spin-button,
+input[type="week"].hide-spin-button::-webkit-inner-spin-button,
+input[type="month"].hide-spin-button::-webkit-inner-spin-button,
+input[type="number"].hide-spin-button::-webkit-inner-spin-button,
+input[type="time"].hide-spin-button::-webkit-inner-spin-button {
+  display: none; }
+
 input[type="checkbox"],
 input[type="radio"] {
   opacity: 0;
@@ -2644,10 +2652,54 @@ output {
 .form-group {
   margin-bottom: 1.0714285714rem ; }
 
+.form-horizontal [class*="col-"] > label {
+  margin-top: 1px;
+  padding-top: 0.4285714286rem ; }
+
+@media (min-width: 480px) {
+  .form-horizontal [class*="col-xs-12"] > label {
+    margin-top: 0;
+    padding-top: 0; } }
+
 @media (min-width: 768px) {
-  .form-horizontal [class*="col-sm"]:not([class*="col-sm-12"]) label {
-    margin-top: 1px;
-    padding-top: 0.4285714286rem ; } }
+  .form-horizontal [class*="col-sm-12"] > label {
+    margin-top: 0;
+    padding-top: 0; } }
+
+@media (min-width: 992px) {
+  .form-horizontal [class*="col-md-12"] > label {
+    margin-top: 0;
+    padding-top: 0; } }
+
+@media (min-width: 1200px) {
+  .form-horizontal [class*="col-lg-12"] > label {
+    margin-top: 0;
+    padding-top: 0; } }
+
+.form-force-inline .checkbox,
+.form-force-inline .faux-input,
+.form-force-inline .radio,
+.form-force-inline .select,
+.form-force-inline .form-group,
+.form-force-inline input,
+.form-force-inline label,
+.form-force-inline select,
+.form-force-inline textarea {
+  display: inline-block;
+  width: auto; }
+
+@media (min-width: 768px) {
+  .form-inline .checkbox,
+  .form-inline .faux-input,
+  .form-inline .radio,
+  .form-inline .select,
+  .form-inline .form-group,
+  .form-inline input,
+  .form-inline label,
+  .form-inline select,
+  .form-inline textarea {
+    display: inline-block;
+    width: auto; } }
 
 /**
  * Feedback states
@@ -2805,31 +2857,6 @@ output {
 .faux-input .placeholder {
   color: #bbb;
   height: 2.4285714286rem ; }
-
-.form-force-inline .checkbox,
-.form-force-inline .faux-input,
-.form-force-inline .radio,
-.form-force-inline .select,
-.form-force-inline .form-group,
-.form-force-inline input,
-.form-force-inline label,
-.form-force-inline select,
-.form-force-inline textarea {
-  display: inline-block;
-  width: auto; }
-
-@media (min-width: 768px) {
-  .form-inline .checkbox,
-  .form-inline .faux-input,
-  .form-inline .radio,
-  .form-inline .select,
-  .form-inline .form-group,
-  .form-inline input,
-  .form-inline label,
-  .form-inline select,
-  .form-inline textarea {
-    display: inline-block;
-    width: auto; } }
 
 /**
  * Buttons

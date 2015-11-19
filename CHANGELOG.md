@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.9.1] - 2015-11-19
+
+### Added
+- Added the possibility to hide the spin button in numeric input fields
+
+### Fixed
+- Fixed a bug that made an inline form practically unusable
+
+
+
 ## [1.9.0] - 2015-11-18
 
 ### Added
