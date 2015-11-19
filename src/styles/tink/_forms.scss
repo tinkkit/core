@@ -437,16 +437,81 @@ output {
 }
 
 .form-horizontal {
-  [class*="col-sm"]:not([class*="col-sm-12"]) {
+
+  [class*="col-"] {
+    > label {
+      margin-top: 1px;
+      padding-top: rem(6);
+    }
+  }
+
+  [class*="col-xs-12"] {
+    @include mq($screen-xs) {
+      > label {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  [class*="col-sm-12"] {
     @include mq($screen-sm) {
-      label {
-        margin-top: 1px;
-        //margin-top: rem(7); //renders better in webkit
-        padding-top: rem(6);
+      > label {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  [class*="col-md-12"] {
+    @include mq($screen-md) {
+      > label {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  [class*="col-lg-12"] {
+    @include mq($screen-lg) {
+      > label {
+        margin-top: 0;
+        padding-top: 0;
       }
     }
   }
 }
+
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+
+@mixin form-inline() {
+  .checkbox,
+  .faux-input,
+  .radio,
+  .select,
+  .form-group,
+  input,
+  label,
+  select,
+  textarea {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.form-force-inline {
+  @include form-inline();
+}
+
+.form-inline {
+  @include mq($screen-sm) {
+    @include form-inline();
+  }
+}
+
+
 
 
 /**
@@ -612,36 +677,6 @@ output {
   .placeholder {
     color: $input-color-placeholder;
     height: rem($input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  }
-}
-
-
-// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
-// forms begin stacked on extra small (mobile) devices and then go inline when
-// viewports reach <768px.
-
-@mixin form-inline() {
-  .checkbox,
-  .faux-input,
-  .radio,
-  .select,
-  .form-group,
-  input,
-  label,
-  select,
-  textarea {
-    display: inline-block;
-    width: auto;
-  }
-}
-
-.form-force-inline {
-  @include form-inline();
-}
-
-.form-inline {
-  @include mq($screen-sm) {
-    @include form-inline();
   }
 }
 
