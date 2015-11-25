@@ -5,7 +5,8 @@
   border: 1px solid $table-border-color;
   margin-bottom: rem(($line-height-computed * 0.75));
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  // -ms-overflow-style: -ms-autohiding-scrollbar; // See http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that and _responsive-utilities.scss
+  -ms-overflow-style: scrollbar;
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;

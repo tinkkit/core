@@ -1,6 +1,6 @@
 # Tink core
 
-v1.9.1
+v1.9.2
 
 ## What is this repository for?
 

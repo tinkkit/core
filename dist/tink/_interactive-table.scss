@@ -177,7 +177,7 @@
       label {
         display: block;
 
-        span {
+        > span {
           display: block;
           margin: rem(-2 -4 0 -6);
           padding: rem(2 6 2 6);
@@ -188,7 +188,7 @@
     .is-draggable {
       &:hover {
         label {
-          span {
+          > span {
             cursor: grab;
           }
         }
@@ -202,7 +202,7 @@
 
       &:active {
         label {
-          span {
+          > span {
             cursor: grabbing;
           }
         }
