@@ -12,9 +12,9 @@
   padding: rem($timeline-padding);
   position: relative;
 
-  @include mq($screen-sm) {
-    text-align: center;
-  }
+  // @include mq($screen-sm) {
+  //   text-align: center;
+  // }
 
   /**
    * The starting dot
@@ -25,20 +25,21 @@
     content: '';
     display: block;
     height: rem(6);
-    left: $timeline-padding;
-    margin-left: rem(-2.5); // On non-retina screens, the dot doesn't have a correct position and needs this hack
+    left: rem($timeline-padding);
+    // margin-left: rem(-2.5); // On non-retina screens, the dot doesn't have a correct position and needs this hack
+    margin-left: rem(-2); // On Ibtissam's Google Chrome this appeared to be fixed
     position: absolute;
     top: rem(-3);
     width: rem(6);
 
     @include mq($screen-sm) {
-      left: calc(50% - 1px);
+      left: rem($timeline-offset - 1px);
     }
 
     // On retina screens, the dot has a correct position
-    @include retina {
-      margin-left: rem(-2);
-    }
+    // @include retina {
+    //   margin-left: rem(-2);
+    // }
   }
 
   /**
@@ -48,14 +49,14 @@
     background: $timeline-line-color;
     bottom: 0;
     content: '';
-    left: $timeline-padding;
+    left: rem($timeline-padding);
     position: absolute;
     top: 0;
     width: 2px;
     z-index: layer("cellar");
 
     @include mq($screen-sm) {
-      left: calc(50% - 1px);
+      left: rem($timeline-offset - 1px);
     }
   }
 
@@ -68,8 +69,8 @@
     position: relative;
 
     @include mq($screen-sm) {
-      margin: rem(20 auto);
-      text-align: left;
+      margin: rem($timeline-card-offset $timeline-padding 0);
+      // text-align: left;
     }
 
     /**
@@ -77,7 +78,7 @@
      */
     > li {
       @extend .card;
-      margin: rem(20 0 20) $timeline-card-offset;
+      margin: rem($timeline-card-offset 0 $timeline-card-offset $timeline-card-offset);
       position: relative;
 
       /**
@@ -87,58 +88,59 @@
         background: linear-gradient(to right, $timeline-line-color, $card-default-border);
         content: '';
         height: 1px;
-        left: -($timeline-card-offset + 1px);
+        left: rem(-$timeline-card-offset);
         position: absolute;
         // top: 20px;
-        top: rem(10);
+        top: rem($timeline-card-offset / 2);
         // top: calc(50% - 6px);
-        width: $timeline-card-offset;
+        width: rem($timeline-card-offset);
       }
 
       @include mq($screen-sm) {
-        width: calc(50% - #{$timeline-card-offset});
+        margin: rem(0 0 $timeline-card-offset ($timeline-card-offset + $timeline-offset));
+        // width: calc(50% - #{$timeline-card-offset});
 
-        /**
-         * Left elements
-         */
-        &:nth-child(odd) {
-          clear: both;
-          margin: 0 $timeline-card-offset 0 0;
+        // /**
+        //  * Left elements
+        //  */
+        // &:nth-child(odd) {
+        //   clear: both;
+        //   margin: 0 $timeline-card-offset 0 0;
 
-          &:before {
-            background: linear-gradient(to right, $card-default-border, $timeline-line-color);
-            left: auto;
-            right: -($timeline-card-offset + 1px);
-          }
+        //   &:before {
+        //     background: linear-gradient(to right, $card-default-border, $timeline-line-color);
+        //     left: auto;
+        //     right: -($timeline-card-offset + 1px);
+        //   }
 
-          .timeline-date {
-            right: calc(-100% - 2*#{$timeline-card-offset});
+        //   .timeline-date {
+        //     right: calc(-100% - 2*#{$timeline-card-offset});
 
-            time {
-            }
-          }
-        }
+        //     time {
+        //     }
+        //   }
+        // }
 
-        /**
-         * Right elements
-         */
-        &:nth-child(even) {
-          float: right;
+        // /**
+        //  * Right elements
+        //  */
+        // &:nth-child(even) {
+        //   float: right;
 
-          .timeline-date {
-            left: calc(-100% - 2*#{$timeline-card-offset});
+        //   .timeline-date {
+        //     left: calc(-100% - 2*#{$timeline-card-offset});
 
-            &:before {
-              background: linear-gradient(to right, $timeline-date-border, $timeline-line-color);
-              left: auto;
-              right: -($timeline-card-offset);
-            }
+        //     &:before {
+        //       background: linear-gradient(to right, $timeline-date-border, $timeline-line-color);
+        //       left: auto;
+        //       right: -($timeline-card-offset);
+        //     }
 
-            time {
-              float: right;
-            }
-          }
-        }
+        //     time {
+        //       float: right;
+        //     }
+        //   }
+        // }
       }
     }
   }
@@ -152,20 +154,20 @@
     color: $timeline-label-color;
     display: inline-block;
     font-weight: 600;
-    margin-top: rem(20);
+    margin-top: rem($timeline-card-offset);
     padding: rem(3 8);
 
-    &:first-child {
-      margin-top: 0;
-    }
+    // &:first-child {
+    //   margin-top: 0;
+    // }
 
-    @include mq($screen-sm, "max") {
+    // @include mq($screen-sm, "max") {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-    }
+    // }
 
     @include mq($screen-sm) {
-      margin: rem(20 auto 0);
+      margin: rem($timeline-card-offset 0 0 $timeline-offset);
     }
   }
 
@@ -174,9 +176,13 @@
    */
   &-date {
     display: block;
-    margin: rem(-10 0 -10 8);
-    width: 100%;
+    margin: rem(-($timeline-card-offset / 2) 0 -8 8);
+    position: absolute;
+    // width: 100%;
 
+    /**
+     * Fixes for card on mobile
+     */
     @include mq($screen-sm, "max") {
       & + .card-heading {
         padding-top: rem(12);
@@ -187,17 +193,25 @@
     }
 
     @include mq($screen-sm) {
-      margin: rem(0);
-      position: absolute;
+      display: block;
+      // left: rem(-$timeline-offset);
+      margin: rem(2 0 0);
+      margin-left: rem(-$timeline-offset - $timeline-card-offset - 1px);
+      text-align: right;
+
+      width: rem($timeline-offset - $timeline-card-offset);
+      // right: rem(-$timeline-offset - $timeline-card-offset -1px);
+      // position: absolute;
 
       &:before {
         background: linear-gradient(to right, $timeline-line-color, $timeline-date-border);
         content: '';
         height: 1px;
-        left: -($timeline-card-offset);
+        // left: -($timeline-card-offset);
         position: absolute;
-        top: rem(10);
-        width: $timeline-card-offset;
+        right: rem(-$timeline-card-offset);
+        top: rem($timeline-card-offset / 2 - 2);
+        width: rem($timeline-card-offset);
       }
     }
 

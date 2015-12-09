@@ -863,7 +863,9 @@ $loader-border-width: 2px !default;
 /**
  * Variables
  */
-$timeline-padding: 20px !default;
+$timeline-padding: 0 !default;
+$timeline-offset: 110px !default;
+$timeline-card-offset: 24px !default;
 $timeline-border-radius: $border-radius-base !default;
 $timeline-line-color: $brand-light !default;
 $timeline-label-color: $white !default;
