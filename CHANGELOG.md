@@ -16,6 +16,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.10.0] - 2015-12-15
+
+### Added
+- Added a clear button in the timepicker
+
+### Changed
+- Completely revamped the timeline
+- Removed margins of the callouts
+
+
+
 ## [1.9.2] - 2015-11-25
 
 ### Fixed
