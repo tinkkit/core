@@ -28,8 +28,8 @@
     "tink-accordion-angular": "latest",
     "tink-modal-angular": "latest",
     "tink-datepicker-angular": "latest",
-    "tink-range-datepicker-angular": "latest"
-
+    "tink-range-datepicker-angular": "latest",
+    "tink-timepicker-angular": "~1.0.8"
   },
   "authors": [
     "Jasper Van Proeyen",

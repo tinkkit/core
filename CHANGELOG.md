@@ -20,10 +20,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added a clear button in the timepicker
+- Added larger margin helper classes
 
 ### Changed
 - Completely revamped the timeline
-- Removed margins of the callouts
+- Removed margins from callouts, cards and breadcrumbs
 
 
 
