@@ -89,9 +89,9 @@
 
   .upload-btn-delete {
     bottom: 0;
-    margin-top: -7px;
+    margin-top: rem(-7);
     position: absolute;
-    right: 28px;
+    right: rem(28);
     top: 50%;
   }
 }

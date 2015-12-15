@@ -1350,6 +1350,7 @@ hr {
 h1,
 h2,
 h3,
+.timeline-label,
 h4,
 h5,
 h6,
@@ -1367,8 +1368,8 @@ h6,
   h1 .small,
   h2 small,
   h2 .small,
-  h3 small,
-  h3 .small,
+  h3 small, .timeline-label small,
+  h3 .small, .timeline-label .small,
   h4 small,
   h4 .small,
   h5 small,
@@ -1394,6 +1395,7 @@ h6,
 h1,
 h2,
 h3,
+.timeline-label,
 .h1,
 .h2,
 .h3 {
@@ -1403,8 +1405,8 @@ h3,
   h1 .small,
   h2 small,
   h2 .small,
-  h3 small,
-  h3 .small,
+  h3 small, .timeline-label small,
+  h3 .small, .timeline-label .small,
   .h1 small,
   .h1 .small,
   .h2 small,
@@ -1443,7 +1445,7 @@ h2,
 .h2 {
   font-size: 2.1428571429rem ; }
 
-h3,
+h3, .timeline-label,
 .h3 {
   font-size: 1.7142857143rem ; }
 
@@ -3430,26 +3432,25 @@ input[type="submit"],
  * Cards
  * --------------------------------------------------
  */
-.card, .timeline-list > li, .accordion-panel {
+.card, .accordion-panel {
   border-color: #eaeaea;
   background-color: #fff;
   border: 1px solid #eaeaea;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.4285714286rem ; }
-  .card .card-heading, .timeline-list > li .card-heading, .accordion-panel .card-heading, .card .accordion-panel-heading, .timeline-list > li .accordion-panel-heading, .accordion-panel .accordion-panel-heading {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+  .card .card-heading, .accordion-panel .card-heading, .card .accordion-panel-heading, .accordion-panel .accordion-panel-heading {
     color: #333;
     background-color: #f7f7f7;
     border-color: #eaeaea; }
-    .card .card-heading + .card-collapse > .card-body, .timeline-list > li .card-heading + .card-collapse > .card-body, .accordion-panel .card-heading + .card-collapse > .card-body, .card .accordion-panel-heading + .card-collapse > .card-body, .timeline-list > li .accordion-panel-heading + .card-collapse > .card-body, .accordion-panel .accordion-panel-heading + .card-collapse > .card-body, .card .card-heading + .card-collapse > .accordion-panel-body, .timeline-list > li .card-heading + .card-collapse > .accordion-panel-body, .accordion-panel .card-heading + .card-collapse > .accordion-panel-body, .card .accordion-panel-heading + .card-collapse > .accordion-panel-body, .timeline-list > li .accordion-panel-heading + .card-collapse > .accordion-panel-body, .accordion-panel .accordion-panel-heading + .card-collapse > .accordion-panel-body {
+    .card .card-heading + .card-collapse > .card-body, .accordion-panel .card-heading + .card-collapse > .card-body, .card .accordion-panel-heading + .card-collapse > .card-body, .accordion-panel .accordion-panel-heading + .card-collapse > .card-body, .card .card-heading + .card-collapse > .accordion-panel-body, .accordion-panel .card-heading + .card-collapse > .accordion-panel-body, .card .accordion-panel-heading + .card-collapse > .accordion-panel-body, .accordion-panel .accordion-panel-heading + .card-collapse > .accordion-panel-body {
       border-top-color: #eaeaea; }
-    .card .card-heading .badge, .timeline-list > li .card-heading .badge, .accordion-panel .card-heading .badge, .card .accordion-panel-heading .badge, .timeline-list > li .accordion-panel-heading .badge, .accordion-panel .accordion-panel-heading .badge {
+    .card .card-heading .badge, .accordion-panel .card-heading .badge, .card .accordion-panel-heading .badge, .accordion-panel .accordion-panel-heading .badge {
       color: #f7f7f7;
       background-color: #333; }
-  .card .card-footer + .card-collapse > .card-body, .timeline-list > li .card-footer + .card-collapse > .card-body, .accordion-panel .card-footer + .card-collapse > .card-body, .card .card-footer + .card-collapse > .accordion-panel-body, .timeline-list > li .card-footer + .card-collapse > .accordion-panel-body, .accordion-panel .card-footer + .card-collapse > .accordion-panel-body {
+  .card .card-footer + .card-collapse > .card-body, .accordion-panel .card-footer + .card-collapse > .card-body, .card .card-footer + .card-collapse > .accordion-panel-body, .accordion-panel .card-footer + .card-collapse > .accordion-panel-body {
     border-bottom-color: #eaeaea; }
-  .card:not(.accordion-panel), .timeline-list > li:not(.accordion-panel), .accordion-panel:not(.accordion-panel) {
+  .card:not(.accordion-panel), .accordion-panel:not(.accordion-panel) {
     border-radius: 3px; }
-  .card > .card-heading, .timeline-list > li > .card-heading, .accordion-panel > .card-heading, .card > .accordion-panel-heading, .timeline-list > li > .accordion-panel-heading, .accordion-panel > .accordion-panel-heading {
+  .card > .card-heading, .accordion-panel > .card-heading, .card > .accordion-panel-heading, .accordion-panel > .accordion-panel-heading {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
 
@@ -3757,7 +3758,6 @@ span.table-interactive.is-loading:after {
   border-radius: 0rem ;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   color: #213e4e;
-  margin: 1.4285714286rem  0;
   padding: 0.7142857143rem 1.1428571429rem ; }
   .callout a, .callout-success a, .callout-warning a, .callout-danger a {
     color: #3fa1ce;
@@ -3927,156 +3927,62 @@ span.table-interactive.is-loading:after {
  * The timeline
  */
 .timeline {
-  padding: 1.4285714286rem ;
-  position: relative;
+  margin-left: 0;
+  padding: 0rem 0rem 0rem 0.8571428571rem ;
   /**
-   * The starting dot
+   * Timeline label
    */
   /**
-   * The main branch line
-   */
-  /**
-   * Each timeline can have multiple lists
-   */
-  /**
-   * Each timeline can have multiple labels
-   */
-  /**
-   * Each card can have a date
+   * List items
    */ }
   @media (min-width: 768px) {
     .timeline {
-      text-align: center; } }
-  .timeline:before {
-    background: #5fb1d6;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 0.4285714286rem ;
-    left: 20px;
-    margin-left: -0.1785714286rem ;
-    position: absolute;
-    top: -0.2142857143rem ;
-    width: 0.4285714286rem ; }
-    @media (min-width: 768px) {
-      .timeline:before {
-        left: calc(50% - 1px); } }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-      .timeline:before {
-        margin-left: -0.1428571429rem ; } }
-  .timeline:after {
-    background: #5fb1d6;
-    bottom: 0;
-    content: '';
-    left: 20px;
-    position: absolute;
-    top: 0;
-    width: 2px;
-    z-index: -1; }
-    @media (min-width: 768px) {
-      .timeline:after {
-        left: calc(50% - 1px); } }
+      margin-left: 8.5714285714rem ; } }
+  .timeline-label {
+    margin: 0.7142857143rem 0rem 0.7142857143rem -1.7142857143rem ; }
   .timeline-list {
     position: relative;
     /**
-     * Timeline items are actually cards
+     * Timeline list label
      */ }
-    .timeline-list:before, .timeline-list:after {
-      content: " ";
-      display: table; }
-    .timeline-list:after {
-      clear: both; }
-    @media (min-width: 768px) {
-      .timeline-list {
-        margin: 1.4285714286rem auto ;
-        text-align: left; } }
+    .timeline-list:before {
+      background: #bbb;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 2px;
+      z-index: -1; }
     .timeline-list > li {
-      margin: 1.4285714286rem 0rem 1.4285714286rem  24px;
-      position: relative;
-      /**
-       * Connection line to main branch
-       */ }
+      padding: 0.8571428571rem 0rem 0.8571428571rem 1.7142857143rem ;
+      position: relative; }
       .timeline-list > li:before {
-        background: linear-gradient(to right, #5fb1d6, #eaeaea);
+        background: #fff;
+        border: 2px solid #888;
+        border-radius: 50%;
         content: '';
-        height: 1px;
-        left: -25px;
+        height: 12px;
+        left: -5px;
         position: absolute;
-        top: 0.7142857143rem ;
-        width: 24px; }
+        top: calc(50% - 5px);
+        width: 12px; }
+    .timeline-list-label {
+      padding-bottom: 0.8571428571rem ; }
       @media (min-width: 768px) {
-        .timeline-list > li {
-          width: calc(50% - 24px);
-          /**
-         * Left elements
-         */
-          /**
-         * Right elements
-         */ }
-          .timeline-list > li:nth-child(odd) {
-            clear: both;
-            margin: 0 24px 0 0; }
-            .timeline-list > li:nth-child(odd):before {
-              background: linear-gradient(to right, #eaeaea, #5fb1d6);
-              left: auto;
-              right: -25px; }
-            .timeline-list > li:nth-child(odd) .timeline-date {
-              right: calc(-100% - 2*24px); }
-          .timeline-list > li:nth-child(even) {
-            float: right; }
-            .timeline-list > li:nth-child(even) .timeline-date {
-              left: calc(-100% - 2*24px); }
-              .timeline-list > li:nth-child(even) .timeline-date:before {
-                background: linear-gradient(to right, #5fb1d6, #5fb1d6);
-                left: auto;
-                right: -24px; }
-              .timeline-list > li:nth-child(even) .timeline-date time {
-                float: right; } }
-  .timeline-label {
-    background-color: #5fb1d6;
-    border-radius: 3px;
-    color: #fff;
-    display: inline-block;
-    font-weight: 600;
-    margin-top: 1.4285714286rem ;
-    padding: 0.2142857143rem 0.5714285714rem ; }
-    .timeline-label:first-child {
-      margin-top: 0; }
-    @media (max-width: 768px) {
-      .timeline-label {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0; } }
-    @media (min-width: 768px) {
-      .timeline-label {
-        margin: 1.4285714286rem auto 0rem ; } }
-  .timeline-date {
-    display: block;
-    margin: -0.7142857143rem 0rem -0.7142857143rem 0.5714285714rem ;
-    width: 100%; }
-    @media (max-width: 768px) {
-      .timeline-date + .card-heading, .timeline-date + .accordion-panel-heading {
-        padding-top: 0.8571428571rem ; }
-      .timeline-date + .card-body, .timeline-date + .accordion-panel-body {
-        padding-top: 1.4285714286rem ; } }
-    @media (min-width: 768px) {
-      .timeline-date {
-        margin: 0rem ;
-        position: absolute; }
-        .timeline-date:before {
-          background: linear-gradient(to right, #5fb1d6, #5fb1d6);
-          content: '';
-          height: 1px;
-          left: -24px;
+        .timeline-list-label {
+          bottom: 0;
+          display: table;
+          height: 100%;
+          left: -9.4285714286rem ;
+          padding-bottom: 0;
           position: absolute;
-          top: 0.7142857143rem ;
-          width: 24px; } }
-    .timeline-date time {
-      background-color: #fff;
-      border: 1px solid #5fb1d6;
-      border-radius: 3px;
-      color: #5fb1d6;
-      font-size: 0.8571428571rem ;
-      padding: 0.1428571429rem 0.5714285714rem ; }
+          text-align: right;
+          top: 50%;
+          -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          width: 7.7142857143rem ; } }
 
 /**
  * Flex Bar component
@@ -4192,37 +4098,42 @@ a.filter-bar-link-external {
  * Accordions
  * --------------------------------------------------
  */
-.accordion-panel {
-  margin-bottom: 0; }
-  .accordion-panel:first-child {
+.accordion-panel:first-child {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px; }
+  .accordion-panel:first-child .card-heading, .accordion-panel:first-child .accordion-panel-heading {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px; }
-    .accordion-panel:first-child .card-heading, .accordion-panel:first-child .accordion-panel-heading {
-      border-top-right-radius: 3px;
-      border-top-left-radius: 3px; }
-  .accordion-panel:not(:first-child) {
-    border-top: none; }
-  .accordion-panel:last-child {
+
+.accordion-panel:not(:first-child) {
+  border-top: none; }
+
+.accordion-panel:last-child {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px; }
+  .accordion-panel:last-child .card-heading, .accordion-panel:last-child .accordion-panel-heading {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px; }
-    .accordion-panel:last-child .card-heading, .accordion-panel:last-child .accordion-panel-heading {
-      border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px; }
-  .accordion-panel > a {
-    text-decoration: none; }
-  .accordion-panel.group-open > .accordion-toggle:before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .accordion-panel.group-open:last-child .card-heading, .accordion-panel.group-open:last-child .accordion-panel-heading {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0; }
-  .accordion-panel.group-loading > .accordion-toggle:before {
-    opacity: 0; }
-  .accordion-panel.group-loading > .accordion-toggle:after {
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-    content: "\f021"; }
+
+.accordion-panel > a {
+  text-decoration: none; }
+
+.accordion-panel.group-open > .accordion-toggle:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.accordion-panel.group-open:last-child .card-heading, .accordion-panel.group-open:last-child .accordion-panel-heading {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.accordion-panel.group-loading > .accordion-toggle:before {
+  opacity: 0; }
+
+.accordion-panel.group-loading > .accordion-toggle:after {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  content: "\f021"; }
 
 .accordion-panel-heading:hover, .accordion-panel-heading:active, .accordion-panel-heading:focus {
   background-color: #ededed;
@@ -5465,6 +5376,12 @@ html {
       border-color: #5fb1d6 transparent transparent; }
     .timepicker input:focus ~ .timepicker-earlier:hover:before, .timepicker input:focus ~ .timepicker-earlier:active:before {
       border-color: #3398c5 transparent transparent; }
+  .timepicker .upload-btn-delete {
+    bottom: 0;
+    margin-top: -0.5rem ;
+    position: absolute;
+    right: 2rem ;
+    top: 50%; }
 
 /**
  * Tooltips
@@ -5661,7 +5578,7 @@ html {
   .upload-filename {
     font-size: 14px; }
   .upload-file-change {
-    background-color: #fff4e5;
+    background-color: #fff4e6;
     color: #ff8d00;
     font-size: 14px;
     margin: 0.4285714286rem 0rem 0rem ;
@@ -5826,6 +5743,18 @@ html {
 
 .margin-right {
   margin-right: 1.7142857143rem ; }
+
+.margin-bottom-lg {
+  margin-bottom: 2.1428571429rem ; }
+
+.margin-top-lg {
+  margin-top: 2.1428571429rem ; }
+
+.margin-left-lg {
+  margin-left: 3.4285714286rem ; }
+
+.margin-right-lg {
+  margin-right: 3.4285714286rem ; }
 
 .no-margin {
   margin: 0 !important; }
