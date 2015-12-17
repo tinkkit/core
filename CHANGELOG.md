@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.10.0] - 2015-12-15
+## [1.10.0] - 2015-12-17
 
 ### Added
 - Added a clear button in the timepicker
