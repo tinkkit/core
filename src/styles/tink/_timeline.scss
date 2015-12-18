@@ -12,8 +12,28 @@
   margin-left: 0;
   padding: rem(0 0 0 12);
 
-  @include mq($screen-sm) {
-    margin-left: rem($timeline-offset);
+  /**
+   * Extra styles for normal (larger) timeline
+   */
+  &:not(.timeline-is-compact) {
+    @include mq($screen-sm) {
+      margin-left: rem($timeline-offset);
+    }
+
+    .timeline-list-label {
+      @include mq($screen-sm) {
+        bottom: 0;
+        display: table;
+        height: 100%;
+        left: rem(-$timeline-offset - ($timeline-padding / 2));
+        padding-bottom: 0;
+        position: absolute;
+        text-align: right;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: rem($timeline-offset - ($timeline-padding / 2));
+      }
+    }
   }
 
   /**
@@ -31,6 +51,9 @@
     @extend .list-unstyled;
     position: relative;
 
+    /**
+     * Line
+     */
     &:before {
       background: $timeline-line-color;
       bottom: 0;
@@ -39,7 +62,6 @@
       position: absolute;
       top: 0;
       width: 2px;
-      z-index: layer("cellar");
     }
 
     > li {
@@ -64,19 +86,6 @@
      */
     &-label {
       padding-bottom: rem($timeline-padding / 2);
-
-      @include mq($screen-sm) {
-        bottom: 0;
-        display: table;
-        height: 100%;
-        left: rem(-$timeline-offset - ($timeline-padding / 2));
-        padding-bottom: 0;
-        position: absolute;
-        text-align: right;
-        top: 50%;
-        transform: translate(0, -50%);
-        width: rem($timeline-offset - ($timeline-padding / 2));
-      }
     }
   }
 }

@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.10.1] - 2015-12-18
+
+### Added
+- Added an option for a compacter timeline
+
+### Fixed
+- Fixed a bug where the timeline line would disappear in a modal dialog
+
+
+
 ## [1.10.0] - 2015-12-17
 
 ### Added
