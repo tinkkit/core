@@ -39,7 +39,7 @@ html.has-open-modal {
     max-width: 95%;
     overflow: visible;
     padding: rem($modal-inner-padding);
-    user-select: all;
+    user-select: text;
     vertical-align: middle;
 
     @include mq($screen-sm) {
