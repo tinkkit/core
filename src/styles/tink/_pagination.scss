@@ -65,6 +65,28 @@
       color: $pagination-link-active-color;
       cursor: default;
     }
+
+    /**
+     * Hide some stuff on mobile
+     */
+    @include mq($screen-md, "max") {
+      display: none;
+
+      &.prev,
+      &.next,
+      &.active {
+        display: block;
+      }
+    }
+
+    @include mq($screen-sm, "max") {
+      &.prev,
+      &.next {
+        span {
+          display: none;
+        }
+      }
+    }
   }
 
   .prev:before,

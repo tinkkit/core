@@ -18,10 +18,12 @@
   &:not(.timeline-is-compact) {
     @include mq($screen-sm) {
       margin-left: rem($timeline-offset);
-    }
 
-    .timeline-list-label {
-      @include mq($screen-sm) {
+      .timeline-label {
+        margin: rem(10 0 10 (-$timeline-padding));
+      }
+
+      .timeline-list-label {
         bottom: 0;
         display: table;
         height: 100%;
@@ -41,7 +43,7 @@
    */
   &-label {
     @extend h3;
-    margin: rem(10 0 10 (-$timeline-padding));
+    margin: rem(10 0 10 (-$timeline-padding / 2));
   }
 
   /**

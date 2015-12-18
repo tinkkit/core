@@ -21,8 +21,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Added an option for a compacter timeline
 
+### Changed
+- Improved the timeline styling
+
 ### Fixed
 - Fixed a bug where the timeline line would disappear in a modal dialog
+- Fixed a bug where all modal content would become selected when clicked inside the modal dialog
+- Fixed the pagination view on mobile
 
 
 
