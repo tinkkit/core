@@ -64,6 +64,7 @@
       border-color: $pagination-link-active-border;
       color: $pagination-link-active-color;
       cursor: default;
+      z-index: 3;
     }
 
     /**

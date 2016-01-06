@@ -7,9 +7,11 @@
   position: relative;
   display: inline-block;
   vertical-align: middle; // match .btn alignment given font-size hack above
+
   > .btn {
     position: relative;
     float: left;
+
     // Bring the "active" button to the front
     &:hover,
     &:focus,
@@ -49,7 +51,7 @@
 // }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match

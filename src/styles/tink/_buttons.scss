@@ -62,7 +62,7 @@
  * Default buttons
  */
 
-button,
+button:not([type="submit"]),
 input[type="button"],
 .btn {
   @extend %btn;
@@ -73,7 +73,7 @@ button[type="submit"],
 input[type="submit"],
 .btn-primary {
   @extend %btn;
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border, true);
 }
 
 // Alternate buttons
@@ -86,30 +86,31 @@ input[type="submit"],
 //   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 // }
 // Success appears as green
+
 .btn-success {
-  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border, true);
 }
 // Info appears as blue-green
 .btn-info {
-  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border, true);
 }
 // Warning appears as orange
 .btn-warning {
-  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border, true);
 }
 // Danger and error appear as red
 .btn-danger {
-  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, true);
 }
 
 
 // Transparent used on a dark background
 .btn-transparent {
-  @include button-variant($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border, $btn-transparent-hover-bg);
+  @include button-variant($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border, false, $btn-transparent-hover-bg);
 }
 // Transparent used on a light background
 .btn-transparent-invert {
-  @include button-variant($btn-transparent-invert-color, $btn-transparent-invert-bg, $btn-transparent-invert-border, $btn-transparent-invert-hover-bg);
+  @include button-variant($btn-transparent-invert-color, $btn-transparent-invert-bg, $btn-transparent-invert-border, false, $btn-transparent-invert-hover-bg);
 }
 
 
@@ -250,14 +251,14 @@ input[type="submit"],
 
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large, true);
 }
 .btn-sm {
   // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-base, $border-radius-small);
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-base, $border-radius-small, true);
 }
 .btn-xs {
-  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-base, $border-radius-small);
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-base, $border-radius-small, true);
 }
 
 

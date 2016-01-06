@@ -18,6 +18,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.10.1] - 2015-12-18
 
+### Fixed
+- Fixed a specificity problem with buttons
+- Fixed small display bug in pagination
+
+
+
+## [1.10.1] - 2015-12-18
+
 ### Added
 - Added an option for a compacter timeline
 

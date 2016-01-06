@@ -3,37 +3,72 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($color, $background, $border, $background-hover: darken($background, 5%)) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
+@mixin button-variant($color, $background, $border, $important: false, $background-hover: darken($background, 5%)) {
+  @if $important {
+    color: $color !important;
+    background-color: $background !important;
+    border-color: $border !important;
 
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: $color;
-    background-color: $background-hover;
-    // border-color: darken($border, 12%);
-  }
-
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-image: none;
-  }
-
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
     &:hover,
     &:focus,
     &:active,
-    &.active {
-      background-color: $background;
-      border-color: $border;
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $color !important;
+      background-color: $background-hover !important;
+      // border-color: darken($border, 12%) !important;
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      background-image: none !important;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background-color: $background !important;
+        border-color: $border !important;
+      }
+    }
+  } @else {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $color;
+      background-color: $background-hover;
+      // border-color: darken($border, 12%);
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      background-image: none;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background-color: $background;
+        border-color: $border;
+      }
     }
   }
 
@@ -44,11 +79,18 @@
 }
 
 // Button sizes
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  border-radius: rem($border-radius);
-  font-size: rem($font-size);
-  line-height: $line-height;
-  padding: rem($padding-vertical $padding-horizontal);
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius, $important: false) {
+  @if $important {
+    border-radius: rem($border-radius) !important;
+    font-size: rem($font-size) !important;
+    line-height: $line-height !important;
+    padding: rem($padding-vertical $padding-horizontal) !important;
+  } @else {
+    border-radius: rem($border-radius);
+    font-size: rem($font-size);
+    line-height: $line-height;
+    padding: rem($padding-vertical $padding-horizontal);
+  }
 }
 
 // @mixin button-line-variant($color, $background, $border) {
