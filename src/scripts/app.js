@@ -25,8 +25,7 @@
    'tink.modal',
    'tink.datepicker',
    'tink.rangedatepicker',
-   'tink.timepicker',
-   'tink.pagination'
+   'tink.timepicker'
    ])
  .config(function ($routeProvider) { /*, $locationProvider */
   $routeProvider
