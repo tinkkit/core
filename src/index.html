@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-ng-app="tinkApp" class="has-nav-left nav-left-can-always-close-and-starts-open">
+<html data-ng-app="tinkApp" class="has-nav-left has-nav-right nav-left-can-always-close nav-right-can-always-close">
 <head>
   <meta charset="utf-8">
   <title>Tink core</title>
@@ -17,8 +17,8 @@
     <li class="nav-top-logo">
       <a href="#/" title="Tink"><span>Tink</span></a>
     </li>
-    <li class="nav-top-toggle nav-top-toggle-visible" data-tink-sidenav-collapse="asideNavLeft">
-      <a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open menu</span></i></a>
+    <li class="nav-top-toggle nav-top-toggle-left nav-top-toggle-visible" data-tink-sidenav-collapse="asideNavLeft">
+      <a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open left menu</span></i></a>
     </li>
     <li class="nav-top-app">
       <h1><a href="#/">Tink</a></h1>
@@ -40,9 +40,29 @@
       center
     </li>
   </ul>
+  <ul class="nav-top-right">
+    <li>
+      <a href="#/" class="btn btn-transparent-invert">Link 2</a>
+    </li>
+    <li class="nav-top-toggle nav-top-toggle-right nav-top-toggle-visible" data-tink-sidenav-collapse="asideNavRight">
+      <a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open right menu</span></i></a>
+    </li>
+  </ul>
 </nav>
 
 <div data-tink-nav-aside data-toggle-id="asideNavLeft" class="nav-left nav-aside">
+  <aside>
+    <div class="nav-aside-section">
+      <ul>
+        <li>
+          <a href="#/start"><span data-i18n="Getting started">Getting started</span></a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<div data-tink-nav-aside data-toggle-id="asideNavRight" class="nav-right nav-aside">
   <aside>
     <div class="nav-aside-section">
       <ul>
