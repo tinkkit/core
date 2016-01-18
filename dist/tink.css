@@ -3402,12 +3402,12 @@ input[type="submit"],
   top: auto; }
 
 .btn-group {
-  position: relative;
   display: inline-block;
+  position: relative;
   vertical-align: middle; }
   .btn-group > .btn, .btn-group > a.filter-bar-item {
-    position: relative;
-    float: left; }
+    float: left;
+    position: relative; }
     .btn-group > .btn:hover, .btn-group > a.filter-bar-item:hover, .btn-group > .btn:focus, .btn-group > a.filter-bar-item:focus, .btn-group > .btn:active, .btn-group > a.filter-bar-item:active, .btn-group > .btn.active, .btn-group > a.active.filter-bar-item {
       z-index: 2; }
     .btn-group > .btn:focus, .btn-group > a.filter-bar-item:focus {
@@ -3417,7 +3417,7 @@ input[type="submit"],
   margin-left: -1px; }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > a.filter-bar-item:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-  border-radius: 0; }
+  border-radius: 0 !important; }
 
 .btn-group > .btn:first-child, .btn-group > a.filter-bar-item:first-child {
   margin-left: 0; }
@@ -3427,6 +3427,59 @@ input[type="submit"],
 
 .btn-group > .btn:last-child:not(:first-child), .btn-group > a.filter-bar-item:last-child:not(:first-child) {
   border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
+
+.btn-group-vertical > .btn, .btn-group-vertical > a.filter-bar-item,
+.btn-group-vertical > .btn-group,
+.btn-group-vertical > .btn-group > .btn,
+.btn-group-vertical > .btn-group > a.filter-bar-item {
+  display: block;
+  float: none;
+  max-width: 100%;
+  width: 100%; }
+
+.btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after {
+  content: " ";
+  display: table; }
+
+.btn-group-vertical > .btn-group:after {
+  clear: both; }
+
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > a.filter-bar-item {
+  float: none; }
+
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > a.filter-bar-item + .btn, .btn-group-vertical > .btn + a.filter-bar-item, .btn-group-vertical > a.filter-bar-item + a.filter-bar-item,
+.btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > a.filter-bar-item + .btn-group,
+.btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + a.filter-bar-item,
+.btn-group-vertical > .btn-group + .btn-group {
+  margin-left: 0;
+  margin-top: -1px; }
+
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > a.filter-bar-item:not(:first-child):not(:last-child) {
+  border-radius: 0; }
+
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > a.filter-bar-item:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px; }
+
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > a.filter-bar-item:last-child:not(:first-child) {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 3px; }
+
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a.filter-bar-item {
+  border-radius: 0; }
+
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > a.filter-bar-item:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > a.filter-bar-item:first-child {
+  border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
 /**
@@ -4433,7 +4486,8 @@ a.filter-bar-link-external {
       background-color: #347ea6;
       border-color: #347ea6;
       color: #fff;
-      cursor: default; }
+      cursor: default;
+      z-index: 3; }
     @media (max-width: 992px) {
       .table-sort-pagination .btn, .table-sort-pagination a.filter-bar-item {
         display: none; }
@@ -5597,7 +5651,7 @@ html {
   .upload-filename {
     font-size: 14px; }
   .upload-file-change {
-    background-color: #fff4e5;
+    background-color: #fff4e6;
     color: #ff8d00;
     font-size: 14px;
     margin: 0.4285714286rem 0rem 0rem ;
