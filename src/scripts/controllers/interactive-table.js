@@ -124,7 +124,8 @@ angular.module('tinkApp')
     name:'firstname',
     alias:'voornaam',
     sort:'firstname',
-    checked:true
+    checked:true,
+    disabled:true
   },{
     name:'lastname',
     disabled:true,

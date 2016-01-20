@@ -3801,6 +3801,50 @@ span.table-interactive.is-loading:after {
   top: .125em;
   width: 1em; }
 
+button[type="submit"] span.loader, button[type="submit"] span.loader-lg, button[type="submit"] span.table-interactive.is-loading:after,
+button[type="submit"] span.loader-lg,
+button[type="submit"] span.table-interactive.is-loading:after,
+input[type="submit"] span.loader,
+input[type="submit"] span.loader-lg,
+input[type="submit"] span.table-interactive.is-loading:after,
+input[type="submit"] span.loader-lg,
+input[type="submit"] span.table-interactive.is-loading:after,
+.btn-primary span.loader,
+.btn-primary span.loader-lg,
+.btn-primary span.table-interactive.is-loading:after,
+.btn-primary span.loader-lg,
+.btn-primary span.table-interactive.is-loading:after,
+.btn-success span.loader,
+.btn-success span.loader-lg,
+.btn-success span.table-interactive.is-loading:after,
+.btn-success span.loader-lg,
+.btn-success span.table-interactive.is-loading:after,
+.btn-info span.loader,
+.btn-info span.loader-lg,
+.btn-info span.table-interactive.is-loading:after,
+.btn-info span.loader-lg,
+.btn-info span.table-interactive.is-loading:after,
+.btn-warning span.loader,
+.btn-warning span.loader-lg,
+.btn-warning span.table-interactive.is-loading:after,
+.btn-warning span.loader-lg,
+.btn-warning span.table-interactive.is-loading:after,
+.btn-danger span.loader,
+.btn-danger span.loader-lg,
+.btn-danger span.table-interactive.is-loading:after,
+.btn-danger span.loader-lg,
+.btn-danger span.table-interactive.is-loading:after,
+.btn-transparent-invert span.loader,
+.btn-transparent-invert span.loader-lg,
+.btn-transparent-invert span.table-interactive.is-loading:after,
+.btn-transparent-invert span.loader-lg,
+.btn-transparent-invert span.table-interactive.is-loading:after {
+  -webkit-animation: none;
+  animation: none;
+  -webkit-animation: spin .7s infinite linear;
+  animation: spin .7s infinite linear;
+  border-color: #fff #fff #fff transparent; }
+
 /**
  * Callout
  * --------------------------------------------------
