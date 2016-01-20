@@ -16,7 +16,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.10.1] - 2015-12-18
+## [1.11.0] - 2016-01-20
+
+### Added
+- Added vertical variant of button groups
+- Added inverted variant of loaders
 
 ### Fixed
 - Fixed a specificity problem with buttons
@@ -85,7 +89,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.8.0] - 2015-10-30
 
 ### Added
-- Added buttons groups
+- Added button groups
 - Added a filter bar component
 - Added a timeline component
 - Added another possibility to always leave the sidenav open
