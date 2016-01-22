@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.11.1] - 2016-01-20
+
+### Fixed
+- Fixed a display bug in the datepicker that was introduced by the specificity fix
+
+
+
 ## [1.11.0] - 2016-01-20
 
 ### Added

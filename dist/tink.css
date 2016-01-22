@@ -2867,7 +2867,7 @@ output {
 /**
  * Base styles
  */
-button:not([type="submit"]),
+button,
 input[type="button"],
 .btn, a.filter-bar-item, button[type="submit"],
 input[type="submit"],
@@ -2890,60 +2890,59 @@ input[type="submit"],
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  button:focus:not([type="submit"]),
+  button:focus,
   input[type="button"]:focus,
-  .btn:focus, a.filter-bar-item:focus, button[type="submit"]:focus,
+  .btn:focus, a.filter-bar-item:focus,
   input[type="submit"]:focus,
-  .btn-primary:focus, button:active:focus:not([type="submit"]),
+  .btn-primary:focus, button:active:focus,
   input[type="button"]:active:focus,
-  .btn:active:focus, a.filter-bar-item:active:focus, button[type="submit"]:active:focus,
+  .btn:active:focus, a.filter-bar-item:active:focus,
   input[type="submit"]:active:focus,
-  .btn-primary:active:focus, button.active:focus:not([type="submit"]),
+  .btn-primary:active:focus, button.active:focus,
   input.active[type="button"]:focus,
-  .active.btn:focus, a.active.filter-bar-item:focus, button.active[type="submit"]:focus,
+  .active.btn:focus, a.active.filter-bar-item:focus,
   input.active[type="submit"]:focus,
   .active.btn-primary:focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(95, 177, 214, 0.25); }
-  button:hover:not([type="submit"]),
+  button:hover,
   input[type="button"]:hover,
-  .btn:hover, a.filter-bar-item:hover, button[type="submit"]:hover,
+  .btn:hover, a.filter-bar-item:hover,
   input[type="submit"]:hover,
-  .btn-primary:hover, button:focus:not([type="submit"]),
+  .btn-primary:hover, button:focus,
   input[type="button"]:focus,
-  .btn:focus, a.filter-bar-item:focus, button[type="submit"]:focus,
+  .btn:focus, a.filter-bar-item:focus,
   input[type="submit"]:focus,
   .btn-primary:focus {
     color: #333;
     text-decoration: none; }
-  button:active:not([type="submit"]),
+  button:active,
   input[type="button"]:active,
-  .btn:active, a.filter-bar-item:active, button[type="submit"]:active,
+  .btn:active, a.filter-bar-item:active,
   input[type="submit"]:active,
-  .btn-primary:active, button.active:not([type="submit"]),
+  .btn-primary:active, button.active,
   input.active[type="button"],
-  .active.btn, a.active.filter-bar-item, button.active[type="submit"],
+  .active.btn, a.active.filter-bar-item,
   input.active[type="submit"],
   .active.btn-primary {
     background-image: none;
     box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.075);
     outline: 0; }
-  button.disabled:not([type="submit"]),
+  button.disabled,
   input.disabled[type="button"],
-  .disabled.btn, a.disabled.filter-bar-item, button.disabled[type="submit"],
+  .disabled.btn, a.disabled.filter-bar-item,
   input.disabled[type="submit"],
-  .disabled.btn-primary, button[disabled]:not([type="submit"]),
+  .disabled.btn-primary, button[disabled],
   input[disabled][type="button"],
-  [disabled].btn, a[disabled].filter-bar-item, button[disabled][type="submit"],
+  [disabled].btn, a[disabled].filter-bar-item,
   input[disabled][type="submit"],
   [disabled].btn-primary,
-  fieldset[disabled] button:not([type="submit"]),
+  fieldset[disabled] button,
   fieldset[disabled]
   input[type="button"],
   fieldset[disabled]
   .btn,
   fieldset[disabled] a.filter-bar-item,
-  fieldset[disabled] button[type="submit"],
   fieldset[disabled]
   input[type="submit"],
   fieldset[disabled]
@@ -2952,25 +2951,19 @@ input[type="submit"],
     cursor: not-allowed;
     opacity: .65;
     pointer-events: none; }
-  button.btn-text:not([type="submit"]) .fa,
-  input.btn-text[type="button"] .fa,
-  .btn-text.btn .fa, a.btn-text.filter-bar-item .fa, button.btn-text[type="submit"] .fa,
-  input.btn-text[type="submit"] .fa,
-  .btn-text.btn-primary .fa {
-    margin-right: 0.5714285714rem ; }
 
 /**
  * Default buttons
  */
-button:not([type="submit"]),
+button,
 input[type="button"],
 .btn,
 a.filter-bar-item {
   color: #333;
   background-color: #fff;
   border-color: #bbb; }
-  button:not([type="submit"]):hover, button:not([type="submit"]):focus, button:not([type="submit"]):active, button:not([type="submit"]).active,
-  .open > button:not([type="submit"]).dropdown-toggle,
+  button:hover, button:focus, button:active, button.active,
+  .open > button.dropdown-toggle,
   input[type="button"]:hover,
   input[type="button"]:focus,
   input[type="button"]:active,
@@ -2990,8 +2983,8 @@ a.filter-bar-item {
   .open > a.dropdown-toggle.filter-bar-item {
     color: #333;
     background-color: #f2f2f2; }
-  button:not([type="submit"]):active, button:not([type="submit"]).active,
-  .open > button:not([type="submit"]).dropdown-toggle,
+  button:active, button.active,
+  .open > button.dropdown-toggle,
   input[type="button"]:active,
   input[type="button"].active,
   .open >
@@ -3004,12 +2997,12 @@ a.filter-bar-item {
   .btn.dropdown-toggle,
   .open > a.dropdown-toggle.filter-bar-item {
     background-image: none; }
-  button:not([type="submit"]).disabled, button:not([type="submit"]).disabled:hover, button:not([type="submit"]).disabled:focus, button:not([type="submit"]).disabled:active, button:not([type="submit"]).disabled.active, button:not([type="submit"])[disabled], button:not([type="submit"])[disabled]:hover, button:not([type="submit"])[disabled]:focus, button:not([type="submit"])[disabled]:active, button:not([type="submit"])[disabled].active,
-  fieldset[disabled] button:not([type="submit"]),
-  fieldset[disabled] button:not([type="submit"]):hover,
-  fieldset[disabled] button:not([type="submit"]):focus,
-  fieldset[disabled] button:not([type="submit"]):active,
-  fieldset[disabled] button:not([type="submit"]).active,
+  button.disabled, button.disabled:hover, button.disabled:focus, button.disabled:active, button.disabled.active, button[disabled], button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button[disabled].active,
+  fieldset[disabled] button,
+  fieldset[disabled] button:hover,
+  fieldset[disabled] button:focus,
+  fieldset[disabled] button:active,
+  fieldset[disabled] button.active,
   input[type="button"].disabled,
   input[type="button"].disabled:hover,
   input[type="button"].disabled:focus,
@@ -5695,7 +5688,7 @@ html {
   .upload-filename {
     font-size: 14px; }
   .upload-file-change {
-    background-color: #fff4e6;
+    background-color: #fff4e5;
     color: #ff8d00;
     font-size: 14px;
     margin: 0.4285714286rem 0rem 0rem ;
