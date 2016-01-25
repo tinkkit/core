@@ -146,7 +146,10 @@
 
   table {
     background: $datepicker-bg-color;
+    height: 100%;
     margin-bottom: 0;
+    table-layout: fixed;
+    width: 100%;
   }
 
   .table-responsive {
