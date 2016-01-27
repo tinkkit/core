@@ -3394,59 +3394,69 @@ input[type="submit"],
 .arrow-left-bottom:before, .arrow-left-bottom:after, .arrow-left-top:before, .arrow-left-top:after {
   top: auto; }
 
-.btn-group {
+.btn-group, .btn-group-vertical {
   display: inline-block;
   position: relative;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > a.filter-bar-item {
+  .btn-group > .btn, .btn-group-vertical > .btn, .btn-group > a.filter-bar-item, .btn-group-vertical > a.filter-bar-item {
     float: left;
     position: relative; }
-    .btn-group > .btn:hover, .btn-group > a.filter-bar-item:hover, .btn-group > .btn:focus, .btn-group > a.filter-bar-item:focus, .btn-group > .btn:active, .btn-group > a.filter-bar-item:active, .btn-group > .btn.active, .btn-group > a.active.filter-bar-item {
+    .btn-group > .btn:hover, .btn-group-vertical > .btn:hover, .btn-group > a.filter-bar-item:hover, .btn-group-vertical > a.filter-bar-item:hover, .btn-group > .btn:focus, .btn-group-vertical > .btn:focus, .btn-group > a.filter-bar-item:focus, .btn-group-vertical > a.filter-bar-item:focus, .btn-group > .btn:active, .btn-group-vertical > .btn:active, .btn-group > a.filter-bar-item:active, .btn-group-vertical > a.filter-bar-item:active, .btn-group > .btn.active, .btn-group-vertical > .btn.active, .btn-group > a.active.filter-bar-item, .btn-group-vertical > a.active.filter-bar-item {
       z-index: 2; }
-    .btn-group > .btn:focus, .btn-group > a.filter-bar-item:focus {
+    .btn-group > .btn:focus, .btn-group-vertical > .btn:focus, .btn-group > a.filter-bar-item:focus, .btn-group-vertical > a.filter-bar-item:focus {
       outline: 0; }
 
-.btn-group .btn + .btn, .btn-group a.filter-bar-item + .btn, .btn-group .btn + a.filter-bar-item, .btn-group a.filter-bar-item + a.filter-bar-item {
+.btn-group .btn + .btn, .btn-group-vertical .btn + .btn, .btn-group a.filter-bar-item + .btn, .btn-group-vertical a.filter-bar-item + .btn, .btn-group .btn + a.filter-bar-item, .btn-group-vertical .btn + a.filter-bar-item, .btn-group a.filter-bar-item + a.filter-bar-item, .btn-group-vertical a.filter-bar-item + a.filter-bar-item {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > a.filter-bar-item:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > a.filter-bar-item:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group-vertical > a.filter-bar-item:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0 !important; }
 
-.btn-group > .btn:first-child, .btn-group > a.filter-bar-item:first-child {
+.btn-group > .btn:first-child, .btn-group-vertical > .btn:first-child, .btn-group > a.filter-bar-item:first-child, .btn-group-vertical > a.filter-bar-item:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child), .btn-group > a.filter-bar-item:first-child:not(:last-child) {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0; }
+  .btn-group > .btn:first-child:not(:last-child), .btn-group-vertical > .btn:first-child:not(:last-child), .btn-group > a.filter-bar-item:first-child:not(:last-child), .btn-group-vertical > a.filter-bar-item:first-child:not(:last-child) {
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > a.filter-bar-item:last-child:not(:first-child) {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
+.btn-group > .btn:last-child:not(:first-child), .btn-group-vertical > .btn:last-child:not(:first-child), .btn-group > a.filter-bar-item:last-child:not(:first-child), .btn-group-vertical > a.filter-bar-item:last-child:not(:first-child) {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important; }
 
 .btn-group-vertical > .btn, .btn-group-vertical > a.filter-bar-item,
 .btn-group-vertical > .btn-group,
+.btn-group-vertical > .btn-group-vertical,
 .btn-group-vertical > .btn-group > .btn,
-.btn-group-vertical > .btn-group > a.filter-bar-item {
+.btn-group-vertical > .btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group > a.filter-bar-item,
+.btn-group-vertical > .btn-group-vertical > a.filter-bar-item {
   display: block;
   float: none;
   max-width: 100%;
   width: 100%; }
 
-.btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after {
+.btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group-vertical:before, .btn-group-vertical > .btn-group:after, .btn-group-vertical > .btn-group-vertical:after {
   content: " ";
   display: table; }
 
-.btn-group-vertical > .btn-group:after {
+.btn-group-vertical > .btn-group:after, .btn-group-vertical > .btn-group-vertical:after {
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > a.filter-bar-item {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group-vertical > .btn, .btn-group-vertical > .btn-group > a.filter-bar-item, .btn-group-vertical > .btn-group-vertical > a.filter-bar-item {
   float: none; }
 
 .btn-group-vertical > .btn + .btn, .btn-group-vertical > a.filter-bar-item + .btn, .btn-group-vertical > .btn + a.filter-bar-item, .btn-group-vertical > a.filter-bar-item + a.filter-bar-item,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > a.filter-bar-item + .btn-group,
+.btn-group-vertical > .btn + .btn-group-vertical,
+.btn-group-vertical > a.filter-bar-item + .btn-group-vertical,
 .btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group-vertical + .btn,
 .btn-group-vertical > .btn-group + a.filter-bar-item,
-.btn-group-vertical > .btn-group + .btn-group {
+.btn-group-vertical > .btn-group-vertical + a.filter-bar-item,
+.btn-group-vertical > .btn-group + .btn-group,
+.btn-group-vertical > .btn-group-vertical + .btn-group,
+.btn-group-vertical > .btn-group + .btn-group-vertical,
+.btn-group-vertical > .btn-group-vertical + .btn-group-vertical {
   margin-left: 0;
   margin-top: -1px; }
 
@@ -3454,26 +3464,39 @@ input[type="submit"],
   border-radius: 0; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > a.filter-bar-item:first-child:not(:last-child) {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 3px; }
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0.2142857143rem  !important; }
 
 .btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > a.filter-bar-item:last-child:not(:first-child) {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 3px; }
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0.2142857143rem  !important; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a.filter-bar-item {
+.btn-group-vertical.btn-group-lg > .btn:first-child:not(:last-child), .btn-group-vertical.btn-group-lg > a.filter-bar-item:first-child:not(:last-child) {
+  border-top-right-radius: 0.2857142857rem  !important; }
+
+.btn-group-vertical.btn-group-lg > .btn:last-child:not(:first-child), .btn-group-vertical.btn-group-lg > a.filter-bar-item:last-child:not(:first-child) {
+  border-bottom-left-radius: 0.2857142857rem  !important; }
+
+.btn-group-vertical.btn-group-sm > .btn:first-child:not(:last-child), .btn-group-vertical.btn-group-sm > a.filter-bar-item:first-child:not(:last-child), .btn-group-vertical.btn-group-xs > .btn:first-child:not(:last-child), .btn-group-vertical.btn-group-xs > a.filter-bar-item:first-child:not(:last-child) {
+  border-top-right-radius: 0.1428571429rem  !important; }
+
+.btn-group-vertical.btn-group-sm > .btn:last-child:not(:first-child), .btn-group-vertical.btn-group-sm > a.filter-bar-item:last-child:not(:first-child), .btn-group-vertical.btn-group-xs > .btn:last-child:not(:first-child), .btn-group-vertical.btn-group-xs > a.filter-bar-item:last-child:not(:first-child) {
+  border-bottom-left-radius: 0.1428571429rem  !important; }
+
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group-vertical:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a.filter-bar-item, .btn-group-vertical > .btn-group-vertical:not(:first-child):not(:last-child) > a.filter-bar-item {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > a.filter-bar-item:last-child,
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group-vertical:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > a.filter-bar-item:last-child, .btn-group-vertical > .btn-group-vertical:first-child:not(:last-child) > a.filter-bar-item:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle,
+.btn-group-vertical > .btn-group-vertical:first-child:not(:last-child) > .dropdown-toggle {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > a.filter-bar-item:first-child {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group-vertical:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > a.filter-bar-item:first-child, .btn-group-vertical > .btn-group-vertical:last-child:not(:first-child) > a.filter-bar-item:first-child {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important; }
 
 /**
  * Cards
@@ -3765,7 +3788,24 @@ html.has-open-modal {
  * To do: give the loader a decent fallback for IE9.
  * Check the comment signs at the end of the lines below.
  */
-.loader, .loader-lg, .table-interactive.is-loading:after {
+.loader, .loader-lg, .table-interactive.is-loading:after, .loader-invert, button[type="submit"] span.loader,
+button[type="submit"] span.loader-lg,
+button[type="submit"] span.table-interactive.is-loading:after,
+input[type="submit"] span.loader,
+input[type="submit"] span.loader-lg,
+input[type="submit"] span.table-interactive.is-loading:after,
+.btn-primary span.loader,
+.btn-primary span.loader-lg,
+.btn-success span.loader,
+.btn-success span.loader-lg,
+.btn-info span.loader,
+.btn-info span.loader-lg,
+.btn-warning span.loader,
+.btn-warning span.loader-lg,
+.btn-danger span.loader,
+.btn-danger span.loader-lg,
+.btn-transparent-invert span.loader,
+.btn-transparent-invert span.loader-lg {
   -webkit-animation: spin .7s infinite linear, loader-color 2.8s infinite linear;
   animation: spin .7s infinite linear, loader-color 2.8s infinite linear;
   -webkit-backface-visibility: hidden;
@@ -3785,58 +3825,63 @@ html.has-open-modal {
     border-width: 3px;
     height: 2.5714285714rem ;
     width: 2.5714285714rem ; }
+  .loader-invert, button[type="submit"] span.loader, button[type="submit"] span.loader-lg, button[type="submit"] span.table-interactive.is-loading:after, button[type="submit"] span.loader-invert,
+  input[type="submit"] span.loader,
+  input[type="submit"] span.loader-lg,
+  input[type="submit"] span.table-interactive.is-loading:after,
+  input[type="submit"] span.loader-invert,
+  .btn-primary span.loader,
+  .btn-primary span.loader-lg,
+  .btn-primary span.table-interactive.is-loading:after,
+  .btn-primary span.loader-invert,
+  .btn-success span.loader,
+  .btn-success span.loader-lg,
+  .btn-success span.table-interactive.is-loading:after,
+  .btn-success span.loader-invert,
+  .btn-info span.loader,
+  .btn-info span.loader-lg,
+  .btn-info span.table-interactive.is-loading:after,
+  .btn-info span.loader-invert,
+  .btn-warning span.loader,
+  .btn-warning span.loader-lg,
+  .btn-warning span.table-interactive.is-loading:after,
+  .btn-warning span.loader-invert,
+  .btn-danger span.loader,
+  .btn-danger span.loader-lg,
+  .btn-danger span.table-interactive.is-loading:after,
+  .btn-danger span.loader-invert,
+  .btn-transparent-invert span.loader,
+  .btn-transparent-invert span.loader-lg,
+  .btn-transparent-invert span.table-interactive.is-loading:after,
+  .btn-transparent-invert span.loader-invert {
+    -webkit-animation: none;
+    animation: none;
+    -webkit-animation: spin .7s infinite linear;
+    animation: spin .7s infinite linear;
+    border-color: #fff #fff #fff transparent; }
 
-span.loader, span.loader-lg, span.table-interactive.is-loading:after,
+span.loader, span.loader-lg, span.table-interactive.is-loading:after, span.loader-invert, button[type="submit"] span.loader,
+button[type="submit"] span.loader-lg,
+input[type="submit"] span.loader,
+input[type="submit"] span.loader-lg,
+.btn-primary span.loader,
+.btn-primary span.loader-lg,
+.btn-success span.loader,
+.btn-success span.loader-lg,
+.btn-info span.loader,
+.btn-info span.loader-lg,
+.btn-warning span.loader,
+.btn-warning span.loader-lg,
+.btn-danger span.loader,
+.btn-danger span.loader-lg,
+.btn-transparent-invert span.loader,
+.btn-transparent-invert span.loader-lg,
 span.loader-lg,
 span.table-interactive.is-loading:after {
   height: 1em;
   line-height: 1em;
   top: .125em;
   width: 1em; }
-
-button[type="submit"] span.loader, button[type="submit"] span.loader-lg, button[type="submit"] span.table-interactive.is-loading:after,
-button[type="submit"] span.loader-lg,
-button[type="submit"] span.table-interactive.is-loading:after,
-input[type="submit"] span.loader,
-input[type="submit"] span.loader-lg,
-input[type="submit"] span.table-interactive.is-loading:after,
-input[type="submit"] span.loader-lg,
-input[type="submit"] span.table-interactive.is-loading:after,
-.btn-primary span.loader,
-.btn-primary span.loader-lg,
-.btn-primary span.table-interactive.is-loading:after,
-.btn-primary span.loader-lg,
-.btn-primary span.table-interactive.is-loading:after,
-.btn-success span.loader,
-.btn-success span.loader-lg,
-.btn-success span.table-interactive.is-loading:after,
-.btn-success span.loader-lg,
-.btn-success span.table-interactive.is-loading:after,
-.btn-info span.loader,
-.btn-info span.loader-lg,
-.btn-info span.table-interactive.is-loading:after,
-.btn-info span.loader-lg,
-.btn-info span.table-interactive.is-loading:after,
-.btn-warning span.loader,
-.btn-warning span.loader-lg,
-.btn-warning span.table-interactive.is-loading:after,
-.btn-warning span.loader-lg,
-.btn-warning span.table-interactive.is-loading:after,
-.btn-danger span.loader,
-.btn-danger span.loader-lg,
-.btn-danger span.table-interactive.is-loading:after,
-.btn-danger span.loader-lg,
-.btn-danger span.table-interactive.is-loading:after,
-.btn-transparent-invert span.loader,
-.btn-transparent-invert span.loader-lg,
-.btn-transparent-invert span.table-interactive.is-loading:after,
-.btn-transparent-invert span.loader-lg,
-.btn-transparent-invert span.table-interactive.is-loading:after {
-  -webkit-animation: none;
-  animation: none;
-  -webkit-animation: spin .7s infinite linear;
-  animation: spin .7s infinite linear;
-  border-color: #fff #fff #fff transparent; }
 
 /**
  * Callout
@@ -4405,7 +4450,8 @@ a.filter-bar-link-external {
   .datepicker table,
   .datepickerrange table {
     background: #fff;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    table-layout: fixed; }
   .datepicker .table-responsive,
   .datepickerrange .table-responsive {
     border: none; }

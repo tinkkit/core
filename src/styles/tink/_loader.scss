@@ -26,6 +26,13 @@
     height: rem(36);
     width: rem(36);
   }
+
+  &-invert {
+    @extend .loader;
+    animation: none;
+    animation: spin .7s infinite linear;
+    border-color: $white $white $white transparent;
+  }
 }
 
 // Set the loader inline and adjust the size to its adjacent content
@@ -48,8 +55,6 @@ input[type="submit"],
 .btn-transparent-invert {
   span.loader,
   span.loader-lg {
-    animation: none;
-    animation: spin .7s infinite linear;
-    border-color: $white $white $white transparent;
+    @extend .loader-invert;
   }
 }

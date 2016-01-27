@@ -143,6 +143,8 @@
 // // ----------------------
 
 .btn-group-vertical {
+  @extend .btn-group;
+
   > .btn,
   > .btn-group,
   > .btn-group > .btn {
@@ -170,17 +172,42 @@
   }
 }
 
-.btn-group-vertical > .btn {
-  &:not(:first-child):not(:last-child) {
-    border-radius: 0;
+.btn-group-vertical {
+    > .btn {
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:first-child:not(:last-child) {
+      @include border-bottom-radius(0);
+      border-top-right-radius: rem($border-radius-base) !important;
+    }
+    &:last-child:not(:first-child) {
+      @include border-top-radius(0);
+      border-bottom-left-radius: rem($border-radius-base) !important;
+    }
   }
-  &:first-child:not(:last-child) {
-    @include border-bottom-radius(0);
-    border-top-right-radius: $border-radius-base;
+
+  &.btn-group-lg {
+    > .btn {
+      &:first-child:not(:last-child) {
+        border-top-right-radius: rem($border-radius-large) !important;
+      }
+      &:last-child:not(:first-child) {
+        border-bottom-left-radius: rem($border-radius-large) !important;
+      }
+    }
   }
-  &:last-child:not(:first-child) {
-    @include border-top-radius(0);
-    border-bottom-left-radius: $border-radius-base;
+
+  &.btn-group-sm,
+  &.btn-group-xs {
+    > .btn {
+      &:first-child:not(:last-child) {
+        border-top-right-radius: rem($border-radius-small) !important;
+      }
+      &:last-child:not(:first-child) {
+        border-bottom-left-radius: rem($border-radius-small) !important;
+      }
+    }
   }
 }
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
