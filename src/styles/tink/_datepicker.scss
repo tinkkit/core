@@ -5,6 +5,9 @@
  * - range
  */
 
+// Variables
+$datepicker-input-offset:                  35px !default;
+
 
 .datepicker-input-fields {
   min-width: rem(110); // Prevents the datepicker from collapsing
@@ -22,6 +25,11 @@
 
     &:focus {
       z-index: layer("base");
+    }
+
+    .is-offset {
+      // make some room for the .datepicker-day
+      padding-left: $datepicker-input-offset;
     }
   }
 
@@ -56,6 +64,14 @@
   &:active {
     color: $datepicker-icon-hover-color;
   }
+
+.datepicker-day {
+  bottom: 1px;
+  cursor: pointer;
+  padding: rem($padding-base-vertical ($padding-base-horizontal / 1.5));
+  position: absolute;
+  top: 1px;
+  transition: color $animation-speed linear;
 }
 
 
