@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.11.2] - 2016-02-02
+
+### Fixed
+- Fixed more specificity problems with buttons
+- Fixed a broken loader when Tink was minified for a second time (by external minifiers)
+- Fixed inline CSS in the datepicker
+- Fixed a <select> padding hack
+
+
+
 ## [1.11.1] - 2016-01-22
 
 ### Fixed

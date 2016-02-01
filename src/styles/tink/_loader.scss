@@ -9,7 +9,7 @@
   animation: spin .7s infinite linear, loader-color 2.8s infinite linear; //
   -webkit-backface-visibility: hidden;
   border: $loader-border-width solid;
-  border-color: $loader-color $loader-color $loader-color transparent;
+  border-color: transparent $loader-color $loader-color $loader-color;
   border-radius: 50%;
   display: inline-block;
   height: rem(28);
@@ -31,7 +31,7 @@
     @extend .loader;
     animation: none;
     animation: spin .7s infinite linear;
-    border-color: $white $white $white transparent;
+    border-color: transparent $white $white $white;
   }
 }
 
