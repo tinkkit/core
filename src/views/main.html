@@ -1,4 +1,37 @@
 <div class="container margin-top-lg">
+  <div class="row" data-ng-controller="interactiveTableController">
+    <div class="col-xs-6">
+      <tink-interactive-table class="table-interactive" tink-checked="boxChecked($data,$checked)" tink-loading="ct.loading" tink-headers="headers" tink-data="data.content" tink-actions="actions" tink-empty-message="Geen resultaten">
+        <table tink-sort-table="data.content" tink-callback="sorted($property,$order,$type)" tink-asc="ctrl.asc" tink-sort-field="firstname">
+          <thead>
+            <tr>
+              <th ng-repeat="view in tinkHeaders" tink-sort-header="{{view.sort}}">{{ view.alias }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-click="$parent.$parent.load()" ng-repeat="view in tinkData">
+              <td>{{ view.firstname | date:'dd/MM/yyyy' }}</td>
+              <td>{{ view.lastname }}</td>
+              <td>{{ view.username }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <tink-pagination tink-current-page="$parent.ct.nums" tink-change="$parent.changed(type,value,next)" tink-total-items="100" tink-items-per-page="$parent.ct.numpp"></tink-pagination>
+
+      </tink-interactive-table>
+    </div>
+    <div class="col-xs-6">
+      <ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-xs-12">
       <ul class="nav-tabs">
@@ -1109,30 +1142,6 @@
         </tbody>
       </table>
     </div>
-  </div>
-</div> -->
-
-<!-- <div class="row" data-ng-controller="interactiveTableController">
-  <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
-    <tink-interactive-table class="table-interactive" tink-checked="boxChecked($data,$checked)" tink-loading="ct.loading" tink-headers="headers" tink-data="data.content" tink-actions="actions" tink-empty-message="Geen resultaten">
-      <table tink-sort-table="data.content" tink-callback="sorted($property,$order,$type)" tink-asc="ctrl.asc" tink-sort-field="firstname">
-        <thead>
-          <tr>
-            <th ng-repeat="view in tinkHeaders" tink-sort-header="{{view.sort}}">{{ view.alias }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-click="$parent.$parent.load()" ng-repeat="view in tinkData">
-            <td>{{ view.firstname | date:'dd/MM/yyyy' }}</td>
-            <td>{{ view.lastname }}</td>
-            <td>{{ view.username }}</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <tink-pagination tink-current-page="$parent.ct.nums" tink-change="$parent.changed(type,value,next)" tink-total-items="100" tink-items-per-page="$parent.ct.numpp"></tink-pagination>
-
-    </tink-interactive-table>
   </div>
 </div> -->
 
