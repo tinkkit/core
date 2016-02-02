@@ -1,3 +1,251 @@
+<div class="container margin-top-lg">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="nav-tabs">
+        <li role="presentation"><a href="">Tabs</a></li>
+        <li role="presentation"><a href="">Are</a></li>
+        <li role="presentation"><a href="">Cool</a></li>
+        <li role="presentation"><a href="">Are</a></li>
+        <li role="presentation"><a href="">Cool</a></li>
+        <li role="presentation"><a href="">Are</a></li>
+        <li role="presentation" class="active"><a href="">Cool</a></li>
+        <li role="presentation"><a href="">Are</a></li>
+        <li role="presentation"><a href="">Cool</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="bcsdHoofdstuk">
+            <tink-accordion data-one-at-a-time="false">
+              <div class="accordion" ng-transclude="">
+                <section class="accordion-panel ng-isolate-scope group-open" data-is-collapsed="rapportHoofdstukCtrl.accordion.collapsed" has-padding="false" data-onclick="rapportHoofdstukCtrl.openHoofdstuk">
+                  <a href="" class="accordion-toggle" ng-click="toggleOpen()">
+                    <div class="accordion-panel-heading">
+                      <span class="panel-title">
+                        <data-header class="ng-scope">
+                          <div class="row">
+                            <div class="col-xs-8 ng-binding" style="margin-top:6px;">
+                              GroepSamenstelling (1) (VERY OLD)
+                            </div>
+                            <div class="col-xs-4">
+                              <div class="pull-right">
+                                <span ng-click="rapportHoofdstukCtrl.navigeerNaarEigenComment($event)" class="fa-stack vis-hidden" style="color:white;" ng-class="{'vis-hidden': rapportHoofdstukCtrl.hoofdstuk.aantalEigenAanduidingen < 1 }">
+                                  <i class="fa fa-comment fa-stack-2x" style="color:#333"></i>
+                                  <strong class="fa-stack-1x fa-stack-text ng-binding">0</strong>
+                                </span>
+                              </div>
+                              <div class="pull-right" style="padding-right:15px;">
+                                <span ng-click="rapportHoofdstukCtrl.navigeerNaarPubliekeComment($event)" class="fa-stack vis-hidden" style="color:white;" ng-class="{'vis-hidden': rapportHoofdstukCtrl.hoofdstuk.aantalPubliekeAanduidingen < 1 }">
+                                  <i class="fa fa-comment fa-stack-2x fa-flip-horizontal"></i>
+                                  <strong class="fa-stack-1x fa-stack-text ng-binding">0</strong>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </data-header>
+                      </span>
+                    </div>
+                  </a>
+                </section>
+              </div>
+            </tink-accordion>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 margin-top-lg">
+          <tink-accordion data-start-open="false">
+            <tink-accordion-panel>
+              <data-header>
+                <div class="bar">
+                  <div class="bar-left">
+                    GroepSamenstelling (1) NIEUW
+                  </div>
+                  <div class="bar-right">
+                    <div>
+                      <span class="fa-stack">
+                        <i class="fa fa-comment fa-stack-2x fa-flip-horizontal"></i>
+                        <strong class="fa-stack-1x fa-stack-text tink-text-white">0</strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span class="fa-stack margin-left-sm">
+                        <i class="fa fa-comment fa-stack-2x tink-text-black"></i>
+                        <strong class="fa-stack-1x fa-stack-text tink-text-white">0</strong>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </data-header>
+              <data-content>
+                Test
+              </data-content>
+            </tink-accordion-panel>
+          </tink-accordion>
+        </div>
+
+
+        <div class="col-xs-12 margin-top-lg">
+          <tink-accordion data-start-open="false">
+            <tink-accordion-panel>
+              <data-header>
+                <div class="row">
+                  <div class="col-xs-8">
+                    GroepSamenstelling (1) OUD
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="pull-right">
+                      <span class="fa-stack">
+                        <i class="fa fa-comment fa-stack-2x"></i>
+                        <strong class="fa-stack-1x fa-stack-text">0</strong>
+                      </span>
+                    </div>
+                    <div class="pull-right">
+                      <span class="fa-stack">
+                        <i class="fa fa-comment fa-stack-2x fa-flip-horizontal"></i>
+                        <strong class="fa-stack-1x fa-stack-text">0</strong>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </data-header>
+              <data-content>
+                Test
+              </data-content>
+            </tink-accordion-panel>
+          </tink-accordion>
+        </div>
+
+
+        <div class="col-xs-12 margin-top-lg">
+          <tink-accordion data-start-open="false">
+            <tink-accordion-panel>
+              <data-header>
+                GroepSamenstelling (1) (No HTML)
+              </data-header>
+              <data-content>
+                Test
+              </data-content>
+            </tink-accordion-panel>
+          </tink-accordion>
+        </div>
+
+
+        <div class="col-xs-12 margin-top-lg">
+          <tink-accordion data-start-open="false">
+            <tink-accordion-panel>
+              <data-header>
+                <div class="row">
+                  <div class="col-xs-12">
+                    GroepSamenstelling (1) (HTML)
+                  </div>
+                </div>
+              </data-header>
+              <data-content>
+                Test
+              </data-content>
+            </tink-accordion-panel>
+          </tink-accordion>
+        </div>
+
+
+        <!-- <div class="col-xs-12 margin-top-lg">
+          <div class="bcsdHoofdstuk">
+            <tink-accordion data-one-at-a-time="false">
+              <tink-accordion-panel data-is-collapsed="rapportHoofdstukCtrl.accordion.collapsed" has-padding="false" data-onclick="rapportHoofdstukCtrl.openHoofdstuk">
+                <data-header>
+                  <div class="row">
+                    <div class="col-xs-8" style="margin-top:6px;">{{rapportHoofdstukCtrl.hoofdstuk.titel}}</div>
+                    <div class="col-xs-4">
+                      <div class="pull-right">
+                        <span ng-click="rapportHoofdstukCtrl.navigeerNaarEigenComment($event)" class="fa-stack" style="color:white;" ng-class="{'vis-hidden': rapportHoofdstukCtrl.hoofdstuk.aantalEigenAanduidingen < 1 }">
+                          <i class="fa fa-comment fa-stack-2x" style="color:#333"></i>
+                          <strong class="fa-stack-1x fa-stack-text">{{rapportHoofdstukCtrl.hoofdstuk.aantalEigenAanduidingen}}</strong>
+                        </span>
+                      </div>
+                      <div class="pull-right" style="padding-right:15px;" >
+                        <span ng-click="rapportHoofdstukCtrl.navigeerNaarPubliekeComment($event)" class="fa-stack" style="color:white;" ng-class="{'vis-hidden': rapportHoofdstukCtrl.hoofdstuk.aantalPubliekeAanduidingen < 1 }">
+                          <i class="fa fa-comment fa-stack-2x fa-flip-horizontal"></i>
+                          <strong class="fa-stack-1x fa-stack-text">{{rapportHoofdstukCtrl.hoofdstuk.aantalPubliekeAanduidingen}}</strong>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </data-header>
+                <data-content>
+                  <div class="row margin-top" ng-show="rapportHoofdstukCtrl.hoofdstuk.inhoud && rapportHoofdstukCtrl.hoofdstuk.inhoud.trim().length > 0" style="padding-left:40px;padding-right:40px;padding-top:15px">
+                    <div class="col-xs-10 col-md-11 editable">
+                      <rapport-html id="rapportHtml" html="rapportHoofdstukCtrl.hoofdstuk.inhoud" hoofdstuk-id="rapportHoofdstukCtrl.hoofdstuk.id" hoofdstuk="rapportHoofdstukCtrl.hoofdstuk" rapport-id="rapportHoofdstukCtrl.hoofdstuk.rapportId" type="hoofdstuk"></rapport-html>
+                    </div>
+                    <div class="col-xs-2 col-md-1" style="text-align:right;padding-top:5px;">
+                      <div class="bcsdCommentIcon" ng-show="rapportHoofdstukCtrl.hasACommentFilledIn">
+                        <i class="fa fa-comment fa-2x" style="color:#357ea6"></i>
+                      </div>
+                      <div class="bcsdNewCommentIcon" ng-show="!rapportHoofdstukCtrl.hasACommentFilledIn">
+                        <a ng-click="rapportHoofdstukCtrl.insertComment()" href="">
+                          <span class="fa-stack">
+                            <i class="fa fa-comment-o fa-stack-1x" style="font-size:1.2em;color:#aaaaaa"></i>
+                            <i class="fa fa-plus fa-stack-1x" style="font-size:0.5em;color:#aaaaaa"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="comments"></div>
+                  <div id="publiekeComments"></div>
+                  <hoofdstuk-onderdeel ng-repeat="onderdeel in rapportHoofdstukCtrl.hoofdstuk.hoofdstukOnderdelen" onderdeel="onderdeel" onderdeel-id="{{onderdeel.id}}" hoofdstuk-id="rapportHoofdstukCtrl.hoofdstuk.id" rapport-id="rapportHoofdstukCtrl.hoofdstuk.rapportId"></hoofdstuk-onderdeel>
+                  <div class="row margin-top" style="margin-bottom:10px">
+                    <div class="col-md-12">
+                    </div>
+                  </div>
+                  <div class="row bcsdParagraafLinks" style="padding-left:40px;padding-right:40px;" ng-show="rapportHoofdstukCtrl.hasLoaded">
+                    <div ng-repeat="paragraaf in rapportHoofdstukCtrl.hoofdstuk.paragrafen">
+                      <div class="col-lg-4 col-md-4 col-sm-6" ng-show="rapportHoofdstukCtrl.hasTitel(paragraaf)">
+                        <a href="" anchor-smooth-scroll="paragraaf{{paragraaf.id}}">{{paragraaf.titel}} <i ng-if="paragraaf.hasComment" class="fa fa-comment"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                  </div>
+                  <div ng-repeat="paragraaf in rapportHoofdstukCtrl.hoofdstuk.paragrafen">
+                    <rapport-paragraaf paragraaf="paragraaf" paragraaf-id="{{paragraaf.id}}" rapport-id="rapportHoofdstukCtrl.hoofdstuk.rapportId"></rapport-paragraaf>
+                  </div>
+                  <div class="row" style="margin-bottom:15px">
+                    <div class="col-md-12" style="padding-left:40px">
+                      <a href="" ng-click="rapportHoofdstukCtrl.scrollNaarMenu()"><i class="fa fa-chevron-circle-up"></i> Naar top van {{rapportHoofdstukCtrl.hoofdstuk.titel}}</a>
+                    </div>
+                  </div>
+                </data-content>
+              </tink-accordion-panel>
+            </tink-accordion>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <section class="card">
+        <header class="card-heading">
+          <span class="card-title">Basic card</span>
+        </header>
+        <div class="card-body">
+          Basic card content
+        </div>
+        <footer class="card-footer">
+          Card footer
+        </footer>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
