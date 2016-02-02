@@ -36,6 +36,9 @@
     }
 
     &.active {
+      margin-bottom: -1px;
+      border-bottom: 1px solid #fff;
+
       > a {
         background: $nav-link-active-bgcolor;
         color: $nav-link-active-color;

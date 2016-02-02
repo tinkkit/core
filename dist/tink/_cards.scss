@@ -4,14 +4,11 @@
  */
 
 // Base class
-
 .card {
   @include card-variant($card-default-border, $card-default-text, $card-default-heading-bg, $card-default-border);
-
   background-color: $card-bg;
   border: 1px solid $card-default-border;
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
-  // margin-bottom: rem($line-height-computed);
 
   &:not(.accordion-panel) {
     border-radius: $card-border-radius;
@@ -23,8 +20,9 @@
   }
 }
 
-// Card contents
-
+/**
+ * Card contents
+ */
 .card-body {
   @include clearfix();
   border-bottom: 1px solid $card-default-border;
@@ -39,12 +37,17 @@
   }
 }
 
-// Optional heading
-
+/**
+ * Optional heading
+ */
 .card-heading {
+  align-items: center;
+  display: flex;
   font-size: rem(16);
   font-weight: 700;
-  padding: rem($card-heading-padding ($card-heading-padding * 2));
+  min-height: rem(38);
+  padding: rem(($card-heading-padding/4) ($card-heading-padding * 2));
+  width: 100%;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -68,8 +71,10 @@
     padding: 0;
   }
 
-  // Icon margin
-  // Badge margin
+  /**
+   * Icon margin
+   * Badge margin
+   */
   .fa + .card-title,
   .fa + .panel-title,
   [class^="badge"] + .card-title,
@@ -80,8 +85,9 @@
   }
 }
 
-// Optional footer
-
+/**
+ * Optional footer
+ */
 .card-footer {
   background: $card-default-footer-bg;
   border-top: 1px solid $card-default-border;
@@ -92,7 +98,6 @@
 
 
 // Card variations
-
 // .card-primary {
 //   @include card-variant($card-primary-border, $card-primary-text, $card-primary-heading-bg, $card-primary-border);
 // }

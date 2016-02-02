@@ -1566,14 +1566,14 @@ ol {
   margin-bottom: 0.7142857143rem ;
   margin-top: 0; }
 
-.list-unstyled, .list-inline, .bar > ul, .nav-top > ul, .hit-area-box, .timeline-list, .table-interactive-cols, .nav-aside ul, .popover-menu-list ul, .upload-files, .dragenter {
+.list-unstyled, .list-inline, .bar > ul, .nav-top > ul, .bar > div, .nav-top > div, .hit-area-box, .timeline-list, .table-interactive-cols, .nav-aside ul, .popover-menu-list ul, .upload-files, .dragenter {
   list-style: none;
   margin-bottom: 0;
   padding-left: 0; }
 
-.list-inline, .bar > ul, .nav-top > ul {
+.list-inline, .bar > ul, .nav-top > ul, .bar > div, .nav-top > div {
   margin-left: -0.4285714286rem ; }
-  .list-inline > li, .bar > ul > li, .nav-top > ul > li {
+  .list-inline > li, .bar > ul > li, .nav-top > ul > li, .bar > div > li, .nav-top > div > li {
     display: inline-block;
     padding-left: 0.4285714286rem ;
     padding-right: 0.4285714286rem ; }
@@ -2621,8 +2621,7 @@ select {
   -moz-appearance: none;
   background: #fff url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjQkJCQkJCIiBwb2ludHM9IjQuMiwyOS4yIDguMywyMiAwLDIyIDQuMiwyOS4yIDguMywyMiAwLDIyICIvPgo8cG9seWdvbiBmaWxsPSIjQkJCQkJCIiBwb2ludHM9IjQuMiwxMS44IDAsMTkgOC4zLDE5IDQuMiwxMS44IDAsMTkgOC4zLDE5ICIvPgo8L3N2Zz4K") no-repeat right center;
   background-size: contain;
-  padding-right: 1.7142857143rem ;
-  padding: 0.4285714286rem 0.5714285714rem 0.4285714286rem 0.8571428571rem  \9;
+  padding: 0.4285714286rem 1.7142857143rem 0.4285714286rem 0.8571428571rem ;
   text-indent: 0.01px;
   text-overflow: ''; }
   select:focus {
@@ -3524,6 +3523,9 @@ input[type="submit"],
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
 
+/**
+ * Card contents
+ */
 .card-body, .accordion-panel-body {
   border-bottom: 1px solid #eaeaea;
   padding: 1.1428571429rem ; }
@@ -3537,12 +3539,27 @@ input[type="submit"],
   .card-body.has-no-padding, .has-no-padding.accordion-panel-body {
     padding: 0; }
 
+/**
+ * Optional heading
+ */
 .card-heading, .accordion-panel-heading {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.1428571429rem ;
   font-weight: 700;
-  padding: 0.5714285714rem 1.1428571429rem ;
+  min-height: 2.7142857143rem ;
+  padding: 0.1428571429rem 1.1428571429rem ;
+  width: 100%;
   /**
    * !!!! Panel title should be removed later…
+   */
+  /**
+   * Icon margin
+   * Badge margin
    */ }
   .card-heading > .dropdown .dropdown-toggle, .accordion-panel-heading > .dropdown .dropdown-toggle {
     color: inherit; }
@@ -3565,6 +3582,9 @@ input[type="submit"],
   .card-heading .panel-title + [class^="badge"], .accordion-panel-heading .panel-title + [class^="badge"] {
     margin-left: 0.6428571429rem ; }
 
+/**
+ * Optional footer
+ */
 .card-footer {
   background: #f7f7f7;
   border-top: 1px solid #eaeaea;
@@ -3688,11 +3708,14 @@ a.badge:hover, a.badge:focus {
         background: rgba(0, 0, 0, 0.05);
         color: #369dcc;
         text-decoration: none; }
-    .nav-tabs > li.active > a {
-      background: #fff;
-      color: #333;
-      cursor: default;
-      font-weight: 600; }
+    .nav-tabs > li.active {
+      margin-bottom: -1px;
+      border-bottom: 1px solid #fff; }
+      .nav-tabs > li.active > a {
+        background: #fff;
+        color: #333;
+        cursor: default;
+        font-weight: 600; }
     .nav-tabs > li.disabled > a {
       color: #bbb; }
       .nav-tabs > li.disabled > a:hover, .nav-tabs > li.disabled > a:focus {
@@ -3810,7 +3833,7 @@ input[type="submit"] span.table-interactive.is-loading:after,
   animation: spin .7s infinite linear, loader-color 2.8s infinite linear;
   -webkit-backface-visibility: hidden;
   border: 2px solid;
-  border-color: rgba(52, 126, 166, 0.8) rgba(52, 126, 166, 0.8) rgba(52, 126, 166, 0.8) transparent;
+  border-color: transparent rgba(52, 126, 166, 0.8) rgba(52, 126, 166, 0.8) rgba(52, 126, 166, 0.8);
   border-radius: 50%;
   display: inline-block;
   height: 2rem ;
@@ -3858,7 +3881,7 @@ input[type="submit"] span.table-interactive.is-loading:after,
     animation: none;
     -webkit-animation: spin .7s infinite linear;
     animation: spin .7s infinite linear;
-    border-color: #fff #fff #fff transparent; }
+    border-color: transparent #fff #fff #fff; }
 
 span.loader, span.loader-lg, span.table-interactive.is-loading:after, span.loader-invert, button[type="submit"] span.loader,
 button[type="submit"] span.loader-lg,
@@ -4156,7 +4179,7 @@ span.table-interactive.is-loading:after {
   .bar select, .nav-top select,
   .bar .faux-input, .nav-top .faux-input {
     display: inline-block; }
-  .bar > ul, .nav-top > ul {
+  .bar > ul, .nav-top > ul, .bar > div, .nav-top > div {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -4166,8 +4189,10 @@ span.table-interactive.is-loading:after {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .bar > ul > li, .nav-top > ul > li {
-      vertical-align: middle; }
+  .bar > ul > li, .nav-top > ul > li {
+    vertical-align: middle; }
+  .bar > div.bar-left, .nav-top > div.bar-left, .bar > div.nav-top-left, .nav-top > div.nav-top-left, .bar > div.bar-right, .nav-top > div.bar-right, .bar > div.nav-top-right, .nav-top > div.nav-top-right {
+    margin: 0; }
   .bar-left, .nav-top-left {
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -5911,6 +5936,18 @@ html {
 
 .margin-right-lg {
   margin-right: 3.4285714286rem ; }
+
+.margin-bottom-sm {
+  margin-bottom: 0.5357142857rem ; }
+
+.margin-top-sm {
+  margin-top: 0.5357142857rem ; }
+
+.margin-left-sm {
+  margin-left: 0.8571428571rem ; }
+
+.margin-right-sm {
+  margin-right: 0.8571428571rem ; }
 
 .no-margin {
   margin: 0 !important; }

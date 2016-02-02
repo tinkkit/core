@@ -31,18 +31,27 @@
    * 2nd level container
    */
 
-  > ul {
+  > ul, > div {
     @extend .list-inline;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 
+    img {
+      @extend img.non-responsive;
+    }
+  }
+
+  > ul {
     > li {
       vertical-align: middle;
     }
+  }
 
-    img {
-      @extend img.non-responsive;
+  > div {
+    &.bar-left,
+    &.bar-right {
+      margin: 0;
     }
   }
 
