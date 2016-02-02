@@ -140,6 +140,30 @@
 .margin-right {
   margin-right: rem($padding-large-horizontal * 1.5);
 }
+.margin-bottom-lg {
+  margin-bottom: rem($padding-large-vertical * 3);
+}
+.margin-top-lg {
+  margin-top: rem($padding-large-vertical * 3);
+}
+.margin-left-lg {
+  margin-left: rem($padding-large-horizontal * 3);
+}
+.margin-right-lg {
+  margin-right: rem($padding-large-horizontal * 3);
+}
+.margin-bottom-sm {
+  margin-bottom: rem($padding-large-vertical * .75);
+}
+.margin-top-sm {
+  margin-top: rem($padding-large-vertical * .75);
+}
+.margin-left-sm {
+  margin-left: rem($padding-large-horizontal * .75);
+}
+.margin-right-sm {
+  margin-right: rem($padding-large-horizontal * .75);
+}
 .no-margin {
   margin: 0 !important;
 }

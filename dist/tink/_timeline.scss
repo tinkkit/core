@@ -9,244 +9,85 @@
  */
 
 .timeline {
-  padding: rem($timeline-padding);
-  position: relative;
-
-  @include mq($screen-sm) {
-    text-align: center;
-  }
+  margin-left: 0;
+  padding: rem(0 0 0 12);
 
   /**
-   * The starting dot
+   * Extra styles for normal (larger) timeline
    */
-  &:before {
-    background: $timeline-line-color;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: rem(6);
-    left: $timeline-padding;
-    margin-left: rem(-2.5); // On non-retina screens, the dot doesn't have a correct position and needs this hack
-    position: absolute;
-    top: rem(-3);
-    width: rem(6);
-
+  &:not(.timeline-is-compact) {
     @include mq($screen-sm) {
-      left: calc(50% - 1px);
-    }
+      margin-left: rem($timeline-offset);
 
-    // On retina screens, the dot has a correct position
-    @include retina {
-      margin-left: rem(-2);
+      .timeline-label {
+        margin: rem(10 0 10 (-$timeline-padding));
+      }
+
+      .timeline-list-label {
+        bottom: 0;
+        display: table;
+        height: 100%;
+        left: rem(-$timeline-offset - ($timeline-padding / 2));
+        padding-bottom: 0;
+        position: absolute;
+        text-align: right;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: rem($timeline-offset - ($timeline-padding / 2));
+      }
     }
   }
 
   /**
-   * The main branch line
+   * Timeline label
    */
-  &:after {
-    background: $timeline-line-color;
-    bottom: 0;
-    content: '';
-    left: $timeline-padding;
-    position: absolute;
-    top: 0;
-    width: 2px;
-    z-index: layer("cellar");
-
-    @include mq($screen-sm) {
-      left: calc(50% - 1px);
-    }
+  &-label {
+    @extend h3;
+    margin: rem(10 0 10 (-$timeline-padding / 2));
   }
 
   /**
-   * Each timeline can have multiple lists
+   * List items
    */
   &-list {
     @extend .list-unstyled;
-    @include clearfix();
     position: relative;
 
-    @include mq($screen-sm) {
-      margin: rem(20 auto);
-      text-align: left;
+    /**
+     * Line
+     */
+    &:before {
+      background: $timeline-line-color;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 2px;
+    }
+
+    > li {
+      padding: rem(($timeline-padding / 2) 0 ($timeline-padding / 2) $timeline-padding);
+      position: relative;
+
+      &:before {
+        background: $white;
+        border: 2px solid $timeline-circle-color;
+        border-radius: 50%;
+        content: '';
+        height: 12px;
+        left: -5px;
+        position: absolute;
+        top: calc(50% - 5px);
+        width: 12px;
+      }
     }
 
     /**
-     * Timeline items are actually cards
+     * Timeline list label
      */
-    > li {
-      @extend .card;
-      margin: rem(20 0 20) $timeline-card-offset;
-      position: relative;
-
-      /**
-       * Connection line to main branch
-       */
-      &:before {
-        background: linear-gradient(to right, $timeline-line-color, $card-default-border);
-        content: '';
-        height: 1px;
-        left: -($timeline-card-offset + 1px);
-        position: absolute;
-        // top: 20px;
-        top: rem(10);
-        // top: calc(50% - 6px);
-        width: $timeline-card-offset;
-      }
-
-      @include mq($screen-sm) {
-        width: calc(50% - #{$timeline-card-offset});
-
-        /**
-         * Left elements
-         */
-        &:nth-child(odd) {
-          clear: both;
-          margin: 0 $timeline-card-offset 0 0;
-
-          &:before {
-            background: linear-gradient(to right, $card-default-border, $timeline-line-color);
-            left: auto;
-            right: -($timeline-card-offset + 1px);
-          }
-
-          .timeline-date {
-            right: calc(-100% - 2*#{$timeline-card-offset});
-
-            time {
-            }
-          }
-        }
-
-        /**
-         * Right elements
-         */
-        &:nth-child(even) {
-          float: right;
-
-          .timeline-date {
-            left: calc(-100% - 2*#{$timeline-card-offset});
-
-            &:before {
-              background: linear-gradient(to right, $timeline-date-border, $timeline-line-color);
-              left: auto;
-              right: -($timeline-card-offset);
-            }
-
-            time {
-              float: right;
-            }
-          }
-        }
-      }
+    &-label {
+      padding-bottom: rem($timeline-padding / 2);
     }
   }
-
-  /**
-   * Each timeline can have multiple labels
-   */
-  &-label {
-    background-color: $timeline-label-bgcolor;
-    border-radius: $timeline-border-radius;
-    color: $timeline-label-color;
-    display: inline-block;
-    font-weight: 600;
-    margin-top: rem(20);
-    padding: rem(3 8);
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    @include mq($screen-sm, "max") {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-    }
-
-    @include mq($screen-sm) {
-      margin: rem(20 auto 0);
-    }
-  }
-
-  /**
-   * Each card can have a date
-   */
-  &-date {
-    display: block;
-    margin: rem(-10 0 -10 8);
-    width: 100%;
-
-    @include mq($screen-sm, "max") {
-      & + .card-heading {
-        padding-top: rem(12);
-      }
-      & + .card-body {
-        padding-top: rem(20);
-      }
-    }
-
-    @include mq($screen-sm) {
-      margin: rem(0);
-      position: absolute;
-
-      &:before {
-        background: linear-gradient(to right, $timeline-line-color, $timeline-date-border);
-        content: '';
-        height: 1px;
-        left: -($timeline-card-offset);
-        position: absolute;
-        top: rem(10);
-        width: $timeline-card-offset;
-      }
-    }
-
-    time {
-      background-color: $timeline-date-bgcolor;
-      border: 1px solid $timeline-date-border;
-      border-radius: $timeline-border-radius;
-      color: $timeline-date-color;
-      font-size: rem(12);
-      padding: rem(2 8);
-    }
-  }
-
-  // &.save-space {
-  //   .timeline-list {
-  //     > li {
-  //       @include mq($screen-sm) {
-  //         &:nth-child(odd) {
-  //           float: left;
-
-  //           .timeline-date {
-  //             margin: rem(-10 0 -10 -10);
-
-  //             time {
-  //               float: right;
-  //             }
-  //           }
-  //         }
-
-  //         &:nth-child(even) {
-  //           .timeline-date {
-  //             margin: rem(-10 0 -10 10);
-
-  //             time {
-  //               float: left;
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .timeline-date {
-  //     @include clearfix();
-  //     position: static;
-
-  //     &:before {
-  //       content: none;
-  //     }
-  //   }
-  // }
 }

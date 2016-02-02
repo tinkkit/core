@@ -86,4 +86,12 @@
       }
     }
   }
+
+  .upload-btn-delete {
+    bottom: 0;
+    margin-top: rem(-7);
+    position: absolute;
+    right: rem(28);
+    top: 50%;
+  }
 }

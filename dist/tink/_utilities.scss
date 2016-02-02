@@ -140,6 +140,18 @@
 .margin-right {
   margin-right: rem($padding-large-horizontal * 1.5);
 }
+.margin-bottom-lg {
+  margin-bottom: rem($padding-large-vertical * 3);
+}
+.margin-top-lg {
+  margin-top: rem($padding-large-vertical * 3);
+}
+.margin-left-lg {
+  margin-left: rem($padding-large-horizontal * 3);
+}
+.margin-right-lg {
+  margin-right: rem($padding-large-horizontal * 3);
+}
 .no-margin {
   margin: 0 !important;
 }

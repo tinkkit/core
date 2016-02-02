@@ -1,6 +1,6 @@
 {
   "name": "tink-core",
-  "version": "1.9.2",
+  "version": "1.11.1",
   "main": [
     "dist/tink.css"
   ],
@@ -28,8 +28,8 @@
     "tink-accordion-angular": "latest",
     "tink-modal-angular": "latest",
     "tink-datepicker-angular": "latest",
-    "tink-range-datepicker-angular": "latest"
-
+    "tink-range-datepicker-angular": "latest",
+    "tink-timepicker-angular": "latest"
   },
   "authors": [
     "Jasper Van Proeyen",

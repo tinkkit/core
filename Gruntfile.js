@@ -90,7 +90,7 @@ module.exports = function (grunt) {
         },
         cwd: 'src',
         src: 'templates/**.html',
-        dest: '<%= yeoman.dist %>/scripts/templates.js'
+        dest: '.tmp/scripts/templates.js'
       }
     },
     bump: {
@@ -179,7 +179,7 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            '.tmp',
+            // '.tmp',
             '<%= yeoman.dist %>/{,*/}*',
             '!<%= yeoman.dist %>/.git*'
           ]
@@ -188,11 +188,11 @@ module.exports = function (grunt) {
       server: {
         files: [{
           src: [
-            '.tmp',
-            '<%= yeoman.dist %>/scripts'
+            '.tmp'
+            // '<%= yeoman.dist %>/scripts'
           ]
         }]
-      }
+      },
     },
     autoprefixer: {
       options: {
@@ -250,7 +250,7 @@ module.exports = function (grunt) {
             expand: true,
             dot: true,
             cwd: '<%= yeoman.app %>/scripts/',
-            dest: '<%= yeoman.dist %>/scripts/',
+            dest: '.tmp/scripts/',
             src: [
               '{,*/}*'
             ]
@@ -290,9 +290,9 @@ module.exports = function (grunt) {
       },
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js'
+          '.tmp/scripts/{,*/}*.js'
         ],
-        dest: '<%= yeoman.dist %>/<%= yeoman.module %>.js'
+        dest: '.tmp/<%= yeoman.module %>.js'
       }
     },
     uglify: {
@@ -412,6 +412,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'clean:server',
     'clean:dist',
     // 'ngtemplates',
     'replace',
@@ -425,7 +426,7 @@ module.exports = function (grunt) {
     'copy:styles',
     'copy:sass',
     'cssmin',
-    'clean:server'
+    // 'clean:dist'
   ]);
 
   grunt.registerTask('default', [

@@ -863,12 +863,7 @@ $loader-border-width: 2px !default;
 /**
  * Variables
  */
-$timeline-padding: 20px !default;
-$timeline-border-radius: $border-radius-base !default;
-$timeline-line-color: $brand-light !default;
-$timeline-label-color: $white !default;
-$timeline-label-bgcolor: $timeline-line-color !default;
-$timeline-card-offset: 24px !default;
-$timeline-date-color: $timeline-line-color !default;
-$timeline-date-bgcolor: $white !default;
-$timeline-date-border: $timeline-line-color !default;
+$timeline-offset: 120px !default;
+$timeline-padding: 24px !default;
+$timeline-line-color: $gray-light !default;
+$timeline-circle-color: $gray !default;

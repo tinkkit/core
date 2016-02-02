@@ -26,6 +26,13 @@
     height: rem(36);
     width: rem(36);
   }
+
+  &-invert {
+    @extend .loader;
+    animation: none;
+    animation: spin .7s infinite linear;
+    border-color: $white $white $white transparent;
+  }
 }
 
 // Set the loader inline and adjust the size to its adjacent content
@@ -35,4 +42,19 @@ span.loader-lg {
   line-height: 1em;
   top: .125em;
   width: 1em;
+}
+
+// Override for non-default buttons
+button[type="submit"],
+input[type="submit"],
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-transparent-invert {
+  span.loader,
+  span.loader-lg {
+    @extend .loader-invert;
+  }
 }

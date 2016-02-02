@@ -16,6 +16,70 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.12.0] - 2016-02-02
+
+### Added
+- Upgraded the bar component to also work with divs
+- Added small margin classes
+
+### Changed
+- Updated the appearance of cards and accordions
+- Updated the appearance of tabs
+
+### Fixed
+- Fixed more specificity problems with buttons
+- Fixed a broken loader when Tink was minified for a second time (by external minifiers)
+- Fixed inline CSS in the datepicker
+- Fixed a <select> padding hack
+
+
+
+## [1.11.1] - 2016-01-22
+
+### Fixed
+- Fixed a display bug in the datepicker that was introduced by the specificity fix
+
+
+
+## [1.11.0] - 2016-01-20
+
+### Added
+- Added vertical variant of button groups
+- Added inverted variant of loaders
+
+### Fixed
+- Fixed a specificity problem with buttons
+- Fixed small display bug in pagination
+
+
+
+## [1.10.1] - 2015-12-18
+
+### Added
+- Added an option for a compacter timeline
+
+### Changed
+- Improved the timeline styling
+
+### Fixed
+- Fixed a bug where the timeline line would disappear in a modal dialog
+- Fixed a bug where all modal content would become selected when clicked inside the modal dialog
+- Fixed the pagination view on mobile
+
+
+
+## [1.10.0] - 2015-12-17
+
+### Added
+- Added a clear button in the timepicker
+- Added larger margin helper classes
+
+### Changed
+- Completely revamped the timeline
+- Removed margins from callouts, cards and breadcrumbs
+
+
+
 ## [1.9.2] - 2015-11-25
 
 ### Fixed
@@ -50,7 +114,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.8.0] - 2015-10-30
 
 ### Added
-- Added buttons groups
+- Added button groups
 - Added a filter bar component
 - Added a timeline component
 - Added another possibility to always leave the sidenav open

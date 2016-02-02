@@ -9,7 +9,7 @@
   animation: spin .7s infinite linear, loader-color 2.8s infinite linear; //
   -webkit-backface-visibility: hidden;
   border: $loader-border-width solid;
-  border-color: $loader-color $loader-color $loader-color transparent;
+  border-color: transparent $loader-color $loader-color $loader-color;
   border-radius: 50%;
   display: inline-block;
   height: rem(28);
@@ -26,6 +26,13 @@
     height: rem(36);
     width: rem(36);
   }
+
+  &-invert {
+    @extend .loader;
+    animation: none;
+    animation: spin .7s infinite linear;
+    border-color: transparent $white $white $white;
+  }
 }
 
 // Set the loader inline and adjust the size to its adjacent content
@@ -35,4 +42,19 @@ span.loader-lg {
   line-height: 1em;
   top: .125em;
   width: 1em;
+}
+
+// Override for non-default buttons
+button[type="submit"],
+input[type="submit"],
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-transparent-invert {
+  span.loader,
+  span.loader-lg {
+    @extend .loader-invert;
+  }
 }
