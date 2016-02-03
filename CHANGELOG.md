@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.12.0] - 2016-02-02
+## [1.12.0] - 2016-02-03
 
 ### Added
 - Upgraded the bar component to also work with divs
