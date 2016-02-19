@@ -16,6 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.12.2] - 2016-02-19
+
+### Added
+- Added logo padding variable (mostly as a helper for the Brandweer theme)
+
+### Changed
+- Upgraded to Font Awesome 4.5
+
+
+
 ## [1.12.1] - 2016-02-03
 
 ### Fixed
