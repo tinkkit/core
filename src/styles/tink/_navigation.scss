@@ -348,7 +348,7 @@ html {
       background-size: cover;
       display: inline-block;
       height: rem($logo-height);
-      margin: rem(0 $nav-top-padding 0 0);
+      margin: rem(0 $nav-top-logo-padding 0 0);
       // padding: 0; // isn't really necessary
       vertical-align: middle;
       width: rem($logo-width);
