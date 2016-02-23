@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.12.4] - 2016-02-23
+
+### Fixed
+- Fixed inclusion of unwanted files and folders
+
+
+
 ## [1.12.3] - 2016-02-23
 
 ### Added

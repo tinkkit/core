@@ -1,7 +1,11 @@
 .*
 **/.*
 assets
+bower_components
 Gruntfile.js
+npm-debug.log
 src
 test
+*.lock
 *.sublime-project
+*.sublime-workspace
