@@ -1,0 +1,7 @@
+.*
+**/.*
+assets
+Gruntfile.js
+src
+test
+*.sublime-project

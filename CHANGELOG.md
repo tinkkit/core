@@ -16,6 +16,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.12.3] - 2016-02-23
+
+### Added
+- Tink can now be installed as an NPM package
+
+
+
 ## [1.12.2] - 2016-02-19
 
 ### Added
