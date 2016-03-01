@@ -13,12 +13,12 @@ Tink is an in-house developed easy-to-use front end framework for quick prototyp
 ### Prerequisites
 
 * nodeJS [http://nodejs.org/download/](http://nodejs.org/download/)
-* bower: `npm install -g bower`
 
 ### Install
 
-1. Go to the root of your project and type the following command in your terminal:
-   `bower install tink-core --save`
+1. Go to the root of your project and type one of the following commands in your terminal:
+   - `bower install tink-core --save`
+   - `npm install tink-core --save`
 
 2. Include `dist/tink.css` and its necessary dependencies in your project.
 
